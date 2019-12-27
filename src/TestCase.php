@@ -1,6 +1,7 @@
 <?php declare( strict_types = 1 );
 namespace CodeKandis\PhpUnit;
 
+use DMS\PHPUnitExtensions\ArraySubset\ArraySubsetAsserts;
 use PHPUnit\Framework\TestCase as TestCaseOrigin;
 
 /**
@@ -10,4 +11,5 @@ use PHPUnit\Framework\TestCase as TestCaseOrigin;
  */
 abstract class TestCase extends TestCaseOrigin
 {
+	use ArraySubsetAsserts;
 }
