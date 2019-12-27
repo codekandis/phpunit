@@ -28,7 +28,8 @@
 	},
 	"require": {
 		"php": ">=7.3",
-		"phpunit/phpunit": "^8"
+		"phpunit/phpunit": "^8",
+		"dms/phpunit-arraysubset-asserts": "^0"
 	},
 	"require-dev": {
 		"roave/security-advisories": "dev-master",
