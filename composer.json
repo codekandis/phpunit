@@ -1,0 +1,49 @@
+{
+	"name": "codekandis/phpunit",
+	"description": "This library provides several wrapper and helper classes for the package `PHPUnit`.",
+	"keywords": [
+		"php",
+		"phpunit wrapper helper classes",
+		"phpunit",
+		"wrapper",
+		"helper",
+		"classes"
+	],
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Christian Ramelow",
+			"email": "info@codekandis.net",
+			"homepage": "https://codekandis.net",
+			"role": "Developer"
+		}
+	],
+	"support": {
+		"email": "info@codekandis.net",
+		"issues": "https://github.com/codekandis/phpunit/issues",
+		"docs": "https://github.com/codekandis/phpunit/blob/master/README.md",
+		"source": "https://github.com/codekandis/phpunit/tree/master"
+	},
+	"require": {
+		"php": ">=7.3",
+		"phpunit/phpunit": "^8"
+	},
+	"require-dev": {
+		"roave/security-advisories": "dev-master",
+		"sensiolabs/security-checker": "^6"
+	},
+	"autoload": {
+		"psr-4": {
+			"CodeKandis\\PhpUnit\\": [
+				"src/"
+			]
+		}
+	},
+	"scripts": {
+		"post-update-cmd": [
+			"vendor/bin/security-checker security:check composer.lock"
+		]
+	}
+}
