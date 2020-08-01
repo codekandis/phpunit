@@ -28,7 +28,7 @@
 	},
 	"require": {
 		"php": ">=7.3",
-		"phpunit/phpunit": "^8",
+		"phpunit/phpunit": "^9",
 		"dms/phpunit-arraysubset-asserts": "^0"
 	},
 	"require-dev": {
