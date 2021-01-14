@@ -4,7 +4,7 @@
 [![License][xtlink-license-badge]][srclink-license]
 [![Minimum PHP Version][xtlink-php-version-badge]][xtlink-php-net]
 
-This library provides several wrapper and helper classes for the package [`phpunit/phpunit`][xtlink-packagist-phpunit-phpunit].
+This library provides several wrappers and helper classes for the package [`phpunit/phpunit`][xtlink-packagist-phpunit-phpunit].
 
 ## Index
 
@@ -17,7 +17,7 @@ This library provides several wrapper and helper classes for the package [`phpun
 Install the latest version with
 
 ```bash
-$ composer require --dev codekandis/json-codec
+$ composer require --dev codekandis/phpunit
 ```
 
 # How to use
@@ -37,7 +37,7 @@ class FooTest extends TestCase
 
 
 
-[xtlink-version-badge]: https://img.shields.io/badge/version-1.0.0-blue.svg
+[xtlink-version-badge]: https://img.shields.io/badge/version-development-blue.svg
 [xtlink-license-badge]: https://img.shields.io/badge/license-MIT-yellow.svg
 [xtlink-php-version-badge]: https://img.shields.io/badge/php-%3E%3D%207.3-8892BF.svg
 [xtlink-php-net]: https://php.net
