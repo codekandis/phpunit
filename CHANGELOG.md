@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [keep a changelog][xtlink-keep-a-changelog]
 and this project adheres to [Semantic Versioning 2.0.0][xtlink-semantic-versioning].
 
+## [3.0.0] - 2021-01-17
+
+### Removed
+  * `sensiolabs/security-checker`
+
+### Changed
+  * `minimum-stability` [stable]
+  * `php` [^7.4]
+
+[3.0.0]: https://github.com/codekandis/phpunit/compare/2.0.1...3.0.0
+
+---
 ## [2.0.1] - 2021-01-17
 
 ### Changed
