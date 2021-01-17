@@ -39,7 +39,7 @@ class FooTest extends TestCase
 
 [xtlink-version-badge]: https://img.shields.io/badge/version-development-blue.svg
 [xtlink-license-badge]: https://img.shields.io/badge/license-MIT-yellow.svg
-[xtlink-php-version-badge]: https://img.shields.io/badge/php-%3E%3D%207.3-8892BF.svg
+[xtlink-php-version-badge]: https://img.shields.io/badge/php-%3E%3D%207.4-8892BF.svg
 [xtlink-php-net]: https://php.net
 [xtlink-packagist-phpunit-phpunit]: https://packagist.org/packages/phpunit/phpunit
 
