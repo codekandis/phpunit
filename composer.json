@@ -1,6 +1,6 @@
 {
 	"name": "codekandis/phpunit",
-	"description": "This library provides several wrapper and helper classes for the package `PHPUnit`.",
+	"description": "`codekandis/phpunit` is a library providing any several wrapper and helper classes for the package `PHPUnit`.",
 	"keywords": [
 		"php",
 		"phpunit wrapper helper classes",
@@ -27,11 +27,12 @@
 		"source": "https://github.com/codekandis/phpunit/tree/master"
 	},
 	"require": {
-		"php": ">=7.4",
-		"phpunit/phpunit": "^9",
-		"dms/phpunit-arraysubset-asserts": "^0"
+		"php": ">=8.1",
+		"dms/phpunit-arraysubset-asserts": "^0",
+		"phpunit/phpunit": "^9"
 	},
 	"require-dev": {
+		"rector/rector": "^0",
 		"roave/security-advisories": "dev-master"
 	},
 	"autoload": {
@@ -40,9 +41,5 @@
 				"src/"
 			]
 		}
-	},
-	"scripts": {
-		"post-update-cmd": [
-		]
 	}
 }
