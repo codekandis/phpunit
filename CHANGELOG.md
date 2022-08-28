@@ -5,6 +5,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [keep a changelog][xtlink-keep-a-changelog]
 and this project adheres to [Semantic Versioning 2.0.0][xtlink-semantic-versioning].
 
+## [4.0.0] - 2022-08-28
+
+### Changed
+
+* composer package dependencies
+  * changed
+    * `php` [^8.1]
+  * added
+    * `rector/rector` [^0]
+* updated the PHP version in the `README.md` to `8.1`
+
+### Added
+
+* rector configuration with set list `PHP_81`
+* rector shell script
+
+[4.0.0]: https://github.com/codekandis/phpunit/compare/3.0.0...4.0.0
+
+---
 ## [3.0.0] - 2021-01-17
 
 ### Changed
