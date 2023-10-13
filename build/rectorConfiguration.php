@@ -3,7 +3,6 @@
 namespace CodeKandis\PhpUnit\Build;
 
 use Rector\Config\RectorConfig;
-use Rector\Core\ValueObject\PhpVersion;
 use Rector\Set\ValueObject\LevelSetList;
 use Rector\Set\ValueObject\SetList;
 use function dirname;
@@ -15,8 +14,6 @@ use function sprintf;
  */
 $setupRectorConfiguration = static function ( RectorConfig $rectorConfig ): void
 {
-	$rectorConfig->phpVersion( PhpVersion::PHP_83 );
-
 	$rectorConfig->sets(
 		[
 			LevelSetList::UP_TO_PHP_83,
@@ -26,7 +23,6 @@ $setupRectorConfiguration = static function ( RectorConfig $rectorConfig ): void
 			SetList::EARLY_RETURN,
 			SetList::GMAGICK_TO_IMAGICK,
 			SetList::INSTANCEOF,
-			SetList::NAMING,
 			SetList::PRIVATIZATION,
 			SetList::STRICT_BOOLEANS,
 			SetList::TYPE_DECLARATION
