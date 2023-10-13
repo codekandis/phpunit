@@ -5,6 +5,39 @@ All notable changes to this project will be documented in this file.
 The format is based on [keep a changelog][xtlink-keep-a-changelog]
 and this project adheres to [Semantic Versioning 2.0.0][xtlink-semantic-versioning].
 
+## [5.0.0] - 2024-02-13
+
+### Changed
+
+* composer package
+  * changed
+    * require
+      * `php` [>=8.3]
+      * `dms/phpunit-arraysubset-asserts` [^0.5.0]
+      * `phpunit/phpunit` [^10.4.1]
+    * require-dev
+      * `rector/rector` [^0.18.5]
+  * added
+    * version
+    * autoload-dev
+      * psr-4
+        * `CodeKandis\PhpUnit\Build\`
+          * `build/`
+* rector configuration script
+* rector shell script
+  * changed the default behaviour
+* `CODE_OF_CONDUCT.md`
+* `README.md`
+  * PHP version `8.3`
+  * documentation
+
+### Added
+
+* interface `DataProviderInterface` of any data provider
+
+[5.0.0]: https://github.com/codekandis/phpunit/compare/4.0.0...5.0.0
+
+---
 ## [4.0.0] - 2022-08-28
 
 ### Changed
