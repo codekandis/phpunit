@@ -1,7 +1,7 @@
 {
 	"name": "codekandis/phpunit",
 	"description": "`codekandis/phpunit` is a library providing several wrapper and helper classes for the package `PHPUnit`.",
-	"version": "dev-development",
+	"version": "5.0.0",
 	"keywords": [
 		"php",
 		"phpunit wrapper helper classes",
