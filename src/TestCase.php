@@ -4,6 +4,7 @@ namespace CodeKandis\PhpUnit;
 use CodeKandis\PhpUnit\Constraints\ArrayContainsKeyedSubsetConstraint;
 use CodeKandis\PhpUnit\Constraints\ArrayContainsUnkeyedSubsetConstraint;
 use CodeKandis\PhpUnit\Constraints\IsKeyedSubsetOfArrayConstraint;
+use CodeKandis\PhpUnit\Constraints\IsSubClassOfConstraint;
 use CodeKandis\PhpUnit\Constraints\IsUnkeyedSubsetOfArrayConstraint;
 use Override;
 use PHPUnit\Framework\TestCase as TestCaseOrigin;
@@ -64,6 +65,19 @@ abstract class TestCase extends TestCaseOrigin implements TestCaseInterface
 			$actualSubset,
 			new IsUnkeyedSubsetOfArrayConstraint( $expectedArray, $strict ),
 			$message
+		);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	#[Override]
+	public static function assertIsSubClassOf( string $expectedInterfaceOrClassName, mixed $actual, string $message = '' ): void
+	{
+		static::assertThat(
+			$actual,
+			new IsSubClassOfConstraint( $expectedInterfaceOrClassName ),
+			$message,
 		);
 	}
 }
