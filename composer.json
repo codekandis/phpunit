@@ -48,5 +48,10 @@
 				"build/"
 			]
 		}
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-main": "5.0.0-dev"
+		}
 	}
 }
