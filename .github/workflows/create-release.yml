@@ -1,0 +1,14 @@
+---
+name: Run tests and create release
+
+on:
+  push:
+    tags:
+      - "[0-9]+.[0-9]+.[0-9]+"
+
+permissions:
+  contents: write
+
+jobs:
+  github-create-release:
+    uses: ./.github/workflows/_github-create-release.yml
