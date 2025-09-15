@@ -5,6 +5,32 @@ All notable changes to this project will be documented in this file.
 The format is based on [keep a changelog][xtlink-keep-a-changelog]
 and this project adheres to [Semantic Versioning 2.0.0][xtlink-semantic-versioning].
 
+## [5.0.0] - 2025-09-15
+
+### Changed
+
+* composer packages
+  * changed
+    * keywords
+    * require
+      * `php` [>=8.4]
+      * `dms/phpunit-arraysubset-asserts` [~0.5]
+      * `phpunit/phpunit` [~10.5]
+    * require-dev
+      * `rector/rector` [~1.2]
+* moved `CODE_OF_CONDUCT.md`
+
+### Added
+
+* `DataProviderInterface` representing any external data provider
+* subclass assertion
+* `rector` scripts
+* `GitHub` workflows
+* `.gitattributes` to ignore dev-assets
+
+[5.0.0]: https://github.com/codekandis/phpunit/compare/4.0.0...5.0.0
+
+---
 ## [4.0.0] - 2022-08-28
 
 ### Changed
@@ -72,5 +98,5 @@ and this project adheres to [Semantic Versioning 2.0.0][xtlink-semantic-versioni
 
 
 
-[xtlink-keep-a-changelog]: http://keepachangelog.com/en/1.0.0/
+[xtlink-keep-a-changelog]: http://keepachangelog.com/en/1.1.0/
 [xtlink-semantic-versioning]: http://semver.org/spec/v2.0.0.html
