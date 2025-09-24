@@ -5,7 +5,33 @@ All notable changes to this project will be documented in this file.
 The format is based on [keep a changelog][xtlink-keep-a-changelog]
 and this project adheres to [Semantic Versioning 2.0.0][xtlink-semantic-versioning].
 
-## [4.0.0] - 2022-08-28
+## [5.0.0] - 2025-09-24
+
+### Changed
+
+* composer packages
+  * changed
+    * keywords
+    * require
+      * `php` [>=8.4]
+      * `dms/phpunit-arraysubset-asserts` [5.0.0]
+      * `phpunit/phpunit` [^10.5.56]
+    * require-dev
+      * `rector/rector` [^1.2.10]
+* moved `CODE_OF_CONDUCT.md`
+
+### Added
+
+* `DataProviderInterface` representing any external data provider
+* subclass assertion
+* `rector` scripts
+* `GitHub` workflows
+* `.gitattributes` to ignore dev-assets
+
+[5.0.0]: https://github.com/codekandis/phpunit/compare/4.0.0...5.0.0
+
+---
+## [5.0.0] - 2025-09-24
 
 ### Changed
 
@@ -21,10 +47,10 @@ and this project adheres to [Semantic Versioning 2.0.0][xtlink-semantic-versioni
 * rector configuration with set list `PHP_81`
 * rector shell script
 
-[4.0.0]: https://github.com/codekandis/phpunit/compare/3.0.0...4.0.0
+[5.0.0]: https://github.com/codekandis/phpunit/compare/3.0.0...4.0.0
 
 ---
-## [3.0.0] - 2021-01-17
+## [5.0.0] - 2025-09-24
 
 ### Changed
 
@@ -36,19 +62,19 @@ and this project adheres to [Semantic Versioning 2.0.0][xtlink-semantic-versioni
     * `sensiolabs/security-checker`
 * updated the PHP version in the `README.md` to `7.4`
 
-[3.0.0]: https://github.com/codekandis/phpunit/compare/2.0.1...3.0.0
+[5.0.0]: https://github.com/codekandis/phpunit/compare/2.0.1...3.0.0
 
 ---
-## [2.0.1] - 2021-01-17
+## [5.0.0] - 2025-09-24
 
 ### Changed
 
 * the release version in the `README.md`
 
-[2.0.1]: https://github.com/codekandis/phpunit/compare/2.0.0...2.0.1
+[5.0.0]: https://github.com/codekandis/phpunit/compare/2.0.0...2.0.1
 
 ---
-## [2.0.0] - 2020-08-01
+## [5.0.0] - 2025-09-24
 
 ### Changed
 
@@ -56,10 +82,10 @@ and this project adheres to [Semantic Versioning 2.0.0][xtlink-semantic-versioni
   * changed
     * `phpunit/phpunit` [^9]
 
-[2.0.0]: https://github.com/codekandis/phpunit/compare/1.0.0...2.0.0
+[5.0.0]: https://github.com/codekandis/phpunit/compare/1.0.0...2.0.0
 
 ---
-## [1.0.0] - 2019-12-27
+## [5.0.0] - 2025-09-24
 
 ### Added
 
@@ -68,9 +94,9 @@ and this project adheres to [Semantic Versioning 2.0.0][xtlink-semantic-versioni
 * `README.md`
 * `CHANGELOG.md`
 
-[1.0.0]: https://github.com/codekandis/phpunit/tree/1.0.0
+[5.0.0]: https://github.com/codekandis/phpunit/tree/1.0.0
 
 
 
-[xtlink-keep-a-changelog]: http://keepachangelog.com/en/1.0.0/
+[xtlink-keep-a-changelog]: http://keepachangelog.com/en/1.1.0/
 [xtlink-semantic-versioning]: http://semver.org/spec/v2.0.0.html
