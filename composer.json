@@ -42,10 +42,25 @@
 			]
 		}
 	},
+	"autoload-dev": {
+		"psr-4": {
+			"CodeKandis\\PhpUnit\\Tests\\": [
+				"tests/"
+			]
+		}
+	},
 	"scripts": {
 		"analyse": [
 			"Composer\\Config::disableProcessTimeout",
 			"./vendor/bin/phpstan analyse --configuration ./build/phpstan.neon"
+		],
+		"test": [
+			"Composer\\Config::disableProcessTimeout",
+			"/usr/bin/env php -d xdebug.mode=off ./vendor/bin/phpunit --configuration ./build/phpunit.xml --no-coverage"
+		],
+		"test-coverage": [
+			"Composer\\Config::disableProcessTimeout",
+			"/usr/bin/env php -d xdebug.mode=coverage ./vendor/bin/phpunit --configuration ./build/phpunit.xml"
 		]
 	}
 }
