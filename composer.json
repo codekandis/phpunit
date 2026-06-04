@@ -1,9 +1,9 @@
 {
 	"name": "codekandis/phpunit",
-	"description": "`codekandis/phpunit` is a library providing any several wrapper and helper classes for the package `PHPUnit`.",
+	"description": "`codekandis/phpunit` is a library providing an enhanced test case wrapper with additional constraint assertions for `PhpUnit`.",
 	"keywords": [
 		"php",
-		"phpunit wrapper helper classes",
+		"library",
 		"phpunit",
 		"wrapper",
 		"helper",
@@ -27,13 +27,13 @@
 		"source": "https://github.com/codekandis/phpunit/tree/master"
 	},
 	"require": {
-		"php": ">=8.1",
-		"dms/phpunit-arraysubset-asserts": "^0",
-		"phpunit/phpunit": "^9"
+		"php": "^8.5",
+		"phpunit/phpunit": "^13.1.10"
 	},
 	"require-dev": {
-		"rector/rector": "^0",
-		"roave/security-advisories": "dev-master"
+		"roave/security-advisories": "dev-master",
+		"phpstan/phpstan": "^2.1.54",
+		"rector/rector": "^2.4.3"
 	},
 	"autoload": {
 		"psr-4": {
@@ -41,5 +41,26 @@
 				"src/"
 			]
 		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"CodeKandis\\PhpUnit\\Tests\\": [
+				"tests/"
+			]
+		}
+	},
+	"scripts": {
+		"analyse": [
+			"Composer\\Config::disableProcessTimeout",
+			"./vendor/bin/phpstan analyse --configuration ./build/phpstan.neon"
+		],
+		"test": [
+			"Composer\\Config::disableProcessTimeout",
+			"/usr/bin/env php -d xdebug.mode=off ./vendor/bin/phpunit --configuration ./build/phpunit.xml --no-coverage"
+		],
+		"test-coverage": [
+			"Composer\\Config::disableProcessTimeout",
+			"/usr/bin/env php -d xdebug.mode=coverage ./vendor/bin/phpunit --configuration ./build/phpunit.xml"
+		]
 	}
 }
