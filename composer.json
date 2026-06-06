@@ -1,13 +1,16 @@
 {
 	"name": "codekandis/phpunit",
-	"description": "`codekandis/phpunit` is a library providing an enhanced test case wrapper with additional constraint assertions for `PhpUnit`.",
+	"description":  "`codekandis/phpunit` is a library for `PHPUnit` testing with enhanced test cases and custom constraint assertions.",
 	"keywords": [
 		"php",
-		"library",
 		"phpunit",
-		"wrapper",
-		"helper",
-		"classes"
+		"testing",
+		"test-case",
+		"data-provider",
+		"assertions",
+		"constraints",
+		"array-subset",
+		"subclass"
 	],
 	"minimum-stability": "stable",
 	"prefer-stable": true,
@@ -61,6 +64,10 @@
 		"test-coverage": [
 			"Composer\\Config::disableProcessTimeout",
 			"/usr/bin/env php -d xdebug.mode=coverage ./vendor/bin/phpunit --configuration ./build/phpunit.xml"
+		],
+		"test-coverage-paths": [
+			"Composer\\Config::disableProcessTimeout",
+			"/usr/bin/env php -d xdebug.mode=coverage ./vendor/bin/phpunit --configuration ./build/phpunit.xml --path-coverage"
 		]
 	}
 }

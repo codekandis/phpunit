@@ -5,8 +5,8 @@
 [![Minimum PHP Version][xtlink-php-version-badge]][xtlink-php-net]
 ![Code Coverage][xtlink-code-coverage-badge]
 
-`codekandis/phpunit` is a library providing an enhanced test case wrapper with additional constraint assertions for
-[`phpunit/phpunit`][xtlink-packagist-phpunit-phpunit].
+`codekandis/phpunit` is a library for [`PHPUnit`][xtlink-packagist-phpunit-phpunit] testing with enhanced test cases and
+custom constraint assertions.
 
 ## Index
 
@@ -34,7 +34,7 @@ $ composer require --dev codekandis/phpunit
 
 ### Using the test case wrapper
 
-Create a test case that extends the `TestCase` wrapper.
+Create a test case that extends the [`TestCase`][srclink-testcase] wrapper.
 
 The additional constraint assertions are available through this wrapper.
 
@@ -51,7 +51,7 @@ class ApplicationTest extends TestCase
 
 ### Using the data provider interface
 
-Create a data provider that implements `DataProviderInterface`.
+Create a data provider that implements [`DataProviderInterface`][srclink-dataproviderinterface].
 
 ```php
 <?php declare( strict_types = 1 );
@@ -79,7 +79,8 @@ final class DifferentValuesDataProvider implements DataProviderInterface
 }
 ```
 
-Use the data provider in your test case.
+Use the data provider in your test case through
+[`DataProviderInterface::PROVIDER_METHOD_NAME`][srclink-dataproviderinterface-provider-method-name].
 
 ```php
 <?php declare( strict_types = 1 );
@@ -103,8 +104,9 @@ final class DifferentValuesTest extends TestCase
 
 #### `TestCase::assertArrayContainsKeyedSubset()`
 
-Use `TestCase::assertArrayContainsKeyedSubset()` to assert that `$actualArray` contains `$expectedSubset` with matching
-keys and values. Set `$strict` to `true` to compare values strictly, or to `false` to compare values loosely.
+Use [`TestCase::assertArrayContainsKeyedSubset()`][srclink-testcase-assert-array-contains-keyed-subset] to assert that
+`$actualArray` contains `$expectedSubset` with matching keys and values. Set `$strict` to `true` to compare values
+strictly, or to `false` to compare values loosely.
 
 ```php
 <?php declare( strict_types = 1 );
@@ -136,9 +138,9 @@ final class ArrayTest extends TestCase
 
 #### `TestCase::assertArrayContainsUnkeyedSubset()`
 
-Use `TestCase::assertArrayContainsUnkeyedSubset()` to assert that `$actualArray` contains the values of
-`$expectedSubset` without comparing keys. Set `$strict` to `true` to compare values strictly, or to `false` to compare
-values loosely.
+Use [`TestCase::assertArrayContainsUnkeyedSubset()`][srclink-testcase-assert-array-contains-unkeyed-subset] to assert
+that `$actualArray` contains the values of `$expectedSubset` without comparing keys. Set `$strict` to `true` to compare
+values strictly, or to `false` to compare values loosely.
 
 ```php
 <?php declare( strict_types = 1 );
@@ -166,8 +168,9 @@ final class ArrayTest extends TestCase
 
 #### `TestCase::assertIsKeyedSubsetOfArray()`
 
-Use `TestCase::assertIsKeyedSubsetOfArray()` to assert that `$actualSubset` is contained in `$expectedArray` with
-matching keys and values. Set `$strict` to `true` to compare values strictly, or to `false` to compare values loosely.
+Use [`TestCase::assertIsKeyedSubsetOfArray()`][srclink-testcase-assert-is-keyed-subset-of-array] to assert that
+`$actualSubset` is contained in `$expectedArray` with matching keys and values. Set `$strict` to `true` to compare
+values strictly, or to `false` to compare values loosely.
 
 ```php
 <?php declare( strict_types = 1 );
@@ -199,9 +202,9 @@ final class ArrayTest extends TestCase
 
 #### `TestCase::assertIsUnkeyedSubsetOfArray()`
 
-Use `TestCase::assertIsUnkeyedSubsetOfArray()` to assert that the values of `$actualSubset` are contained in
-`$expectedArray` without comparing keys. Set `$strict` to `true` to compare values strictly, or to `false` to compare
-values loosely.
+Use [`TestCase::assertIsUnkeyedSubsetOfArray()`][srclink-testcase-assert-is-unkeyed-subset-of-array] to assert that the
+values of `$actualSubset` are contained in `$expectedArray` without comparing keys. Set `$strict` to `true` to compare
+values strictly, or to `false` to compare values loosely.
 
 ```php
 <?php declare( strict_types = 1 );
@@ -231,8 +234,8 @@ final class ArrayTest extends TestCase
 
 #### `TestCase::assertIsSubClassOf()`
 
-Use `TestCase::assertIsSubClassOf()` to assert that `$actual` is a subclass of or implements
-`$expectedInterfaceOrClassName`. `$actual` can be an object or a class name.
+Use [`TestCase::assertIsSubClassOf()`][srclink-testcase-assert-is-subclass-of] to assert that `$actual` is a subclass of
+or implements `$expectedInterfaceOrClassName`. `$actual` can be an object or a class name.
 
 ```php
 <?php declare( strict_types = 1 );
@@ -260,7 +263,9 @@ final class MessageHandlerTest extends TestCase
 }
 ```
 
-The assertion throws an `UnknownClassOrInterfaceException` if the expected type does not exist.
+The assertion throws an
+[`UnknownClassOrInterfaceException`][xtlink-phpunit-unknown-class-or-interface-exception] if the expected type does not
+exist.
 
 
 
@@ -270,6 +275,15 @@ The assertion throws an `UnknownClassOrInterfaceException` if the expected type 
 [xtlink-code-coverage-badge]: https://img.shields.io/badge/coverage-100%25-green.svg
 [xtlink-php-net]: https://php.net
 [xtlink-packagist-phpunit-phpunit]: https://packagist.org/packages/phpunit/phpunit
+[xtlink-phpunit-unknown-class-or-interface-exception]: https://github.com/sebastianbergmann/phpunit/blob/13.1.10/src/Framework/UnknownClassOrInterfaceException.php
 
 [srclink-changelog]: ./CHANGELOG.md
 [srclink-license]: ./LICENSE
+[srclink-dataproviderinterface]: ./src/DataProviderInterface.php#L11
+[srclink-dataproviderinterface-provider-method-name]: ./src/DataProviderInterface.php#L17
+[srclink-testcase]: ./src/TestCase.php#L18
+[srclink-testcase-assert-array-contains-keyed-subset]: ./src/TestCase.php#L40
+[srclink-testcase-assert-array-contains-unkeyed-subset]: ./src/TestCase.php#L53
+[srclink-testcase-assert-is-keyed-subset-of-array]: ./src/TestCase.php#L66
+[srclink-testcase-assert-is-unkeyed-subset-of-array]: ./src/TestCase.php#L79
+[srclink-testcase-assert-is-subclass-of]: ./src/TestCase.php#L92
