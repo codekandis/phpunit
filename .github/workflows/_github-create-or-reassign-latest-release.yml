@@ -33,7 +33,7 @@ jobs:
 
           releaseChangelog=""
           isReadingSection=false
-          while read -r changelogLine
+          while IFS= read -r changelogLine
           do
             if [[ "${changelogLine}" =~ ${sectionStartRegEx} ]]
             then
@@ -75,9 +75,11 @@ jobs:
             exit 1
           fi
 
-          echo "release_changelog<<EOF" >> ${GITHUB_OUTPUT}
-          echo "${releaseChangelog}" >> ${GITHUB_OUTPUT}
-          echo "EOF" >> ${GITHUB_OUTPUT}
+          {
+            printf '%s\n' "release_changelog<<EOF"
+            printf '%s' "${releaseChangelog}"
+            printf '%s\n' "EOF"
+          } >> "${GITHUB_OUTPUT}"
 
       - name: Create or update release with changelog
         env:
