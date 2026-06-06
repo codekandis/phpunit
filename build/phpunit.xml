@@ -24,8 +24,14 @@
 	colors="false"
 	cacheResult="false">
 	<testsuites>
-		<testsuite name="codekandis/phpunit">
-			<directory>../tests</directory>
+		<testsuite name="architecture">
+			<directory>../tests/Suites/Architecture</directory>
+		</testsuite>
+		<testsuite name="integration">
+			<directory>../tests/Suites/Integration</directory>
+		</testsuite>
+		<testsuite name="unit">
+			<directory>../tests/Suites/Unit</directory>
 		</testsuite>
 	</testsuites>
 	<source>
