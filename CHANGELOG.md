@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [keep a changelog][xtlink-keep-a-changelog]
 and this project adheres to [Semantic Versioning 2.0.0][xtlink-semantic-versioning].
 
+## [5.0.2] - 2026-06-06
+
+### Fixed
+
+* GitHub release workflow
+  * preserved leading and trailing whitespace when reading release changelog sections
+  * wrote release changelog output through `printf`
+  * quoted `GITHUB_OUTPUT` path expansion
+
+[5.0.2]: https://github.com/codekandis/phpunit/compare/5.0.1..5.0.2
+
+---
 ## [5.0.1] - 2026-06-06
 
 ### Changed
