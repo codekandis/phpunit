@@ -58,12 +58,12 @@ interface TestCaseInterface
 
 	/**
 	 * Asserts that an object or FQCN is a subclass of an expected interface or class FQCN.
-	 * @param string $expectedInterfaceOrClassName The expected interface or class FQCN.
+	 * @param string $expectedInterfaceOrClassFqcn The expected interface or class FQCN.
 	 * @param mixed $actual The actual object or FQCN.
 	 * @param string $message The additional failure message.
 	 * @return void
 	 * @throws UnknownClassOrInterfaceException The expected interface or class FQCN does not exist.
 	 * @throws ExpectationFailedException The assertion failed.
 	 */
-	public static function assertIsSubClassOf( string $expectedInterfaceOrClassName, mixed $actual, string $message = '' ): void;
+	public static function assertIsSubClassOf( string $expectedInterfaceOrClassFqcn, mixed $actual, string $message = '' ): void;
 }

@@ -112,27 +112,27 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0000 
 			],
 			18  => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_0, Values::BOOLEAN_FALSE ),
-				'value'          => Values::INTERFACE_NAME,
+				'value'          => Values::INTERFACE_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			19  => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_0, Values::BOOLEAN_FALSE ),
-				'value'          => Values::UNKNOWN_INTERFACE_NAME,
+				'value'          => Values::UNKNOWN_INTERFACE_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			20  => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_0, Values::BOOLEAN_FALSE ),
-				'value'          => Values::CLASS_NAME_0,
+				'value'          => Values::CLASS_FQCN_0,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			21  => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_0, Values::BOOLEAN_FALSE ),
-				'value'          => Values::CLASS_NAME_1,
+				'value'          => Values::CLASS_FQCN_1,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			22  => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_0, Values::BOOLEAN_FALSE ),
-				'value'          => Values::UNKNOWN_CLASS_NAME,
+				'value'          => Values::UNKNOWN_CLASS_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			23  => [
@@ -387,27 +387,27 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0000 
 			],
 			73  => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_0, Values::BOOLEAN_TRUE ),
-				'value'          => Values::INTERFACE_NAME,
+				'value'          => Values::INTERFACE_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			74  => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_0, Values::BOOLEAN_TRUE ),
-				'value'          => Values::UNKNOWN_INTERFACE_NAME,
+				'value'          => Values::UNKNOWN_INTERFACE_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			75  => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_0, Values::BOOLEAN_TRUE ),
-				'value'          => Values::CLASS_NAME_0,
+				'value'          => Values::CLASS_FQCN_0,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			76  => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_0, Values::BOOLEAN_TRUE ),
-				'value'          => Values::CLASS_NAME_1,
+				'value'          => Values::CLASS_FQCN_1,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			77  => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_0, Values::BOOLEAN_TRUE ),
-				'value'          => Values::UNKNOWN_CLASS_NAME,
+				'value'          => Values::UNKNOWN_CLASS_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			78  => [
@@ -662,27 +662,27 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0000 
 			],
 			128 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_1, Values::BOOLEAN_FALSE ),
-				'value'          => Values::INTERFACE_NAME,
+				'value'          => Values::INTERFACE_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			129 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_1, Values::BOOLEAN_FALSE ),
-				'value'          => Values::UNKNOWN_INTERFACE_NAME,
+				'value'          => Values::UNKNOWN_INTERFACE_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			130 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_1, Values::BOOLEAN_FALSE ),
-				'value'          => Values::CLASS_NAME_0,
+				'value'          => Values::CLASS_FQCN_0,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			131 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_1, Values::BOOLEAN_FALSE ),
-				'value'          => Values::CLASS_NAME_1,
+				'value'          => Values::CLASS_FQCN_1,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			132 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_1, Values::BOOLEAN_FALSE ),
-				'value'          => Values::UNKNOWN_CLASS_NAME,
+				'value'          => Values::UNKNOWN_CLASS_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			133 => [
@@ -937,27 +937,27 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0000 
 			],
 			183 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_1, Values::BOOLEAN_TRUE ),
-				'value'          => Values::INTERFACE_NAME,
+				'value'          => Values::INTERFACE_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			184 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_1, Values::BOOLEAN_TRUE ),
-				'value'          => Values::UNKNOWN_INTERFACE_NAME,
+				'value'          => Values::UNKNOWN_INTERFACE_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			185 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_1, Values::BOOLEAN_TRUE ),
-				'value'          => Values::CLASS_NAME_0,
+				'value'          => Values::CLASS_FQCN_0,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			186 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_1, Values::BOOLEAN_TRUE ),
-				'value'          => Values::CLASS_NAME_1,
+				'value'          => Values::CLASS_FQCN_1,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			187 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_1, Values::BOOLEAN_TRUE ),
-				'value'          => Values::UNKNOWN_CLASS_NAME,
+				'value'          => Values::UNKNOWN_CLASS_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			188 => [
@@ -1212,27 +1212,27 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0000 
 			],
 			238 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_2, Values::BOOLEAN_FALSE ),
-				'value'          => Values::INTERFACE_NAME,
+				'value'          => Values::INTERFACE_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			239 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_2, Values::BOOLEAN_FALSE ),
-				'value'          => Values::UNKNOWN_INTERFACE_NAME,
+				'value'          => Values::UNKNOWN_INTERFACE_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			240 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_2, Values::BOOLEAN_FALSE ),
-				'value'          => Values::CLASS_NAME_0,
+				'value'          => Values::CLASS_FQCN_0,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			241 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_2, Values::BOOLEAN_FALSE ),
-				'value'          => Values::CLASS_NAME_1,
+				'value'          => Values::CLASS_FQCN_1,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			242 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_2, Values::BOOLEAN_FALSE ),
-				'value'          => Values::UNKNOWN_CLASS_NAME,
+				'value'          => Values::UNKNOWN_CLASS_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			243 => [
@@ -1487,27 +1487,27 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0000 
 			],
 			293 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_2, Values::BOOLEAN_TRUE ),
-				'value'          => Values::INTERFACE_NAME,
+				'value'          => Values::INTERFACE_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			294 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_2, Values::BOOLEAN_TRUE ),
-				'value'          => Values::UNKNOWN_INTERFACE_NAME,
+				'value'          => Values::UNKNOWN_INTERFACE_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			295 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_2, Values::BOOLEAN_TRUE ),
-				'value'          => Values::CLASS_NAME_0,
+				'value'          => Values::CLASS_FQCN_0,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			296 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_2, Values::BOOLEAN_TRUE ),
-				'value'          => Values::CLASS_NAME_1,
+				'value'          => Values::CLASS_FQCN_1,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			297 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_2, Values::BOOLEAN_TRUE ),
-				'value'          => Values::UNKNOWN_CLASS_NAME,
+				'value'          => Values::UNKNOWN_CLASS_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			298 => [
@@ -1762,27 +1762,27 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0000 
 			],
 			348 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_3, Values::BOOLEAN_FALSE ),
-				'value'          => Values::INTERFACE_NAME,
+				'value'          => Values::INTERFACE_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			349 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_3, Values::BOOLEAN_FALSE ),
-				'value'          => Values::UNKNOWN_INTERFACE_NAME,
+				'value'          => Values::UNKNOWN_INTERFACE_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			350 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_3, Values::BOOLEAN_FALSE ),
-				'value'          => Values::CLASS_NAME_0,
+				'value'          => Values::CLASS_FQCN_0,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			351 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_3, Values::BOOLEAN_FALSE ),
-				'value'          => Values::CLASS_NAME_1,
+				'value'          => Values::CLASS_FQCN_1,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			352 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_3, Values::BOOLEAN_FALSE ),
-				'value'          => Values::UNKNOWN_CLASS_NAME,
+				'value'          => Values::UNKNOWN_CLASS_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			353 => [
@@ -2037,27 +2037,27 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0000 
 			],
 			403 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_3, Values::BOOLEAN_TRUE ),
-				'value'          => Values::INTERFACE_NAME,
+				'value'          => Values::INTERFACE_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			404 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_3, Values::BOOLEAN_TRUE ),
-				'value'          => Values::UNKNOWN_INTERFACE_NAME,
+				'value'          => Values::UNKNOWN_INTERFACE_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			405 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_3, Values::BOOLEAN_TRUE ),
-				'value'          => Values::CLASS_NAME_0,
+				'value'          => Values::CLASS_FQCN_0,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			406 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_3, Values::BOOLEAN_TRUE ),
-				'value'          => Values::CLASS_NAME_1,
+				'value'          => Values::CLASS_FQCN_1,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			407 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_3, Values::BOOLEAN_TRUE ),
-				'value'          => Values::UNKNOWN_CLASS_NAME,
+				'value'          => Values::UNKNOWN_CLASS_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			408 => [
@@ -2312,27 +2312,27 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0000 
 			],
 			458 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_4, Values::BOOLEAN_FALSE ),
-				'value'          => Values::INTERFACE_NAME,
+				'value'          => Values::INTERFACE_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			459 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_4, Values::BOOLEAN_FALSE ),
-				'value'          => Values::UNKNOWN_INTERFACE_NAME,
+				'value'          => Values::UNKNOWN_INTERFACE_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			460 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_4, Values::BOOLEAN_FALSE ),
-				'value'          => Values::CLASS_NAME_0,
+				'value'          => Values::CLASS_FQCN_0,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			461 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_4, Values::BOOLEAN_FALSE ),
-				'value'          => Values::CLASS_NAME_1,
+				'value'          => Values::CLASS_FQCN_1,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			462 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_4, Values::BOOLEAN_FALSE ),
-				'value'          => Values::UNKNOWN_CLASS_NAME,
+				'value'          => Values::UNKNOWN_CLASS_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			463 => [
@@ -2587,27 +2587,27 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0000 
 			],
 			513 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_4, Values::BOOLEAN_TRUE ),
-				'value'          => Values::INTERFACE_NAME,
+				'value'          => Values::INTERFACE_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			514 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_4, Values::BOOLEAN_TRUE ),
-				'value'          => Values::UNKNOWN_INTERFACE_NAME,
+				'value'          => Values::UNKNOWN_INTERFACE_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			515 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_4, Values::BOOLEAN_TRUE ),
-				'value'          => Values::CLASS_NAME_0,
+				'value'          => Values::CLASS_FQCN_0,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			516 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_4, Values::BOOLEAN_TRUE ),
-				'value'          => Values::CLASS_NAME_1,
+				'value'          => Values::CLASS_FQCN_1,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			517 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_4, Values::BOOLEAN_TRUE ),
-				'value'          => Values::UNKNOWN_CLASS_NAME,
+				'value'          => Values::UNKNOWN_CLASS_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			518 => [
@@ -2862,27 +2862,27 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0000 
 			],
 			568 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_5, Values::BOOLEAN_FALSE ),
-				'value'          => Values::INTERFACE_NAME,
+				'value'          => Values::INTERFACE_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			569 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_5, Values::BOOLEAN_FALSE ),
-				'value'          => Values::UNKNOWN_INTERFACE_NAME,
+				'value'          => Values::UNKNOWN_INTERFACE_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			570 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_5, Values::BOOLEAN_FALSE ),
-				'value'          => Values::CLASS_NAME_0,
+				'value'          => Values::CLASS_FQCN_0,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			571 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_5, Values::BOOLEAN_FALSE ),
-				'value'          => Values::CLASS_NAME_1,
+				'value'          => Values::CLASS_FQCN_1,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			572 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_5, Values::BOOLEAN_FALSE ),
-				'value'          => Values::UNKNOWN_CLASS_NAME,
+				'value'          => Values::UNKNOWN_CLASS_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			573 => [
@@ -3137,27 +3137,27 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0000 
 			],
 			623 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_5, Values::BOOLEAN_TRUE ),
-				'value'          => Values::INTERFACE_NAME,
+				'value'          => Values::INTERFACE_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			624 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_5, Values::BOOLEAN_TRUE ),
-				'value'          => Values::UNKNOWN_INTERFACE_NAME,
+				'value'          => Values::UNKNOWN_INTERFACE_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			625 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_5, Values::BOOLEAN_TRUE ),
-				'value'          => Values::CLASS_NAME_0,
+				'value'          => Values::CLASS_FQCN_0,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			626 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_5, Values::BOOLEAN_TRUE ),
-				'value'          => Values::CLASS_NAME_1,
+				'value'          => Values::CLASS_FQCN_1,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			627 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_5, Values::BOOLEAN_TRUE ),
-				'value'          => Values::UNKNOWN_CLASS_NAME,
+				'value'          => Values::UNKNOWN_CLASS_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			628 => [
@@ -3412,27 +3412,27 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0000 
 			],
 			678 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_6, Values::BOOLEAN_FALSE ),
-				'value'          => Values::INTERFACE_NAME,
+				'value'          => Values::INTERFACE_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			679 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_6, Values::BOOLEAN_FALSE ),
-				'value'          => Values::UNKNOWN_INTERFACE_NAME,
+				'value'          => Values::UNKNOWN_INTERFACE_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			680 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_6, Values::BOOLEAN_FALSE ),
-				'value'          => Values::CLASS_NAME_0,
+				'value'          => Values::CLASS_FQCN_0,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			681 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_6, Values::BOOLEAN_FALSE ),
-				'value'          => Values::CLASS_NAME_1,
+				'value'          => Values::CLASS_FQCN_1,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			682 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_6, Values::BOOLEAN_FALSE ),
-				'value'          => Values::UNKNOWN_CLASS_NAME,
+				'value'          => Values::UNKNOWN_CLASS_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			683 => [
@@ -3687,27 +3687,27 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0000 
 			],
 			733 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_6, Values::BOOLEAN_TRUE ),
-				'value'          => Values::INTERFACE_NAME,
+				'value'          => Values::INTERFACE_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			734 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_6, Values::BOOLEAN_TRUE ),
-				'value'          => Values::UNKNOWN_INTERFACE_NAME,
+				'value'          => Values::UNKNOWN_INTERFACE_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			735 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_6, Values::BOOLEAN_TRUE ),
-				'value'          => Values::CLASS_NAME_0,
+				'value'          => Values::CLASS_FQCN_0,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			736 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_6, Values::BOOLEAN_TRUE ),
-				'value'          => Values::CLASS_NAME_1,
+				'value'          => Values::CLASS_FQCN_1,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			737 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_6, Values::BOOLEAN_TRUE ),
-				'value'          => Values::UNKNOWN_CLASS_NAME,
+				'value'          => Values::UNKNOWN_CLASS_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			738 => [
@@ -3962,27 +3962,27 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0000 
 			],
 			788 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_7, Values::BOOLEAN_FALSE ),
-				'value'          => Values::INTERFACE_NAME,
+				'value'          => Values::INTERFACE_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			789 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_7, Values::BOOLEAN_FALSE ),
-				'value'          => Values::UNKNOWN_INTERFACE_NAME,
+				'value'          => Values::UNKNOWN_INTERFACE_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			790 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_7, Values::BOOLEAN_FALSE ),
-				'value'          => Values::CLASS_NAME_0,
+				'value'          => Values::CLASS_FQCN_0,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			791 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_7, Values::BOOLEAN_FALSE ),
-				'value'          => Values::CLASS_NAME_1,
+				'value'          => Values::CLASS_FQCN_1,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			792 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_7, Values::BOOLEAN_FALSE ),
-				'value'          => Values::UNKNOWN_CLASS_NAME,
+				'value'          => Values::UNKNOWN_CLASS_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			793 => [
@@ -4237,27 +4237,27 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0000 
 			],
 			843 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_7, Values::BOOLEAN_TRUE ),
-				'value'          => Values::INTERFACE_NAME,
+				'value'          => Values::INTERFACE_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			844 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_7, Values::BOOLEAN_TRUE ),
-				'value'          => Values::UNKNOWN_INTERFACE_NAME,
+				'value'          => Values::UNKNOWN_INTERFACE_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			845 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_7, Values::BOOLEAN_TRUE ),
-				'value'          => Values::CLASS_NAME_0,
+				'value'          => Values::CLASS_FQCN_0,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			846 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_7, Values::BOOLEAN_TRUE ),
-				'value'          => Values::CLASS_NAME_1,
+				'value'          => Values::CLASS_FQCN_1,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			847 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_7, Values::BOOLEAN_TRUE ),
-				'value'          => Values::UNKNOWN_CLASS_NAME,
+				'value'          => Values::UNKNOWN_CLASS_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			848 => [
@@ -4512,27 +4512,27 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0000 
 			],
 			898 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_8, Values::BOOLEAN_FALSE ),
-				'value'          => Values::INTERFACE_NAME,
+				'value'          => Values::INTERFACE_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			899 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_8, Values::BOOLEAN_FALSE ),
-				'value'          => Values::UNKNOWN_INTERFACE_NAME,
+				'value'          => Values::UNKNOWN_INTERFACE_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			900 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_8, Values::BOOLEAN_FALSE ),
-				'value'          => Values::CLASS_NAME_0,
+				'value'          => Values::CLASS_FQCN_0,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			901 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_8, Values::BOOLEAN_FALSE ),
-				'value'          => Values::CLASS_NAME_1,
+				'value'          => Values::CLASS_FQCN_1,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			902 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_8, Values::BOOLEAN_FALSE ),
-				'value'          => Values::UNKNOWN_CLASS_NAME,
+				'value'          => Values::UNKNOWN_CLASS_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			903 => [
@@ -4787,27 +4787,27 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0000 
 			],
 			953 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_8, Values::BOOLEAN_TRUE ),
-				'value'          => Values::INTERFACE_NAME,
+				'value'          => Values::INTERFACE_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			954 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_8, Values::BOOLEAN_TRUE ),
-				'value'          => Values::UNKNOWN_INTERFACE_NAME,
+				'value'          => Values::UNKNOWN_INTERFACE_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			955 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_8, Values::BOOLEAN_TRUE ),
-				'value'          => Values::CLASS_NAME_0,
+				'value'          => Values::CLASS_FQCN_0,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			956 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_8, Values::BOOLEAN_TRUE ),
-				'value'          => Values::CLASS_NAME_1,
+				'value'          => Values::CLASS_FQCN_1,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			957 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_8, Values::BOOLEAN_TRUE ),
-				'value'          => Values::UNKNOWN_CLASS_NAME,
+				'value'          => Values::UNKNOWN_CLASS_FQCN,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			958 => [

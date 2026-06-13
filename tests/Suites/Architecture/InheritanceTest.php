@@ -3,7 +3,7 @@ namespace CodeKandis\PhpUnit\Tests\Suites\Architecture;
 
 use CodeKandis\PhpUnit\DataProviderInterface;
 use CodeKandis\PhpUnit\TestCase;
-use CodeKandis\PhpUnit\Tests\DataProviders\Architecture\InheritanceTest\InterfaceOrClassNamesWithExpectedAncestorInterfaceOrClassNameDataProvider;
+use CodeKandis\PhpUnit\Tests\DataProviders\Architecture\InheritanceTest\InterfaceOrClassFqcnsWithExpectedAncestorInterfaceOrClassFqcnDataProvider;
 use PHPUnit\Framework\Attributes\DataProviderExternal;
 
 /**
@@ -14,13 +14,13 @@ use PHPUnit\Framework\Attributes\DataProviderExternal;
 final class InheritanceTest extends TestCase
 {
 	/**
-	 * Tests if an interface or class is a subclass of a specific ancestor interface or class name.
-	 * @param class-string $interfaceOrClassName The interface or class name to test.
-	 * @param class-string $expectedAncestorInterfaceOrClassName The expected ancestor interface or class name.
+	 * Tests if an interface or class is a subclass of a specific ancestor interface or class FQCN.
+	 * @param class-string $interfaceOrClassFqcn The interface or class FQCN to test.
+	 * @param class-string $expectedAncestorInterfaceOrClassFqcn The expected ancestor interface or class FQCN.
 	 */
-	#[DataProviderExternal( InterfaceOrClassNamesWithExpectedAncestorInterfaceOrClassNameDataProvider::class, DataProviderInterface::PROVIDER_METHOD_NAME )]
-	public function testIfInterfaceOrClassIsSubClassOfAncestorInterfaceOrClassName( string $interfaceOrClassName, string $expectedAncestorInterfaceOrClassName ): void
+	#[DataProviderExternal( InterfaceOrClassFqcnsWithExpectedAncestorInterfaceOrClassFqcnDataProvider::class, DataProviderInterface::PROVIDER_METHOD_NAME )]
+	public function testIfInterfaceOrClassIsSubClassOfAncestorInterfaceOrClassFqcn( string $interfaceOrClassFqcn, string $expectedAncestorInterfaceOrClassFqcn ): void
 	{
-		static::assertIsSubClassOf( $expectedAncestorInterfaceOrClassName, $interfaceOrClassName );
+		static::assertIsSubClassOf( $expectedAncestorInterfaceOrClassFqcn, $interfaceOrClassFqcn );
 	}
 }

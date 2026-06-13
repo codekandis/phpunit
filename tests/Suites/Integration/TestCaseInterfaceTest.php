@@ -6,15 +6,15 @@ use CodeKandis\PhpUnit\TestCase;
 use CodeKandis\PhpUnit\TestCaseInterface;
 use CodeKandis\PhpUnit\Tests\DataProviders\Integration\TestCaseInterfaceTest\TestCasesWithArraysArraySubsetsStrictFlagAndMessageDataProvider;
 use CodeKandis\PhpUnit\Tests\DataProviders\Integration\TestCaseInterfaceTest\TestCasesWithArraySubsetsArraysStrictFlagAndMessageDataProvider;
-use CodeKandis\PhpUnit\Tests\DataProviders\Integration\TestCaseInterfaceTest\TestCasesWithInterfaceOrClassNameActualAndMessageDataProvider;
-use CodeKandis\PhpUnit\Tests\DataProviders\Integration\TestCaseInterfaceTest\TestCasesWithMismatchingArraysArraySubsetsStrictFlagMessageExpectedThrowableClassNameExpectedThrowableMessageExpectedThrowableCodeAndExpectedThrowablePreviousDataProvider;
-use CodeKandis\PhpUnit\Tests\DataProviders\Integration\TestCaseInterfaceTest\TestCasesWithMismatchingArraySubsetsArraysStrictFlagMessageExpectedThrowableClassNameExpectedThrowableMessageExpectedThrowableCodeAndExpectedThrowablePreviousDataProvider;
-use CodeKandis\PhpUnit\Tests\DataProviders\Integration\TestCaseInterfaceTest\TestCasesWithMismatchingInterfaceOrClassNameActualMessageExpectedThrowableClassNameExpectedThrowableMessageExpectedThrowableCodeAndExpectedThrowablePreviousDataProvider;
-use CodeKandis\PhpUnit\Tests\DataProviders\Integration\TestCaseInterfaceTest\TestCasesWithMismatchingUnkeyedArraysArraySubsetsStrictFlagMessageExpectedThrowableClassNameExpectedThrowableMessageExpectedThrowableCodeAndExpectedThrowablePreviousDataProvider;
-use CodeKandis\PhpUnit\Tests\DataProviders\Integration\TestCaseInterfaceTest\TestCasesWithMismatchingUnkeyedArraySubsetsArraysStrictFlagMessageExpectedThrowableClassNameExpectedThrowableMessageExpectedThrowableCodeAndExpectedThrowablePreviousDataProvider;
+use CodeKandis\PhpUnit\Tests\DataProviders\Integration\TestCaseInterfaceTest\TestCasesWithExpectedInterfaceOrClassFqcnActualAndMessageDataProvider;
+use CodeKandis\PhpUnit\Tests\DataProviders\Integration\TestCaseInterfaceTest\TestCasesWithMismatchingArraysArraySubsetsStrictFlagMessageExpectedThrowableClassFqcnExpectedThrowableMessageExpectedThrowableCodeAndExpectedThrowablePreviousDataProvider;
+use CodeKandis\PhpUnit\Tests\DataProviders\Integration\TestCaseInterfaceTest\TestCasesWithMismatchingArraySubsetsArraysStrictFlagMessageExpectedThrowableClassFqcnExpectedThrowableMessageExpectedThrowableCodeAndExpectedThrowablePreviousDataProvider;
+use CodeKandis\PhpUnit\Tests\DataProviders\Integration\TestCaseInterfaceTest\TestCasesWithMismatchingInterfaceOrClassFqcnActualMessageExpectedThrowableClassFqcnExpectedThrowableMessageExpectedThrowableCodeAndExpectedThrowablePreviousDataProvider;
+use CodeKandis\PhpUnit\Tests\DataProviders\Integration\TestCaseInterfaceTest\TestCasesWithMismatchingUnkeyedArraysArraySubsetsStrictFlagMessageExpectedThrowableClassFqcnExpectedThrowableMessageExpectedThrowableCodeAndExpectedThrowablePreviousDataProvider;
+use CodeKandis\PhpUnit\Tests\DataProviders\Integration\TestCaseInterfaceTest\TestCasesWithMismatchingUnkeyedArraySubsetsArraysStrictFlagMessageExpectedThrowableClassFqcnExpectedThrowableMessageExpectedThrowableCodeAndExpectedThrowablePreviousDataProvider;
 use CodeKandis\PhpUnit\Tests\DataProviders\Integration\TestCaseInterfaceTest\TestCasesWithUnkeyedArraysArraySubsetsStrictFlagAndMessageDataProvider;
 use CodeKandis\PhpUnit\Tests\DataProviders\Integration\TestCaseInterfaceTest\TestCasesWithUnkeyedArraySubsetsArraysStrictFlagAndMessageDataProvider;
-use CodeKandis\PhpUnit\Tests\DataProviders\Integration\TestCaseInterfaceTest\TestCasesWithUnknownInterfaceOrClassNameActualMessageExpectedThrowableClassNameExpectedThrowableMessageExpectedThrowableCodeAndExpectedThrowablePreviousDataProvider;
+use CodeKandis\PhpUnit\Tests\DataProviders\Integration\TestCaseInterfaceTest\TestCasesWithUnknownInterfaceOrClassFqcnActualMessageExpectedThrowableClassFqcnExpectedThrowableMessageExpectedThrowableCodeAndExpectedThrowablePreviousDataProvider;
 use PHPUnit\Framework\Attributes\DataProviderExternal;
 use PHPUnit\Framework\ExpectationFailedException;
 use PHPUnit\Framework\UnknownClassOrInterfaceException;
@@ -34,13 +34,13 @@ final class TestCaseInterfaceTest extends TestCase
 	 * @param array<array-key, mixed> $actualArray The actual arrayto pass.
 	 * @param bool $strict The strict flag to pass.
 	 * @param string $message The message to pass.
-	 * @param class-string<ExpectationFailedException> $expectedThrowableClassName The expected throwable class name.
+	 * @param class-string<ExpectationFailedException> $expectedThrowableClassFqcn The expected throwable FQCN.
 	 * @param string $expectedThrowableMessage The expected throwable message.
 	 * @param int $expectedThrowableCode The expected throwable code.
 	 * @param ?Throwable $expectedThrowablePrevious The expected previous throwable.
 	 */
-	#[DataProviderExternal( TestCasesWithMismatchingArraySubsetsArraysStrictFlagMessageExpectedThrowableClassNameExpectedThrowableMessageExpectedThrowableCodeAndExpectedThrowablePreviousDataProvider::class, DataProviderInterface::PROVIDER_METHOD_NAME )]
-	public function testIfMethodAssertArrayContainsKeyedSubsetThrowsExpectationFailedExceptionOnArrayNotContainingKeyedSubset( TestCaseInterface $testCase, array $expectedSubset, array $actualArray, bool $strict, string $message, string $expectedThrowableClassName, string $expectedThrowableMessage, int $expectedThrowableCode, ?Throwable $expectedThrowablePrevious ): void
+	#[DataProviderExternal( TestCasesWithMismatchingArraySubsetsArraysStrictFlagMessageExpectedThrowableClassFqcnExpectedThrowableMessageExpectedThrowableCodeAndExpectedThrowablePreviousDataProvider::class, DataProviderInterface::PROVIDER_METHOD_NAME )]
+	public function testIfMethodAssertArrayContainsKeyedSubsetThrowsExpectationFailedExceptionOnArrayNotContainingKeyedSubset( TestCaseInterface $testCase, array $expectedSubset, array $actualArray, bool $strict, string $message, string $expectedThrowableClassFqcn, string $expectedThrowableMessage, int $expectedThrowableCode, ?Throwable $expectedThrowablePrevious ): void
 	{
 		try
 		{
@@ -50,8 +50,8 @@ final class TestCaseInterfaceTest extends TestCase
 		{
 			static::assertInstanceOf( ExpectationFailedException::class, $throwable );
 
-			$resultedThrowableClassName = $throwable::class;
-			static::assertSame( $expectedThrowableClassName, $resultedThrowableClassName );
+			$resultedThrowableClassFqcn = $throwable::class;
+			static::assertSame( $expectedThrowableClassFqcn, $resultedThrowableClassFqcn );
 
 			$resultedThrowableMessage = $throwable->getMessage();
 			static::assertSame( $expectedThrowableMessage, $resultedThrowableMessage );
@@ -100,13 +100,13 @@ final class TestCaseInterfaceTest extends TestCase
 	 * @param array<array-key, mixed> $actualArray The actual arrayto pass.
 	 * @param bool $strict The strict flag to pass.
 	 * @param string $message The message to pass.
-	 * @param class-string<ExpectationFailedException> $expectedThrowableClassName The expected throwable class name.
+	 * @param class-string<ExpectationFailedException> $expectedThrowableClassFqcn The expected throwable FQCN.
 	 * @param string $expectedThrowableMessage The expected throwable message.
 	 * @param int $expectedThrowableCode The expected throwable code.
 	 * @param ?Throwable $expectedThrowablePrevious The expected previous throwable.
 	 */
-	#[DataProviderExternal( TestCasesWithMismatchingUnkeyedArraySubsetsArraysStrictFlagMessageExpectedThrowableClassNameExpectedThrowableMessageExpectedThrowableCodeAndExpectedThrowablePreviousDataProvider::class, DataProviderInterface::PROVIDER_METHOD_NAME )]
-	public function testIfMethodAssertArrayContainsUnkeyedSubsetThrowsExpectationFailedExceptionOnArrayNotContainingUnkeyedSubset( TestCaseInterface $testCase, array $expectedSubset, array $actualArray, bool $strict, string $message, string $expectedThrowableClassName, string $expectedThrowableMessage, int $expectedThrowableCode, ?Throwable $expectedThrowablePrevious ): void
+	#[DataProviderExternal( TestCasesWithMismatchingUnkeyedArraySubsetsArraysStrictFlagMessageExpectedThrowableClassFqcnExpectedThrowableMessageExpectedThrowableCodeAndExpectedThrowablePreviousDataProvider::class, DataProviderInterface::PROVIDER_METHOD_NAME )]
+	public function testIfMethodAssertArrayContainsUnkeyedSubsetThrowsExpectationFailedExceptionOnArrayNotContainingUnkeyedSubset( TestCaseInterface $testCase, array $expectedSubset, array $actualArray, bool $strict, string $message, string $expectedThrowableClassFqcn, string $expectedThrowableMessage, int $expectedThrowableCode, ?Throwable $expectedThrowablePrevious ): void
 	{
 		try
 		{
@@ -116,8 +116,8 @@ final class TestCaseInterfaceTest extends TestCase
 		{
 			static::assertInstanceOf( ExpectationFailedException::class, $throwable );
 
-			$resultedThrowableClassName = $throwable::class;
-			static::assertSame( $expectedThrowableClassName, $resultedThrowableClassName );
+			$resultedThrowableClassFqcn = $throwable::class;
+			static::assertSame( $expectedThrowableClassFqcn, $resultedThrowableClassFqcn );
 
 			$resultedThrowableMessage = $throwable->getMessage();
 			static::assertSame( $expectedThrowableMessage, $resultedThrowableMessage );
@@ -166,13 +166,13 @@ final class TestCaseInterfaceTest extends TestCase
 	 * @param array<array-key, mixed> $actualSubset The actual subset to pass.
 	 * @param bool $strict The strict flag to pass.
 	 * @param string $message The message to pass.
-	 * @param class-string<ExpectationFailedException> $expectedThrowableClassName The expected throwable class name.
+	 * @param class-string<ExpectationFailedException> $expectedThrowableClassFqcn The expected throwable FQCN.
 	 * @param string $expectedThrowableMessage The expected throwable message.
 	 * @param int $expectedThrowableCode The expected throwable code.
 	 * @param ?Throwable $expectedThrowablePrevious The expected previous throwable.
 	 */
-	#[DataProviderExternal( TestCasesWithMismatchingArraysArraySubsetsStrictFlagMessageExpectedThrowableClassNameExpectedThrowableMessageExpectedThrowableCodeAndExpectedThrowablePreviousDataProvider::class, DataProviderInterface::PROVIDER_METHOD_NAME )]
-	public function testIfMethodAssertIsKeyedSubsetOfArrayThrowsExpectationFailedExceptionOnArrayNotBeingKeyedSubsetOfArray( TestCaseInterface $testCase, array $expectedArray, array $actualSubset, bool $strict, string $message, string $expectedThrowableClassName, string $expectedThrowableMessage, int $expectedThrowableCode, ?Throwable $expectedThrowablePrevious ): void
+	#[DataProviderExternal( TestCasesWithMismatchingArraysArraySubsetsStrictFlagMessageExpectedThrowableClassFqcnExpectedThrowableMessageExpectedThrowableCodeAndExpectedThrowablePreviousDataProvider::class, DataProviderInterface::PROVIDER_METHOD_NAME )]
+	public function testIfMethodAssertIsKeyedSubsetOfArrayThrowsExpectationFailedExceptionOnArrayNotBeingKeyedSubsetOfArray( TestCaseInterface $testCase, array $expectedArray, array $actualSubset, bool $strict, string $message, string $expectedThrowableClassFqcn, string $expectedThrowableMessage, int $expectedThrowableCode, ?Throwable $expectedThrowablePrevious ): void
 	{
 		try
 		{
@@ -182,8 +182,8 @@ final class TestCaseInterfaceTest extends TestCase
 		{
 			static::assertInstanceOf( ExpectationFailedException::class, $throwable );
 
-			$resultedThrowableClassName = $throwable::class;
-			static::assertSame( $expectedThrowableClassName, $resultedThrowableClassName );
+			$resultedThrowableClassFqcn = $throwable::class;
+			static::assertSame( $expectedThrowableClassFqcn, $resultedThrowableClassFqcn );
 
 			$resultedThrowableMessage = $throwable->getMessage();
 			static::assertSame( $expectedThrowableMessage, $resultedThrowableMessage );
@@ -232,13 +232,13 @@ final class TestCaseInterfaceTest extends TestCase
 	 * @param array<array-key, mixed> $actualSubset The actual subset to pass.
 	 * @param bool $strict The strict flag to pass.
 	 * @param string $message The message to pass.
-	 * @param class-string<ExpectationFailedException> $expectedThrowableClassName The expected throwable class name.
+	 * @param class-string<ExpectationFailedException> $expectedThrowableClassFqcn The expected throwable FQCN.
 	 * @param string $expectedThrowableMessage The expected throwable message.
 	 * @param int $expectedThrowableCode The expected throwable code.
 	 * @param ?Throwable $expectedThrowablePrevious The expected previous throwable.
 	 */
-	#[DataProviderExternal( TestCasesWithMismatchingUnkeyedArraysArraySubsetsStrictFlagMessageExpectedThrowableClassNameExpectedThrowableMessageExpectedThrowableCodeAndExpectedThrowablePreviousDataProvider::class, DataProviderInterface::PROVIDER_METHOD_NAME )]
-	public function testIfMethodAssertIsUnkeyedSubsetOfArrayThrowsExpectationFailedExceptionOnArrayNotBeingUnkeyedSubsetOfArray( TestCaseInterface $testCase, array $expectedArray, array $actualSubset, bool $strict, string $message, string $expectedThrowableClassName, string $expectedThrowableMessage, int $expectedThrowableCode, ?Throwable $expectedThrowablePrevious ): void
+	#[DataProviderExternal( TestCasesWithMismatchingUnkeyedArraysArraySubsetsStrictFlagMessageExpectedThrowableClassFqcnExpectedThrowableMessageExpectedThrowableCodeAndExpectedThrowablePreviousDataProvider::class, DataProviderInterface::PROVIDER_METHOD_NAME )]
+	public function testIfMethodAssertIsUnkeyedSubsetOfArrayThrowsExpectationFailedExceptionOnArrayNotBeingUnkeyedSubsetOfArray( TestCaseInterface $testCase, array $expectedArray, array $actualSubset, bool $strict, string $message, string $expectedThrowableClassFqcn, string $expectedThrowableMessage, int $expectedThrowableCode, ?Throwable $expectedThrowablePrevious ): void
 	{
 		try
 		{
@@ -248,8 +248,8 @@ final class TestCaseInterfaceTest extends TestCase
 		{
 			static::assertInstanceOf( ExpectationFailedException::class, $throwable );
 
-			$resultedThrowableClassName = $throwable::class;
-			static::assertSame( $expectedThrowableClassName, $resultedThrowableClassName );
+			$resultedThrowableClassFqcn = $throwable::class;
+			static::assertSame( $expectedThrowableClassFqcn, $resultedThrowableClassFqcn );
 
 			$resultedThrowableMessage = $throwable->getMessage();
 			static::assertSame( $expectedThrowableMessage, $resultedThrowableMessage );
@@ -292,29 +292,29 @@ final class TestCaseInterfaceTest extends TestCase
 	}
 
 	/**
-	 * Tests if {@link TestCaseInterface::assertIsSubClassOf()} throws an {@link UnknownClassOrInterfaceException} on unknown interface or class name.
+	 * Tests if {@link TestCaseInterface::assertIsSubClassOf()} throws an {@link UnknownClassOrInterfaceException} on unknown interface or class FQCN.
 	 * @param TestCaseInterface $testCase The test case.
-	 * @param string $expectedInterfaceOrClassName The expected interface or class name to pass.
+	 * @param string $expectedInterfaceOrClassFqcn The expected interface or class FQCN to pass.
 	 * @param mixed $actual The actual value to pass.
 	 * @param string $message The message to pass.
-	 * @param class-string<UnknownClassOrInterfaceException> $expectedThrowableClassName The expected throwable class name.
+	 * @param class-string<UnknownClassOrInterfaceException> $expectedThrowableClassFqcn The expected throwable FQCN.
 	 * @param string $expectedThrowableMessage The expected throwable message.
 	 * @param int $expectedThrowableCode The expected throwable code.
 	 * @param ?Throwable $expectedThrowablePrevious The expected previous throwable.
 	 */
-	#[DataProviderExternal( TestCasesWithUnknownInterfaceOrClassNameActualMessageExpectedThrowableClassNameExpectedThrowableMessageExpectedThrowableCodeAndExpectedThrowablePreviousDataProvider::class, DataProviderInterface::PROVIDER_METHOD_NAME )]
-	public function testIfMethodAssertIsSubClassOfThrowsUnknownClassOrInterfaceExceptionOnUnknownInterfaceOrClassName( TestCaseInterface $testCase, string $expectedInterfaceOrClassName, mixed $actual, string $message, string $expectedThrowableClassName, string $expectedThrowableMessage, int $expectedThrowableCode, ?Throwable $expectedThrowablePrevious ): void
+	#[DataProviderExternal( TestCasesWithUnknownInterfaceOrClassFqcnActualMessageExpectedThrowableClassFqcnExpectedThrowableMessageExpectedThrowableCodeAndExpectedThrowablePreviousDataProvider::class, DataProviderInterface::PROVIDER_METHOD_NAME )]
+	public function testIfMethodAssertIsSubClassOfThrowsUnknownClassOrInterfaceExceptionOnUnknownInterfaceOrClassFqcn( TestCaseInterface $testCase, string $expectedInterfaceOrClassFqcn, mixed $actual, string $message, string $expectedThrowableClassFqcn, string $expectedThrowableMessage, int $expectedThrowableCode, ?Throwable $expectedThrowablePrevious ): void
 	{
 		try
 		{
-			$testCase::assertIsSubClassOf( $expectedInterfaceOrClassName, $actual, $message );
+			$testCase::assertIsSubClassOf( $expectedInterfaceOrClassFqcn, $actual, $message );
 		}
 		catch ( Throwable $throwable )
 		{
 			static::assertInstanceOf( UnknownClassOrInterfaceException::class, $throwable );
 
-			$resultedThrowableClassName = $throwable::class;
-			static::assertSame( $expectedThrowableClassName, $resultedThrowableClassName );
+			$resultedThrowableClassFqcn = $throwable::class;
+			static::assertSame( $expectedThrowableClassFqcn, $resultedThrowableClassFqcn );
 
 			$resultedThrowableMessage = $throwable->getMessage();
 			static::assertSame( $expectedThrowableMessage, $resultedThrowableMessage );
@@ -334,27 +334,27 @@ final class TestCaseInterfaceTest extends TestCase
 	/**
 	 * Tests if {@link TestCaseInterface::assertIsSubClassOf()} throws an {@link ExpectationFailedException} on a value not being a subclass of or implementing an interface or class.
 	 * @param TestCaseInterface $testCase The test case.
-	 * @param class-string $expectedInterfaceOrClassName The expected interface or class name to pass.
+	 * @param class-string $expectedInterfaceOrClassFqcn The expected interface or class FQCN to pass.
 	 * @param mixed $actual The actual value to pass.
 	 * @param string $message The message to pass.
-	 * @param class-string<ExpectationFailedException> $expectedThrowableClassName The expected throwable class name.
+	 * @param class-string<ExpectationFailedException> $expectedThrowableClassFqcn The expected throwable FQCN.
 	 * @param string $expectedThrowableMessage The expected throwable message.
 	 * @param int $expectedThrowableCode The expected throwable code.
 	 * @param ?Throwable $expectedThrowablePrevious The expected previous throwable.
 	 */
-	#[DataProviderExternal( TestCasesWithMismatchingInterfaceOrClassNameActualMessageExpectedThrowableClassNameExpectedThrowableMessageExpectedThrowableCodeAndExpectedThrowablePreviousDataProvider::class, DataProviderInterface::PROVIDER_METHOD_NAME )]
-	public function testIfMethodAssertIsSubClassOfThrowsExpectationFailedExceptionOnValueNotBeingSubClassOf( TestCaseInterface $testCase, string $expectedInterfaceOrClassName, mixed $actual, string $message, string $expectedThrowableClassName, string $expectedThrowableMessage, int $expectedThrowableCode, ?Throwable $expectedThrowablePrevious ): void
+	#[DataProviderExternal( TestCasesWithMismatchingInterfaceOrClassFqcnActualMessageExpectedThrowableClassFqcnExpectedThrowableMessageExpectedThrowableCodeAndExpectedThrowablePreviousDataProvider::class, DataProviderInterface::PROVIDER_METHOD_NAME )]
+	public function testIfMethodAssertIsSubClassOfThrowsExpectationFailedExceptionOnValueNotBeingSubClassOf( TestCaseInterface $testCase, string $expectedInterfaceOrClassFqcn, mixed $actual, string $message, string $expectedThrowableClassFqcn, string $expectedThrowableMessage, int $expectedThrowableCode, ?Throwable $expectedThrowablePrevious ): void
 	{
 		try
 		{
-			$testCase::assertIsSubClassOf( $expectedInterfaceOrClassName, $actual, $message );
+			$testCase::assertIsSubClassOf( $expectedInterfaceOrClassFqcn, $actual, $message );
 		}
 		catch ( Throwable $throwable )
 		{
 			static::assertInstanceOf( ExpectationFailedException::class, $throwable );
 
-			$resultedThrowableClassName = $throwable::class;
-			static::assertSame( $expectedThrowableClassName, $resultedThrowableClassName );
+			$resultedThrowableClassFqcn = $throwable::class;
+			static::assertSame( $expectedThrowableClassFqcn, $resultedThrowableClassFqcn );
 
 			$resultedThrowableMessage = $throwable->getMessage();
 			static::assertSame( $expectedThrowableMessage, $resultedThrowableMessage );
@@ -374,18 +374,18 @@ final class TestCaseInterfaceTest extends TestCase
 	/**
 	 * Tests if {@link TestCaseInterface::assertIsSubClassOf()} asserts that a value is a subclass of or implements an interface or class correctly.
 	 * @param TestCaseInterface $testCase The test case to test.
-	 * @param class-string $expectedInterfaceOrClassName The expected interface or class name to pass.
+	 * @param class-string $expectedInterfaceOrClassFqcn The expected interface or class FQCN to pass.
 	 * @param mixed $actual The actual value to pass.
 	 * @param string $message The message to pass.
 	 */
-	#[DataProviderExternal( TestCasesWithInterfaceOrClassNameActualAndMessageDataProvider::class, DataProviderInterface::PROVIDER_METHOD_NAME )]
-	public function testIfMethodAssertIsSubClassOfAssertsThatValueIsSubClassOfCorrectly( TestCaseInterface $testCase, string $expectedInterfaceOrClassName, mixed $actual, string $message ): void
+	#[DataProviderExternal( TestCasesWithExpectedInterfaceOrClassFqcnActualAndMessageDataProvider::class, DataProviderInterface::PROVIDER_METHOD_NAME )]
+	public function testIfMethodAssertIsSubClassOfAssertsThatValueIsSubClassOfCorrectly( TestCaseInterface $testCase, string $expectedInterfaceOrClassFqcn, mixed $actual, string $message ): void
 	{
 		$unexpectedThrowable = null;
 
 		try
 		{
-			$testCase::assertIsSubClassOf( $expectedInterfaceOrClassName, $actual, $message );
+			$testCase::assertIsSubClassOf( $expectedInterfaceOrClassFqcn, $actual, $message );
 		}
 		catch ( Throwable $throwable )
 		{

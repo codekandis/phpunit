@@ -41,28 +41,28 @@ class IsSubClassOfConstraint extends AbstractConstraint implements IsSubClassOfC
 
 	/**
 	 * Constructor method.
-	 * @param string $interfaceOrClassName The expected interface or class FQCN.
+	 * @param string $expectedInterfaceOrClassFqcn The expected interface or class FQCN.
 	 * @throws UnknownClassOrInterfaceException The expected interface or class FQCN does not exist.
 	 */
 	public function __construct(
-		private readonly string $interfaceOrClassName
+		private readonly string $expectedInterfaceOrClassFqcn
 	)
 	{
-		if ( interface_exists( $interfaceOrClassName ) === true )
+		if ( interface_exists( $expectedInterfaceOrClassFqcn ) === true )
 		{
 			$this->typeKind = 'interface';
 
 			return;
 		}
 
-		if ( class_exists( $interfaceOrClassName ) === true )
+		if ( class_exists( $expectedInterfaceOrClassFqcn ) === true )
 		{
 			$this->typeKind = 'class';
 
 			return;
 		}
 
-		throw new UnknownClassOrInterfaceException( $interfaceOrClassName );
+		throw new UnknownClassOrInterfaceException( $expectedInterfaceOrClassFqcn );
 	}
 
 	/**
@@ -72,7 +72,7 @@ class IsSubClassOfConstraint extends AbstractConstraint implements IsSubClassOfC
 	#[Override]
 	public function toString(): string
 	{
-		return sprintf( $this->stringRepresentationTemplate, $this->typeKind, $this->interfaceOrClassName );
+		return sprintf( $this->stringRepresentationTemplate, $this->typeKind, $this->expectedInterfaceOrClassFqcn );
 	}
 
 	/**
@@ -88,6 +88,6 @@ class IsSubClassOfConstraint extends AbstractConstraint implements IsSubClassOfC
 			return false;
 		}
 
-		return is_subclass_of( $other, $this->interfaceOrClassName, true ) === true;
+		return is_subclass_of( $other, $this->expectedInterfaceOrClassFqcn, true ) === true;
 	}
 }

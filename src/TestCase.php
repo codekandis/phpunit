@@ -90,11 +90,11 @@ abstract class TestCase extends TestCaseOrigin implements TestCaseInterface
 	 * {@inheritDoc}
 	 */
 	#[Override]
-	public static function assertIsSubClassOf( string $expectedInterfaceOrClassName, mixed $actual, string $message = '' ): void
+	public static function assertIsSubClassOf( string $expectedInterfaceOrClassFqcn, mixed $actual, string $message = '' ): void
 	{
 		static::assertThat(
 			$actual,
-			new IsSubClassOfConstraint( $expectedInterfaceOrClassName ),
+			new IsSubClassOfConstraint( $expectedInterfaceOrClassFqcn ),
 			$message,
 		);
 	}
