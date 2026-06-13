@@ -8,7 +8,7 @@ use Override;
 use PHPUnit\Framework\AssertionFailedError;
 
 /**
- * Represents a data provider providing test cases with expected throwable FQCN and expected throwable message.
+ * Represents a data provider providing test cases with expected throwable class FQCN and expected throwable message.
  * @package codekandis/phpunit
  * @author Christian Ramelow <info@codekandis.net>
  */

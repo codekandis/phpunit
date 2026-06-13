@@ -9,11 +9,11 @@ use Override;
 use PHPUnit\Framework\UnknownClassOrInterfaceException;
 
 /**
- * Represents a data provider providing constraint FQCNs with unknown interface or class FQCN, expected throwable FQCN, expected throwable message, expected throwable code and expected throwable previous.
+ * Represents a data provider providing constraint FQCNs with unknown interface or class FQCN, expected throwable class FQCN, expected throwable message, expected throwable code and expected throwable previous.
  * @package codekandis/phpunit
  * @author Christian Ramelow <info@codekandis.net>
  */
-final readonly class ConstraintClassFqcnsWithUnkownInterfaceOrClassFqcnExpectedThrowableClassFqcnExpectedThrowableMessageExpectedThrowableCodeAndExpectedThrowablePreviousDataProvider implements DataProviderInterface
+final readonly class ConstraintClassFqcnsWithUnknownInterfaceOrClassFqcnExpectedThrowableClassFqcnExpectedThrowableMessageExpectedThrowableCodeAndExpectedThrowablePreviousDataProvider implements DataProviderInterface
 {
 	/**
 	 * {@inheritDoc}

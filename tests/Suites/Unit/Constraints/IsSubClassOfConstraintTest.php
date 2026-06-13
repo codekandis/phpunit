@@ -5,7 +5,7 @@ use CodeKandis\PhpUnit\Constraints\IsSubClassOfConstraint;
 use CodeKandis\PhpUnit\DataProviderInterface;
 use CodeKandis\PhpUnit\TestCase;
 use CodeKandis\PhpUnit\Tests\DataProviders\Unit\Constraints\IsSubClassOfConstraintTest\ConstraintClassFqcnsWithInterfaceOrClassFqcnDataProvider;
-use CodeKandis\PhpUnit\Tests\DataProviders\Unit\Constraints\IsSubClassOfConstraintTest\ConstraintClassFqcnsWithUnkownInterfaceOrClassFqcnExpectedThrowableClassFqcnExpectedThrowableMessageExpectedThrowableCodeAndExpectedThrowablePreviousDataProvider;
+use CodeKandis\PhpUnit\Tests\DataProviders\Unit\Constraints\IsSubClassOfConstraintTest\ConstraintClassFqcnsWithUnknownInterfaceOrClassFqcnExpectedThrowableClassFqcnExpectedThrowableMessageExpectedThrowableCodeAndExpectedThrowablePreviousDataProvider;
 use PHPUnit\Framework\Attributes\DataProviderExternal;
 use PHPUnit\Framework\UnknownClassOrInterfaceException;
 use Throwable;
@@ -21,13 +21,13 @@ final class IsSubClassOfConstraintTest extends TestCase
 	 * Tests if {@link IsSubClassOfConstraint::__construct()} throws an {@link UnknownClassOrInterfaceException} on invalid interface or class FQCN.
 	 * @param class-string<IsSubClassOfConstraint> $constraintClassFqcn The FQCN of the constraint to test.
 	 * @param string $unknownInterfaceOrClassFqcn The unknown interface or class FQCN to pass.
-	 * @param class-string<UnknownClassOrInterfaceException> $expectedThrowableClassFqcn The expected throwable FQCN.
+	 * @param class-string<UnknownClassOrInterfaceException> $expectedThrowableClassFqcn The expected throwable class FQCN.
 	 * @param string $expectedThrowableMessage The expected throwable message.
 	 * @param int $expectedThrowableCode The expected throwable code.
 	 * @param ?Throwable $expectedThrowablePrevious The expected previous throwable.
 	 * @return void
 	 */
-	#[DataProviderExternal( ConstraintClassFqcnsWithUnkownInterfaceOrClassFqcnExpectedThrowableClassFqcnExpectedThrowableMessageExpectedThrowableCodeAndExpectedThrowablePreviousDataProvider::class, DataProviderInterface::PROVIDER_METHOD_NAME )]
+	#[DataProviderExternal( ConstraintClassFqcnsWithUnknownInterfaceOrClassFqcnExpectedThrowableClassFqcnExpectedThrowableMessageExpectedThrowableCodeAndExpectedThrowablePreviousDataProvider::class, DataProviderInterface::PROVIDER_METHOD_NAME )]
 	public function testIfConstructorThrowsUnknownClassOrInterfaceExceptionOnUnknownInterfaceOrClassFqcn( string $constraintClassFqcn, string $unknownInterfaceOrClassFqcn, string $expectedThrowableClassFqcn, string $expectedThrowableMessage, int $expectedThrowableCode, ?Throwable $expectedThrowablePrevious ): void
 	{
 		try

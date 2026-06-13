@@ -10,7 +10,7 @@ use Override;
 use PHPUnit\Framework\ExpectationFailedException;
 
 /**
- * Represents a data provider providing test cases with mismatching interface or class FQCN, actual value, message, expected throwable FQCN, expected throwable message, expected throwable code and expected throwable previous.
+ * Represents a data provider providing test cases with mismatching interface or class FQCN, actual value, message, expected throwable class FQCN, expected throwable message, expected throwable code and expected throwable previous.
  * @package codekandis/phpunit
  * @author Christian Ramelow <info@codekandis.net>
  */

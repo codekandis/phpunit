@@ -34,7 +34,7 @@ final class TestCaseInterfaceTest extends TestCase
 	 * @param array<array-key, mixed> $actualArray The actual arrayto pass.
 	 * @param bool $strict The strict flag to pass.
 	 * @param string $message The message to pass.
-	 * @param class-string<ExpectationFailedException> $expectedThrowableClassFqcn The expected throwable FQCN.
+	 * @param class-string<ExpectationFailedException> $expectedThrowableClassFqcn The expected throwable class FQCN.
 	 * @param string $expectedThrowableMessage The expected throwable message.
 	 * @param int $expectedThrowableCode The expected throwable code.
 	 * @param ?Throwable $expectedThrowablePrevious The expected previous throwable.
@@ -100,7 +100,7 @@ final class TestCaseInterfaceTest extends TestCase
 	 * @param array<array-key, mixed> $actualArray The actual arrayto pass.
 	 * @param bool $strict The strict flag to pass.
 	 * @param string $message The message to pass.
-	 * @param class-string<ExpectationFailedException> $expectedThrowableClassFqcn The expected throwable FQCN.
+	 * @param class-string<ExpectationFailedException> $expectedThrowableClassFqcn The expected throwable class FQCN.
 	 * @param string $expectedThrowableMessage The expected throwable message.
 	 * @param int $expectedThrowableCode The expected throwable code.
 	 * @param ?Throwable $expectedThrowablePrevious The expected previous throwable.
@@ -166,7 +166,7 @@ final class TestCaseInterfaceTest extends TestCase
 	 * @param array<array-key, mixed> $actualSubset The actual subset to pass.
 	 * @param bool $strict The strict flag to pass.
 	 * @param string $message The message to pass.
-	 * @param class-string<ExpectationFailedException> $expectedThrowableClassFqcn The expected throwable FQCN.
+	 * @param class-string<ExpectationFailedException> $expectedThrowableClassFqcn The expected throwable class FQCN.
 	 * @param string $expectedThrowableMessage The expected throwable message.
 	 * @param int $expectedThrowableCode The expected throwable code.
 	 * @param ?Throwable $expectedThrowablePrevious The expected previous throwable.
@@ -232,7 +232,7 @@ final class TestCaseInterfaceTest extends TestCase
 	 * @param array<array-key, mixed> $actualSubset The actual subset to pass.
 	 * @param bool $strict The strict flag to pass.
 	 * @param string $message The message to pass.
-	 * @param class-string<ExpectationFailedException> $expectedThrowableClassFqcn The expected throwable FQCN.
+	 * @param class-string<ExpectationFailedException> $expectedThrowableClassFqcn The expected throwable class FQCN.
 	 * @param string $expectedThrowableMessage The expected throwable message.
 	 * @param int $expectedThrowableCode The expected throwable code.
 	 * @param ?Throwable $expectedThrowablePrevious The expected previous throwable.
@@ -297,7 +297,7 @@ final class TestCaseInterfaceTest extends TestCase
 	 * @param string $expectedInterfaceOrClassFqcn The expected interface or class FQCN to pass.
 	 * @param mixed $actual The actual value to pass.
 	 * @param string $message The message to pass.
-	 * @param class-string<UnknownClassOrInterfaceException> $expectedThrowableClassFqcn The expected throwable FQCN.
+	 * @param class-string<UnknownClassOrInterfaceException> $expectedThrowableClassFqcn The expected throwable class FQCN.
 	 * @param string $expectedThrowableMessage The expected throwable message.
 	 * @param int $expectedThrowableCode The expected throwable code.
 	 * @param ?Throwable $expectedThrowablePrevious The expected previous throwable.
@@ -337,7 +337,7 @@ final class TestCaseInterfaceTest extends TestCase
 	 * @param class-string $expectedInterfaceOrClassFqcn The expected interface or class FQCN to pass.
 	 * @param mixed $actual The actual value to pass.
 	 * @param string $message The message to pass.
-	 * @param class-string<ExpectationFailedException> $expectedThrowableClassFqcn The expected throwable FQCN.
+	 * @param class-string<ExpectationFailedException> $expectedThrowableClassFqcn The expected throwable class FQCN.
 	 * @param string $expectedThrowableMessage The expected throwable message.
 	 * @param int $expectedThrowableCode The expected throwable code.
 	 * @param ?Throwable $expectedThrowablePrevious The expected previous throwable.

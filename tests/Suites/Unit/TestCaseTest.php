@@ -19,7 +19,7 @@ final class TestCaseTest extends TestCase
 	/**
 	 * Tests if {@link TestCase::failExpectedThrowableHasNotBeenThrown()} fails with the expected throwable has not been thrown message.
 	 * @param TestCaseExposingFailExpectedThrowableHasNotBeenThrownMethodAccessor $testCase The test case to test.
-	 * @param class-string<AssertionFailedError> $expectedThrowableClassFqcn The expected throwable FQCN.
+	 * @param class-string<AssertionFailedError> $expectedThrowableClassFqcn The expected throwable class FQCN.
 	 * @param string $expectedThrowableMessage The expected throwable message.
 	 * @return void
 	 */
