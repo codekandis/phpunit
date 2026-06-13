@@ -5,7 +5,8 @@ use Override;
 use function is_array;
 
 /**
- * Represents a helper determining if an array contains an unkeyed subset with matching values while ignoring keys.
+ * Represents a helper for unkeyed array subset comparisons.
+ * Determines whether one array contains another array as an unkeyed subset by matching values and ignoring keys.
  * @package codekandis/phpunit
  * @author Christian Ramelow <info@codekandis.net>
  */

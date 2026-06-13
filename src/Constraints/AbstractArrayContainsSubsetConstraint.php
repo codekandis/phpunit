@@ -7,7 +7,8 @@ use function sprintf;
 use function var_export;
 
 /**
- * Represents the base class of all constraints determining if an array contains a subset.
+ * Represents the base class of all array-contains-subset constraints.
+ * Defines the common type for checks whether one array contains another array as a subset.
  * @package codekandis/phpunit
  * @author Christian Ramelow <info@codekandis.net>
  */

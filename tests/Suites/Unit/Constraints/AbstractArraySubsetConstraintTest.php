@@ -5,7 +5,7 @@ use CodeKandis\PhpUnit\Constraints\AbstractArraySubsetConstraint;
 use CodeKandis\PhpUnit\Constraints\Helpers\ArraySubsetHelperInterface;
 use CodeKandis\PhpUnit\DataProviderInterface;
 use CodeKandis\PhpUnit\TestCase;
-use CodeKandis\PhpUnit\Tests\DataProviders\Unit\Constraints\AbstractArraySubsetConstraintTest\ArraySubsetConstraintClassNamesWithArraySubsetHelperDataProvider;
+use CodeKandis\PhpUnit\Tests\DataProviders\Unit\Constraints\AbstractArraySubsetConstraintTest\ArraySubsetConstraintClassFqcnsWithArraySubsetHelperDataProvider;
 use PHPUnit\Framework\Attributes\DataProviderExternal;
 
 /**
@@ -17,13 +17,13 @@ final class AbstractArraySubsetConstraintTest extends TestCase
 {
 	/**
 	 * Tests if {@link AbstractArraySubsetConstraint::__construct()} instantiates the constraint correctly.
-	 * @param class-string<AbstractArraySubsetConstraint> $arraySubsetConstraintClassName The class name of the constraint to test.
+	 * @param class-string<AbstractArraySubsetConstraint> $arraySubsetConstraintClassFqcn The FQCN of the constraint to test.
 	 * @param ArraySubsetHelperInterface $arraySubsetHelper The array subset helper to pass.
 	 */
-	#[DataProviderExternal( ArraySubsetConstraintClassNamesWithArraySubsetHelperDataProvider::class, DataProviderInterface::PROVIDER_METHOD_NAME )]
-	public function testIfConstructorInstantiatesConstraintCorrectly( string $arraySubsetConstraintClassName, ArraySubsetHelperInterface $arraySubsetHelper ): void
+	#[DataProviderExternal( ArraySubsetConstraintClassFqcnsWithArraySubsetHelperDataProvider::class, DataProviderInterface::PROVIDER_METHOD_NAME )]
+	public function testIfConstructorInstantiatesConstraintCorrectly( string $arraySubsetConstraintClassFqcn, ArraySubsetHelperInterface $arraySubsetHelper ): void
 	{
-		$resultedArraySubsetConstraint = new $arraySubsetConstraintClassName( $arraySubsetHelper );
+		$resultedArraySubsetConstraint = new $arraySubsetConstraintClassFqcn( $arraySubsetHelper );
 
 		static::assertInstanceOf( AbstractArraySubsetConstraint::class, $resultedArraySubsetConstraint );
 	}

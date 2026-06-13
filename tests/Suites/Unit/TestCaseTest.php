@@ -4,7 +4,7 @@ namespace CodeKandis\PhpUnit\Tests\Suites\Unit;
 use CodeKandis\PhpUnit\DataProviderInterface;
 use CodeKandis\PhpUnit\TestCase;
 use CodeKandis\PhpUnit\Tests\Accessors\TestCaseExposingFailExpectedThrowableHasNotBeenThrownMethodAccessor;
-use CodeKandis\PhpUnit\Tests\DataProviders\Unit\TestCaseTest\TestCasesWithExpectedThrowableClassNameAndExpectedThrowableMessageDataProvider;
+use CodeKandis\PhpUnit\Tests\DataProviders\Unit\TestCaseTest\TestCasesWithExpectedThrowableClassFqcnAndExpectedThrowableMessageDataProvider;
 use PHPUnit\Framework\AssertionFailedError;
 use PHPUnit\Framework\Attributes\DataProviderExternal;
 use Throwable;
@@ -19,12 +19,12 @@ final class TestCaseTest extends TestCase
 	/**
 	 * Tests if {@link TestCase::failExpectedThrowableHasNotBeenThrown()} fails with the expected throwable has not been thrown message.
 	 * @param TestCaseExposingFailExpectedThrowableHasNotBeenThrownMethodAccessor $testCase The test case to test.
-	 * @param class-string<AssertionFailedError> $expectedThrowableClassName The expected throwable class name.
+	 * @param class-string<AssertionFailedError> $expectedThrowableClassFqcn The expected throwable FQCN.
 	 * @param string $expectedThrowableMessage The expected throwable message.
 	 * @return void
 	 */
-	#[DataProviderExternal( TestCasesWithExpectedThrowableClassNameAndExpectedThrowableMessageDataProvider::class, DataProviderInterface::PROVIDER_METHOD_NAME )]
-	public function testIfMethodFailExpectedThrowableHasNotBeenThrownFailsWithExpectedThrowableHasNotBeenThrownMessage( TestCaseExposingFailExpectedThrowableHasNotBeenThrownMethodAccessor $testCase, string $expectedThrowableClassName, string $expectedThrowableMessage ): void
+	#[DataProviderExternal( TestCasesWithExpectedThrowableClassFqcnAndExpectedThrowableMessageDataProvider::class, DataProviderInterface::PROVIDER_METHOD_NAME )]
+	public function testIfMethodFailExpectedThrowableHasNotBeenThrownFailsWithExpectedThrowableHasNotBeenThrownMessage( TestCaseExposingFailExpectedThrowableHasNotBeenThrownMethodAccessor $testCase, string $expectedThrowableClassFqcn, string $expectedThrowableMessage ): void
 	{
 		try
 		{
@@ -32,10 +32,12 @@ final class TestCaseTest extends TestCase
 		}
 		catch ( Throwable $throwable )
 		{
-			$resultedThrowableMessage = $throwable->getMessage();
-
 			static::assertInstanceOf( AssertionFailedError::class, $throwable );
-			static::assertInstanceOf( $expectedThrowableClassName, $throwable );
+
+			$resultedThrowableClassFqcn = $throwable::class;
+			static::assertSame( $expectedThrowableClassFqcn, $resultedThrowableClassFqcn );
+
+			$resultedThrowableMessage = $throwable->getMessage();
 			static::assertSame( $expectedThrowableMessage, $resultedThrowableMessage );
 
 			return;

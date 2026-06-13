@@ -978,27 +978,27 @@ final readonly class ConstraintsWithExpectedStringRepresentationDataProvider imp
 				)
 			],
 			136 => [
-				'constraint'                   => new IsSubClassOfConstraint( $interfaceOrClassName = Values::INTERFACE_NAME ),
+				'constraint'                   => new IsSubClassOfConstraint( $interfaceOrClassFqcn = Values::INTERFACE_FQCN ),
 				'expectedStringRepresentation' => sprintf(
 					IsSubClassOfConstraint::STRING_REPRESENTATION_TEMPLATE,
 					TypeKinds::INTERFACE_KIND,
-					$interfaceOrClassName
+					$interfaceOrClassFqcn
 				)
 			],
 			137 => [
-				'constraint'                   => new IsSubClassOfConstraint( $interfaceOrClassName = Values::CLASS_NAME_0 ),
+				'constraint'                   => new IsSubClassOfConstraint( $interfaceOrClassFqcn = Values::CLASS_FQCN_0 ),
 				'expectedStringRepresentation' => sprintf(
 					IsSubClassOfConstraint::STRING_REPRESENTATION_TEMPLATE,
 					TypeKinds::CLASS_KIND,
-					$interfaceOrClassName
+					$interfaceOrClassFqcn
 				)
 			],
 			138 => [
-				'constraint'                   => new IsSubClassOfConstraint( $interfaceOrClassName = Values::CLASS_NAME_1 ),
+				'constraint'                   => new IsSubClassOfConstraint( $interfaceOrClassFqcn = Values::CLASS_FQCN_1 ),
 				'expectedStringRepresentation' => sprintf(
 					IsSubClassOfConstraint::STRING_REPRESENTATION_TEMPLATE,
 					TypeKinds::CLASS_KIND,
-					$interfaceOrClassName
+					$interfaceOrClassFqcn
 				)
 			]
 		];

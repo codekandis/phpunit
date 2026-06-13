@@ -12,6 +12,7 @@ use PHPUnit\Framework\TestCase as TestCaseOrigin;
 
 /**
  * Represents the base class of all test cases.
+ * Provides test cases with the package-specific assertion API.
  * @package codekandis/phpunit
  * @author Christian Ramelow <info@codekandis.net>
  */
@@ -89,11 +90,11 @@ abstract class TestCase extends TestCaseOrigin implements TestCaseInterface
 	 * {@inheritDoc}
 	 */
 	#[Override]
-	public static function assertIsSubClassOf( string $expectedInterfaceOrClassName, mixed $actual, string $message = '' ): void
+	public static function assertIsSubClassOf( string $expectedInterfaceOrClassFqcn, mixed $actual, string $message = '' ): void
 	{
 		static::assertThat(
 			$actual,
-			new IsSubClassOfConstraint( $expectedInterfaceOrClassName ),
+			new IsSubClassOfConstraint( $expectedInterfaceOrClassFqcn ),
 			$message,
 		);
 	}

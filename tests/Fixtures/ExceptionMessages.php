@@ -8,5 +8,5 @@ namespace CodeKandis\PhpUnit\Tests\Fixtures;
  */
 abstract class ExceptionMessages
 {
-	public const string UNKNOWN_INTERFACE_OR_CLASS_NAME = 'Class or interface "%1$s" does not exist';
+	public const string UNKNOWN_INTERFACE_OR_CLASS_FQCN = 'Class or interface "%1$s" does not exist';
 }

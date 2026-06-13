@@ -6,7 +6,8 @@ use Override;
 use function is_array;
 
 /**
- * Represents a constraint to determine if an array contains a recursively comparable keyed subset with matching keys and values.
+ * Represents a constraint for keyed array-contains-subset checks.
+ * Determines whether one array contains another array as a keyed subset by matching keys and values.
  * @package codekandis/phpunit
  * @author Christian Ramelow <info@codekandis.net>
  */

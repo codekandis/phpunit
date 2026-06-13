@@ -5,6 +5,7 @@ use Throwable;
 
 /**
  * Represents the interface of all data providers.
+ * Defines a stable provider method contract for reusable external PHPUnit data sets.
  * @package codekandis/phpunit
  * @author Christian Ramelow <info@codekandis.net>
  */

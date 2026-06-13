@@ -235,7 +235,7 @@ final class ArrayTest extends TestCase
 #### `TestCase::assertIsSubClassOf()`
 
 Use [`TestCase::assertIsSubClassOf()`][srclink-testcase-assert-is-subclass-of] to assert that `$actual` is a subclass of
-or implements `$expectedInterfaceOrClassName`. `$actual` can be an object or a class name.
+or implements `$expectedInterfaceOrClassFqcn`. `$actual` can be an object or an FQCN.
 
 ```php
 <?php declare( strict_types = 1 );
@@ -279,11 +279,11 @@ exist.
 
 [srclink-changelog]: ./CHANGELOG.md
 [srclink-license]: ./LICENSE
-[srclink-dataproviderinterface]: ./src/DataProviderInterface.php#L11
-[srclink-dataproviderinterface-provider-method-name]: ./src/DataProviderInterface.php#L17
-[srclink-testcase]: ./src/TestCase.php#L18
-[srclink-testcase-assert-array-contains-keyed-subset]: ./src/TestCase.php#L40
-[srclink-testcase-assert-array-contains-unkeyed-subset]: ./src/TestCase.php#L53
-[srclink-testcase-assert-is-keyed-subset-of-array]: ./src/TestCase.php#L66
-[srclink-testcase-assert-is-unkeyed-subset-of-array]: ./src/TestCase.php#L79
-[srclink-testcase-assert-is-subclass-of]: ./src/TestCase.php#L92
+[srclink-dataproviderinterface]: ./src/DataProviderInterface.php#L12
+[srclink-dataproviderinterface-provider-method-name]: ./src/DataProviderInterface.php#L18
+[srclink-testcase]: ./src/TestCase.php#L19
+[srclink-testcase-assert-array-contains-keyed-subset]: ./src/TestCase.php#L41
+[srclink-testcase-assert-array-contains-unkeyed-subset]: ./src/TestCase.php#L54
+[srclink-testcase-assert-is-keyed-subset-of-array]: ./src/TestCase.php#L67
+[srclink-testcase-assert-is-unkeyed-subset-of-array]: ./src/TestCase.php#L80
+[srclink-testcase-assert-is-subclass-of]: ./src/TestCase.php#L93

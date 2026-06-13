@@ -11,7 +11,8 @@ use function is_subclass_of;
 use function sprintf;
 
 /**
- * Represents a constraint to determine if a value is a subclass of a class or implements an interface.
+ * Represents a constraint for subclass-of checks.
+ * Determines whether an object or FQCN is a subclass of an expected interface or class FQCN.
  * @package codekandis/phpunit
  * @author Christian Ramelow <info@codekandis.net>
  */
@@ -40,28 +41,28 @@ class IsSubClassOfConstraint extends AbstractConstraint implements IsSubClassOfC
 
 	/**
 	 * Constructor method.
-	 * @param string $interfaceOrClassName The name of the type.
-	 * @throws UnknownClassOrInterfaceException The expected interface or class does not exist.
+	 * @param string $expectedInterfaceOrClassFqcn The expected interface or class FQCN.
+	 * @throws UnknownClassOrInterfaceException The expected interface or class FQCN does not exist.
 	 */
 	public function __construct(
-		private readonly string $interfaceOrClassName
+		private readonly string $expectedInterfaceOrClassFqcn
 	)
 	{
-		if ( interface_exists( $interfaceOrClassName ) === true )
+		if ( interface_exists( $expectedInterfaceOrClassFqcn ) === true )
 		{
 			$this->typeKind = 'interface';
 
 			return;
 		}
 
-		if ( class_exists( $interfaceOrClassName ) === true )
+		if ( class_exists( $expectedInterfaceOrClassFqcn ) === true )
 		{
 			$this->typeKind = 'class';
 
 			return;
 		}
 
-		throw new UnknownClassOrInterfaceException( $interfaceOrClassName );
+		throw new UnknownClassOrInterfaceException( $expectedInterfaceOrClassFqcn );
 	}
 
 	/**
@@ -71,7 +72,7 @@ class IsSubClassOfConstraint extends AbstractConstraint implements IsSubClassOfC
 	#[Override]
 	public function toString(): string
 	{
-		return sprintf( $this->stringRepresentationTemplate, $this->typeKind, $this->interfaceOrClassName );
+		return sprintf( $this->stringRepresentationTemplate, $this->typeKind, $this->expectedInterfaceOrClassFqcn );
 	}
 
 	/**
@@ -87,6 +88,6 @@ class IsSubClassOfConstraint extends AbstractConstraint implements IsSubClassOfC
 			return false;
 		}
 
-		return is_subclass_of( $other, $this->interfaceOrClassName, true ) === true;
+		return is_subclass_of( $other, $this->expectedInterfaceOrClassFqcn, true ) === true;
 	}
 }

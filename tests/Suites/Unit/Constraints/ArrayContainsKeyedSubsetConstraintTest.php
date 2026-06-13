@@ -4,7 +4,7 @@ namespace CodeKandis\PhpUnit\Tests\Suites\Unit\Constraints;
 use CodeKandis\PhpUnit\Constraints\ArrayContainsKeyedSubsetConstraint;
 use CodeKandis\PhpUnit\DataProviderInterface;
 use CodeKandis\PhpUnit\TestCase;
-use CodeKandis\PhpUnit\Tests\DataProviders\Unit\Constraints\ArrayContainsKeyedSubsetConstraintTest\ConstraintClassNamesWithSubsetAndStrictFlagDataProvider;
+use CodeKandis\PhpUnit\Tests\DataProviders\Unit\Constraints\ArrayContainsKeyedSubsetConstraintTest\ConstraintClassFqcnsWithSubsetAndStrictFlagDataProvider;
 use PHPUnit\Framework\Attributes\DataProviderExternal;
 
 /**
@@ -16,14 +16,14 @@ final class ArrayContainsKeyedSubsetConstraintTest extends TestCase
 {
 	/**
 	 * Tests if {@link ArrayContainsKeyedSubsetConstraint::__construct()} instantiates the constraint correctly.
-	 * @param class-string<ArrayContainsKeyedSubsetConstraint> $constraintClassName The class name of the constraint to test.
+	 * @param class-string<ArrayContainsKeyedSubsetConstraint> $constraintClassFqcn The FQCN of the constraint to test.
 	 * @param array<array-key, mixed> $subset The subset to pass.
 	 * @param bool $strict The strict flag to pass.
 	 */
-	#[DataProviderExternal( ConstraintClassNamesWithSubsetAndStrictFlagDataProvider::class, DataProviderInterface::PROVIDER_METHOD_NAME )]
-	public function testIfConstructorInstantiatesConstraintCorrectly( string $constraintClassName, array $subset, bool $strict ): void
+	#[DataProviderExternal( ConstraintClassFqcnsWithSubsetAndStrictFlagDataProvider::class, DataProviderInterface::PROVIDER_METHOD_NAME )]
+	public function testIfConstructorInstantiatesConstraintCorrectly( string $constraintClassFqcn, array $subset, bool $strict ): void
 	{
-		$resultedConstraint = new $constraintClassName( $subset, $strict );
+		$resultedConstraint = new $constraintClassFqcn( $subset, $strict );
 
 		static::assertInstanceOf( ArrayContainsKeyedSubsetConstraint::class, $resultedConstraint );
 	}

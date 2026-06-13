@@ -6,7 +6,7 @@ use PHPUnit\Framework\Constraint\Constraint;
 use function sprintf;
 
 /**
- * Represents
+ * Represents the base class of all package constraints.
  * @package codekandis/phpunit
  * @author Christian Ramelow <info@codekandis.net>
  */

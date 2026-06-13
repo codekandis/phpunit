@@ -5,6 +5,7 @@ use CodeKandis\PhpUnit\Constraints\Helpers\ArraySubsetHelperInterface;
 
 /**
  * Represents the base class of all array subset constraints.
+ * Defines the common type for constraints comparing one array with another array as a subset.
  * @package codekandis/phpunit
  * @author Christian Ramelow <info@codekandis.net>
  */

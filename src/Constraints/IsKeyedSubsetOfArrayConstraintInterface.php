@@ -2,7 +2,8 @@
 namespace CodeKandis\PhpUnit\Constraints;
 
 /**
- * Represents the interface of all constraints determining if an array is a keyed subset of another array with matching keys and values.
+ * Represents the interface of all keyed subset-of-array constraints.
+ * Determines whether one array is contained in another array as a keyed subset by matching keys and values.
  * @package codekandis/phpunit
  * @author Christian Ramelow <info@codekandis.net>
  */

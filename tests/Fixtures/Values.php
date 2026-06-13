@@ -127,34 +127,34 @@ abstract class Values
 	public const string STRING_1 = 'bar';
 
 	/**
-	 * Represents an interface name value.
+	 * Represents an interface FQCN value.
 	 * @var string
 	 */
-	public const string INTERFACE_NAME = InterfaceFixture::class;
+	public const string INTERFACE_FQCN = InterfaceFixture::class;
 
 	/**
-	 * Represents an unknown interface name value.
+	 * Represents an unknown interface FQCN value.
 	 * @var string
 	 */
-	public const string UNKNOWN_INTERFACE_NAME = 'UnknownInterfaceName';
+	public const string UNKNOWN_INTERFACE_FQCN = 'UnknownInterfaceFqcn';
 
 	/**
-	 * Represents a class name value.
+	 * Represents a FQCN value.
 	 * @var string
 	 */
-	public const string CLASS_NAME_0 = ClassFixture::class;
+	public const string CLASS_FQCN_0 = ClassFixture::class;
 
 	/**
-	 * Represents a class name value.
+	 * Represents a FQCN value.
 	 * @var string
 	 */
-	public const string CLASS_NAME_1 = ImplementingClassFixture::class;
+	public const string CLASS_FQCN_1 = ImplementingClassFixture::class;
 
 	/**
-	 * Represents an unknown class name value.
+	 * Represents an unknown FQCN value.
 	 * @var string
 	 */
-	public const string UNKNOWN_CLASS_NAME = 'UnknownClassName';
+	public const string UNKNOWN_CLASS_FQCN = 'UnknownClassFqcn';
 
 	/**
 	 * Represents an `array` value.
@@ -465,7 +465,7 @@ abstract class Values
 	 * Represents a previous throwable.
 	 * @var null
 	 */
-	public const null PREVIOUS_THROWABLE = null;
+	public const null THROWABLE_PREVIOUS = null;
 
 	/**
 	 * Creates a class fixture.

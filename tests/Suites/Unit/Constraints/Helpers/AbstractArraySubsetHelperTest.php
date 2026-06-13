@@ -5,7 +5,7 @@ use CodeKandis\PhpUnit\Constraints\Helpers\AbstractArraySubsetHelper;
 use CodeKandis\PhpUnit\DataProviderInterface;
 use CodeKandis\PhpUnit\TestCase;
 use CodeKandis\PhpUnit\Tests\Accessors\ArraySubsetHelperExposingValuesAreEqualMethodAccessor;
-use CodeKandis\PhpUnit\Tests\DataProviders\Unit\Constraints\Helpers\AbstractArraySubsetHelperTest\ArraySubsetHelperClassNamesWithStrictFlagDataProvider;
+use CodeKandis\PhpUnit\Tests\DataProviders\Unit\Constraints\Helpers\AbstractArraySubsetHelperTest\ArraySubsetHelperClassFqcnsWithStrictFlagDataProvider;
 use CodeKandis\PhpUnit\Tests\DataProviders\Unit\Constraints\Helpers\AbstractArraySubsetHelperTest\ArraySubsetHelpersWithExpectedValueActualValueAndExpectedResultDataProvider;
 use PHPUnit\Framework\Attributes\DataProviderExternal;
 
@@ -18,13 +18,13 @@ final class AbstractArraySubsetHelperTest extends TestCase
 {
 	/**
 	 * Tests if {@link AbstractArraySubsetHelper::__construct()} instantiates the array subset helper correctly.
-	 * @param class-string<AbstractArraySubsetHelper> $arraySubsetHelperClassName The class name of the array subset helper to test.
+	 * @param class-string<AbstractArraySubsetHelper> $arraySubsetHelperClassFqcn The FQCN of the array subset helper to test.
 	 * @param bool $strict The strict flag to pass.
 	 */
-	#[DataProviderExternal( ArraySubsetHelperClassNamesWithStrictFlagDataProvider::class, DataProviderInterface::PROVIDER_METHOD_NAME )]
-	public function testIfConstructorInstantiatesArraySubsetHelperCorrectly( string $arraySubsetHelperClassName, bool $strict ): void
+	#[DataProviderExternal( ArraySubsetHelperClassFqcnsWithStrictFlagDataProvider::class, DataProviderInterface::PROVIDER_METHOD_NAME )]
+	public function testIfConstructorInstantiatesArraySubsetHelperCorrectly( string $arraySubsetHelperClassFqcn, bool $strict ): void
 	{
-		$resultedArraySubsetHelper = new $arraySubsetHelperClassName( $strict );
+		$resultedArraySubsetHelper = new $arraySubsetHelperClassFqcn( $strict );
 
 		static::assertInstanceOf( AbstractArraySubsetHelper::class, $resultedArraySubsetHelper );
 	}
