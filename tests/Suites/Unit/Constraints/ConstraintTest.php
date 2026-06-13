@@ -36,7 +36,7 @@ final class ConstraintTest extends TestCase
 	 * Tests if {@link Constraint::evaluate()} throws an {@link ExpectationFailedException} on a mismatching value.
 	 * @param Constraint $constraint The constraint to test.
 	 * @param mixed $mismatchingValue The value to pass.
-	 * @param class-string<ExpectationFailedException> $expectedThrowableClassFqcn The expected throwable FQCN.
+	 * @param class-string<ExpectationFailedException> $expectedThrowableClassFqcn The expected throwable class FQCN.
 	 * @param string $expectedThrowableMessage The expected throwable message.
 	 * @param int $expectedThrowableCode The expected throwable code.
 	 * @param ?Throwable $expectedThrowablePrevious The expected previous throwable.
