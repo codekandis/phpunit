@@ -3,6 +3,7 @@ namespace CodeKandis\PhpUnit\Constraints\Helpers;
 
 /**
  * Represents the base class of all array subset helpers.
+ * Defines the common type for checking whether one array contains another array as a subset.
  * @package codekandis/phpunit
  * @author Christian Ramelow <info@codekandis.net>
  */

@@ -6,6 +6,7 @@ use PHPUnit\Framework\UnknownClassOrInterfaceException;
 
 /**
  * Represents the interface of all test cases.
+ * Defines the assertion API required from compatible package test case wrappers.
  * @package codekandis/phpunit
  * @author Christian Ramelow <info@codekandis.net>
  */
@@ -56,12 +57,12 @@ interface TestCaseInterface
 	public static function assertIsUnkeyedSubsetOfArray( array $expectedArray, array $actualSubset, bool $strict, string $message = '' ): void;
 
 	/**
-	 * Asserts that a value is a subclass of or implements a given interface or class.
-	 * @param string $expectedInterfaceOrClassName The name of the expected interface or class.
-	 * @param mixed $actual The actual value or class name.
+	 * Asserts that an object or FQCN is a subclass of an expected interface or class FQCN.
+	 * @param string $expectedInterfaceOrClassName The expected interface or class FQCN.
+	 * @param mixed $actual The actual object or FQCN.
 	 * @param string $message The additional failure message.
 	 * @return void
-	 * @throws UnknownClassOrInterfaceException The expected interface or class does not exist.
+	 * @throws UnknownClassOrInterfaceException The expected interface or class FQCN does not exist.
 	 * @throws ExpectationFailedException The assertion failed.
 	 */
 	public static function assertIsSubClassOf( string $expectedInterfaceOrClassName, mixed $actual, string $message = '' ): void;

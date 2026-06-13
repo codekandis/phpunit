@@ -12,6 +12,7 @@ use PHPUnit\Framework\TestCase as TestCaseOrigin;
 
 /**
  * Represents the base class of all test cases.
+ * Provides test cases with the package-specific assertion API.
  * @package codekandis/phpunit
  * @author Christian Ramelow <info@codekandis.net>
  */

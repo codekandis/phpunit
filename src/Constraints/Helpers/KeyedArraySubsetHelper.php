@@ -6,7 +6,8 @@ use function array_key_exists;
 use function is_array;
 
 /**
- * Represents a helper determining if an array contains a keyed subset with matching keys and values.
+ * Represents a helper for keyed array subset comparisons.
+ * Determines whether one array contains another array as a keyed subset by matching keys and values.
  * @package codekandis/phpunit
  * @author Christian Ramelow <info@codekandis.net>
  */
