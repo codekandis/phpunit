@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [keep a changelog][xtlink-keep-a-changelog]
 and this project adheres to [Semantic Versioning 2.0.0][xtlink-semantic-versioning].
 
+## [5.0.3] - 2026-06-13
+
+### Changed
+
+* updated type and parameter wording from class names to FQCNs
+* updated source type PHPDocs with clearer purpose descriptions
+* updated `README.md` source links for shifted source line numbers
+
+[5.0.3]: https://github.com/codekandis/phpunit/compare/5.0.2..5.0.3
+
+---
 ## [5.0.2] - 2026-06-06
 
 ### Fixed
