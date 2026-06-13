@@ -9,11 +9,11 @@ use Override;
 use PHPUnit\Framework\UnknownClassOrInterfaceException;
 
 /**
- * Represents a data provider providing constraint class names with unknown interface or class name, expected throwable class name, expected throwable message, expected throwable code and expected previous throwable.
+ * Represents a data provider providing constraint class names with unknown interface or class name, expected throwable class name, expected throwable message, expected throwable code and expected throwable previous.
  * @package codekandis/phpunit
  * @author Christian Ramelow <info@codekandis.net>
  */
-final readonly class ConstraintClassNamesWithUnkownInterfaceOrClassNameExpectedThrowableClassNameExpectedThrowableMessageExpectedThrowableCodeAndExpectedPreviousThrowableDataProvider implements DataProviderInterface
+final readonly class ConstraintClassNamesWithUnkownInterfaceOrClassNameExpectedThrowableClassNameExpectedThrowableMessageExpectedThrowableCodeAndExpectedThrowablePreviousDataProvider implements DataProviderInterface
 {
 	/**
 	 * {@inheritDoc}
@@ -28,7 +28,7 @@ final readonly class ConstraintClassNamesWithUnkownInterfaceOrClassNameExpectedT
 				'expectedThrowableClassName'  => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'    => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_NAME, $unknownInterfaceOrClassName ),
 				'expectedThrowableCode'       => 0,
-				'expectedPreviousThrowable'   => null
+				'expectedThrowablePrevious'   => null
 			],
 			1 => [
 				'constraintClassName'         => IsSubClassOfConstraint::class,
@@ -36,7 +36,7 @@ final readonly class ConstraintClassNamesWithUnkownInterfaceOrClassNameExpectedT
 				'expectedThrowableClassName'  => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'    => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_NAME, $unknownInterfaceOrClassName ),
 				'expectedThrowableCode'       => 0,
-				'expectedPreviousThrowable'   => null
+				'expectedThrowablePrevious'   => null
 			]
 		];
 	}

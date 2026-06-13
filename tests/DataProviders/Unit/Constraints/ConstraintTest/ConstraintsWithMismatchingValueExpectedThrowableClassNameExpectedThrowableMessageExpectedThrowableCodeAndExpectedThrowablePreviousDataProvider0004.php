@@ -1,7 +1,7 @@
 <?php declare( strict_types = 1 );
 namespace CodeKandis\PhpUnit\Tests\DataProviders\Unit\Constraints\ConstraintTest;
 
-use CodeKandis\PhpUnit\Constraints\IsKeyedSubsetOfArrayConstraint;
+use CodeKandis\PhpUnit\Constraints\ArrayContainsUnkeyedSubsetConstraint;
 use CodeKandis\PhpUnit\DataProviderInterface;
 use CodeKandis\PhpUnit\Tests\Accessors\ConstraintExposingValueToTypeStringFragmentMethodAccessor;
 use CodeKandis\PhpUnit\Tests\Fixtures\Values;
@@ -13,7 +13,7 @@ use PHPUnit\Framework\ExpectationFailedException;
  * @package codekandis/phpunit
  * @author Christian Ramelow <info@codekandis.net>
  */
-final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameExpectedThrowableMessageExpectedThrowableCodeAndExpectedPreviousThrowableDataProvider0008 implements DataProviderInterface
+final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameExpectedThrowableMessageExpectedThrowableCodeAndExpectedThrowablePreviousDataProvider0004 implements DataProviderInterface
 {
 	/**
 	 * {@inheritDoc}
@@ -22,294 +22,8 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 	public static function provideData(): iterable
 	{
 		return [
-			8000 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_TRUE,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8001 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_FALSE,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8002 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_TRUE,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8003 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_FALSE,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8004 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_TRUE,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8005 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_FALSE,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8006 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_TRUE,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8007 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_0,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8008 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_1,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8009 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_0,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8010 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_1,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8011 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::FLOAT,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8012 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::FLOAT_STRING,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8013 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::STRING_0,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8014 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::STRING_1,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8015 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_NAME,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8016 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_INTERFACE_NAME,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8017 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_0,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8018 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_1,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8019 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_CLASS_NAME,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8020 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_1,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8021 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_2,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8022 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
+			4000 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_9, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_3,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -319,10 +33,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8023 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
+			4001 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_9, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_4,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -332,10 +46,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8024 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
+			4002 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_9, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_5,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -345,10 +59,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8025 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
+			4003 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_9, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_6,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -358,10 +72,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8026 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
+			4004 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_9, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_7,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -371,10 +85,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8027 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
+			4005 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_9, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_8,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -384,11 +98,11 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8028 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_9,
+			4006 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_9, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -397,36 +111,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8029 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_10,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8030 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_11,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8031 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
+			4007 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_9, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -436,10 +124,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8032 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
+			4008 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_9, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_2,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -449,10 +137,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8033 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
+			4009 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_9, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_3,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -462,10 +150,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8034 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
+			4010 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_9, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_4,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -475,10 +163,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8035 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
+			4011 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_9, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_5,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -488,10 +176,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8036 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
+			4012 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_9, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_6,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -501,10 +189,23 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8037 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
+			4013 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_9, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_7,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4014 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_9, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_8,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -514,10 +215,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8038 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
+			4015 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_9, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_9,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -527,10 +228,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8039 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
+			4016 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_9, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_10,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -540,10 +241,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8040 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
+			4017 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_9, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_11,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -553,10 +254,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8041 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
+			4018 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_9, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_12,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -566,10 +267,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8042 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
+			4019 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_9, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_13,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -579,10 +280,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8043 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
+			4020 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_9, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_14,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -592,10 +293,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8044 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
+			4021 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_9, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_15,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -605,10 +306,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8045 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
+			4022 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_9, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_16,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -618,10 +319,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8046 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
+			4023 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_9, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_17,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -631,10 +332,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8047 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
+			4024 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_9, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture(),
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -644,10 +345,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8048 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
+			4025 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_9, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::createImplementingClassFixture(),
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -657,10 +358,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8049 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4026 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::NULL,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -670,10 +371,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8050 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4027 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::NULL_STRING,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -683,10 +384,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8051 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4028 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -696,10 +397,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8052 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4029 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -709,10 +410,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8053 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4030 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -722,10 +423,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8054 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4031 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -735,10 +436,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8055 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4032 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -748,10 +449,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8056 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4033 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -761,10 +462,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8057 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4034 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -774,10 +475,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8058 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4035 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -787,10 +488,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8059 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4036 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -800,10 +501,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8060 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4037 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -813,10 +514,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8061 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4038 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -826,10 +527,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8062 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4039 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -839,10 +540,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8063 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4040 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::FLOAT,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -852,10 +553,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8064 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4041 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::FLOAT_STRING,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -865,10 +566,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8065 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4042 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::STRING_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -878,10 +579,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8066 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4043 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::STRING_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -891,10 +592,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8067 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4044 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -904,10 +605,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8068 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4045 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_INTERFACE_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -917,10 +618,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8069 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4046 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -930,10 +631,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8070 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4047 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -943,10 +644,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8071 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4048 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_CLASS_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -956,10 +657,23 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8072 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4049 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_0,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4050 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -969,10 +683,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8073 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4051 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_2,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -982,10 +696,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8074 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4052 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_3,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -995,10 +709,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8075 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4053 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_4,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1008,10 +722,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8076 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4054 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_5,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1021,10 +735,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8077 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4055 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_6,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1034,10 +748,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8078 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4056 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_7,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1047,10 +761,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8079 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4057 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_8,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1060,10 +774,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8080 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4058 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_9,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1073,23 +787,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8081 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_10,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8082 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4059 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_11,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1099,10 +800,23 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8083 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4060 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_0,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4061 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1112,10 +826,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8084 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4062 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_2,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1125,10 +839,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8085 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4063 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_3,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1138,10 +852,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8086 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4064 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_4,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1151,10 +865,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8087 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4065 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_5,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1164,10 +878,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8088 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4066 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_6,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1177,10 +891,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8089 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4067 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_7,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1190,10 +904,23 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8090 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4068 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_8,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4069 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_9,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1203,10 +930,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8091 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4070 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_10,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1216,10 +943,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8092 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4071 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_11,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1229,10 +956,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8093 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4072 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_12,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1242,10 +969,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8094 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4073 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_13,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1255,10 +982,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8095 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4074 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_14,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1268,10 +995,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8096 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4075 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_15,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1281,10 +1008,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8097 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4076 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_16,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1294,10 +1021,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8098 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4077 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_17,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1307,10 +1034,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8099 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4078 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture(),
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1320,10 +1047,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8100 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+			4079 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::createImplementingClassFixture(),
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1333,10 +1060,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8101 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4080 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::NULL,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1346,10 +1073,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8102 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4081 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::NULL_STRING,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1359,10 +1086,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8103 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4082 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1372,10 +1099,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8104 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4083 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1385,10 +1112,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8105 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4084 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1398,10 +1125,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8106 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4085 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1411,10 +1138,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8107 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4086 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1424,10 +1151,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8108 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4087 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1437,10 +1164,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8109 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4088 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1450,10 +1177,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8110 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4089 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1463,10 +1190,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8111 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4090 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1476,10 +1203,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8112 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4091 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1489,10 +1216,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8113 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4092 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1502,10 +1229,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8114 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4093 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1515,10 +1242,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8115 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4094 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::FLOAT,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1528,10 +1255,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8116 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4095 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::FLOAT_STRING,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1541,10 +1268,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8117 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4096 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::STRING_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1554,10 +1281,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8118 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4097 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::STRING_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1567,10 +1294,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8119 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4098 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1580,10 +1307,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8120 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4099 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_INTERFACE_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1593,10 +1320,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8121 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4100 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1606,10 +1333,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8122 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4101 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1619,10 +1346,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8123 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4102 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_CLASS_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1632,10 +1359,23 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8124 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4103 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_0,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4104 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1645,10 +1385,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8125 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4105 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_2,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1658,10 +1398,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8126 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4106 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_3,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1671,10 +1411,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8127 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4107 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_4,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1684,10 +1424,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8128 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4108 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_5,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1697,10 +1437,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8129 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4109 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_6,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1710,10 +1450,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8130 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4110 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_7,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1723,10 +1463,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8131 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4111 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_8,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1736,10 +1476,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8132 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4112 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_9,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1749,23 +1489,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8133 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_10,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8134 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4113 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_11,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1775,10 +1502,23 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8135 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4114 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_0,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4115 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1788,10 +1528,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8136 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4116 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_2,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1801,10 +1541,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8137 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4117 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_3,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1814,10 +1554,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8138 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4118 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_4,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1827,10 +1567,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8139 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4119 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_5,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1840,10 +1580,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8140 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4120 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_6,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1853,10 +1593,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8141 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4121 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_7,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1866,10 +1606,23 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8142 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4122 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_8,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4123 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_9,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1879,10 +1632,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8143 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4124 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_10,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1892,10 +1645,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8144 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4125 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_11,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1905,10 +1658,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8145 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4126 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_12,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1918,10 +1671,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8146 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4127 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_13,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1931,10 +1684,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8147 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4128 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_14,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1944,10 +1697,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8148 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4129 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_15,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1957,10 +1710,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8149 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4130 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_16,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1970,10 +1723,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8150 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4131 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_17,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1983,10 +1736,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8151 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4132 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture(),
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -1996,10 +1749,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8152 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
+			4133 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::createImplementingClassFixture(),
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -2009,10 +1762,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8153 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
+			4134 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::NULL,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -2022,10 +1775,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8154 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
+			4135 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::NULL_STRING,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -2035,10 +1788,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8155 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
+			4136 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -2048,10 +1801,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8156 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
+			4137 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -2061,10 +1814,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8157 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
+			4138 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -2074,10 +1827,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8158 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
+			4139 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -2087,10 +1840,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8159 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
+			4140 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -2100,10 +1853,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8160 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
+			4141 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -2113,10 +1866,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8161 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
+			4142 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -2126,10 +1879,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8162 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
+			4143 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -2139,10 +1892,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8163 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
+			4144 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -2152,10 +1905,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8164 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
+			4145 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -2165,10 +1918,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8165 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
+			4146 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -2178,10 +1931,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8166 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
+			4147 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -2191,10 +1944,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8167 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
+			4148 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::FLOAT,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -2204,10 +1957,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8168 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
+			4149 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::FLOAT_STRING,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -2217,10 +1970,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8169 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
+			4150 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::STRING_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -2230,10 +1983,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8170 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
+			4151 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::STRING_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -2243,10 +1996,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8171 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
+			4152 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -2256,10 +2009,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8172 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
+			4153 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_INTERFACE_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -2269,10 +2022,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8173 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
+			4154 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -2282,10 +2035,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8174 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
+			4155 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -2295,10 +2048,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8175 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
+			4156 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_CLASS_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -2308,10 +2061,23 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8176 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
+			4157 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_0,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4158 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -2321,10 +2087,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8177 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
+			4159 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_2,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -2334,10 +2100,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8178 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
+			4160 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_3,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -2347,10 +2113,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8179 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
+			4161 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_4,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -2360,10 +2126,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8180 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
+			4162 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_5,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -2373,10 +2139,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8181 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
+			4163 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_6,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -2386,10 +2152,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8182 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
+			4164 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_7,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -2399,10 +2165,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8183 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
+			4165 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_8,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -2412,10 +2178,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8184 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
+			4166 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_9,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -2425,10 +2191,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8185 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
+			4167 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_10,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -2438,11 +2204,11 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8186 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_11,
+			4168 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -2451,10 +2217,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8187 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
+			4169 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -2464,10 +2230,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8188 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
+			4170 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_2,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -2477,10 +2243,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8189 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
+			4171 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_3,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -2490,10 +2256,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8190 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
+			4172 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_4,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -2503,10 +2269,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8191 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
+			4173 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_5,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -2516,10 +2282,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8192 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
+			4174 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_6,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -2529,10 +2295,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8193 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
+			4175 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_7,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -2542,10 +2308,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8194 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
+			4176 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_8,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -2555,1362 +2321,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8195 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_10,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8196 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_11,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8197 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_12,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8198 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_13,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8199 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_14,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8200 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_15,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8201 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_16,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8202 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_17,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8203 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture(),
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8204 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createImplementingClassFixture(),
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8205 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::NULL,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8206 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::NULL_STRING,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8207 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_FALSE,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8208 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_TRUE,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8209 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_FALSE,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8210 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_TRUE,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8211 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_FALSE,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8212 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_TRUE,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8213 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_FALSE,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8214 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_TRUE,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8215 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_0,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8216 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_1,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8217 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_0,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8218 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_1,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8219 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::FLOAT,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8220 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::FLOAT_STRING,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8221 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::STRING_0,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8222 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::STRING_1,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8223 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_NAME,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8224 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_INTERFACE_NAME,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8225 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_0,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8226 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_1,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8227 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_CLASS_NAME,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8228 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_1,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8229 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_2,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8230 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_3,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8231 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_4,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8232 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_5,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8233 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_6,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8234 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_7,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8235 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_8,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8236 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_9,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8237 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_10,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8238 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_11,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8239 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_1,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8240 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_2,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8241 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_3,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8242 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_4,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8243 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_5,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8244 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_6,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8245 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_7,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8246 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_8,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8247 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_10,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8248 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_11,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8249 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_12,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8250 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_13,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8251 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_14,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8252 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_15,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8253 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_16,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8254 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_17,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8255 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture(),
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8256 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createImplementingClassFixture(),
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8257 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::NULL,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8258 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::NULL_STRING,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8259 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_FALSE,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8260 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_TRUE,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8261 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_FALSE,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8262 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_TRUE,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8263 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_FALSE,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8264 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_TRUE,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8265 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_FALSE,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8266 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_TRUE,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8267 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_0,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8268 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_1,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8269 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_0,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8270 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_1,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8271 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::FLOAT,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8272 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::FLOAT_STRING,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8273 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::STRING_0,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8274 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::STRING_1,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8275 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_NAME,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8276 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_INTERFACE_NAME,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8277 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_0,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8278 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_1,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8279 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_CLASS_NAME,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8280 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_1,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8281 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_2,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8282 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_3,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8283 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_4,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8284 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_5,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8285 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_6,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8286 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_7,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8287 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_8,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8288 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_9,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8289 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_10,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8290 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_11,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8291 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_1,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8292 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_2,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8293 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_3,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8294 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_4,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8295 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_5,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8296 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_6,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8297 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_7,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8298 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_8,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8299 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
+			4177 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_9,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -3920,10 +2334,23 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8300 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
+			4178 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_10,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4179 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_11,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -3933,10 +2360,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8301 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
+			4180 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_12,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -3946,10 +2373,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8302 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
+			4181 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_13,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -3959,10 +2386,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8303 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
+			4182 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_14,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -3972,10 +2399,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8304 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
+			4183 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_15,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -3985,10 +2412,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8305 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
+			4184 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_16,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -3998,10 +2425,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8306 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
+			4185 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_17,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4011,10 +2438,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8307 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
+			4186 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture(),
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4024,10 +2451,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8308 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
+			4187 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::createImplementingClassFixture(),
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4037,10 +2464,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8309 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4188 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::NULL,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4050,10 +2477,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8310 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4189 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::NULL_STRING,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4063,10 +2490,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8311 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4190 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4076,10 +2503,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8312 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4191 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4089,10 +2516,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8313 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4192 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4102,10 +2529,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8314 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4193 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4115,10 +2542,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8315 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4194 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4128,10 +2555,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8316 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4195 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4141,10 +2568,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8317 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4196 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4154,10 +2581,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8318 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4197 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4167,10 +2594,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8319 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4198 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4180,10 +2607,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8320 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4199 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4193,10 +2620,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8321 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4200 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4206,10 +2633,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8322 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4201 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4219,10 +2646,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8323 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4202 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::FLOAT,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4232,10 +2659,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8324 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4203 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::FLOAT_STRING,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4245,10 +2672,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8325 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4204 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::STRING_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4258,10 +2685,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8326 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4205 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::STRING_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4271,10 +2698,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8327 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4206 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4284,10 +2711,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8328 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4207 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_INTERFACE_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4297,10 +2724,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8329 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4208 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4310,10 +2737,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8330 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4209 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4323,10 +2750,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8331 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4210 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_CLASS_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4336,10 +2763,23 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8332 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4211 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_0,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4212 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4349,10 +2789,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8333 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4213 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_2,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4362,10 +2802,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8334 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4214 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_3,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4375,10 +2815,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8335 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4215 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_4,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4388,10 +2828,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8336 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4216 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_5,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4401,10 +2841,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8337 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4217 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_6,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4414,10 +2854,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8338 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4218 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_7,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4427,10 +2867,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8339 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4219 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_8,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4440,10 +2880,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8340 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4220 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_9,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4453,10 +2893,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8341 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4221 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_10,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4466,11 +2906,11 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8342 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_11,
+			4222 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -4479,10 +2919,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8343 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4223 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4492,10 +2932,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8344 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4224 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_2,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4505,10 +2945,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8345 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4225 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_3,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4518,10 +2958,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8346 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4226 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_4,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4531,10 +2971,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8347 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4227 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_5,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4544,10 +2984,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8348 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4228 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_6,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4557,10 +2997,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8349 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4229 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_7,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4570,10 +3010,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8350 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4230 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_8,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4583,10 +3023,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8351 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4231 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_9,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4596,10 +3036,23 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8352 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4232 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_10,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4233 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_11,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4609,10 +3062,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8353 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4234 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_12,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4622,10 +3075,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8354 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4235 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_13,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4635,10 +3088,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8355 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4236 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_14,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4648,10 +3101,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8356 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4237 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_15,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4661,10 +3114,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8357 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4238 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_16,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4674,10 +3127,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8358 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4239 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_17,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4687,10 +3140,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8359 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4240 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture(),
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4700,10 +3153,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8360 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
+			4241 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::createImplementingClassFixture(),
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4713,10 +3166,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8361 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
+			4242 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::NULL,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4726,10 +3179,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8362 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
+			4243 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::NULL_STRING,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4739,10 +3192,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8363 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
+			4244 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4752,10 +3205,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8364 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
+			4245 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4765,10 +3218,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8365 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
+			4246 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4778,10 +3231,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8366 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
+			4247 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4791,10 +3244,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8367 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
+			4248 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4804,10 +3257,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8368 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
+			4249 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4817,10 +3270,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8369 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
+			4250 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4830,10 +3283,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8370 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
+			4251 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4843,10 +3296,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8371 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
+			4252 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4856,10 +3309,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8372 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
+			4253 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4869,10 +3322,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8373 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
+			4254 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4882,10 +3335,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8374 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
+			4255 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4895,10 +3348,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8375 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
+			4256 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::FLOAT,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4908,10 +3361,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8376 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
+			4257 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::FLOAT_STRING,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4921,10 +3374,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8377 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
+			4258 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::STRING_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4934,10 +3387,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8378 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
+			4259 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::STRING_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4947,10 +3400,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8379 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
+			4260 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4960,10 +3413,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8380 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
+			4261 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_INTERFACE_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4973,10 +3426,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8381 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
+			4262 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4986,10 +3439,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8382 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
+			4263 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -4999,10 +3452,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8383 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
+			4264 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_CLASS_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5012,11 +3465,11 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8384 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_1,
+			4265 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture(),
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -5025,11 +3478,11 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8385 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_2,
+			4266 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::createImplementingClassFixture(),
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -5038,11 +3491,11 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8386 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_3,
+			4267 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::NULL,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -5051,11 +3504,11 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8387 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_4,
+			4268 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::NULL_STRING,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -5064,10 +3517,621 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8388 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
+			4269 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_FALSE,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4270 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_TRUE,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4271 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_FALSE,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4272 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_TRUE,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4273 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_FALSE,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4274 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_TRUE,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4275 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_FALSE,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4276 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_TRUE,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4277 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_0,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4278 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_1,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4279 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_0,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4280 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_1,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4281 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::FLOAT,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4282 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::FLOAT_STRING,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4283 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::STRING_0,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4284 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::STRING_1,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4285 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_NAME,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4286 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_INTERFACE_NAME,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4287 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_0,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4288 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_1,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4289 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_CLASS_NAME,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4290 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture(),
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4291 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::createImplementingClassFixture(),
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4292 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::NULL,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4293 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::NULL_STRING,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4294 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_FALSE,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4295 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_TRUE,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4296 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_FALSE,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4297 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_TRUE,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4298 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_FALSE,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4299 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_TRUE,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4300 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_FALSE,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4301 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_TRUE,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4302 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_0,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4303 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_1,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4304 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_0,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4305 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_1,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4306 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::FLOAT,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4307 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::FLOAT_STRING,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4308 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::STRING_0,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4309 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::STRING_1,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4310 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_NAME,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4311 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_INTERFACE_NAME,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4312 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_0,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4313 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_1,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4314 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_CLASS_NAME,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4315 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_0,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4316 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_5,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5077,10 +4141,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8389 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
+			4317 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_6,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5090,10 +4154,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8390 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
+			4318 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_7,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5103,11 +4167,11 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8391 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_8,
+			4319 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -5116,75 +4180,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8392 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_9,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8393 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_10,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8394 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_11,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8395 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_1,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8396 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_2,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8397 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
+			4320 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_3,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5194,10 +4193,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8398 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
+			4321 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_4,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5207,10 +4206,1206 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8399 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
+			4322 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_7,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4323 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_8,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4324 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_9,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4325 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_10,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4326 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_11,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4327 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_12,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4328 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_13,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4329 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_14,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4330 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_16,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4331 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_17,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4332 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture(),
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4333 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::createImplementingClassFixture(),
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4334 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::NULL,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4335 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::NULL_STRING,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4336 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_FALSE,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4337 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_TRUE,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4338 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_FALSE,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4339 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_TRUE,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4340 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_FALSE,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4341 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_TRUE,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4342 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_FALSE,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4343 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_TRUE,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4344 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_0,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4345 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_1,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4346 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_0,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4347 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_1,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4348 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::FLOAT,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4349 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::FLOAT_STRING,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4350 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::STRING_0,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4351 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::STRING_1,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4352 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_NAME,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4353 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_INTERFACE_NAME,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4354 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_0,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4355 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_1,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4356 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_CLASS_NAME,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4357 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_0,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4358 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_5,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4359 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_6,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4360 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_7,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4361 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_0,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4362 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_3,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4363 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_4,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4364 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_7,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4365 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_8,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4366 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_9,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4367 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_10,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4368 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_11,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4369 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_12,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4370 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_13,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4371 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_14,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4372 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_16,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4373 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_17,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4374 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture(),
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4375 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::createImplementingClassFixture(),
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4376 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::NULL,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4377 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::NULL_STRING,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4378 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_FALSE,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4379 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_TRUE,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4380 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_FALSE,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4381 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_TRUE,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4382 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_FALSE,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4383 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_TRUE,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4384 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_FALSE,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4385 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_TRUE,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4386 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_0,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4387 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_1,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4388 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_0,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4389 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_1,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4390 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::FLOAT,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4391 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::FLOAT_STRING,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4392 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::STRING_0,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4393 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::STRING_1,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4394 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_NAME,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4395 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_INTERFACE_NAME,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4396 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_0,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4397 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_1,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4398 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_CLASS_NAME,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4399 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_0,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4400 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_1,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4401 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_2,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4402 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_3,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4403 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_5,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4404 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_6,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4405 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_7,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4406 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_8,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4407 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_9,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4408 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_10,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4409 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_11,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4410 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_0,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4411 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_1,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4412 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_3,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4413 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_4,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4414 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_5,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5220,10 +5415,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8400 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
+			4415 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_6,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5233,10 +5428,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8401 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
+			4416 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_7,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5246,10 +5441,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8402 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
+			4417 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_8,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5259,10 +5454,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8403 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
+			4418 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_9,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5272,10 +5467,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8404 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
+			4419 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_10,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5285,10 +5480,23 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8405 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
+			4420 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_11,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4421 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_12,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5298,10 +5506,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8406 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
+			4422 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_13,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5311,10 +5519,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8407 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
+			4423 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_14,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5324,10 +5532,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8408 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
+			4424 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_15,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5337,10 +5545,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8409 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
+			4425 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_16,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5350,10 +5558,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8410 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
+			4426 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_17,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5363,10 +5571,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8411 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
+			4427 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture(),
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5376,10 +5584,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8412 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
+			4428 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::createImplementingClassFixture(),
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5389,10 +5597,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8413 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4429 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::NULL,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5402,10 +5610,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8414 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4430 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::NULL_STRING,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5415,10 +5623,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8415 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4431 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5428,10 +5636,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8416 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4432 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5441,10 +5649,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8417 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4433 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5454,10 +5662,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8418 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4434 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5467,10 +5675,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8419 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4435 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5480,10 +5688,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8420 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4436 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5493,10 +5701,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8421 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4437 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5506,10 +5714,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8422 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4438 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5519,10 +5727,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8423 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4439 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5532,10 +5740,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8424 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4440 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5545,10 +5753,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8425 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4441 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5558,10 +5766,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8426 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4442 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5571,10 +5779,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8427 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4443 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::FLOAT,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5584,10 +5792,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8428 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4444 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::FLOAT_STRING,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5597,10 +5805,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8429 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4445 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::STRING_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5610,10 +5818,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8430 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4446 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::STRING_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5623,10 +5831,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8431 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4447 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5636,10 +5844,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8432 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4448 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_INTERFACE_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5649,10 +5857,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8433 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4449 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5662,10 +5870,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8434 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4450 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5675,10 +5883,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8435 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4451 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_CLASS_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5688,10 +5896,23 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8436 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4452 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_0,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4453 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5701,10 +5922,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8437 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4454 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_2,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5714,10 +5935,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8438 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4455 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_3,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5727,23 +5948,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8439 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_4,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8440 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4456 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_5,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5753,10 +5961,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8441 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4457 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_6,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5766,10 +5974,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8442 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4458 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_7,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5779,10 +5987,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8443 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4459 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_8,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5792,10 +6000,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8444 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4460 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_9,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5805,10 +6013,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8445 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4461 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_10,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5818,10 +6026,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8446 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4462 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_11,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5831,10 +6039,23 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8447 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4463 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_0,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4464 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5844,23 +6065,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8448 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_2,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8449 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4465 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_3,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5870,10 +6078,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8450 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4466 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_4,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5883,10 +6091,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8451 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4467 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_5,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5896,10 +6104,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8452 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4468 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_6,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5909,10 +6117,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8453 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4469 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_7,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5922,10 +6130,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8454 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4470 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_8,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5935,10 +6143,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8455 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4471 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_9,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5948,10 +6156,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8456 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4472 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_10,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5961,10 +6169,23 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8457 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4473 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_11,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4474 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_12,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5974,10 +6195,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8458 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4475 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_13,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -5987,10 +6208,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8459 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4476 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_14,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6000,10 +6221,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8460 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4477 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_15,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6013,10 +6234,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8461 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4478 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_16,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6026,10 +6247,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8462 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4479 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_17,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6039,10 +6260,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8463 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4480 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture(),
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6052,10 +6273,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8464 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
+			4481 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::createImplementingClassFixture(),
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6065,10 +6286,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8465 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4482 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::NULL,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6078,10 +6299,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8466 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4483 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::NULL_STRING,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6091,10 +6312,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8467 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4484 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6104,10 +6325,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8468 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4485 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6117,10 +6338,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8469 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4486 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6130,10 +6351,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8470 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4487 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6143,10 +6364,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8471 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4488 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6156,10 +6377,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8472 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4489 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6169,10 +6390,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8473 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4490 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6182,10 +6403,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8474 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4491 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6195,10 +6416,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8475 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4492 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6208,10 +6429,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8476 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4493 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6221,10 +6442,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8477 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4494 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6234,10 +6455,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8478 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4495 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6247,10 +6468,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8479 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4496 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::FLOAT,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6260,10 +6481,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8480 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4497 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::FLOAT_STRING,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6273,10 +6494,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8481 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4498 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::STRING_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6286,10 +6507,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8482 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4499 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::STRING_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6299,10 +6520,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8483 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4500 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6312,10 +6533,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8484 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4501 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_INTERFACE_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6325,10 +6546,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8485 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4502 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6338,10 +6559,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8486 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4503 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6351,10 +6572,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8487 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4504 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_CLASS_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6364,10 +6585,23 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8488 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4505 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_0,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4506 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6377,10 +6611,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8489 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4507 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_2,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6390,10 +6624,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8490 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4508 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_3,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6403,10 +6637,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8491 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4509 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_4,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6416,62 +6650,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8492 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_5,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8493 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_6,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8494 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_7,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8495 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_8,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8496 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4510 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_9,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6481,10 +6663,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8497 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4511 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_10,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6494,10 +6676,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8498 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4512 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_11,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6507,10 +6689,23 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8499 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4513 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_0,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4514 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6520,10 +6715,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8500 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4515 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_2,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6533,49 +6728,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8501 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_3,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8502 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_4,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8503 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_5,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8504 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4516 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_6,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6585,10 +6741,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8505 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4517 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_7,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6598,10 +6754,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8506 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4518 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_8,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6611,10 +6767,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8507 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4519 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_9,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6624,10 +6780,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8508 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4520 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_10,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6637,10 +6793,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8509 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4521 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_11,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6650,10 +6806,23 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8510 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4522 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_12,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4523 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_13,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6663,10 +6832,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8511 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4524 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_14,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6676,10 +6845,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8512 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4525 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_15,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6689,10 +6858,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8513 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4526 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_16,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6702,10 +6871,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8514 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4527 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_17,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6715,10 +6884,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8515 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4528 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture(),
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6728,10 +6897,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8516 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
+			4529 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::createImplementingClassFixture(),
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6741,10 +6910,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8517 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4530 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::NULL,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6754,10 +6923,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8518 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4531 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::NULL_STRING,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6767,10 +6936,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8519 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4532 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6780,10 +6949,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8520 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4533 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6793,10 +6962,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8521 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4534 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6806,10 +6975,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8522 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4535 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6819,10 +6988,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8523 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4536 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6832,10 +7001,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8524 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4537 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6845,10 +7014,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8525 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4538 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6858,10 +7027,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8526 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4539 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6871,10 +7040,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8527 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4540 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6884,10 +7053,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8528 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4541 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6897,10 +7066,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8529 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4542 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6910,10 +7079,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8530 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4543 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6923,10 +7092,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8531 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4544 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::FLOAT,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6936,10 +7105,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8532 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4545 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::FLOAT_STRING,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6949,10 +7118,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8533 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4546 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::STRING_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6962,10 +7131,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8534 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4547 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::STRING_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6975,10 +7144,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8535 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4548 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -6988,10 +7157,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8536 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4549 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_INTERFACE_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7001,10 +7170,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8537 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4550 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7014,10 +7183,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8538 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4551 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7027,10 +7196,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8539 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4552 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_CLASS_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7040,10 +7209,23 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8540 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4553 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_0,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4554 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7053,10 +7235,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8541 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4555 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_2,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7066,10 +7248,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8542 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4556 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_3,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7079,10 +7261,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8543 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4557 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_4,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7092,62 +7274,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8544 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_5,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8545 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_6,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8546 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_7,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8547 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_8,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8548 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4558 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_9,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7157,10 +7287,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8549 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4559 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_10,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7170,10 +7300,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8550 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4560 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_11,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7183,10 +7313,23 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8551 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4561 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_0,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4562 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7196,10 +7339,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8552 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4563 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_2,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7209,49 +7352,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8553 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_3,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8554 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_4,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8555 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_5,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8556 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4564 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_6,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7261,10 +7365,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8557 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4565 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_7,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7274,10 +7378,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8558 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4566 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_8,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7287,10 +7391,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8559 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4567 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_9,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7300,10 +7404,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8560 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4568 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_10,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7313,10 +7417,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8561 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4569 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_11,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7326,10 +7430,23 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8562 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4570 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_12,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4571 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_13,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7339,10 +7456,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8563 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4572 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_14,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7352,10 +7469,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8564 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4573 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_15,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7365,10 +7482,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8565 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4574 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_16,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7378,10 +7495,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8566 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4575 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_17,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7391,10 +7508,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8567 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4576 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture(),
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7404,10 +7521,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8568 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
+			4577 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::createImplementingClassFixture(),
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7417,10 +7534,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8569 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4578 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::NULL,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7430,10 +7547,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8570 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4579 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::NULL_STRING,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7443,10 +7560,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8571 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4580 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7456,10 +7573,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8572 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4581 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7469,10 +7586,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8573 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4582 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7482,10 +7599,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8574 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4583 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7495,10 +7612,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8575 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4584 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7508,10 +7625,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8576 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4585 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7521,10 +7638,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8577 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4586 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7534,10 +7651,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8578 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4587 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7547,10 +7664,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8579 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4588 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7560,10 +7677,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8580 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4589 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7573,10 +7690,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8581 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4590 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7586,10 +7703,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8582 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4591 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7599,10 +7716,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8583 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4592 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::FLOAT,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7612,10 +7729,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8584 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4593 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::FLOAT_STRING,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7625,10 +7742,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8585 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4594 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::STRING_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7638,10 +7755,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8586 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4595 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::STRING_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7651,10 +7768,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8587 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4596 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7664,10 +7781,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8588 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4597 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_INTERFACE_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7677,10 +7794,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8589 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4598 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7690,10 +7807,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8590 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4599 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7703,10 +7820,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8591 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4600 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_CLASS_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7716,10 +7833,23 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8592 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4601 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_0,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4602 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7729,10 +7859,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8593 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4603 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_2,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7742,10 +7872,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8594 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4604 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_3,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7755,10 +7885,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8595 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4605 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_4,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7768,10 +7898,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8596 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4606 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_5,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7781,10 +7911,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8597 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4607 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_6,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7794,10 +7924,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8598 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4608 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_7,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7807,10 +7937,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8599 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4609 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_8,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7820,10 +7950,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8600 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4610 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_9,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7833,10 +7963,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8601 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4611 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_10,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7846,10 +7976,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8602 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4612 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_11,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7859,10 +7989,23 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8603 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4613 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_0,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4614 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7872,10 +8015,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8604 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4615 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_2,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7885,10 +8028,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8605 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4616 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_3,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7898,23 +8041,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8606 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_4,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8607 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4617 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_5,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7924,10 +8054,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8608 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4618 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_6,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7937,10 +8067,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8609 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4619 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_7,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7950,10 +8080,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8610 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4620 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_8,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7963,10 +8093,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8611 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4621 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_9,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7976,10 +8106,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8612 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4622 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_10,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -7989,10 +8119,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8613 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4623 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_11,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8002,10 +8132,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8614 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4624 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_12,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8015,10 +8145,23 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8615 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4625 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_13,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4626 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_14,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8028,10 +8171,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8616 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4627 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_15,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8041,10 +8184,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8617 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4628 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_16,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8054,10 +8197,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8618 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4629 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_17,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8067,10 +8210,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8619 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4630 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture(),
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8080,10 +8223,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8620 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_FALSE ),
+			4631 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::createImplementingClassFixture(),
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8093,10 +8236,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8621 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4632 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::NULL,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8106,10 +8249,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8622 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4633 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::NULL_STRING,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8119,10 +8262,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8623 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4634 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8132,10 +8275,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8624 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4635 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8145,10 +8288,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8625 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4636 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8158,10 +8301,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8626 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4637 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8171,10 +8314,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8627 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4638 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8184,10 +8327,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8628 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4639 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8197,10 +8340,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8629 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4640 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8210,10 +8353,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8630 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4641 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8223,10 +8366,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8631 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4642 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8236,10 +8379,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8632 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4643 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8249,10 +8392,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8633 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4644 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8262,10 +8405,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8634 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4645 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8275,10 +8418,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8635 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4646 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::FLOAT,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8288,10 +8431,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8636 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4647 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::FLOAT_STRING,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8301,10 +8444,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8637 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4648 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::STRING_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8314,10 +8457,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8638 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4649 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::STRING_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8327,10 +8470,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8639 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4650 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8340,10 +8483,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8640 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4651 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_INTERFACE_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8353,10 +8496,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8641 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4652 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8366,10 +8509,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8642 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4653 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8379,10 +8522,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8643 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4654 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_CLASS_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8392,10 +8535,23 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8644 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4655 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_0,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4656 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8405,10 +8561,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8645 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4657 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_2,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8418,10 +8574,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8646 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4658 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_3,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8431,10 +8587,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8647 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4659 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_4,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8444,10 +8600,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8648 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4660 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_5,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8457,10 +8613,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8649 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4661 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_6,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8470,10 +8626,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8650 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4662 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_7,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8483,10 +8639,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8651 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4663 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_8,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8496,10 +8652,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8652 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4664 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_9,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8509,10 +8665,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8653 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4665 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_10,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8522,10 +8678,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8654 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4666 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_11,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8535,10 +8691,23 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8655 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4667 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_0,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4668 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8548,10 +8717,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8656 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4669 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_2,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8561,10 +8730,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8657 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4670 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_3,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8574,23 +8743,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8658 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_4,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8659 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4671 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_5,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8600,10 +8756,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8660 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4672 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_6,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8613,10 +8769,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8661 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4673 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_7,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8626,10 +8782,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8662 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4674 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_8,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8639,10 +8795,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8663 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4675 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_9,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8652,10 +8808,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8664 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4676 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_10,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8665,10 +8821,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8665 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4677 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_11,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8678,10 +8834,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8666 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4678 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_12,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8691,10 +8847,23 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8667 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4679 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_13,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4680 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_14,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8704,10 +8873,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8668 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4681 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_15,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8717,10 +8886,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8669 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4682 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_16,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8730,10 +8899,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8670 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4683 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_17,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8743,10 +8912,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8671 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4684 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture(),
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8756,10 +8925,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8672 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_13, Values::BOOLEAN_TRUE ),
+			4685 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::createImplementingClassFixture(),
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8769,10 +8938,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8673 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4686 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::NULL,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8782,10 +8951,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8674 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4687 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::NULL_STRING,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8795,10 +8964,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8675 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4688 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8808,10 +8977,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8676 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4689 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8821,10 +8990,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8677 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4690 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8834,10 +9003,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8678 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4691 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8847,10 +9016,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8679 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4692 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8860,10 +9029,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8680 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4693 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8873,10 +9042,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8681 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4694 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8886,10 +9055,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8682 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4695 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8899,10 +9068,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8683 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4696 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8912,10 +9081,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8684 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4697 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8925,10 +9094,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8685 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4698 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8938,10 +9107,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8686 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4699 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8951,10 +9120,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8687 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4700 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::FLOAT,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8964,10 +9133,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8688 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4701 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::FLOAT_STRING,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8977,10 +9146,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8689 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4702 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::STRING_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -8990,10 +9159,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8690 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4703 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::STRING_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9003,10 +9172,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8691 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4704 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9016,10 +9185,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8692 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4705 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_INTERFACE_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9029,10 +9198,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8693 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4706 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9042,10 +9211,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8694 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4707 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9055,10 +9224,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8695 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4708 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_CLASS_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9068,10 +9237,23 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8696 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4709 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_0,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4710 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9081,10 +9263,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8697 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4711 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_2,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9094,10 +9276,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8698 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4712 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_3,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9107,10 +9289,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8699 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4713 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_4,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9120,10 +9302,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8700 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4714 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_5,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9133,10 +9315,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8701 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4715 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_6,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9146,10 +9328,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8702 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4716 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_7,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9159,23 +9341,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8703 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_8,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8704 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4717 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_9,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9185,10 +9354,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8705 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4718 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_10,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9198,10 +9367,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8706 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4719 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_11,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9211,10 +9380,23 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8707 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4720 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_0,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4721 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9224,10 +9406,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8708 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4722 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_2,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9237,10 +9419,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8709 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4723 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_3,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9250,10 +9432,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8710 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4724 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_4,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9263,23 +9445,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8711 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_5,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8712 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4725 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_6,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9289,10 +9458,23 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8713 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4726 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_7,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4727 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_8,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9302,10 +9484,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8714 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4728 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_9,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9315,10 +9497,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8715 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4729 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_10,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9328,10 +9510,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8716 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4730 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_11,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9341,10 +9523,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8717 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4731 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_12,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9354,10 +9536,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8718 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4732 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_13,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9367,10 +9549,23 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8719 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4733 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_14,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4734 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_15,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9380,10 +9575,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8720 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4735 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_16,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9393,10 +9588,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8721 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4736 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_17,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9406,10 +9601,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8722 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4737 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture(),
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9419,10 +9614,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8723 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_FALSE ),
+			4738 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::createImplementingClassFixture(),
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9432,10 +9627,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8724 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4739 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::NULL,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9445,10 +9640,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8725 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4740 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::NULL_STRING,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9458,10 +9653,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8726 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4741 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9471,10 +9666,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8727 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4742 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9484,10 +9679,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8728 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4743 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9497,10 +9692,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8729 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4744 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9510,10 +9705,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8730 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4745 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9523,10 +9718,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8731 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4746 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9536,10 +9731,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8732 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4747 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9549,10 +9744,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8733 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4748 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9562,10 +9757,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8734 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4749 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9575,10 +9770,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8735 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4750 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9588,10 +9783,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8736 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4751 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9601,10 +9796,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8737 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4752 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9614,10 +9809,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8738 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4753 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::FLOAT,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9627,10 +9822,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8739 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4754 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::FLOAT_STRING,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9640,10 +9835,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8740 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4755 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::STRING_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9653,10 +9848,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8741 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4756 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::STRING_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9666,10 +9861,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8742 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4757 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9679,10 +9874,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8743 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4758 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_INTERFACE_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9692,10 +9887,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8744 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4759 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9705,10 +9900,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8745 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4760 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9718,10 +9913,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8746 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4761 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_CLASS_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9731,10 +9926,23 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8747 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4762 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_0,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4763 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9744,10 +9952,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8748 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4764 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_2,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9757,10 +9965,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8749 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4765 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_3,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9770,10 +9978,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8750 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4766 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_4,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9783,10 +9991,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8751 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4767 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_5,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9796,10 +10004,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8752 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4768 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_6,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9809,10 +10017,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8753 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4769 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_7,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9822,23 +10030,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8754 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_8,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8755 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4770 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_9,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9848,10 +10043,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8756 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4771 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_10,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9861,10 +10056,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8757 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4772 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_11,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9874,10 +10069,23 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8758 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4773 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_0,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4774 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9887,10 +10095,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8759 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4775 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_2,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9900,10 +10108,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8760 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4776 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_3,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9913,10 +10121,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8761 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4777 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_4,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9926,23 +10134,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8762 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_5,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8763 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4778 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_6,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9952,10 +10147,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8764 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4779 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_7,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9965,10 +10160,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8765 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4780 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_8,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9978,10 +10173,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8766 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4781 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_9,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -9991,10 +10186,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8767 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4782 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_10,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10004,10 +10199,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8768 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4783 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_11,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10017,10 +10212,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8769 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4784 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_12,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10030,10 +10225,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8770 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4785 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_13,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10043,10 +10238,23 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8771 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4786 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_14,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4787 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_15,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10056,10 +10264,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8772 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4788 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_16,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10069,10 +10277,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8773 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4789 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_17,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10082,10 +10290,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8774 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4790 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture(),
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10095,10 +10303,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8775 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_14, Values::BOOLEAN_TRUE ),
+			4791 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::createImplementingClassFixture(),
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10108,10 +10316,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8776 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
+			4792 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::NULL,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10121,10 +10329,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8777 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
+			4793 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::NULL_STRING,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10134,10 +10342,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8778 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
+			4794 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10147,10 +10355,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8779 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
+			4795 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10160,10 +10368,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8780 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
+			4796 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10173,10 +10381,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8781 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
+			4797 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10186,10 +10394,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8782 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
+			4798 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10199,10 +10407,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8783 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
+			4799 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10212,10 +10420,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8784 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
+			4800 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10225,10 +10433,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8785 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
+			4801 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10238,10 +10446,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8786 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
+			4802 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10251,10 +10459,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8787 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
+			4803 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10264,10 +10472,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8788 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
+			4804 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10277,10 +10485,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8789 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
+			4805 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10290,10 +10498,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8790 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
+			4806 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::FLOAT,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10303,10 +10511,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8791 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
+			4807 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::FLOAT_STRING,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10316,10 +10524,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8792 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
+			4808 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::STRING_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10329,10 +10537,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8793 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
+			4809 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::STRING_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10342,10 +10550,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8794 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
+			4810 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10355,10 +10563,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8795 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
+			4811 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_INTERFACE_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10368,10 +10576,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8796 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
+			4812 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10381,10 +10589,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8797 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
+			4813 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10394,10 +10602,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8798 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
+			4814 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_CLASS_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10407,11 +10615,11 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8799 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_1,
+			4815 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -10420,49 +10628,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8800 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_2,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8801 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_3,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8802 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_4,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8803 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
+			4816 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_5,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10472,10 +10641,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8804 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
+			4817 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_6,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10485,10 +10654,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8805 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
+			4818 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_7,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10498,11 +10667,11 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8806 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_8,
+			4819 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -10511,75 +10680,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8807 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_9,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8808 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_10,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8809 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_11,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8810 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_1,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8811 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_2,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8812 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
+			4820 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_3,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10589,10 +10693,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8813 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
+			4821 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_4,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10602,23 +10706,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8814 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_5,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8815 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
+			4822 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_7,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10628,10 +10719,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8816 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
+			4823 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_8,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10641,10 +10732,23 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8817 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
+			4824 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_9,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4825 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_10,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10654,10 +10758,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8818 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
+			4826 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_11,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10667,10 +10771,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8819 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
+			4827 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_12,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10680,10 +10784,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8820 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
+			4828 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_13,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10693,10 +10797,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8821 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
+			4829 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_14,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10706,10 +10810,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8822 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
+			4830 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_16,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10719,10 +10823,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8823 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
+			4831 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_17,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10732,10 +10836,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8824 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
+			4832 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture(),
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10745,10 +10849,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8825 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_FALSE ),
+			4833 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::createImplementingClassFixture(),
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10758,10 +10862,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8826 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
+			4834 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::NULL,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10771,10 +10875,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8827 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
+			4835 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::NULL_STRING,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10784,10 +10888,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8828 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
+			4836 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10797,10 +10901,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8829 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
+			4837 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10810,10 +10914,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8830 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
+			4838 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10823,10 +10927,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8831 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
+			4839 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10836,10 +10940,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8832 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
+			4840 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10849,10 +10953,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8833 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
+			4841 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10862,10 +10966,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8834 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
+			4842 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10875,10 +10979,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8835 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
+			4843 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10888,10 +10992,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8836 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
+			4844 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10901,10 +11005,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8837 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
+			4845 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10914,10 +11018,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8838 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
+			4846 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10927,10 +11031,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8839 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
+			4847 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10940,10 +11044,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8840 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
+			4848 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::FLOAT,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10953,10 +11057,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8841 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
+			4849 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::FLOAT_STRING,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10966,10 +11070,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8842 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
+			4850 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::STRING_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10979,10 +11083,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8843 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
+			4851 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::STRING_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -10992,10 +11096,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8844 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
+			4852 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11005,10 +11109,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8845 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
+			4853 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_INTERFACE_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11018,10 +11122,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8846 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
+			4854 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11031,10 +11135,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8847 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
+			4855 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11044,10 +11148,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8848 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
+			4856 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_CLASS_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11057,11 +11161,11 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8849 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_1,
+			4857 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -11070,49 +11174,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8850 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_2,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8851 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_3,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8852 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_4,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8853 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
+			4858 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_5,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11122,10 +11187,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8854 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
+			4859 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_6,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11135,10 +11200,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8855 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
+			4860 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_7,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11148,11 +11213,11 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8856 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_8,
+			4861 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -11161,75 +11226,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8857 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_9,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8858 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_10,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8859 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_11,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8860 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_1,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8861 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_2,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8862 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
+			4862 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_3,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11239,10 +11239,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8863 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
+			4863 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_4,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11252,23 +11252,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8864 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_5,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8865 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
+			4864 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_7,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11278,10 +11265,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8866 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
+			4865 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_8,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11291,10 +11278,23 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8867 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
+			4866 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_9,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4867 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_10,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11304,10 +11304,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8868 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
+			4868 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_11,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11317,10 +11317,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8869 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
+			4869 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_12,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11330,10 +11330,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8870 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
+			4870 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_13,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11343,10 +11343,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8871 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
+			4871 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_14,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11356,10 +11356,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8872 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
+			4872 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_16,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11369,10 +11369,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8873 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
+			4873 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_17,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11382,10 +11382,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8874 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
+			4874 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture(),
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11395,10 +11395,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8875 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_15, Values::BOOLEAN_TRUE ),
+			4875 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::createImplementingClassFixture(),
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11408,10 +11408,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8876 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
+			4876 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::NULL,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11421,10 +11421,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8877 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
+			4877 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::NULL_STRING,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11434,10 +11434,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8878 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
+			4878 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11447,10 +11447,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8879 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
+			4879 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11460,10 +11460,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8880 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
+			4880 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11473,10 +11473,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8881 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
+			4881 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11486,10 +11486,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8882 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
+			4882 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11499,10 +11499,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8883 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
+			4883 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11512,10 +11512,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8884 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
+			4884 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11525,10 +11525,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8885 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
+			4885 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11538,10 +11538,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8886 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
+			4886 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11551,10 +11551,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8887 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
+			4887 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11564,10 +11564,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8888 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
+			4888 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11577,10 +11577,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8889 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
+			4889 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11590,10 +11590,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8890 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
+			4890 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::FLOAT,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11603,10 +11603,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8891 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
+			4891 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::FLOAT_STRING,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11616,10 +11616,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8892 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
+			4892 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::STRING_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11629,10 +11629,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8893 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
+			4893 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::STRING_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11642,10 +11642,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8894 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
+			4894 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11655,10 +11655,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8895 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
+			4895 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_INTERFACE_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11668,10 +11668,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8896 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
+			4896 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11681,10 +11681,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8897 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
+			4897 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11694,10 +11694,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8898 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
+			4898 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_CLASS_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11707,11 +11707,11 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8899 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_1,
+			4899 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -11720,10 +11720,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8900 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
+			4900 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_2,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11733,10 +11733,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8901 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
+			4901 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_3,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11746,10 +11746,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8902 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
+			4902 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_4,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11759,10 +11759,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8903 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
+			4903 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_5,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11772,10 +11772,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8904 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
+			4904 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_6,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11785,23 +11785,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8905 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_7,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8906 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
+			4905 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_8,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11811,11 +11798,11 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8907 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_9,
+			4906 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -11824,36 +11811,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8908 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_10,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8909 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_11,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8910 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
+			4907 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11863,10 +11824,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8911 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
+			4908 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_2,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11876,10 +11837,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8912 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
+			4909 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_3,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11889,10 +11850,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8913 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
+			4910 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_4,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11902,10 +11863,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8914 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
+			4911 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_5,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11915,10 +11876,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8915 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
+			4912 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_6,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11928,23 +11889,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8916 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_7,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8917 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
+			4913 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_8,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11954,10 +11902,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8918 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
+			4914 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_9,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11967,10 +11915,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8919 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
+			4915 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_10,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11980,10 +11928,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8920 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
+			4916 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_11,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -11993,10 +11941,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8921 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
+			4917 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_12,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12006,36 +11954,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8922 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_13,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8923 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_14,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8924 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
+			4918 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_15,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12045,10 +11967,23 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8925 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
+			4919 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_16,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4920 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_17,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12058,10 +11993,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8926 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
+			4921 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture(),
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12071,10 +12006,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8927 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_FALSE ),
+			4922 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::createImplementingClassFixture(),
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12084,10 +12019,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8928 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4923 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::NULL,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12097,10 +12032,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8929 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4924 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::NULL_STRING,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12110,10 +12045,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8930 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4925 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12123,10 +12058,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8931 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4926 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12136,10 +12071,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8932 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4927 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12149,10 +12084,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8933 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4928 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12162,10 +12097,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8934 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4929 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12175,10 +12110,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8935 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4930 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12188,10 +12123,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8936 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4931 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12201,10 +12136,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8937 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4932 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12214,10 +12149,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8938 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4933 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12227,10 +12162,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8939 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4934 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12240,10 +12175,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8940 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4935 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12253,10 +12188,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8941 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4936 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12266,10 +12201,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8942 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4937 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::FLOAT,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12279,10 +12214,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8943 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4938 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::FLOAT_STRING,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12292,10 +12227,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8944 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4939 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::STRING_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12305,10 +12240,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8945 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4940 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::STRING_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12318,10 +12253,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8946 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4941 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12331,10 +12266,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8947 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4942 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_INTERFACE_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12344,10 +12279,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8948 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4943 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12357,10 +12292,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8949 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4944 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12370,10 +12305,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8950 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4945 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_CLASS_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12383,10 +12318,23 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8951 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4946 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_0,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4947 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12396,10 +12344,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8952 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4948 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_2,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12409,10 +12357,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8953 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4949 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_3,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12422,10 +12370,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8954 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4950 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_4,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12435,10 +12383,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8955 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4951 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_5,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12448,10 +12396,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8956 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4952 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_6,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12461,10 +12409,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8957 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4953 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_7,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12474,10 +12422,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8958 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4954 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_8,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12487,10 +12435,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8959 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4955 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_9,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12500,10 +12448,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8960 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4956 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_10,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12513,10 +12461,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8961 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4957 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_11,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12526,10 +12474,23 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8962 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4958 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_0,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4959 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12539,10 +12500,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8963 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4960 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_2,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12552,10 +12513,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8964 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4961 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_3,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12565,10 +12526,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8965 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4962 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_4,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12578,10 +12539,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8966 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4963 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_5,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12591,10 +12552,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8967 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4964 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_6,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12604,23 +12565,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8968 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_7,
-				'expectedThrowableClassName' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => sprintf(
-					'Failed asserting that %1$s%2$s.',
-					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
-						->valueToTypeStringFragment( $mismatchingValue ),
-					$constraint->toString()
-				),
-				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
-			],
-			8969 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4965 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_8,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12630,10 +12578,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8970 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4966 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_9,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12643,10 +12591,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8971 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4967 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_10,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12656,10 +12604,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8972 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4968 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_11,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12669,10 +12617,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8973 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4969 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_12,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12682,10 +12630,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8974 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4970 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_13,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12695,10 +12643,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8975 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4971 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_14,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12708,10 +12656,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8976 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4972 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_15,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12721,10 +12669,23 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8977 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4973 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
+				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_16,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4974 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::ARRAY_SUBSET_17,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12734,10 +12695,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8978 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4975 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture(),
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12747,10 +12708,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8979 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_16, Values::BOOLEAN_TRUE ),
+			4976 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'mismatchingValue'           => $mismatchingValue = Values::createImplementingClassFixture(),
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12760,10 +12721,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8980 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_17, Values::BOOLEAN_FALSE ),
+			4977 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::NULL,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12773,10 +12734,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8981 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_17, Values::BOOLEAN_FALSE ),
+			4978 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::NULL_STRING,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12786,10 +12747,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8982 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_17, Values::BOOLEAN_FALSE ),
+			4979 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12799,10 +12760,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8983 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_17, Values::BOOLEAN_FALSE ),
+			4980 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12812,10 +12773,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8984 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_17, Values::BOOLEAN_FALSE ),
+			4981 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12825,10 +12786,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8985 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_17, Values::BOOLEAN_FALSE ),
+			4982 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12838,10 +12799,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8986 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_17, Values::BOOLEAN_FALSE ),
+			4983 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12851,10 +12812,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8987 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_17, Values::BOOLEAN_FALSE ),
+			4984 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_STRING_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12864,10 +12825,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8988 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_17, Values::BOOLEAN_FALSE ),
+			4985 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_FALSE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12877,10 +12838,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8989 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_17, Values::BOOLEAN_FALSE ),
+			4986 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::BOOLEAN_INTEGER_STRING_TRUE,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12890,10 +12851,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8990 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_17, Values::BOOLEAN_FALSE ),
+			4987 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12903,10 +12864,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8991 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_17, Values::BOOLEAN_FALSE ),
+			4988 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12916,10 +12877,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8992 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_17, Values::BOOLEAN_FALSE ),
+			4989 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12929,10 +12890,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8993 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_17, Values::BOOLEAN_FALSE ),
+			4990 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTEGER_STRING_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12942,10 +12903,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8994 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_17, Values::BOOLEAN_FALSE ),
+			4991 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::FLOAT,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12955,10 +12916,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8995 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_17, Values::BOOLEAN_FALSE ),
+			4992 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::FLOAT_STRING,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12968,10 +12929,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8996 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_17, Values::BOOLEAN_FALSE ),
+			4993 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::STRING_0,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12981,10 +12942,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8997 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_17, Values::BOOLEAN_FALSE ),
+			4994 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::STRING_1,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -12994,10 +12955,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8998 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_17, Values::BOOLEAN_FALSE ),
+			4995 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -13007,10 +12968,10 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			],
-			8999 => [
-				'constraint'                 => $constraint = new IsKeyedSubsetOfArrayConstraint( Values::ARRAY_SUBSET_17, Values::BOOLEAN_FALSE ),
+			4996 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
 				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_INTERFACE_NAME,
 				'expectedThrowableClassName' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
@@ -13020,7 +12981,46 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassNameEx
 					$constraint->toString()
 				),
 				'expectedThrowableCode'      => Values::THROWABLE_CODE,
-				'expectedPreviousThrowable'  => Values::PREVIOUS_THROWABLE
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4997 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_0,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4998 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::CLASS_NAME_1,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
+			],
+			4999 => [
+				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
+				'mismatchingValue'           => $mismatchingValue = Values::UNKNOWN_CLASS_NAME,
+				'expectedThrowableClassName' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => sprintf(
+					'Failed asserting that %1$s%2$s.',
+					new ConstraintExposingValueToTypeStringFragmentMethodAccessor()
+						->valueToTypeStringFragment( $mismatchingValue ),
+					$constraint->toString()
+				),
+				'expectedThrowableCode'      => Values::THROWABLE_CODE,
+				'expectedThrowablePrevious'  => Values::THROWABLE_PREVIOUS
 			]
 		];
 	}

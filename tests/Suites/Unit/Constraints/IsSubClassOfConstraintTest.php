@@ -5,7 +5,7 @@ use CodeKandis\PhpUnit\Constraints\IsSubClassOfConstraint;
 use CodeKandis\PhpUnit\DataProviderInterface;
 use CodeKandis\PhpUnit\TestCase;
 use CodeKandis\PhpUnit\Tests\DataProviders\Unit\Constraints\IsSubClassOfConstraintTest\ConstraintClassNamesWithInterfaceOrClassNameDataProvider;
-use CodeKandis\PhpUnit\Tests\DataProviders\Unit\Constraints\IsSubClassOfConstraintTest\ConstraintClassNamesWithUnkownInterfaceOrClassNameExpectedThrowableClassNameExpectedThrowableMessageExpectedThrowableCodeAndExpectedPreviousThrowableDataProvider;
+use CodeKandis\PhpUnit\Tests\DataProviders\Unit\Constraints\IsSubClassOfConstraintTest\ConstraintClassNamesWithUnkownInterfaceOrClassNameExpectedThrowableClassNameExpectedThrowableMessageExpectedThrowableCodeAndExpectedThrowablePreviousDataProvider;
 use PHPUnit\Framework\Attributes\DataProviderExternal;
 use PHPUnit\Framework\UnknownClassOrInterfaceException;
 use Throwable;
@@ -24,11 +24,11 @@ final class IsSubClassOfConstraintTest extends TestCase
 	 * @param class-string<UnknownClassOrInterfaceException> $expectedThrowableClassName The expected throwable class name.
 	 * @param string $expectedThrowableMessage The expected throwable message.
 	 * @param int $expectedThrowableCode The expected throwable code.
-	 * @param ?Throwable $expectedPreviousThrowable The expected previous throwable.
+	 * @param ?Throwable $expectedThrowablePrevious The expected previous throwable.
 	 * @return void
 	 */
-	#[DataProviderExternal( ConstraintClassNamesWithUnkownInterfaceOrClassNameExpectedThrowableClassNameExpectedThrowableMessageExpectedThrowableCodeAndExpectedPreviousThrowableDataProvider::class, DataProviderInterface::PROVIDER_METHOD_NAME )]
-	public function testIfConstructorThrowsUnknownClassOrInterfaceExceptionOnUnknownInterfaceOrClassName( string $constraintClassName, string $unknownInterfaceOrClassName, string $expectedThrowableClassName, string $expectedThrowableMessage, int $expectedThrowableCode, ?Throwable $expectedPreviousThrowable ): void
+	#[DataProviderExternal( ConstraintClassNamesWithUnkownInterfaceOrClassNameExpectedThrowableClassNameExpectedThrowableMessageExpectedThrowableCodeAndExpectedThrowablePreviousDataProvider::class, DataProviderInterface::PROVIDER_METHOD_NAME )]
+	public function testIfConstructorThrowsUnknownClassOrInterfaceExceptionOnUnknownInterfaceOrClassName( string $constraintClassName, string $unknownInterfaceOrClassName, string $expectedThrowableClassName, string $expectedThrowableMessage, int $expectedThrowableCode, ?Throwable $expectedThrowablePrevious ): void
 	{
 		try
 		{
@@ -36,15 +36,19 @@ final class IsSubClassOfConstraintTest extends TestCase
 		}
 		catch ( Throwable $throwable )
 		{
-			$resultedThrowableMessage  = $throwable->getMessage();
-			$resultedThrowableCode     = $throwable->getCode();
-			$resultedPreviousThrowable = $throwable->getPrevious();
-
 			static::assertInstanceOf( UnknownClassOrInterfaceException::class, $throwable );
-			static::assertInstanceOf( $expectedThrowableClassName, $throwable );
+
+			$resultedThrowableClassName = $throwable::class;
+			static::assertSame( $expectedThrowableClassName, $resultedThrowableClassName );
+
+			$resultedThrowableMessage = $throwable->getMessage();
 			static::assertSame( $expectedThrowableMessage, $resultedThrowableMessage );
+
+			$resultedThrowableCode = $throwable->getCode();
 			static::assertSame( $expectedThrowableCode, $resultedThrowableCode );
-			static::assertSame( $expectedPreviousThrowable, $resultedPreviousThrowable );
+
+			$resultedThrowablePrevious = $throwable->getPrevious();
+			static::assertSame( $expectedThrowablePrevious, $resultedThrowablePrevious );
 
 			return;
 		}

@@ -31,7 +31,7 @@ use PHPUnit\Framework\TestCase as TestCaseOrigin;
  * @package codekandis/phpunit
  * @author Christian Ramelow <info@codekandis.net>
  */
-class InterfaceOrClassNamesWithExpectedAncestorInterfaceOrClassNameDataProvider implements DataProviderInterface
+final readonly class InterfaceOrClassNamesWithExpectedAncestorInterfaceOrClassNameDataProvider implements DataProviderInterface
 {
 	/**
 	 * {@inheritDoc}

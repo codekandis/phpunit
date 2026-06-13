@@ -465,7 +465,7 @@ abstract class Values
 	 * Represents a previous throwable.
 	 * @var null
 	 */
-	public const null PREVIOUS_THROWABLE = null;
+	public const null THROWABLE_PREVIOUS = null;
 
 	/**
 	 * Creates a class fixture.

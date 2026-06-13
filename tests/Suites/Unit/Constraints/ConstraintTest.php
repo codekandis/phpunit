@@ -4,7 +4,7 @@ namespace CodeKandis\PhpUnit\Tests\Suites\Unit\Constraints;
 use CodeKandis\PhpUnit\DataProviderInterface;
 use CodeKandis\PhpUnit\TestCase;
 use CodeKandis\PhpUnit\Tests\DataProviders\Unit\Constraints\ConstraintTest\ConstraintsWithExpectedStringRepresentationDataProvider;
-use CodeKandis\PhpUnit\Tests\DataProviders\Unit\Constraints\ConstraintTest\ConstraintsWithMismatchingValueExpectedThrowableClassNameExpectedThrowableMessageExpectedThrowableCodeAndExpectedPreviousThrowableDataProvider;
+use CodeKandis\PhpUnit\Tests\DataProviders\Unit\Constraints\ConstraintTest\ConstraintsWithMismatchingValueExpectedThrowableClassNameExpectedThrowableMessageExpectedThrowableCodeAndExpectedThrowablePreviousDataProvider;
 use CodeKandis\PhpUnit\Tests\DataProviders\Unit\Constraints\ConstraintTest\ConstraintsWithValidValueAndExpectedResultDataProvider;
 use PHPUnit\Framework\Attributes\DataProviderExternal;
 use PHPUnit\Framework\Constraint\Constraint;
@@ -39,11 +39,11 @@ final class ConstraintTest extends TestCase
 	 * @param class-string<ExpectationFailedException> $expectedThrowableClassName The expected throwable class name.
 	 * @param string $expectedThrowableMessage The expected throwable message.
 	 * @param int $expectedThrowableCode The expected throwable code.
-	 * @param ?Throwable $expectedPreviousThrowable The expected previous throwable.
+	 * @param ?Throwable $expectedThrowablePrevious The expected previous throwable.
 	 * @return void
 	 */
-	#[DataProviderExternal( ConstraintsWithMismatchingValueExpectedThrowableClassNameExpectedThrowableMessageExpectedThrowableCodeAndExpectedPreviousThrowableDataProvider::class, DataProviderInterface::PROVIDER_METHOD_NAME )]
-	public function testIfMethodEvaluateThrowsExpectationFailedExceptionOnMismatchingValue( Constraint $constraint, mixed $mismatchingValue, string $expectedThrowableClassName, string $expectedThrowableMessage, int $expectedThrowableCode, ?Throwable $expectedPreviousThrowable ): void
+	#[DataProviderExternal( ConstraintsWithMismatchingValueExpectedThrowableClassNameExpectedThrowableMessageExpectedThrowableCodeAndExpectedThrowablePreviousDataProvider::class, DataProviderInterface::PROVIDER_METHOD_NAME )]
+	public function testIfMethodEvaluateThrowsExpectationFailedExceptionOnMismatchingValue( Constraint $constraint, mixed $mismatchingValue, string $expectedThrowableClassName, string $expectedThrowableMessage, int $expectedThrowableCode, ?Throwable $expectedThrowablePrevious ): void
 	{
 		try
 		{
@@ -51,15 +51,19 @@ final class ConstraintTest extends TestCase
 		}
 		catch ( Throwable $throwable )
 		{
-			$resultedThrowableMessage  = $throwable->getMessage();
-			$resultedThrowableCode     = $throwable->getCode();
-			$resultedPreviousThrowable = $throwable->getPrevious();
-
 			static::assertInstanceOf( ExpectationFailedException::class, $throwable );
-			static::assertInstanceOf( $expectedThrowableClassName, $throwable );
+
+			$resultedThrowableClassName = $throwable::class;
+			static::assertSame( $expectedThrowableClassName, $resultedThrowableClassName );
+
+			$resultedThrowableMessage = $throwable->getMessage();
 			static::assertSame( $expectedThrowableMessage, $resultedThrowableMessage );
+
+			$resultedThrowableCode = $throwable->getCode();
 			static::assertSame( $expectedThrowableCode, $resultedThrowableCode );
-			static::assertSame( $expectedPreviousThrowable, $resultedPreviousThrowable );
+
+			$resultedThrowablePrevious = $throwable->getPrevious();
+			static::assertSame( $expectedThrowablePrevious, $resultedThrowablePrevious );
 
 			return;
 		}

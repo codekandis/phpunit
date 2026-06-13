@@ -32,10 +32,12 @@ final class TestCaseTest extends TestCase
 		}
 		catch ( Throwable $throwable )
 		{
-			$resultedThrowableMessage = $throwable->getMessage();
-
 			static::assertInstanceOf( AssertionFailedError::class, $throwable );
-			static::assertInstanceOf( $expectedThrowableClassName, $throwable );
+
+			$resultedThrowableClassName = $throwable::class;
+			static::assertSame( $expectedThrowableClassName, $resultedThrowableClassName );
+
+			$resultedThrowableMessage = $throwable->getMessage();
 			static::assertSame( $expectedThrowableMessage, $resultedThrowableMessage );
 
 			return;
