@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [keep a changelog][xtlink-keep-a-changelog]
 and this project adheres to [Semantic Versioning 2.0.0][xtlink-semantic-versioning].
 
+## [5.0.4] - 2026-06-13
+
+### Changed
+
+* updated test PHPDocs and data provider descriptions to say throwable class FQCN
+
+### Fixed
+
+* fixed `Unknown` spelling in the `IsSubClassOfConstraintTest` data provider name
+
+[5.0.4]: https://github.com/codekandis/phpunit/compare/5.0.3..5.0.4
+
+---
 ## [5.0.3] - 2026-06-13
 
 ### Changed
