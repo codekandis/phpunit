@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [keep a changelog][xtlink-keep-a-changelog]
 and this project adheres to [Semantic Versioning 2.0.0][xtlink-semantic-versioning].
 
+## [5.0.5] - 2026-06-15
+
+### Added
+
+* `TestCase::failUnexpectedThrowableHasBeenThrown()` as protected failure helper for unexpected throwables
+* `README.md` usage documentation for protected exception failure helpers
+
+### Changed
+
+* updated expected throwable failure messages to include the expected throwable FQCN
+
+[5.0.5]: https://github.com/codekandis/phpunit/compare/5.0.4..5.0.5
+
+---
 ## [5.0.4] - 2026-06-13
 
 ### Changed
