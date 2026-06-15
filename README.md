@@ -13,6 +13,9 @@ custom constraint assertions.
 * [Installation](#installation)
 * [Usage](#usage)
   * [Using the test case wrapper](#using-the-test-case-wrapper)
+  * [Failing exception test branches](#failing-exception-test-branches)
+    * [`TestCase::failUnexpectedThrowableHasBeenThrown()`](#testcasefailunexpectedthrowablehasbeenthrown)
+    * [`TestCase::failExpectedThrowableHasNotBeenThrown()`](#testcasefailexpectedthrowablehasnotbeenthrown)
   * [Using the data provider interface](#using-the-data-provider-interface)
   * [Asserting array subsets](#asserting-array-subsets)
     * [`TestCase::assertArrayContainsKeyedSubset()`](#testcaseassertarraycontainskeyedsubset)
@@ -46,6 +49,75 @@ use CodeKandis\PhpUnit\TestCase;
 
 class ApplicationTest extends TestCase
 {
+}
+```
+
+### Failing exception test branches
+
+Use the protected fail helpers in test cases that assert exception control flow explicitly.
+
+#### `TestCase::failUnexpectedThrowableHasBeenThrown()`
+
+Use
+[`TestCase::failUnexpectedThrowableHasBeenThrown()`][srclink-testcase-fail-unexpected-throwable-has-been-thrown] to fail
+a test when a throwable has been thrown in a branch that must not throw.
+
+```php
+<?php declare( strict_types = 1 );
+namespace Vendor\Project\Tests;
+
+use CodeKandis\PhpUnit\TestCase;
+use Throwable;
+
+final class ServiceTest extends TestCase
+{
+	public function testIfServiceRunsWithoutThrowable(): void
+	{
+		try
+		{
+			$service = new Service();
+			$service->run();
+		}
+		catch ( Throwable $throwable )
+		{
+			static::failUnexpectedThrowableHasBeenThrown( $throwable::class );
+		}
+
+		static::assertTrue( $service->hasRun() );
+	}
+}
+```
+
+#### `TestCase::failExpectedThrowableHasNotBeenThrown()`
+
+Use [`TestCase::failExpectedThrowableHasNotBeenThrown()`][srclink-testcase-fail-expected-throwable-has-not-been-thrown]
+to fail a test when an expected throwable has not been thrown.
+
+```php
+<?php declare( strict_types = 1 );
+namespace Vendor\Project\Tests;
+
+use CodeKandis\PhpUnit\TestCase;
+use RuntimeException;
+
+final class ServiceTest extends TestCase
+{
+	public function testIfServiceThrowsRuntimeException(): void
+	{
+		try
+		{
+			$service = new Service();
+			$service->fail();
+		}
+		catch ( RuntimeException $throwable )
+		{
+			static::assertSame( 'The service failed.', $throwable->getMessage() );
+
+			return;
+		}
+
+		static::failExpectedThrowableHasNotBeenThrown( RuntimeException::class );
+	}
 }
 ```
 
@@ -281,9 +353,11 @@ exist.
 [srclink-license]: ./LICENSE
 [srclink-dataproviderinterface]: ./src/DataProviderInterface.php#L12
 [srclink-dataproviderinterface-provider-method-name]: ./src/DataProviderInterface.php#L18
-[srclink-testcase]: ./src/TestCase.php#L19
-[srclink-testcase-assert-array-contains-keyed-subset]: ./src/TestCase.php#L41
-[srclink-testcase-assert-array-contains-unkeyed-subset]: ./src/TestCase.php#L54
-[srclink-testcase-assert-is-keyed-subset-of-array]: ./src/TestCase.php#L67
-[srclink-testcase-assert-is-unkeyed-subset-of-array]: ./src/TestCase.php#L80
-[srclink-testcase-assert-is-subclass-of]: ./src/TestCase.php#L93
+[srclink-testcase]: ./src/TestCase.php#L21
+[srclink-testcase-fail-unexpected-throwable-has-been-thrown]: ./src/TestCase.php#L41
+[srclink-testcase-fail-expected-throwable-has-not-been-thrown]: ./src/TestCase.php#L54
+[srclink-testcase-assert-array-contains-keyed-subset]: ./src/TestCase.php#L65
+[srclink-testcase-assert-array-contains-unkeyed-subset]: ./src/TestCase.php#L78
+[srclink-testcase-assert-is-keyed-subset-of-array]: ./src/TestCase.php#L91
+[srclink-testcase-assert-is-unkeyed-subset-of-array]: ./src/TestCase.php#L104
+[srclink-testcase-assert-is-subclass-of]: ./src/TestCase.php#L117

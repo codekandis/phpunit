@@ -14,14 +14,14 @@ class TestCaseExposingFailExpectedThrowableHasNotBeenThrownMethodAccessor extend
 	/**
 	 * {@inheritDoc}
 	 */
-	public const string EXPECTED_THROWABLE_HAS_NOT_BEEN_THROWN_MESSAGE = parent::EXPECTED_THROWABLE_HAS_NOT_BEEN_THROWN_MESSAGE;
+	public const string EXCEPTION_MESSAGE_WITH_EXPECTED_THROWABLE_FQCN_TEMPLATE = parent::EXCEPTION_MESSAGE_WITH_EXPECTED_THROWABLE_FQCN_TEMPLATE;
 
 	/**
 	 * {@inheritDoc}
 	 */
 	#[Override]
-	public static function failExpectedThrowableHasNotBeenThrown(): never
+	public static function failExpectedThrowableHasNotBeenThrown( string $expectedThrowableFqcn ): never
 	{
-		parent::failExpectedThrowableHasNotBeenThrown();
+		parent::failExpectedThrowableHasNotBeenThrown( $expectedThrowableFqcn );
 	}
 }

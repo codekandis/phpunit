@@ -6,13 +6,14 @@ use CodeKandis\PhpUnit\Tests\Accessors\TestCaseExposingFailExpectedThrowableHasN
 use CodeKandis\PhpUnit\Tests\Fixtures\Values;
 use Override;
 use PHPUnit\Framework\AssertionFailedError;
+use Throwable;
 
 /**
- * Represents a data provider providing test cases with expected throwable class FQCN and expected throwable message.
+ * Represents a data provider providing test cases with expected throwable FQCN, expected throwable class FQCN and expected throwable message.
  * @package codekandis/phpunit
  * @author Christian Ramelow <info@codekandis.net>
  */
-final readonly class TestCasesWithExpectedThrowableClassFqcnAndExpectedThrowableMessageDataProvider implements DataProviderInterface
+final readonly class TestCasesWithExpectedThrowableFqcnExpectedThrowableClassFqcnAndExpectedThrowableMessageDataProvider implements DataProviderInterface
 {
 	/**
 	 * {@inheritDoc}
@@ -23,8 +24,9 @@ final readonly class TestCasesWithExpectedThrowableClassFqcnAndExpectedThrowable
 		return [
 			0 => [
 				'testCase'                   => new TestCaseExposingFailExpectedThrowableHasNotBeenThrownMethodAccessor( Values::EMPTY_STRING ),
+				'expectedThrowableFqcn'      => $expectedThrowableFqcn = Throwable::class,
 				'expectedThrowableClassFqcn' => AssertionFailedError::class,
-				'expectedThrowableMessage'   => TestCaseExposingFailExpectedThrowableHasNotBeenThrownMethodAccessor::EXPECTED_THROWABLE_HAS_NOT_BEEN_THROWN_MESSAGE
+				'expectedThrowableMessage'   => sprintf( TestCaseExposingFailExpectedThrowableHasNotBeenThrownMethodAccessor::EXCEPTION_MESSAGE_WITH_EXPECTED_THROWABLE_FQCN_TEMPLATE, $expectedThrowableFqcn )
 			]
 		];
 	}
