@@ -4,7 +4,7 @@ namespace CodeKandis\PhpUnit\Tests\Suites\Unit;
 use CodeKandis\PhpUnit\DataProviderInterface;
 use CodeKandis\PhpUnit\TestCase;
 use CodeKandis\PhpUnit\Tests\Accessors\TestCaseExposingFailExpectedThrowableHasNotBeenThrownMethodAccessor;
-use CodeKandis\PhpUnit\Tests\DataProviders\Unit\TestCaseTest\TestCasesWithExpectedThrowableClassFqcnAndExpectedThrowableMessageDataProvider;
+use CodeKandis\PhpUnit\Tests\DataProviders\Unit\TestCaseTest\TestCasesWithExpectedThrowableFqcnExpectedThrowableClassFqcnAndExpectedThrowableMessageDataProvider;
 use PHPUnit\Framework\AssertionFailedError;
 use PHPUnit\Framework\Attributes\DataProviderExternal;
 use Throwable;
@@ -19,16 +19,17 @@ final class TestCaseTest extends TestCase
 	/**
 	 * Tests if {@link TestCase::failExpectedThrowableHasNotBeenThrown()} fails with the expected throwable has not been thrown message.
 	 * @param TestCaseExposingFailExpectedThrowableHasNotBeenThrownMethodAccessor $testCase The test case to test.
+	 * @param class-string<Throwable> $expectedThrowableFqcn The expected throwable FQCN.
 	 * @param class-string<AssertionFailedError> $expectedThrowableClassFqcn The expected throwable class FQCN.
 	 * @param string $expectedThrowableMessage The expected throwable message.
 	 * @return void
 	 */
-	#[DataProviderExternal( TestCasesWithExpectedThrowableClassFqcnAndExpectedThrowableMessageDataProvider::class, DataProviderInterface::PROVIDER_METHOD_NAME )]
-	public function testIfMethodFailExpectedThrowableHasNotBeenThrownFailsWithExpectedThrowableHasNotBeenThrownMessage( TestCaseExposingFailExpectedThrowableHasNotBeenThrownMethodAccessor $testCase, string $expectedThrowableClassFqcn, string $expectedThrowableMessage ): void
+	#[DataProviderExternal( TestCasesWithExpectedThrowableFqcnExpectedThrowableClassFqcnAndExpectedThrowableMessageDataProvider::class, DataProviderInterface::PROVIDER_METHOD_NAME )]
+	public function testIfMethodFailExpectedThrowableHasNotBeenThrownFailsWithExpectedThrowableHasNotBeenThrownMessage( TestCaseExposingFailExpectedThrowableHasNotBeenThrownMethodAccessor $testCase, string $expectedThrowableFqcn, string $expectedThrowableClassFqcn, string $expectedThrowableMessage ): void
 	{
 		try
 		{
-			$testCase->failExpectedThrowableHasNotBeenThrown();
+			$testCase->failExpectedThrowableHasNotBeenThrown( $expectedThrowableFqcn );
 		}
 		catch ( Throwable $throwable )
 		{
