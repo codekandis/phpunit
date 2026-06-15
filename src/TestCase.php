@@ -24,7 +24,26 @@ abstract class TestCase extends TestCaseOrigin implements TestCaseInterface
 	 * Represents the expected throwable has not been thrown message.
 	 * @var string
 	 */
+	protected const string EXCEPTION_MESSAGE_WITH_UNEXPECTED_THROWABLE_FQCN_TEMPLATE = 'The unexpected throwable `%1$s` has been thrown.';
+
+	/**
+	 * Represents the expected throwable has not been thrown message.
+	 * @var string
+	 */
 	protected const string EXCEPTION_MESSAGE_WITH_EXPECTED_THROWABLE_FQCN_TEMPLATE = 'The expected throwable `%1$s` has not been thrown.';
+
+	/**
+	 * Fails because an unexpected throwable has been thrown.
+	 * @param class-string<Throwable> $unexpectedThrowableFqcn The unexpected throwable FQCN.
+	 * @return never
+	 * @throws AssertionFailedError The test failed.
+	 */
+	protected static function failUnexpectedThrowableHasBeenThrown( string $unexpectedThrowableFqcn ): never
+	{
+		static::fail(
+			sprintf( static::EXCEPTION_MESSAGE_WITH_UNEXPECTED_THROWABLE_FQCN_TEMPLATE, $unexpectedThrowableFqcn )
+		);
+	}
 
 	/**
 	 * Fails because an expected throwable has not been thrown.
