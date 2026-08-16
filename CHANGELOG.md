@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [keep a changelog][xtlink-keep-a-changelog]
 and this project adheres to [Semantic Versioning 2.0.0][xtlink-semantic-versioning].
 
+## [5.0.6] - 2026-08-16
+
+### Added
+
+* dedicated PHPUnit coverage configuration
+
+### Changed
+
+* composer coverage scripts to use the dedicated PHPUnit coverage configuration
+* default PHPUnit configuration to omit coverage reporting for normal test and debug runs
+* PHPUnit deprecations to be reported without failing test runs
+
+[5.0.6]: https://github.com/codekandis/phpunit/compare/5.0.5..5.0.6
+
+---
 ## [5.0.5] - 2026-06-15
 
 ### Added
