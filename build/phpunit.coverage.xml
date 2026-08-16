@@ -39,4 +39,11 @@
 			<directory>../src</directory>
 		</include>
 	</source>
+	<coverage
+		includeUncoveredFiles="true"
+		ignoreDeprecatedCodeUnits="false">
+		<report>
+			<text outputFile="php://stdout" showUncoveredFiles="true"/>
+		</report>
+	</coverage>
 </phpunit>
