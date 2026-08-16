@@ -63,11 +63,11 @@
 		],
 		"test-coverage": [
 			"Composer\\Config::disableProcessTimeout",
-			"/usr/bin/env php -d xdebug.mode=coverage ./vendor/bin/phpunit --configuration ./build/phpunit.xml"
+			"/usr/bin/env php -d xdebug.mode=coverage ./vendor/bin/phpunit --configuration ./build/phpunit.coverage.xml"
 		],
 		"test-coverage-paths": [
 			"Composer\\Config::disableProcessTimeout",
-			"/usr/bin/env php -d xdebug.mode=coverage ./vendor/bin/phpunit --configuration ./build/phpunit.xml --path-coverage"
+			"/usr/bin/env php -d xdebug.mode=coverage ./vendor/bin/phpunit --configuration ./build/phpunit.coverage.xml --path-coverage"
 		]
 	}
 }
