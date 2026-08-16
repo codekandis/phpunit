@@ -37,7 +37,7 @@ final class AbstractArraySubsetHelperTest extends TestCase
 	 * @param bool $expectedResult The expected result.
 	 */
 	#[DataProviderExternal( ArraySubsetHelpersWithExpectedValueActualValueAndExpectedResultDataProvider::class, DataProviderInterface::PROVIDER_METHOD_NAME )]
-	public function testIfValuesAreEqualDeterminesValueEqualityCorrectly( ArraySubsetHelperExposingValuesAreEqualMethodAccessor $arraySubsetHelper, mixed $expectedValue, mixed $actualValue, bool $expectedResult ): void
+	public function testIfMethodValuesAreEqualDeterminesValueEqualityCorrectly( ArraySubsetHelperExposingValuesAreEqualMethodAccessor $arraySubsetHelper, mixed $expectedValue, mixed $actualValue, bool $expectedResult ): void
 	{
 		$resultedValueEquality = $arraySubsetHelper->valuesAreEqual( $expectedValue, $actualValue );
 
