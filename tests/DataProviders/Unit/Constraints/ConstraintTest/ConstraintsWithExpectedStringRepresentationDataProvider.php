@@ -740,265 +740,262 @@ final readonly class ConstraintsWithExpectedStringRepresentationDataProvider imp
 				)
 			],
 			102 => [
+				'constraint'                   => new IsSubClassOfConstraint( $interfaceOrClassFqcn = Values::INTERFACE_FQCN ),
+				'expectedStringRepresentation' => sprintf(
+					IsSubClassOfConstraint::STRING_REPRESENTATION_TEMPLATE,
+					TypeKinds::INTERFACE_KIND, $interfaceOrClassFqcn
+				)
+			],
+			103 => [
+				'constraint'                   => new IsSubClassOfConstraint( $interfaceOrClassFqcn = Values::CLASS_FQCN_0 ),
+				'expectedStringRepresentation' => sprintf(
+					IsSubClassOfConstraint::STRING_REPRESENTATION_TEMPLATE,
+					TypeKinds::CLASS_KIND, $interfaceOrClassFqcn
+				)
+			],
+			104 => [
+				'constraint'                   => new IsSubClassOfConstraint( $interfaceOrClassFqcn = Values::CLASS_FQCN_1 ),
+				'expectedStringRepresentation' => sprintf(
+					IsSubClassOfConstraint::STRING_REPRESENTATION_TEMPLATE,
+					TypeKinds::CLASS_KIND, $interfaceOrClassFqcn
+				)
+			],
+			105 => [
 				'constraint'                   => new IsUnkeyedSubsetOfArrayConstraint( $array = Values::ARRAY_0, Values::BOOLEAN_FALSE ),
 				'expectedStringRepresentation' => sprintf(
 					IsUnkeyedSubsetOfArrayConstraint::STRING_REPRESENTATION_TEMPLATE,
 					var_export( $array, true )
 				)
 			],
-			103 => [
+			106 => [
 				'constraint'                   => new IsUnkeyedSubsetOfArrayConstraint( $array = Values::ARRAY_0, Values::BOOLEAN_TRUE ),
 				'expectedStringRepresentation' => sprintf(
 					IsUnkeyedSubsetOfArrayConstraint::STRING_REPRESENTATION_TEMPLATE,
 					var_export( $array, true )
 				)
 			],
-			104 => [
+			107 => [
 				'constraint'                   => new IsUnkeyedSubsetOfArrayConstraint( $array = Values::ARRAY_1, Values::BOOLEAN_FALSE ),
 				'expectedStringRepresentation' => sprintf(
 					IsUnkeyedSubsetOfArrayConstraint::STRING_REPRESENTATION_TEMPLATE,
 					var_export( $array, true )
 				)
 			],
-			105 => [
+			108 => [
 				'constraint'                   => new IsUnkeyedSubsetOfArrayConstraint( $array = Values::ARRAY_1, Values::BOOLEAN_TRUE ),
 				'expectedStringRepresentation' => sprintf(
 					IsUnkeyedSubsetOfArrayConstraint::STRING_REPRESENTATION_TEMPLATE,
 					var_export( $array, true )
 				)
 			],
-			106 => [
+			109 => [
 				'constraint'                   => new IsUnkeyedSubsetOfArrayConstraint( $array = Values::ARRAY_2, Values::BOOLEAN_FALSE ),
 				'expectedStringRepresentation' => sprintf(
 					IsUnkeyedSubsetOfArrayConstraint::STRING_REPRESENTATION_TEMPLATE,
 					var_export( $array, true )
 				)
 			],
-			107 => [
+			110 => [
 				'constraint'                   => new IsUnkeyedSubsetOfArrayConstraint( $array = Values::ARRAY_2, Values::BOOLEAN_TRUE ),
 				'expectedStringRepresentation' => sprintf(
 					IsUnkeyedSubsetOfArrayConstraint::STRING_REPRESENTATION_TEMPLATE,
 					var_export( $array, true )
 				)
 			],
-			108 => [
+			111 => [
 				'constraint'                   => new IsUnkeyedSubsetOfArrayConstraint( $array = Values::ARRAY_3, Values::BOOLEAN_FALSE ),
 				'expectedStringRepresentation' => sprintf(
 					IsUnkeyedSubsetOfArrayConstraint::STRING_REPRESENTATION_TEMPLATE,
 					var_export( $array, true )
 				)
 			],
-			109 => [
+			112 => [
 				'constraint'                   => new IsUnkeyedSubsetOfArrayConstraint( $array = Values::ARRAY_3, Values::BOOLEAN_TRUE ),
 				'expectedStringRepresentation' => sprintf(
 					IsUnkeyedSubsetOfArrayConstraint::STRING_REPRESENTATION_TEMPLATE,
 					var_export( $array, true )
 				)
 			],
-			110 => [
+			113 => [
 				'constraint'                   => new IsUnkeyedSubsetOfArrayConstraint( $array = Values::ARRAY_SUBSET_0, Values::BOOLEAN_FALSE ),
 				'expectedStringRepresentation' => sprintf(
 					IsUnkeyedSubsetOfArrayConstraint::STRING_REPRESENTATION_TEMPLATE,
 					var_export( $array, true )
 				)
 			],
-			111 => [
+			114 => [
 				'constraint'                   => new IsUnkeyedSubsetOfArrayConstraint( $array = Values::ARRAY_SUBSET_0, Values::BOOLEAN_TRUE ),
 				'expectedStringRepresentation' => sprintf(
 					IsUnkeyedSubsetOfArrayConstraint::STRING_REPRESENTATION_TEMPLATE,
 					var_export( $array, true )
 				)
 			],
-			112 => [
+			115 => [
 				'constraint'                   => new IsUnkeyedSubsetOfArrayConstraint( $array = Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
 				'expectedStringRepresentation' => sprintf(
 					IsUnkeyedSubsetOfArrayConstraint::STRING_REPRESENTATION_TEMPLATE,
 					var_export( $array, true )
 				)
 			],
-			113 => [
+			116 => [
 				'constraint'                   => new IsUnkeyedSubsetOfArrayConstraint( $array = Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
 				'expectedStringRepresentation' => sprintf(
 					IsUnkeyedSubsetOfArrayConstraint::STRING_REPRESENTATION_TEMPLATE,
 					var_export( $array, true )
 				)
 			],
-			114 => [
+			117 => [
 				'constraint'                   => new IsUnkeyedSubsetOfArrayConstraint( $array = Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
 				'expectedStringRepresentation' => sprintf(
 					IsUnkeyedSubsetOfArrayConstraint::STRING_REPRESENTATION_TEMPLATE,
 					var_export( $array, true )
 				)
 			],
-			115 => [
+			118 => [
 				'constraint'                   => new IsUnkeyedSubsetOfArrayConstraint( $array = Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
 				'expectedStringRepresentation' => sprintf(
 					IsUnkeyedSubsetOfArrayConstraint::STRING_REPRESENTATION_TEMPLATE,
 					var_export( $array, true )
 				)
 			],
-			116 => [
+			119 => [
 				'constraint'                   => new IsUnkeyedSubsetOfArrayConstraint( $array = Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
 				'expectedStringRepresentation' => sprintf(
 					IsUnkeyedSubsetOfArrayConstraint::STRING_REPRESENTATION_TEMPLATE,
 					var_export( $array, true )
 				)
 			],
-			117 => [
+			120 => [
 				'constraint'                   => new IsUnkeyedSubsetOfArrayConstraint( $array = Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
 				'expectedStringRepresentation' => sprintf(
 					IsUnkeyedSubsetOfArrayConstraint::STRING_REPRESENTATION_TEMPLATE,
 					var_export( $array, true )
 				)
 			],
-			118 => [
+			121 => [
 				'constraint'                   => new IsUnkeyedSubsetOfArrayConstraint( $array = Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
 				'expectedStringRepresentation' => sprintf(
 					IsUnkeyedSubsetOfArrayConstraint::STRING_REPRESENTATION_TEMPLATE,
 					var_export( $array, true )
 				)
 			],
-			119 => [
+			122 => [
 				'constraint'                   => new IsUnkeyedSubsetOfArrayConstraint( $array = Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
 				'expectedStringRepresentation' => sprintf(
 					IsUnkeyedSubsetOfArrayConstraint::STRING_REPRESENTATION_TEMPLATE,
 					var_export( $array, true )
 				)
 			],
-			120 => [
+			123 => [
 				'constraint'                   => new IsUnkeyedSubsetOfArrayConstraint( $array = Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
 				'expectedStringRepresentation' => sprintf(
 					IsUnkeyedSubsetOfArrayConstraint::STRING_REPRESENTATION_TEMPLATE,
 					var_export( $array, true )
 				)
 			],
-			121 => [
+			124 => [
 				'constraint'                   => new IsUnkeyedSubsetOfArrayConstraint( $array = Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
 				'expectedStringRepresentation' => sprintf(
 					IsUnkeyedSubsetOfArrayConstraint::STRING_REPRESENTATION_TEMPLATE,
 					var_export( $array, true )
 				)
 			],
-			122 => [
+			125 => [
 				'constraint'                   => new IsUnkeyedSubsetOfArrayConstraint( $array = Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
 				'expectedStringRepresentation' => sprintf(
 					IsUnkeyedSubsetOfArrayConstraint::STRING_REPRESENTATION_TEMPLATE,
 					var_export( $array, true )
 				)
 			],
-			123 => [
+			126 => [
 				'constraint'                   => new IsUnkeyedSubsetOfArrayConstraint( $array = Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
 				'expectedStringRepresentation' => sprintf(
 					IsUnkeyedSubsetOfArrayConstraint::STRING_REPRESENTATION_TEMPLATE,
 					var_export( $array, true )
 				)
 			],
-			124 => [
+			127 => [
 				'constraint'                   => new IsUnkeyedSubsetOfArrayConstraint( $array = Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
 				'expectedStringRepresentation' => sprintf(
 					IsUnkeyedSubsetOfArrayConstraint::STRING_REPRESENTATION_TEMPLATE,
 					var_export( $array, true )
 				)
 			],
-			125 => [
+			128 => [
 				'constraint'                   => new IsUnkeyedSubsetOfArrayConstraint( $array = Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
 				'expectedStringRepresentation' => sprintf(
 					IsUnkeyedSubsetOfArrayConstraint::STRING_REPRESENTATION_TEMPLATE,
 					var_export( $array, true )
 				)
 			],
-			126 => [
+			129 => [
 				'constraint'                   => new IsUnkeyedSubsetOfArrayConstraint( $array = Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
 				'expectedStringRepresentation' => sprintf(
 					IsUnkeyedSubsetOfArrayConstraint::STRING_REPRESENTATION_TEMPLATE,
 					var_export( $array, true )
 				)
 			],
-			127 => [
+			130 => [
 				'constraint'                   => new IsUnkeyedSubsetOfArrayConstraint( $array = Values::ARRAY_SUBSET_8, Values::BOOLEAN_TRUE ),
 				'expectedStringRepresentation' => sprintf(
 					IsUnkeyedSubsetOfArrayConstraint::STRING_REPRESENTATION_TEMPLATE,
 					var_export( $array, true )
 				)
 			],
-			128 => [
+			131 => [
 				'constraint'                   => new IsUnkeyedSubsetOfArrayConstraint( $array = Values::ARRAY_SUBSET_9, Values::BOOLEAN_FALSE ),
 				'expectedStringRepresentation' => sprintf(
 					IsUnkeyedSubsetOfArrayConstraint::STRING_REPRESENTATION_TEMPLATE,
 					var_export( $array, true )
 				)
 			],
-			129 => [
+			132 => [
 				'constraint'                   => new IsUnkeyedSubsetOfArrayConstraint( $array = Values::ARRAY_SUBSET_9, Values::BOOLEAN_TRUE ),
 				'expectedStringRepresentation' => sprintf(
 					IsUnkeyedSubsetOfArrayConstraint::STRING_REPRESENTATION_TEMPLATE,
 					var_export( $array, true )
 				)
 			],
-			130 => [
+			133 => [
 				'constraint'                   => new IsUnkeyedSubsetOfArrayConstraint( $array = Values::ARRAY_SUBSET_10, Values::BOOLEAN_FALSE ),
 				'expectedStringRepresentation' => sprintf(
 					IsUnkeyedSubsetOfArrayConstraint::STRING_REPRESENTATION_TEMPLATE,
 					var_export( $array, true )
 				)
 			],
-			131 => [
+			134 => [
 				'constraint'                   => new IsUnkeyedSubsetOfArrayConstraint( $array = Values::ARRAY_SUBSET_10, Values::BOOLEAN_TRUE ),
 				'expectedStringRepresentation' => sprintf(
 					IsUnkeyedSubsetOfArrayConstraint::STRING_REPRESENTATION_TEMPLATE,
 					var_export( $array, true )
 				)
 			],
-			132 => [
+			135 => [
 				'constraint'                   => new IsUnkeyedSubsetOfArrayConstraint( $array = Values::ARRAY_SUBSET_11, Values::BOOLEAN_FALSE ),
 				'expectedStringRepresentation' => sprintf(
 					IsUnkeyedSubsetOfArrayConstraint::STRING_REPRESENTATION_TEMPLATE,
 					var_export( $array, true )
 				)
 			],
-			133 => [
+			136 => [
 				'constraint'                   => new IsUnkeyedSubsetOfArrayConstraint( $array = Values::ARRAY_SUBSET_11, Values::BOOLEAN_TRUE ),
 				'expectedStringRepresentation' => sprintf(
 					IsUnkeyedSubsetOfArrayConstraint::STRING_REPRESENTATION_TEMPLATE,
 					var_export( $array, true )
 				)
 			],
-			134 => [
+			137 => [
 				'constraint'                   => new IsUnkeyedSubsetOfArrayConstraint( $array = Values::ARRAY_SUBSET_12, Values::BOOLEAN_FALSE ),
 				'expectedStringRepresentation' => sprintf(
 					IsUnkeyedSubsetOfArrayConstraint::STRING_REPRESENTATION_TEMPLATE,
 					var_export( $array, true )
 				)
 			],
-			135 => [
+			138 => [
 				'constraint'                   => new IsUnkeyedSubsetOfArrayConstraint( $array = Values::ARRAY_SUBSET_12, Values::BOOLEAN_TRUE ),
 				'expectedStringRepresentation' => sprintf(
 					IsUnkeyedSubsetOfArrayConstraint::STRING_REPRESENTATION_TEMPLATE,
 					var_export( $array, true )
-				)
-			],
-			136 => [
-				'constraint'                   => new IsSubClassOfConstraint( $interfaceOrClassFqcn = Values::INTERFACE_FQCN ),
-				'expectedStringRepresentation' => sprintf(
-					IsSubClassOfConstraint::STRING_REPRESENTATION_TEMPLATE,
-					TypeKinds::INTERFACE_KIND,
-					$interfaceOrClassFqcn
-				)
-			],
-			137 => [
-				'constraint'                   => new IsSubClassOfConstraint( $interfaceOrClassFqcn = Values::CLASS_FQCN_0 ),
-				'expectedStringRepresentation' => sprintf(
-					IsSubClassOfConstraint::STRING_REPRESENTATION_TEMPLATE,
-					TypeKinds::CLASS_KIND,
-					$interfaceOrClassFqcn
-				)
-			],
-			138 => [
-				'constraint'                   => new IsSubClassOfConstraint( $interfaceOrClassFqcn = Values::CLASS_FQCN_1 ),
-				'expectedStringRepresentation' => sprintf(
-					IsSubClassOfConstraint::STRING_REPRESENTATION_TEMPLATE,
-					TypeKinds::CLASS_KIND,
-					$interfaceOrClassFqcn
 				)
 			]
 		];

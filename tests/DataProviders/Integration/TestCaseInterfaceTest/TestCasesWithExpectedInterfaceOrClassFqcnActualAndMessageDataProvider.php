@@ -7,7 +7,7 @@ use CodeKandis\PhpUnit\Tests\Fixtures\Values;
 use Override;
 
 /**
- * Represents a data provider providing test cases with expected interface or class FQCN, actual value and message.
+ * Represents a data provider providing test cases with expected interface or class FQCN, actual and message.
  * @package codekandis/phpunit
  * @author Christian Ramelow <info@codekandis.net>
  */

@@ -9,15 +9,13 @@ use Override;
 use PHPUnit\Framework\UnknownClassOrInterfaceException;
 
 /**
- * Represents a data provider providing test cases with unknown interface or class FQCN, actual value, message, expected throwable class FQCN, expected throwable message, expected throwable code and expected throwable previous.
+ * Represents a data provider providing test cases with unknown expected interface or class FQCN and actual value.
  * @package codekandis/phpunit
  * @author Christian Ramelow <info@codekandis.net>
  */
-final readonly class TestCasesWithUnknownInterfaceOrClassFqcnActualMessageExpectedThrowableClassFqcnExpectedThrowableMessageExpectedThrowableCodeAndExpectedThrowablePreviousDataProvider implements DataProviderInterface
+final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessageExpectedThrowableClassFqcnExpectedThrowableMessageExpectedThrowableCodeAndExpectedThrowablePreviousDataProvider implements DataProviderInterface
 {
-	/**
-	 * {@inheritDoc}
-	 */
+	/** {@inheritDoc} */
 	#[Override]
 	public static function provideData(): iterable
 	{

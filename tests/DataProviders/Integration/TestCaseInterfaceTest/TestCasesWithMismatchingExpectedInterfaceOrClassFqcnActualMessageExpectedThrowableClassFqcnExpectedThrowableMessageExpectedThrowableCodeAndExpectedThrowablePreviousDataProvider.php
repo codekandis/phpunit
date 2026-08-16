@@ -10,15 +10,13 @@ use Override;
 use PHPUnit\Framework\ExpectationFailedException;
 
 /**
- * Represents a data provider providing test cases with mismatching interface or class FQCN, actual value, message, expected throwable class FQCN, expected throwable message, expected throwable code and expected throwable previous.
+ * Represents a data provider providing test cases with mismatching expected interface or class FQCN and actual value.
  * @package codekandis/phpunit
  * @author Christian Ramelow <info@codekandis.net>
  */
-final readonly class TestCasesWithMismatchingInterfaceOrClassFqcnActualMessageExpectedThrowableClassFqcnExpectedThrowableMessageExpectedThrowableCodeAndExpectedThrowablePreviousDataProvider implements DataProviderInterface
+final readonly class TestCasesWithMismatchingExpectedInterfaceOrClassFqcnActualMessageExpectedThrowableClassFqcnExpectedThrowableMessageExpectedThrowableCodeAndExpectedThrowablePreviousDataProvider implements DataProviderInterface
 {
-	/**
-	 * {@inheritDoc}
-	 */
+	/** {@inheritDoc} */
 	#[Override]
 	public static function provideData(): iterable
 	{
@@ -3286,13 +3284,6 @@ final readonly class TestCasesWithMismatchingInterfaceOrClassFqcnActualMessageEx
 		];
 	}
 
-	/**
-	 * Builds the expected throwable message.
-	 * @param mixed $actual The actual value.
-	 * @param string $expectedInterfaceOrClassFqcn The expected interface or class FQCN.
-	 * @param string $message The message to pass.
-	 * @return string The expected throwable message.
-	 */
 	private static function buildExpectedThrowableMessage( mixed $actual, string $expectedInterfaceOrClassFqcn, string $message ): string
 	{
 		$messagePrefix = Values::EMPTY_STRING === $message
