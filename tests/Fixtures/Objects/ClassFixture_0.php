@@ -6,6 +6,6 @@ namespace CodeKandis\PhpUnit\Tests\Fixtures\Objects;
  * @package codekandis/phpunit
  * @author Christian Ramelow <info@codekandis.net>
  */
-class ClassFixture
+class ClassFixture_0
 {
 }

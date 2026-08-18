@@ -2,10 +2,10 @@
 namespace CodeKandis\PhpUnit\Tests\Fixtures\Objects;
 
 /**
- * Represents a class fixture implementing an interface.
+ * Represents a class fixture.
  * @package codekandis/phpunit
  * @author Christian Ramelow <info@codekandis.net>
  */
-class ImplementingClassFixture implements InterfaceFixture
+class ClassFixture_9 extends ClassFixture_2 implements InterfaceFixture_2
 {
 }

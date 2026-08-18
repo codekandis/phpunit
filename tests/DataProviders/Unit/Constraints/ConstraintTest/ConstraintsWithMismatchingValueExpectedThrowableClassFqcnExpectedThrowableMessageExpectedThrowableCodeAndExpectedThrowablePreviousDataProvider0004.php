@@ -336,7 +336,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4024 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture(),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture_0(),
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -349,7 +349,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4025 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_9, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createImplementingClassFixture(),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture_1(),
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -596,7 +596,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4044 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_FQCN,
+				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_FQCN_0,
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -1038,7 +1038,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4078 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture(),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture_0(),
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -1051,7 +1051,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4079 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createImplementingClassFixture(),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture_1(),
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -1298,7 +1298,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4098 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_FQCN,
+				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_FQCN_0,
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -1740,7 +1740,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4132 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture(),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture_0(),
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -1753,7 +1753,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4133 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createImplementingClassFixture(),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture_1(),
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -2000,7 +2000,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4152 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_FQCN,
+				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_FQCN_0,
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -2442,7 +2442,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4186 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture(),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture_0(),
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -2455,7 +2455,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4187 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createImplementingClassFixture(),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture_1(),
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -2702,7 +2702,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4206 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_FQCN,
+				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_FQCN_0,
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -3144,7 +3144,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4240 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture(),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture_0(),
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -3157,7 +3157,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4241 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createImplementingClassFixture(),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture_1(),
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -3404,7 +3404,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4260 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_FQCN,
+				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_FQCN_0,
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -3469,7 +3469,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4265 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture(),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture_0(),
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -3482,7 +3482,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4266 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createImplementingClassFixture(),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture_1(),
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -3729,7 +3729,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4285 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_FQCN,
+				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_FQCN_0,
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -3794,7 +3794,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4290 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture(),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture_0(),
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -3807,7 +3807,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4291 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createImplementingClassFixture(),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture_1(),
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -4054,7 +4054,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4310 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_FQCN,
+				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_FQCN_0,
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -4340,7 +4340,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4332 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture(),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture_0(),
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -4353,7 +4353,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4333 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createImplementingClassFixture(),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture_1(),
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -4600,7 +4600,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4352 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_FQCN,
+				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_FQCN_0,
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -4886,7 +4886,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4374 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture(),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture_0(),
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -4899,7 +4899,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4375 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createImplementingClassFixture(),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture_1(),
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -5146,7 +5146,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4394 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_FQCN,
+				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_FQCN_0,
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -5575,7 +5575,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4427 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture(),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture_0(),
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -5588,7 +5588,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4428 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createImplementingClassFixture(),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture_1(),
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -5835,7 +5835,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4447 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_FQCN,
+				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_FQCN_0,
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -6264,7 +6264,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4480 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture(),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture_0(),
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -6277,7 +6277,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4481 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createImplementingClassFixture(),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture_1(),
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -6524,7 +6524,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4500 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_FQCN,
+				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_FQCN_0,
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -6888,7 +6888,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4528 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture(),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture_0(),
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -6901,7 +6901,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4529 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createImplementingClassFixture(),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture_1(),
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -7148,7 +7148,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4548 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_FQCN,
+				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_FQCN_0,
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -7512,7 +7512,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4576 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture(),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture_0(),
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -7525,7 +7525,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4577 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createImplementingClassFixture(),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture_1(),
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -7772,7 +7772,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4596 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_FQCN,
+				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_FQCN_0,
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -8214,7 +8214,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4630 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture(),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture_0(),
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -8227,7 +8227,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4631 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createImplementingClassFixture(),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture_1(),
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -8474,7 +8474,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4650 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_FQCN,
+				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_FQCN_0,
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -8916,7 +8916,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4684 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture(),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture_0(),
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -8929,7 +8929,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4685 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createImplementingClassFixture(),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture_1(),
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -9176,7 +9176,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4704 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_FQCN,
+				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_FQCN_0,
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -9605,7 +9605,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4737 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture(),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture_0(),
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -9618,7 +9618,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4738 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createImplementingClassFixture(),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture_1(),
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -9865,7 +9865,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4757 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_FQCN,
+				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_FQCN_0,
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -10294,7 +10294,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4790 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture(),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture_0(),
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -10307,7 +10307,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4791 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createImplementingClassFixture(),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture_1(),
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -10554,7 +10554,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4810 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_FQCN,
+				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_FQCN_0,
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -10840,7 +10840,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4832 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture(),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture_0(),
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -10853,7 +10853,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4833 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createImplementingClassFixture(),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture_1(),
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -11100,7 +11100,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4852 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_FQCN,
+				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_FQCN_0,
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -11386,7 +11386,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4874 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture(),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture_0(),
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -11399,7 +11399,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4875 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createImplementingClassFixture(),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture_1(),
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -11646,7 +11646,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4894 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_FQCN,
+				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_FQCN_0,
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -11997,7 +11997,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4921 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture(),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture_0(),
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -12010,7 +12010,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4922 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createImplementingClassFixture(),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture_1(),
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -12257,7 +12257,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4941 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_FQCN,
+				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_FQCN_0,
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -12699,7 +12699,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4975 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture(),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture_0(),
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -12712,7 +12712,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4976 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_7, Values::BOOLEAN_TRUE ),
-				'mismatchingValue'           => $mismatchingValue = Values::createImplementingClassFixture(),
+				'mismatchingValue'           => $mismatchingValue = Values::createClassFixture_1(),
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',
@@ -12959,7 +12959,7 @@ final readonly class ConstraintsWithMismatchingValueExpectedThrowableClassFqcnEx
 			],
 			4995 => [
 				'constraint'                 => $constraint = new ArrayContainsUnkeyedSubsetConstraint( Values::ARRAY_SUBSET_8, Values::BOOLEAN_FALSE ),
-				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_FQCN,
+				'mismatchingValue'           => $mismatchingValue = Values::INTERFACE_FQCN_0,
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
 				'expectedThrowableMessage'   => sprintf(
 					'Failed asserting that %1$s%2$s.',

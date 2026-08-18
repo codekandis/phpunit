@@ -1,9 +1,21 @@
 <?php declare( strict_types = 1 );
 namespace CodeKandis\PhpUnit\Tests\Fixtures;
 
-use CodeKandis\PhpUnit\Tests\Fixtures\Objects\ClassFixture;
-use CodeKandis\PhpUnit\Tests\Fixtures\Objects\ImplementingClassFixture;
-use CodeKandis\PhpUnit\Tests\Fixtures\Objects\InterfaceFixture;
+use CodeKandis\PhpUnit\Tests\Fixtures\Objects\ClassFixture_0;
+use CodeKandis\PhpUnit\Tests\Fixtures\Objects\ClassFixture_1;
+use CodeKandis\PhpUnit\Tests\Fixtures\Objects\ClassFixture_10;
+use CodeKandis\PhpUnit\Tests\Fixtures\Objects\ClassFixture_11;
+use CodeKandis\PhpUnit\Tests\Fixtures\Objects\ClassFixture_2;
+use CodeKandis\PhpUnit\Tests\Fixtures\Objects\ClassFixture_3;
+use CodeKandis\PhpUnit\Tests\Fixtures\Objects\ClassFixture_4;
+use CodeKandis\PhpUnit\Tests\Fixtures\Objects\ClassFixture_5;
+use CodeKandis\PhpUnit\Tests\Fixtures\Objects\ClassFixture_6;
+use CodeKandis\PhpUnit\Tests\Fixtures\Objects\ClassFixture_7;
+use CodeKandis\PhpUnit\Tests\Fixtures\Objects\ClassFixture_8;
+use CodeKandis\PhpUnit\Tests\Fixtures\Objects\ClassFixture_9;
+use CodeKandis\PhpUnit\Tests\Fixtures\Objects\InterfaceFixture_0;
+use CodeKandis\PhpUnit\Tests\Fixtures\Objects\InterfaceFixture_1;
+use CodeKandis\PhpUnit\Tests\Fixtures\Objects\InterfaceFixture_2;
 
 /**
  * Represents an enumeration of fixture values.
@@ -130,7 +142,19 @@ abstract class Values
 	 * Represents an interface FQCN value.
 	 * @var string
 	 */
-	public const string INTERFACE_FQCN = InterfaceFixture::class;
+	public const string INTERFACE_FQCN_0 = InterfaceFixture_0::class;
+
+	/**
+	 * Represents an interface FQCN value.
+	 * @var string
+	 */
+	public const string INTERFACE_FQCN_1 = InterfaceFixture_1::class;
+
+	/**
+	 * Represents an interface FQCN value.
+	 * @var string
+	 */
+	public const string INTERFACE_FQCN_2 = InterfaceFixture_2::class;
 
 	/**
 	 * Represents an unknown interface FQCN value.
@@ -142,13 +166,73 @@ abstract class Values
 	 * Represents a FQCN value.
 	 * @var string
 	 */
-	public const string CLASS_FQCN_0 = ClassFixture::class;
+	public const string CLASS_FQCN_0 = ClassFixture_0::class;
 
 	/**
 	 * Represents a FQCN value.
 	 * @var string
 	 */
-	public const string CLASS_FQCN_1 = ImplementingClassFixture::class;
+	public const string CLASS_FQCN_1 = ClassFixture_1::class;
+
+	/**
+	 * Represents a FQCN value.
+	 * @var string
+	 */
+	public const string CLASS_FQCN_2 = ClassFixture_2::class;
+
+	/**
+	 * Represents a FQCN value.
+	 * @var string
+	 */
+	public const string CLASS_FQCN_3 = ClassFixture_3::class;
+
+	/**
+	 * Represents a FQCN value.
+	 * @var string
+	 */
+	public const string CLASS_FQCN_4 = ClassFixture_4::class;
+
+	/**
+	 * Represents a FQCN value.
+	 * @var string
+	 */
+	public const string CLASS_FQCN_5 = ClassFixture_5::class;
+
+	/**
+	 * Represents a FQCN value.
+	 * @var string
+	 */
+	public const string CLASS_FQCN_6 = ClassFixture_6::class;
+
+	/**
+	 * Represents a FQCN value.
+	 * @var string
+	 */
+	public const string CLASS_FQCN_7 = ClassFixture_7::class;
+
+	/**
+	 * Represents a FQCN value.
+	 * @var string
+	 */
+	public const string CLASS_FQCN_8 = ClassFixture_8::class;
+
+	/**
+	 * Represents a FQCN value.
+	 * @var string
+	 */
+	public const string CLASS_FQCN_9 = ClassFixture_9::class;
+
+	/**
+	 * Represents a FQCN value.
+	 * @var string
+	 */
+	public const string CLASS_FQCN_10 = ClassFixture_10::class;
+
+	/**
+	 * Represents a FQCN value.
+	 * @var string
+	 */
+	public const string CLASS_FQCN_11 = ClassFixture_11::class;
 
 	/**
 	 * Represents an unknown FQCN value.
@@ -469,19 +553,109 @@ abstract class Values
 
 	/**
 	 * Creates a class fixture.
-	 * @return ClassFixture The created class fixture.
+	 * @return ClassFixture_0 The created class fixture.
 	 */
-	public static function createClassFixture(): ClassFixture
+	public static function createClassFixture_0(): ClassFixture_0
 	{
-		return new ClassFixture();
+		return new ClassFixture_0();
 	}
 
 	/**
-	 * Creates an implementing class fixture.
-	 * @return ImplementingClassFixture The created implementing class fixture.
+	 * Creates a class fixture.
+	 * @return ClassFixture_1 The created class fixture.
 	 */
-	public static function createImplementingClassFixture(): ImplementingClassFixture
+	public static function createClassFixture_1(): ClassFixture_1
 	{
-		return new ImplementingClassFixture();
+		return new ClassFixture_1();
+	}
+
+	/**
+	 * Creates a class fixture.
+	 * @return ClassFixture_2 The created class fixture.
+	 */
+	public static function createClassFixture_2(): ClassFixture_2
+	{
+		return new ClassFixture_2();
+	}
+
+	/**
+	 * Creates a class fixture.
+	 * @return ClassFixture_3 The created class fixture.
+	 */
+	public static function createClassFixture_3(): ClassFixture_3
+	{
+		return new ClassFixture_3();
+	}
+
+	/**
+	 * Creates a class fixture.
+	 * @return ClassFixture_4 The created class fixture.
+	 */
+	public static function createClassFixture_4(): ClassFixture_4
+	{
+		return new ClassFixture_4();
+	}
+
+	/**
+	 * Creates a class fixture.
+	 * @return ClassFixture_5 The created class fixture.
+	 */
+	public static function createClassFixture_5(): ClassFixture_5
+	{
+		return new ClassFixture_5();
+	}
+
+	/**
+	 * Creates a class fixture.
+	 * @return ClassFixture_6 The created class fixture.
+	 */
+	public static function createClassFixture_6(): ClassFixture_6
+	{
+		return new ClassFixture_6();
+	}
+
+	/**
+	 * Creates a class fixture.
+	 * @return ClassFixture_7 The created class fixture.
+	 */
+	public static function createClassFixture_7(): ClassFixture_7
+	{
+		return new ClassFixture_7();
+	}
+
+	/**
+	 * Creates a class fixture.
+	 * @return ClassFixture_8 The created class fixture.
+	 */
+	public static function createClassFixture_8(): ClassFixture_8
+	{
+		return new ClassFixture_8();
+	}
+
+	/**
+	 * Creates a class fixture.
+	 * @return ClassFixture_9 The created class fixture.
+	 */
+	public static function createClassFixture_9(): ClassFixture_9
+	{
+		return new ClassFixture_9();
+	}
+
+	/**
+	 * Creates a class fixture.
+	 * @return ClassFixture_10 The created class fixture.
+	 */
+	public static function createClassFixture_10(): ClassFixture_10
+	{
+		return new ClassFixture_10();
+	}
+
+	/**
+	 * Creates a class fixture.
+	 * @return ClassFixture_11 The created class fixture.
+	 */
+	public static function createClassFixture_11(): ClassFixture_11
+	{
+		return new ClassFixture_11();
 	}
 }

@@ -62,7 +62,7 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0001 
 			],
 			1008 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_9, Values::BOOLEAN_FALSE ),
-				'value'          => Values::INTERFACE_FQCN,
+				'value'          => Values::INTERFACE_FQCN_0,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1009 => [
@@ -237,12 +237,12 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0001 
 			],
 			1043 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_9, Values::BOOLEAN_FALSE ),
-				'value'          => Values::createClassFixture(),
+				'value'          => Values::createClassFixture_0(),
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1044 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_9, Values::BOOLEAN_FALSE ),
-				'value'          => Values::createImplementingClassFixture(),
+				'value'          => Values::createClassFixture_1(),
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1045 => [
@@ -337,7 +337,7 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0001 
 			],
 			1063 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_9, Values::BOOLEAN_TRUE ),
-				'value'          => Values::INTERFACE_FQCN,
+				'value'          => Values::INTERFACE_FQCN_0,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1064 => [
@@ -512,12 +512,12 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0001 
 			],
 			1098 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_9, Values::BOOLEAN_TRUE ),
-				'value'          => Values::createClassFixture(),
+				'value'          => Values::createClassFixture_0(),
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1099 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_9, Values::BOOLEAN_TRUE ),
-				'value'          => Values::createImplementingClassFixture(),
+				'value'          => Values::createClassFixture_1(),
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1100 => [
@@ -612,7 +612,7 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0001 
 			],
 			1118 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
-				'value'          => Values::INTERFACE_FQCN,
+				'value'          => Values::INTERFACE_FQCN_0,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1119 => [
@@ -787,12 +787,12 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0001 
 			],
 			1153 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
-				'value'          => Values::createClassFixture(),
+				'value'          => Values::createClassFixture_0(),
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1154 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_FALSE ),
-				'value'          => Values::createImplementingClassFixture(),
+				'value'          => Values::createClassFixture_1(),
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1155 => [
@@ -887,7 +887,7 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0001 
 			],
 			1173 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
-				'value'          => Values::INTERFACE_FQCN,
+				'value'          => Values::INTERFACE_FQCN_0,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1174 => [
@@ -1062,12 +1062,12 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0001 
 			],
 			1208 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
-				'value'          => Values::createClassFixture(),
+				'value'          => Values::createClassFixture_0(),
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1209 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_10, Values::BOOLEAN_TRUE ),
-				'value'          => Values::createImplementingClassFixture(),
+				'value'          => Values::createClassFixture_1(),
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1210 => [
@@ -1162,7 +1162,7 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0001 
 			],
 			1228 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
-				'value'          => Values::INTERFACE_FQCN,
+				'value'          => Values::INTERFACE_FQCN_0,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1229 => [
@@ -1337,12 +1337,12 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0001 
 			],
 			1263 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
-				'value'          => Values::createClassFixture(),
+				'value'          => Values::createClassFixture_0(),
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1264 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_FALSE ),
-				'value'          => Values::createImplementingClassFixture(),
+				'value'          => Values::createClassFixture_1(),
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1265 => [
@@ -1437,7 +1437,7 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0001 
 			],
 			1283 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
-				'value'          => Values::INTERFACE_FQCN,
+				'value'          => Values::INTERFACE_FQCN_0,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1284 => [
@@ -1612,12 +1612,12 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0001 
 			],
 			1318 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
-				'value'          => Values::createClassFixture(),
+				'value'          => Values::createClassFixture_0(),
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1319 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_11, Values::BOOLEAN_TRUE ),
-				'value'          => Values::createImplementingClassFixture(),
+				'value'          => Values::createClassFixture_1(),
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1320 => [
@@ -1712,7 +1712,7 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0001 
 			],
 			1338 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_FALSE ),
-				'value'          => Values::INTERFACE_FQCN,
+				'value'          => Values::INTERFACE_FQCN_0,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1339 => [
@@ -1887,12 +1887,12 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0001 
 			],
 			1373 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_FALSE ),
-				'value'          => Values::createClassFixture(),
+				'value'          => Values::createClassFixture_0(),
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1374 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_FALSE ),
-				'value'          => Values::createImplementingClassFixture(),
+				'value'          => Values::createClassFixture_1(),
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1375 => [
@@ -1987,7 +1987,7 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0001 
 			],
 			1393 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_TRUE ),
-				'value'          => Values::INTERFACE_FQCN,
+				'value'          => Values::INTERFACE_FQCN_0,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1394 => [
@@ -2162,12 +2162,12 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0001 
 			],
 			1428 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_TRUE ),
-				'value'          => Values::createClassFixture(),
+				'value'          => Values::createClassFixture_0(),
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1429 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_SUBSET_0, Values::BOOLEAN_TRUE ),
-				'value'          => Values::createImplementingClassFixture(),
+				'value'          => Values::createClassFixture_1(),
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1430 => [
@@ -2262,7 +2262,7 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0001 
 			],
 			1448 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
-				'value'          => Values::INTERFACE_FQCN,
+				'value'          => Values::INTERFACE_FQCN_0,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1449 => [
@@ -2437,12 +2437,12 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0001 
 			],
 			1483 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
-				'value'          => Values::createClassFixture(),
+				'value'          => Values::createClassFixture_0(),
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1484 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_FALSE ),
-				'value'          => Values::createImplementingClassFixture(),
+				'value'          => Values::createClassFixture_1(),
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1485 => [
@@ -2537,7 +2537,7 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0001 
 			],
 			1503 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
-				'value'          => Values::INTERFACE_FQCN,
+				'value'          => Values::INTERFACE_FQCN_0,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1504 => [
@@ -2712,12 +2712,12 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0001 
 			],
 			1538 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
-				'value'          => Values::createClassFixture(),
+				'value'          => Values::createClassFixture_0(),
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1539 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_SUBSET_1, Values::BOOLEAN_TRUE ),
-				'value'          => Values::createImplementingClassFixture(),
+				'value'          => Values::createClassFixture_1(),
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1540 => [
@@ -2812,7 +2812,7 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0001 
 			],
 			1558 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
-				'value'          => Values::INTERFACE_FQCN,
+				'value'          => Values::INTERFACE_FQCN_0,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1559 => [
@@ -2987,12 +2987,12 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0001 
 			],
 			1593 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
-				'value'          => Values::createClassFixture(),
+				'value'          => Values::createClassFixture_0(),
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1594 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_FALSE ),
-				'value'          => Values::createImplementingClassFixture(),
+				'value'          => Values::createClassFixture_1(),
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1595 => [
@@ -3087,7 +3087,7 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0001 
 			],
 			1613 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
-				'value'          => Values::INTERFACE_FQCN,
+				'value'          => Values::INTERFACE_FQCN_0,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1614 => [
@@ -3262,12 +3262,12 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0001 
 			],
 			1648 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
-				'value'          => Values::createClassFixture(),
+				'value'          => Values::createClassFixture_0(),
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1649 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_SUBSET_2, Values::BOOLEAN_TRUE ),
-				'value'          => Values::createImplementingClassFixture(),
+				'value'          => Values::createClassFixture_1(),
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1650 => [
@@ -3362,7 +3362,7 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0001 
 			],
 			1668 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
-				'value'          => Values::INTERFACE_FQCN,
+				'value'          => Values::INTERFACE_FQCN_0,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1669 => [
@@ -3537,12 +3537,12 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0001 
 			],
 			1703 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
-				'value'          => Values::createClassFixture(),
+				'value'          => Values::createClassFixture_0(),
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1704 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_FALSE ),
-				'value'          => Values::createImplementingClassFixture(),
+				'value'          => Values::createClassFixture_1(),
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1705 => [
@@ -3637,7 +3637,7 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0001 
 			],
 			1723 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
-				'value'          => Values::INTERFACE_FQCN,
+				'value'          => Values::INTERFACE_FQCN_0,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1724 => [
@@ -3812,12 +3812,12 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0001 
 			],
 			1758 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
-				'value'          => Values::createClassFixture(),
+				'value'          => Values::createClassFixture_0(),
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1759 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_SUBSET_3, Values::BOOLEAN_TRUE ),
-				'value'          => Values::createImplementingClassFixture(),
+				'value'          => Values::createClassFixture_1(),
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1760 => [
@@ -3912,7 +3912,7 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0001 
 			],
 			1778 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
-				'value'          => Values::INTERFACE_FQCN,
+				'value'          => Values::INTERFACE_FQCN_0,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1779 => [
@@ -4087,12 +4087,12 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0001 
 			],
 			1813 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
-				'value'          => Values::createClassFixture(),
+				'value'          => Values::createClassFixture_0(),
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1814 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_FALSE ),
-				'value'          => Values::createImplementingClassFixture(),
+				'value'          => Values::createClassFixture_1(),
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1815 => [
@@ -4187,7 +4187,7 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0001 
 			],
 			1833 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
-				'value'          => Values::INTERFACE_FQCN,
+				'value'          => Values::INTERFACE_FQCN_0,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1834 => [
@@ -4362,12 +4362,12 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0001 
 			],
 			1868 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
-				'value'          => Values::createClassFixture(),
+				'value'          => Values::createClassFixture_0(),
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1869 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_SUBSET_4, Values::BOOLEAN_TRUE ),
-				'value'          => Values::createImplementingClassFixture(),
+				'value'          => Values::createClassFixture_1(),
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1870 => [
@@ -4462,7 +4462,7 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0001 
 			],
 			1888 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
-				'value'          => Values::INTERFACE_FQCN,
+				'value'          => Values::INTERFACE_FQCN_0,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1889 => [
@@ -4637,12 +4637,12 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0001 
 			],
 			1923 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
-				'value'          => Values::createClassFixture(),
+				'value'          => Values::createClassFixture_0(),
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1924 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_FALSE ),
-				'value'          => Values::createImplementingClassFixture(),
+				'value'          => Values::createClassFixture_1(),
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1925 => [
@@ -4737,7 +4737,7 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0001 
 			],
 			1943 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
-				'value'          => Values::INTERFACE_FQCN,
+				'value'          => Values::INTERFACE_FQCN_0,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1944 => [
@@ -4912,12 +4912,12 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0001 
 			],
 			1978 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
-				'value'          => Values::createClassFixture(),
+				'value'          => Values::createClassFixture_0(),
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1979 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_SUBSET_5, Values::BOOLEAN_TRUE ),
-				'value'          => Values::createImplementingClassFixture(),
+				'value'          => Values::createClassFixture_1(),
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1980 => [
@@ -5012,7 +5012,7 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider0001 
 			],
 			1998 => [
 				'constraint'     => new ArrayContainsKeyedSubsetConstraint( Values::ARRAY_SUBSET_6, Values::BOOLEAN_FALSE ),
-				'value'          => Values::INTERFACE_FQCN,
+				'value'          => Values::INTERFACE_FQCN_0,
 				'expectedResult' => Values::BOOLEAN_FALSE
 			],
 			1999 => [

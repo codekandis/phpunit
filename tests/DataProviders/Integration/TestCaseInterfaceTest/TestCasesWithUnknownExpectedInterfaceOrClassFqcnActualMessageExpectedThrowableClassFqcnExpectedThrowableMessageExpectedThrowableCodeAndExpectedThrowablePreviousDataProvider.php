@@ -383,7 +383,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			36  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::INTERFACE_FQCN,
+				'actual'                       => Values::INTERFACE_FQCN_0,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -393,7 +393,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			37  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::INTERFACE_FQCN,
+				'actual'                       => Values::INTERFACE_FQCN_0,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -403,7 +403,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			38  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::INTERFACE_FQCN_1,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -413,7 +413,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			39  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::INTERFACE_FQCN_1,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -423,7 +423,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			40  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::CLASS_FQCN_0,
+				'actual'                       => Values::INTERFACE_FQCN_2,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -433,7 +433,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			41  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::CLASS_FQCN_0,
+				'actual'                       => Values::INTERFACE_FQCN_2,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -443,7 +443,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			42  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::CLASS_FQCN_1,
+				'actual'                       => Values::UNKNOWN_INTERFACE_FQCN,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -453,7 +453,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			43  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::CLASS_FQCN_1,
+				'actual'                       => Values::UNKNOWN_INTERFACE_FQCN,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -463,7 +463,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			44  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::CLASS_FQCN_0,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -473,7 +473,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			45  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::CLASS_FQCN_0,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -483,7 +483,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			46  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_0,
+				'actual'                       => Values::CLASS_FQCN_1,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -493,7 +493,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			47  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_0,
+				'actual'                       => Values::CLASS_FQCN_1,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -503,7 +503,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			48  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_1,
+				'actual'                       => Values::CLASS_FQCN_2,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -513,7 +513,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			49  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_1,
+				'actual'                       => Values::CLASS_FQCN_2,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -523,7 +523,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			50  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_2,
+				'actual'                       => Values::CLASS_FQCN_3,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -533,7 +533,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			51  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_2,
+				'actual'                       => Values::CLASS_FQCN_3,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -543,7 +543,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			52  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_3,
+				'actual'                       => Values::CLASS_FQCN_4,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -553,7 +553,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			53  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_3,
+				'actual'                       => Values::CLASS_FQCN_4,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -563,7 +563,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			54  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_4,
+				'actual'                       => Values::CLASS_FQCN_5,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -573,7 +573,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			55  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_4,
+				'actual'                       => Values::CLASS_FQCN_5,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -583,7 +583,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			56  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_5,
+				'actual'                       => Values::CLASS_FQCN_6,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -593,7 +593,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			57  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_5,
+				'actual'                       => Values::CLASS_FQCN_6,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -603,7 +603,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			58  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_6,
+				'actual'                       => Values::CLASS_FQCN_7,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -613,7 +613,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			59  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_6,
+				'actual'                       => Values::CLASS_FQCN_7,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -623,7 +623,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			60  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_7,
+				'actual'                       => Values::CLASS_FQCN_8,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -633,7 +633,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			61  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_7,
+				'actual'                       => Values::CLASS_FQCN_8,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -643,7 +643,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			62  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_8,
+				'actual'                       => Values::CLASS_FQCN_9,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -653,7 +653,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			63  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_8,
+				'actual'                       => Values::CLASS_FQCN_9,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -663,7 +663,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			64  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_9,
+				'actual'                       => Values::CLASS_FQCN_10,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -673,7 +673,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			65  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_9,
+				'actual'                       => Values::CLASS_FQCN_10,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -683,7 +683,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			66  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_10,
+				'actual'                       => Values::CLASS_FQCN_11,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -693,7 +693,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			67  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_10,
+				'actual'                       => Values::CLASS_FQCN_11,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -703,7 +703,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			68  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_11,
+				'actual'                       => Values::UNKNOWN_CLASS_FQCN,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -713,7 +713,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			69  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_11,
+				'actual'                       => Values::UNKNOWN_CLASS_FQCN,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -723,7 +723,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			70  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_0,
+				'actual'                       => Values::ARRAY_0,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -733,7 +733,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			71  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_0,
+				'actual'                       => Values::ARRAY_0,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -743,7 +743,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			72  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_1,
+				'actual'                       => Values::ARRAY_1,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -753,7 +753,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			73  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_1,
+				'actual'                       => Values::ARRAY_1,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -763,7 +763,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			74  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_2,
+				'actual'                       => Values::ARRAY_2,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -773,7 +773,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			75  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_2,
+				'actual'                       => Values::ARRAY_2,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -783,7 +783,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			76  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_3,
+				'actual'                       => Values::ARRAY_3,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -793,7 +793,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			77  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_3,
+				'actual'                       => Values::ARRAY_3,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -803,7 +803,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			78  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_4,
+				'actual'                       => Values::ARRAY_4,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -813,7 +813,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			79  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_4,
+				'actual'                       => Values::ARRAY_4,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -823,7 +823,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			80  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_5,
+				'actual'                       => Values::ARRAY_5,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -833,7 +833,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			81  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_5,
+				'actual'                       => Values::ARRAY_5,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -843,7 +843,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			82  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_6,
+				'actual'                       => Values::ARRAY_6,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -853,7 +853,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			83  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_6,
+				'actual'                       => Values::ARRAY_6,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -863,7 +863,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			84  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_7,
+				'actual'                       => Values::ARRAY_7,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -873,7 +873,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			85  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_7,
+				'actual'                       => Values::ARRAY_7,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -883,7 +883,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			86  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_8,
+				'actual'                       => Values::ARRAY_8,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -893,7 +893,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			87  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_8,
+				'actual'                       => Values::ARRAY_8,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -903,7 +903,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			88  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_9,
+				'actual'                       => Values::ARRAY_9,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -913,7 +913,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			89  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_9,
+				'actual'                       => Values::ARRAY_9,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -923,7 +923,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			90  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_10,
+				'actual'                       => Values::ARRAY_10,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -933,7 +933,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			91  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_10,
+				'actual'                       => Values::ARRAY_10,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -943,7 +943,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			92  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_11,
+				'actual'                       => Values::ARRAY_11,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -953,7 +953,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			93  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_11,
+				'actual'                       => Values::ARRAY_11,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -963,7 +963,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			94  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_12,
+				'actual'                       => Values::ARRAY_SUBSET_0,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -973,7 +973,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			95  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_12,
+				'actual'                       => Values::ARRAY_SUBSET_0,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -983,7 +983,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			96  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_13,
+				'actual'                       => Values::ARRAY_SUBSET_1,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -993,7 +993,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			97  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_13,
+				'actual'                       => Values::ARRAY_SUBSET_1,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1003,7 +1003,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			98  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_14,
+				'actual'                       => Values::ARRAY_SUBSET_2,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1013,7 +1013,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			99  => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_14,
+				'actual'                       => Values::ARRAY_SUBSET_2,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1023,7 +1023,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			100 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_15,
+				'actual'                       => Values::ARRAY_SUBSET_3,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1033,7 +1033,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			101 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_15,
+				'actual'                       => Values::ARRAY_SUBSET_3,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1043,7 +1043,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			102 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_16,
+				'actual'                       => Values::ARRAY_SUBSET_4,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1053,7 +1053,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			103 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_16,
+				'actual'                       => Values::ARRAY_SUBSET_4,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1063,7 +1063,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			104 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_17,
+				'actual'                       => Values::ARRAY_SUBSET_5,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1073,7 +1073,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			105 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_17,
+				'actual'                       => Values::ARRAY_SUBSET_5,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1083,7 +1083,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			106 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::createClassFixture(),
+				'actual'                       => Values::ARRAY_SUBSET_6,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1093,7 +1093,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			107 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::createClassFixture(),
+				'actual'                       => Values::ARRAY_SUBSET_6,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1103,7 +1103,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			108 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::createImplementingClassFixture(),
+				'actual'                       => Values::ARRAY_SUBSET_7,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1113,7 +1113,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			109 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
-				'actual'                       => Values::createImplementingClassFixture(),
+				'actual'                       => Values::ARRAY_SUBSET_7,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1122,8 +1122,8 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			],
 			110 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::NULL,
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_8,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1132,8 +1132,8 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			],
 			111 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::NULL,
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_8,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1142,8 +1142,8 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			],
 			112 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::NULL_STRING,
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_9,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1152,8 +1152,8 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			],
 			113 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::NULL_STRING,
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_9,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1162,8 +1162,8 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			],
 			114 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::BOOLEAN_FALSE,
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_10,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1172,8 +1172,8 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			],
 			115 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::BOOLEAN_FALSE,
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_10,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1182,8 +1182,8 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			],
 			116 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::BOOLEAN_TRUE,
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_11,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1192,8 +1192,8 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			],
 			117 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::BOOLEAN_TRUE,
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_11,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1202,8 +1202,8 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			],
 			118 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::BOOLEAN_INTEGER_FALSE,
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_12,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1212,8 +1212,8 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			],
 			119 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::BOOLEAN_INTEGER_FALSE,
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_12,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1222,8 +1222,8 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			],
 			120 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::BOOLEAN_INTEGER_TRUE,
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_13,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1232,8 +1232,8 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			],
 			121 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::BOOLEAN_INTEGER_TRUE,
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_13,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1242,8 +1242,8 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			],
 			122 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::BOOLEAN_STRING_FALSE,
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_14,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1252,8 +1252,8 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			],
 			123 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::BOOLEAN_STRING_FALSE,
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_14,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1262,8 +1262,8 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			],
 			124 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::BOOLEAN_STRING_TRUE,
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_15,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1272,8 +1272,8 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			],
 			125 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::BOOLEAN_STRING_TRUE,
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_15,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1282,8 +1282,8 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			],
 			126 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::BOOLEAN_INTEGER_STRING_FALSE,
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_16,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1292,8 +1292,8 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			],
 			127 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::BOOLEAN_INTEGER_STRING_FALSE,
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_16,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1302,8 +1302,8 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			],
 			128 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::BOOLEAN_INTEGER_STRING_TRUE,
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_17,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1312,8 +1312,8 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			],
 			129 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::BOOLEAN_INTEGER_STRING_TRUE,
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_17,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1322,8 +1322,8 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			],
 			130 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::INTEGER_0,
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::createClassFixture_0(),
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1332,8 +1332,8 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			],
 			131 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::INTEGER_0,
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::createClassFixture_0(),
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1342,8 +1342,8 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			],
 			132 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::INTEGER_1,
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::createClassFixture_1(),
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1352,8 +1352,8 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			],
 			133 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::INTEGER_1,
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::createClassFixture_1(),
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1362,8 +1362,8 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			],
 			134 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::INTEGER_STRING_0,
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::createClassFixture_2(),
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1372,8 +1372,8 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			],
 			135 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::INTEGER_STRING_0,
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::createClassFixture_2(),
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1382,8 +1382,8 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			],
 			136 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::INTEGER_STRING_1,
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::createClassFixture_3(),
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1392,8 +1392,8 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			],
 			137 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::INTEGER_STRING_1,
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::createClassFixture_3(),
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1402,8 +1402,8 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			],
 			138 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::FLOAT,
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::createClassFixture_4(),
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1412,8 +1412,8 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			],
 			139 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::FLOAT,
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::createClassFixture_4(),
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1422,8 +1422,8 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			],
 			140 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::FLOAT_STRING,
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::createClassFixture_5(),
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1432,8 +1432,8 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			],
 			141 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::FLOAT_STRING,
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::createClassFixture_5(),
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1442,8 +1442,8 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			],
 			142 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::STRING_0,
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::createClassFixture_6(),
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1452,8 +1452,8 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			],
 			143 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::STRING_0,
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::createClassFixture_6(),
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1462,8 +1462,8 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			],
 			144 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::STRING_1,
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::createClassFixture_7(),
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1472,8 +1472,8 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			],
 			145 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::STRING_1,
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::createClassFixture_7(),
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1482,8 +1482,8 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			],
 			146 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::INTERFACE_FQCN,
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::createClassFixture_8(),
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1492,8 +1492,8 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			],
 			147 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::INTERFACE_FQCN,
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::createClassFixture_8(),
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1502,8 +1502,8 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			],
 			148 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::UNKNOWN_INTERFACE_FQCN,
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::createClassFixture_9(),
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1512,8 +1512,8 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			],
 			149 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::UNKNOWN_INTERFACE_FQCN,
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::createClassFixture_9(),
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1522,8 +1522,8 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			],
 			150 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::CLASS_FQCN_0,
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::createClassFixture_10(),
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1532,8 +1532,8 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			],
 			151 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::CLASS_FQCN_0,
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::createClassFixture_10(),
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1542,8 +1542,8 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			],
 			152 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::CLASS_FQCN_1,
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::createClassFixture_11(),
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1552,8 +1552,8 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			],
 			153 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::CLASS_FQCN_1,
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_INTERFACE_FQCN,
+				'actual'                       => Values::createClassFixture_11(),
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1563,7 +1563,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			154 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::NULL,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1573,7 +1573,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			155 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::NULL,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1583,7 +1583,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			156 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_0,
+				'actual'                       => Values::NULL_STRING,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1593,7 +1593,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			157 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_0,
+				'actual'                       => Values::NULL_STRING,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1603,7 +1603,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			158 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_1,
+				'actual'                       => Values::BOOLEAN_FALSE,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1613,7 +1613,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			159 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_1,
+				'actual'                       => Values::BOOLEAN_FALSE,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1623,7 +1623,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			160 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_2,
+				'actual'                       => Values::BOOLEAN_TRUE,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1633,7 +1633,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			161 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_2,
+				'actual'                       => Values::BOOLEAN_TRUE,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1643,7 +1643,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			162 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_3,
+				'actual'                       => Values::BOOLEAN_INTEGER_FALSE,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1653,7 +1653,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			163 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_3,
+				'actual'                       => Values::BOOLEAN_INTEGER_FALSE,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1663,7 +1663,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			164 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_4,
+				'actual'                       => Values::BOOLEAN_INTEGER_TRUE,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1673,7 +1673,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			165 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_4,
+				'actual'                       => Values::BOOLEAN_INTEGER_TRUE,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1683,7 +1683,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			166 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_5,
+				'actual'                       => Values::BOOLEAN_STRING_FALSE,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1693,7 +1693,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			167 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_5,
+				'actual'                       => Values::BOOLEAN_STRING_FALSE,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1703,7 +1703,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			168 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_6,
+				'actual'                       => Values::BOOLEAN_STRING_TRUE,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1713,7 +1713,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			169 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_6,
+				'actual'                       => Values::BOOLEAN_STRING_TRUE,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1723,7 +1723,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			170 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_7,
+				'actual'                       => Values::BOOLEAN_INTEGER_STRING_FALSE,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1733,7 +1733,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			171 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_7,
+				'actual'                       => Values::BOOLEAN_INTEGER_STRING_FALSE,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1743,7 +1743,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			172 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_8,
+				'actual'                       => Values::BOOLEAN_INTEGER_STRING_TRUE,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1753,7 +1753,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			173 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_8,
+				'actual'                       => Values::BOOLEAN_INTEGER_STRING_TRUE,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1763,7 +1763,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			174 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_9,
+				'actual'                       => Values::INTEGER_0,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1773,7 +1773,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			175 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_9,
+				'actual'                       => Values::INTEGER_0,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1783,7 +1783,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			176 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_10,
+				'actual'                       => Values::INTEGER_1,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1793,7 +1793,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			177 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_10,
+				'actual'                       => Values::INTEGER_1,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1803,7 +1803,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			178 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_11,
+				'actual'                       => Values::INTEGER_STRING_0,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1813,7 +1813,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			179 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_11,
+				'actual'                       => Values::INTEGER_STRING_0,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1823,7 +1823,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			180 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_0,
+				'actual'                       => Values::INTEGER_STRING_1,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1833,7 +1833,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			181 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_0,
+				'actual'                       => Values::INTEGER_STRING_1,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1843,7 +1843,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			182 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_1,
+				'actual'                       => Values::FLOAT,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1853,7 +1853,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			183 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_1,
+				'actual'                       => Values::FLOAT,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1863,7 +1863,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			184 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_2,
+				'actual'                       => Values::FLOAT_STRING,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1873,7 +1873,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			185 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_2,
+				'actual'                       => Values::FLOAT_STRING,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1883,7 +1883,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			186 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_3,
+				'actual'                       => Values::STRING_0,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1893,7 +1893,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			187 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_3,
+				'actual'                       => Values::STRING_0,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1903,7 +1903,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			188 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_4,
+				'actual'                       => Values::STRING_1,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1913,7 +1913,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			189 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_4,
+				'actual'                       => Values::STRING_1,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1923,7 +1923,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			190 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_5,
+				'actual'                       => Values::INTERFACE_FQCN_0,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1933,7 +1933,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			191 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_5,
+				'actual'                       => Values::INTERFACE_FQCN_0,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1943,7 +1943,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			192 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_6,
+				'actual'                       => Values::INTERFACE_FQCN_1,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1953,7 +1953,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			193 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_6,
+				'actual'                       => Values::INTERFACE_FQCN_1,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1963,7 +1963,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			194 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_7,
+				'actual'                       => Values::INTERFACE_FQCN_2,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1973,7 +1973,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			195 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_7,
+				'actual'                       => Values::INTERFACE_FQCN_2,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1983,7 +1983,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			196 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_8,
+				'actual'                       => Values::UNKNOWN_INTERFACE_FQCN,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -1993,7 +1993,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			197 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_8,
+				'actual'                       => Values::UNKNOWN_INTERFACE_FQCN,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -2003,7 +2003,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			198 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_9,
+				'actual'                       => Values::CLASS_FQCN_0,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -2013,7 +2013,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			199 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_9,
+				'actual'                       => Values::CLASS_FQCN_0,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -2023,7 +2023,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			200 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_10,
+				'actual'                       => Values::CLASS_FQCN_1,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -2033,7 +2033,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			201 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_10,
+				'actual'                       => Values::CLASS_FQCN_1,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -2043,7 +2043,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			202 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_11,
+				'actual'                       => Values::CLASS_FQCN_2,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -2053,7 +2053,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			203 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_11,
+				'actual'                       => Values::CLASS_FQCN_2,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -2063,7 +2063,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			204 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_12,
+				'actual'                       => Values::CLASS_FQCN_3,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -2073,7 +2073,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			205 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_12,
+				'actual'                       => Values::CLASS_FQCN_3,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -2083,7 +2083,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			206 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_13,
+				'actual'                       => Values::CLASS_FQCN_4,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -2093,7 +2093,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			207 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_13,
+				'actual'                       => Values::CLASS_FQCN_4,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -2103,7 +2103,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			208 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_14,
+				'actual'                       => Values::CLASS_FQCN_5,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -2113,7 +2113,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			209 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_14,
+				'actual'                       => Values::CLASS_FQCN_5,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -2123,7 +2123,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			210 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_15,
+				'actual'                       => Values::CLASS_FQCN_6,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -2133,7 +2133,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			211 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_15,
+				'actual'                       => Values::CLASS_FQCN_6,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -2143,7 +2143,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			212 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_16,
+				'actual'                       => Values::CLASS_FQCN_7,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -2153,7 +2153,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			213 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_16,
+				'actual'                       => Values::CLASS_FQCN_7,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -2163,7 +2163,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			214 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_17,
+				'actual'                       => Values::CLASS_FQCN_8,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -2173,7 +2173,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			215 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::ARRAY_SUBSET_17,
+				'actual'                       => Values::CLASS_FQCN_8,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -2183,7 +2183,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			216 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::createClassFixture(),
+				'actual'                       => Values::CLASS_FQCN_9,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -2193,7 +2193,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			217 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::createClassFixture(),
+				'actual'                       => Values::CLASS_FQCN_9,
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -2203,7 +2203,7 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			218 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::createImplementingClassFixture(),
+				'actual'                       => Values::CLASS_FQCN_10,
 				'message'                      => Values::STRING_0,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
@@ -2213,7 +2213,887 @@ final readonly class TestCasesWithUnknownExpectedInterfaceOrClassFqcnActualMessa
 			219 => [
 				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
 				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
-				'actual'                       => Values::createImplementingClassFixture(),
+				'actual'                       => Values::CLASS_FQCN_10,
+				'message'                      => Values::STRING_1,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			220 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::CLASS_FQCN_11,
+				'message'                      => Values::STRING_0,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			221 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::CLASS_FQCN_11,
+				'message'                      => Values::STRING_1,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			222 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::UNKNOWN_CLASS_FQCN,
+				'message'                      => Values::STRING_0,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			223 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::UNKNOWN_CLASS_FQCN,
+				'message'                      => Values::STRING_1,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			224 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_0,
+				'message'                      => Values::STRING_0,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			225 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_0,
+				'message'                      => Values::STRING_1,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			226 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_1,
+				'message'                      => Values::STRING_0,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			227 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_1,
+				'message'                      => Values::STRING_1,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			228 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_2,
+				'message'                      => Values::STRING_0,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			229 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_2,
+				'message'                      => Values::STRING_1,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			230 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_3,
+				'message'                      => Values::STRING_0,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			231 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_3,
+				'message'                      => Values::STRING_1,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			232 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_4,
+				'message'                      => Values::STRING_0,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			233 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_4,
+				'message'                      => Values::STRING_1,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			234 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_5,
+				'message'                      => Values::STRING_0,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			235 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_5,
+				'message'                      => Values::STRING_1,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			236 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_6,
+				'message'                      => Values::STRING_0,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			237 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_6,
+				'message'                      => Values::STRING_1,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			238 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_7,
+				'message'                      => Values::STRING_0,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			239 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_7,
+				'message'                      => Values::STRING_1,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			240 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_8,
+				'message'                      => Values::STRING_0,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			241 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_8,
+				'message'                      => Values::STRING_1,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			242 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_9,
+				'message'                      => Values::STRING_0,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			243 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_9,
+				'message'                      => Values::STRING_1,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			244 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_10,
+				'message'                      => Values::STRING_0,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			245 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_10,
+				'message'                      => Values::STRING_1,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			246 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_11,
+				'message'                      => Values::STRING_0,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			247 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_11,
+				'message'                      => Values::STRING_1,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			248 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_0,
+				'message'                      => Values::STRING_0,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			249 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_0,
+				'message'                      => Values::STRING_1,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			250 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_1,
+				'message'                      => Values::STRING_0,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			251 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_1,
+				'message'                      => Values::STRING_1,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			252 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_2,
+				'message'                      => Values::STRING_0,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			253 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_2,
+				'message'                      => Values::STRING_1,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			254 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_3,
+				'message'                      => Values::STRING_0,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			255 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_3,
+				'message'                      => Values::STRING_1,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			256 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_4,
+				'message'                      => Values::STRING_0,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			257 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_4,
+				'message'                      => Values::STRING_1,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			258 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_5,
+				'message'                      => Values::STRING_0,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			259 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_5,
+				'message'                      => Values::STRING_1,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			260 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_6,
+				'message'                      => Values::STRING_0,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			261 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_6,
+				'message'                      => Values::STRING_1,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			262 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_7,
+				'message'                      => Values::STRING_0,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			263 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_7,
+				'message'                      => Values::STRING_1,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			264 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_8,
+				'message'                      => Values::STRING_0,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			265 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_8,
+				'message'                      => Values::STRING_1,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			266 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_9,
+				'message'                      => Values::STRING_0,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			267 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_9,
+				'message'                      => Values::STRING_1,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			268 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_10,
+				'message'                      => Values::STRING_0,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			269 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_10,
+				'message'                      => Values::STRING_1,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			270 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_11,
+				'message'                      => Values::STRING_0,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			271 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_11,
+				'message'                      => Values::STRING_1,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			272 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_12,
+				'message'                      => Values::STRING_0,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			273 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_12,
+				'message'                      => Values::STRING_1,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			274 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_13,
+				'message'                      => Values::STRING_0,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			275 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_13,
+				'message'                      => Values::STRING_1,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			276 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_14,
+				'message'                      => Values::STRING_0,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			277 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_14,
+				'message'                      => Values::STRING_1,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			278 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_15,
+				'message'                      => Values::STRING_0,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			279 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_15,
+				'message'                      => Values::STRING_1,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			280 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_16,
+				'message'                      => Values::STRING_0,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			281 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_16,
+				'message'                      => Values::STRING_1,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			282 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_17,
+				'message'                      => Values::STRING_0,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			283 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::ARRAY_SUBSET_17,
+				'message'                      => Values::STRING_1,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			284 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::createClassFixture_0(),
+				'message'                      => Values::STRING_0,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			285 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::createClassFixture_0(),
+				'message'                      => Values::STRING_1,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			286 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::createClassFixture_1(),
+				'message'                      => Values::STRING_0,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			287 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::createClassFixture_1(),
+				'message'                      => Values::STRING_1,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			288 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::createClassFixture_2(),
+				'message'                      => Values::STRING_0,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			289 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::createClassFixture_2(),
+				'message'                      => Values::STRING_1,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			290 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::createClassFixture_3(),
+				'message'                      => Values::STRING_0,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			291 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::createClassFixture_3(),
+				'message'                      => Values::STRING_1,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			292 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::createClassFixture_4(),
+				'message'                      => Values::STRING_0,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			293 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::createClassFixture_4(),
+				'message'                      => Values::STRING_1,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			294 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::createClassFixture_5(),
+				'message'                      => Values::STRING_0,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			295 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::createClassFixture_5(),
+				'message'                      => Values::STRING_1,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			296 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::createClassFixture_6(),
+				'message'                      => Values::STRING_0,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			297 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::createClassFixture_6(),
+				'message'                      => Values::STRING_1,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			298 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::createClassFixture_7(),
+				'message'                      => Values::STRING_0,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			299 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::createClassFixture_7(),
+				'message'                      => Values::STRING_1,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			300 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::createClassFixture_8(),
+				'message'                      => Values::STRING_0,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			301 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::createClassFixture_8(),
+				'message'                      => Values::STRING_1,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			302 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::createClassFixture_9(),
+				'message'                      => Values::STRING_0,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			303 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::createClassFixture_9(),
+				'message'                      => Values::STRING_1,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			304 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::createClassFixture_10(),
+				'message'                      => Values::STRING_0,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			305 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::createClassFixture_10(),
+				'message'                      => Values::STRING_1,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			306 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::createClassFixture_11(),
+				'message'                      => Values::STRING_0,
+				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
+				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),
+				'expectedThrowableCode'        => 0,
+				'expectedThrowablePrevious'    => null
+			],
+			307 => [
+				'testCase'                     => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedInterfaceOrClassFqcn' => $expectedInterfaceOrClassFqcn = Values::UNKNOWN_CLASS_FQCN,
+				'actual'                       => Values::createClassFixture_11(),
 				'message'                      => Values::STRING_1,
 				'expectedThrowableClassFqcn'   => UnknownClassOrInterfaceException::class,
 				'expectedThrowableMessage'     => sprintf( ExceptionMessages::UNKNOWN_INTERFACE_OR_CLASS_FQCN, $expectedInterfaceOrClassFqcn ),

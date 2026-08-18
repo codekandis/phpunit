@@ -740,7 +740,7 @@ final readonly class ConstraintsWithExpectedStringRepresentationDataProvider imp
 				)
 			],
 			102 => [
-				'constraint'                   => new IsSubClassOfConstraint( $interfaceOrClassFqcn = Values::INTERFACE_FQCN ),
+				'constraint'                   => new IsSubClassOfConstraint( $interfaceOrClassFqcn = Values::INTERFACE_FQCN_0 ),
 				'expectedStringRepresentation' => sprintf(
 					IsSubClassOfConstraint::STRING_REPRESENTATION_TEMPLATE,
 					TypeKinds::INTERFACE_KIND, $interfaceOrClassFqcn
