@@ -109,6 +109,18 @@ abstract class Values
 	public const string INTEGER_STRING_1 = '42';
 
 	/**
+	 * Represents a `NAN` value.
+	 * @var float
+	 */
+	public const float NAN = NAN;
+
+	/**
+	 * Represents a `NAN string` value.
+	 * @var string
+	 */
+	public const string NAN_STRING = 'NAN';
+
+	/**
 	 * Represents a `float` value.
 	 * @var float
 	 */
@@ -329,18 +341,19 @@ abstract class Values
 
 	/**
 	 * Represents an `array` value.
-	 * @var array< string, int|string >
+	 * @var array< string, float|int|string >
 	 */
 	public const array ARRAY_9 = [
 		'foo' => 'foo',
 		'tt'  => 23,
+		'nan' => NAN,
 		'ft'  => 42,
 		'bar' => 'bar'
 	];
 
 	/**
 	 * Represents an `array` value.
-	 * @var array< string, int|string|array< string, int > >
+	 * @var array< string, float|int|string|array< string, int > >
 	 */
 	public const array ARRAY_10 = [
 		'foo' => 'foo',
@@ -351,6 +364,7 @@ abstract class Values
 			't'  => 13,
 			'ts' => 37
 		],
+		'nan' => NAN,
 		'sn'  => [
 			'st' => 73,
 			'oe' => 108
@@ -359,7 +373,7 @@ abstract class Values
 
 	/**
 	 * Represents an `array` value.
-	 * @var array< string, int|string >
+	 * @var array< string, float|int|string >
 	 */
 	public const array ARRAY_11 = [
 		'foo' => 'foo',
@@ -367,7 +381,32 @@ abstract class Values
 		'ft'  => 42,
 		'bar' => 'bar',
 		's'   => 7,
-		'sn'  => 69
+		'sn'  => 69,
+		'nan' => NAN
+	];
+
+	/**
+	 * Represents an `array` value.
+	 * @var array< string, float|int|string >
+	 */
+	public const array ARRAY_12 = [
+		'foo' => 'foo',
+		'ft'  => 42,
+		'nan' => NAN,
+		'bar' => 'bar',
+		'tt'  => 23
+	];
+
+	/**
+	 * Represents an `array` value.
+	 * @var array< int|string, float|int|string >
+	 */
+	public const array ARRAY_13 = [
+		'foo' => 'foo',
+		'tt'  => 23,
+		'ft'  => 42,
+		'bar' => 'bar',
+		23    => NAN
 	];
 
 	/**
@@ -537,6 +576,31 @@ abstract class Values
 			'st' => 73
 		],
 		'foo' => 108
+	];
+
+	/**
+	 * Represents an `array subset` value.
+	 * @var array< string, float >
+	 */
+	public const array ARRAY_SUBSET_18 = [
+		'nan' => NAN
+	];
+
+	/**
+	 * Represents an `array subset` value.
+	 * @var array< string, float|string >
+	 */
+	public const array ARRAY_SUBSET_19 = [
+		'tt'  => '23',
+		'nan' => NAN
+	];
+
+	/**
+	 * Represents an `array subset` value.
+	 * @var array< int, float >
+	 */
+	public const array ARRAY_SUBSET_20 = [
+		23 => NAN
 	];
 
 	/**

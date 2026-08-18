@@ -21,7 +21,8 @@ final readonly class ArraySubsetHelpersWithArraySubsetAndExpectedResultDataProvi
 			...ArraySubsetHelpersWithArraySubsetAndExpectedResultDataProvider0000::provideData(),
 			...ArraySubsetHelpersWithArraySubsetAndExpectedResultDataProvider0001::provideData(),
 			...ArraySubsetHelpersWithArraySubsetAndExpectedResultDataProvider0002::provideData(),
-			...ArraySubsetHelpersWithArraySubsetAndExpectedResultDataProvider0003::provideData()
+			...ArraySubsetHelpersWithArraySubsetAndExpectedResultDataProvider0003::provideData(),
+			...ArraySubsetHelpersWithArraySubsetAndExpectedResultDataProvider0004::provideData()
 		];
 	}
 }

@@ -7,11 +7,11 @@ use CodeKandis\PhpUnit\Tests\Fixtures\Values;
 use Override;
 
 /**
- * Represents a data provider providing test cases with expected subset, actual array, strict and message.
+ * Represents a data provider providing test cases with expected unkeyed subset, actual array, strict and message.
  * @package codekandis/phpunit
  * @author Christian Ramelow <info@codekandis.net>
  */
-final readonly class TestCasesWithExpectedSubsetActualArrayStrictAndMessageDataProvider implements DataProviderInterface
+final readonly class TestCasesWithExpectedUnkeyedSubsetActualArrayStrictAndMessageDataProvider0000 implements DataProviderInterface
 {
 	/**
 	 * {@inheritDoc}
@@ -1030,3222 +1030,4846 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictAndMessageDataP
 			],
 			144 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_2,
-				'actualArray'    => Values::ARRAY_2,
+				'expectedSubset' => Values::ARRAY_1,
+				'actualArray'    => Values::ARRAY_9,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			145 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_2,
-				'actualArray'    => Values::ARRAY_2,
+				'expectedSubset' => Values::ARRAY_1,
+				'actualArray'    => Values::ARRAY_9,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			146 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_2,
-				'actualArray'    => Values::ARRAY_2,
+				'expectedSubset' => Values::ARRAY_1,
+				'actualArray'    => Values::ARRAY_9,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			147 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_2,
-				'actualArray'    => Values::ARRAY_2,
+				'expectedSubset' => Values::ARRAY_1,
+				'actualArray'    => Values::ARRAY_9,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			148 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_3,
-				'actualArray'    => Values::ARRAY_3,
+				'expectedSubset' => Values::ARRAY_1,
+				'actualArray'    => Values::ARRAY_10,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			149 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_3,
-				'actualArray'    => Values::ARRAY_3,
+				'expectedSubset' => Values::ARRAY_1,
+				'actualArray'    => Values::ARRAY_10,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			150 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_3,
-				'actualArray'    => Values::ARRAY_3,
+				'expectedSubset' => Values::ARRAY_1,
+				'actualArray'    => Values::ARRAY_10,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			151 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_3,
-				'actualArray'    => Values::ARRAY_3,
+				'expectedSubset' => Values::ARRAY_1,
+				'actualArray'    => Values::ARRAY_10,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			152 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_3,
-				'actualArray'    => Values::ARRAY_4,
+				'expectedSubset' => Values::ARRAY_1,
+				'actualArray'    => Values::ARRAY_11,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			153 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_3,
-				'actualArray'    => Values::ARRAY_4,
+				'expectedSubset' => Values::ARRAY_1,
+				'actualArray'    => Values::ARRAY_11,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			154 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_3,
-				'actualArray'    => Values::ARRAY_4,
+				'expectedSubset' => Values::ARRAY_1,
+				'actualArray'    => Values::ARRAY_11,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			155 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_3,
-				'actualArray'    => Values::ARRAY_4,
+				'expectedSubset' => Values::ARRAY_1,
+				'actualArray'    => Values::ARRAY_11,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			156 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_3,
-				'actualArray'    => Values::ARRAY_SUBSET_1,
+				'expectedSubset' => Values::ARRAY_1,
+				'actualArray'    => Values::ARRAY_12,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			157 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_3,
-				'actualArray'    => Values::ARRAY_SUBSET_1,
+				'expectedSubset' => Values::ARRAY_1,
+				'actualArray'    => Values::ARRAY_12,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			158 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_3,
-				'actualArray'    => Values::ARRAY_SUBSET_1,
+				'expectedSubset' => Values::ARRAY_1,
+				'actualArray'    => Values::ARRAY_12,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			159 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_3,
-				'actualArray'    => Values::ARRAY_SUBSET_1,
+				'expectedSubset' => Values::ARRAY_1,
+				'actualArray'    => Values::ARRAY_12,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			160 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_3,
-				'actualArray'    => Values::ARRAY_SUBSET_2,
+				'expectedSubset' => Values::ARRAY_1,
+				'actualArray'    => Values::ARRAY_13,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			161 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_3,
-				'actualArray'    => Values::ARRAY_SUBSET_2,
+				'expectedSubset' => Values::ARRAY_1,
+				'actualArray'    => Values::ARRAY_13,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			162 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_3,
-				'actualArray'    => Values::ARRAY_SUBSET_2,
+				'expectedSubset' => Values::ARRAY_1,
+				'actualArray'    => Values::ARRAY_13,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			163 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_3,
-				'actualArray'    => Values::ARRAY_SUBSET_2,
+				'expectedSubset' => Values::ARRAY_1,
+				'actualArray'    => Values::ARRAY_13,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			164 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_4,
-				'actualArray'    => Values::ARRAY_4,
+				'expectedSubset' => Values::ARRAY_2,
+				'actualArray'    => Values::ARRAY_2,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			165 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_4,
-				'actualArray'    => Values::ARRAY_4,
+				'expectedSubset' => Values::ARRAY_2,
+				'actualArray'    => Values::ARRAY_2,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			166 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_4,
-				'actualArray'    => Values::ARRAY_4,
+				'expectedSubset' => Values::ARRAY_2,
+				'actualArray'    => Values::ARRAY_2,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			167 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_4,
-				'actualArray'    => Values::ARRAY_4,
+				'expectedSubset' => Values::ARRAY_2,
+				'actualArray'    => Values::ARRAY_2,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			168 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_4,
-				'actualArray'    => Values::ARRAY_SUBSET_2,
+				'expectedSubset' => Values::ARRAY_2,
+				'actualArray'    => Values::ARRAY_9,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			169 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_4,
-				'actualArray'    => Values::ARRAY_SUBSET_2,
+				'expectedSubset' => Values::ARRAY_2,
+				'actualArray'    => Values::ARRAY_9,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			170 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_4,
-				'actualArray'    => Values::ARRAY_SUBSET_2,
+				'expectedSubset' => Values::ARRAY_2,
+				'actualArray'    => Values::ARRAY_9,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			171 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_4,
-				'actualArray'    => Values::ARRAY_SUBSET_2,
+				'expectedSubset' => Values::ARRAY_2,
+				'actualArray'    => Values::ARRAY_9,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			172 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_5,
-				'actualArray'    => Values::ARRAY_5,
+				'expectedSubset' => Values::ARRAY_2,
+				'actualArray'    => Values::ARRAY_10,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			173 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_5,
-				'actualArray'    => Values::ARRAY_5,
+				'expectedSubset' => Values::ARRAY_2,
+				'actualArray'    => Values::ARRAY_10,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			174 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_5,
-				'actualArray'    => Values::ARRAY_5,
+				'expectedSubset' => Values::ARRAY_2,
+				'actualArray'    => Values::ARRAY_10,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			175 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_5,
-				'actualArray'    => Values::ARRAY_5,
+				'expectedSubset' => Values::ARRAY_2,
+				'actualArray'    => Values::ARRAY_10,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			176 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_6,
-				'actualArray'    => Values::ARRAY_6,
+				'expectedSubset' => Values::ARRAY_2,
+				'actualArray'    => Values::ARRAY_11,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			177 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_6,
-				'actualArray'    => Values::ARRAY_6,
+				'expectedSubset' => Values::ARRAY_2,
+				'actualArray'    => Values::ARRAY_11,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			178 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_6,
-				'actualArray'    => Values::ARRAY_6,
+				'expectedSubset' => Values::ARRAY_2,
+				'actualArray'    => Values::ARRAY_11,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			179 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_6,
-				'actualArray'    => Values::ARRAY_6,
+				'expectedSubset' => Values::ARRAY_2,
+				'actualArray'    => Values::ARRAY_11,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			180 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_6,
-				'actualArray'    => Values::ARRAY_8,
+				'expectedSubset' => Values::ARRAY_2,
+				'actualArray'    => Values::ARRAY_12,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			181 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_6,
-				'actualArray'    => Values::ARRAY_8,
+				'expectedSubset' => Values::ARRAY_2,
+				'actualArray'    => Values::ARRAY_12,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			182 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_6,
-				'actualArray'    => Values::ARRAY_8,
+				'expectedSubset' => Values::ARRAY_2,
+				'actualArray'    => Values::ARRAY_12,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			183 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_6,
-				'actualArray'    => Values::ARRAY_8,
+				'expectedSubset' => Values::ARRAY_2,
+				'actualArray'    => Values::ARRAY_12,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			184 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_6,
-				'actualArray'    => Values::ARRAY_SUBSET_3,
+				'expectedSubset' => Values::ARRAY_2,
+				'actualArray'    => Values::ARRAY_13,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			185 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_6,
-				'actualArray'    => Values::ARRAY_SUBSET_3,
+				'expectedSubset' => Values::ARRAY_2,
+				'actualArray'    => Values::ARRAY_13,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			186 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_6,
-				'actualArray'    => Values::ARRAY_SUBSET_3,
+				'expectedSubset' => Values::ARRAY_2,
+				'actualArray'    => Values::ARRAY_13,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			187 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_6,
-				'actualArray'    => Values::ARRAY_SUBSET_3,
+				'expectedSubset' => Values::ARRAY_2,
+				'actualArray'    => Values::ARRAY_13,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			188 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_6,
-				'actualArray'    => Values::ARRAY_SUBSET_4,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_1,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			189 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_6,
-				'actualArray'    => Values::ARRAY_SUBSET_4,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_1,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			190 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_6,
-				'actualArray'    => Values::ARRAY_SUBSET_4,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_1,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			191 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_6,
-				'actualArray'    => Values::ARRAY_SUBSET_4,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_1,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			192 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_6,
-				'actualArray'    => Values::ARRAY_SUBSET_5,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_2,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			193 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_6,
-				'actualArray'    => Values::ARRAY_SUBSET_5,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_2,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			194 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_6,
-				'actualArray'    => Values::ARRAY_SUBSET_5,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_2,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			195 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_6,
-				'actualArray'    => Values::ARRAY_SUBSET_5,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_2,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			196 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_7,
-				'actualArray'    => Values::ARRAY_7,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_3,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			197 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_7,
-				'actualArray'    => Values::ARRAY_7,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_3,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			198 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_7,
-				'actualArray'    => Values::ARRAY_7,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_3,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			199 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_7,
-				'actualArray'    => Values::ARRAY_7,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_3,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			200 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_8,
-				'actualArray'    => Values::ARRAY_8,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_4,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			201 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_8,
-				'actualArray'    => Values::ARRAY_8,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_4,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			202 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_8,
-				'actualArray'    => Values::ARRAY_8,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_4,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			203 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_8,
-				'actualArray'    => Values::ARRAY_8,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_4,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			204 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_8,
-				'actualArray'    => Values::ARRAY_SUBSET_5,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_8,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			205 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_8,
-				'actualArray'    => Values::ARRAY_SUBSET_5,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_8,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			206 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_8,
-				'actualArray'    => Values::ARRAY_SUBSET_5,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_8,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			207 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_8,
-				'actualArray'    => Values::ARRAY_SUBSET_5,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_8,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			208 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_9,
+				'expectedSubset' => Values::ARRAY_3,
 				'actualArray'    => Values::ARRAY_9,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			209 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_9,
+				'expectedSubset' => Values::ARRAY_3,
 				'actualArray'    => Values::ARRAY_9,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			210 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_9,
+				'expectedSubset' => Values::ARRAY_3,
 				'actualArray'    => Values::ARRAY_9,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			211 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_9,
+				'expectedSubset' => Values::ARRAY_3,
 				'actualArray'    => Values::ARRAY_9,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			212 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_9,
+				'expectedSubset' => Values::ARRAY_3,
 				'actualArray'    => Values::ARRAY_10,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			213 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_9,
+				'expectedSubset' => Values::ARRAY_3,
 				'actualArray'    => Values::ARRAY_10,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			214 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_9,
+				'expectedSubset' => Values::ARRAY_3,
 				'actualArray'    => Values::ARRAY_10,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			215 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_9,
+				'expectedSubset' => Values::ARRAY_3,
 				'actualArray'    => Values::ARRAY_10,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			216 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_9,
+				'expectedSubset' => Values::ARRAY_3,
 				'actualArray'    => Values::ARRAY_11,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			217 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_9,
+				'expectedSubset' => Values::ARRAY_3,
 				'actualArray'    => Values::ARRAY_11,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			218 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_9,
+				'expectedSubset' => Values::ARRAY_3,
 				'actualArray'    => Values::ARRAY_11,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			219 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_9,
+				'expectedSubset' => Values::ARRAY_3,
 				'actualArray'    => Values::ARRAY_11,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			220 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_9,
-				'actualArray'    => Values::ARRAY_12,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_SUBSET_1,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			221 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_9,
-				'actualArray'    => Values::ARRAY_12,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_SUBSET_1,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			222 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_9,
-				'actualArray'    => Values::ARRAY_12,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_SUBSET_1,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			223 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_9,
-				'actualArray'    => Values::ARRAY_12,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_SUBSET_1,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			224 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_10,
-				'actualArray'    => Values::ARRAY_10,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_SUBSET_2,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			225 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_10,
-				'actualArray'    => Values::ARRAY_10,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_SUBSET_2,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			226 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_10,
-				'actualArray'    => Values::ARRAY_10,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_SUBSET_2,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			227 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_10,
-				'actualArray'    => Values::ARRAY_10,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_SUBSET_2,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			228 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_11,
-				'actualArray'    => Values::ARRAY_11,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_SUBSET_5,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			229 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_11,
-				'actualArray'    => Values::ARRAY_11,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_SUBSET_5,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			230 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_11,
-				'actualArray'    => Values::ARRAY_11,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_SUBSET_5,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			231 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_11,
-				'actualArray'    => Values::ARRAY_11,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_SUBSET_5,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			232 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_0,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_SUBSET_6,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			233 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_0,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_SUBSET_6,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			234 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_0,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_SUBSET_6,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			235 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_0,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_SUBSET_6,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			236 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_1,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_SUBSET_15,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			237 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_1,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_SUBSET_15,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			238 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_1,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_SUBSET_15,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			239 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_1,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_SUBSET_15,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			240 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_2,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_12,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			241 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_2,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_12,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			242 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_2,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_12,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			243 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_2,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_12,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			244 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_3,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_13,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			245 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_3,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_13,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			246 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_3,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_13,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			247 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_3,
-				'strict'         => Values::BOOLEAN_TRUE,
-				'message'        => Values::STRING_1
-			],
-			248 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_4,
-				'strict'         => Values::BOOLEAN_FALSE,
-				'message'        => Values::STRING_0
-			],
-			249 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_4,
-				'strict'         => Values::BOOLEAN_FALSE,
-				'message'        => Values::STRING_1
-			],
-			250 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_4,
-				'strict'         => Values::BOOLEAN_TRUE,
-				'message'        => Values::STRING_0
-			],
-			251 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_4,
-				'strict'         => Values::BOOLEAN_TRUE,
-				'message'        => Values::STRING_1
-			],
-			252 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_5,
-				'strict'         => Values::BOOLEAN_FALSE,
-				'message'        => Values::STRING_0
-			],
-			253 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_5,
-				'strict'         => Values::BOOLEAN_FALSE,
-				'message'        => Values::STRING_1
-			],
-			254 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_5,
-				'strict'         => Values::BOOLEAN_TRUE,
-				'message'        => Values::STRING_0
-			],
-			255 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_5,
-				'strict'         => Values::BOOLEAN_TRUE,
-				'message'        => Values::STRING_1
-			],
-			256 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_6,
-				'strict'         => Values::BOOLEAN_FALSE,
-				'message'        => Values::STRING_0
-			],
-			257 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_6,
-				'strict'         => Values::BOOLEAN_FALSE,
-				'message'        => Values::STRING_1
-			],
-			258 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_6,
-				'strict'         => Values::BOOLEAN_TRUE,
-				'message'        => Values::STRING_0
-			],
-			259 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_6,
+				'expectedSubset' => Values::ARRAY_3,
+				'actualArray'    => Values::ARRAY_13,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			260 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_7,
+				'expectedSubset' => Values::ARRAY_4,
+				'actualArray'    => Values::ARRAY_4,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			261 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_7,
+				'expectedSubset' => Values::ARRAY_4,
+				'actualArray'    => Values::ARRAY_4,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			262 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_7,
+				'expectedSubset' => Values::ARRAY_4,
+				'actualArray'    => Values::ARRAY_4,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			263 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_7,
-				'strict'         => Values::BOOLEAN_TRUE,
-				'message'        => Values::STRING_1
-			],
-			264 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_8,
-				'strict'         => Values::BOOLEAN_FALSE,
-				'message'        => Values::STRING_0
-			],
-			265 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_8,
-				'strict'         => Values::BOOLEAN_FALSE,
-				'message'        => Values::STRING_1
-			],
-			266 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_8,
-				'strict'         => Values::BOOLEAN_TRUE,
-				'message'        => Values::STRING_0
-			],
-			267 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_8,
-				'strict'         => Values::BOOLEAN_TRUE,
-				'message'        => Values::STRING_1
-			],
-			268 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_9,
-				'strict'         => Values::BOOLEAN_FALSE,
-				'message'        => Values::STRING_0
-			],
-			269 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_9,
-				'strict'         => Values::BOOLEAN_FALSE,
-				'message'        => Values::STRING_1
-			],
-			270 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_9,
-				'strict'         => Values::BOOLEAN_TRUE,
-				'message'        => Values::STRING_0
-			],
-			271 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_9,
-				'strict'         => Values::BOOLEAN_TRUE,
-				'message'        => Values::STRING_1
-			],
-			272 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_10,
-				'strict'         => Values::BOOLEAN_FALSE,
-				'message'        => Values::STRING_0
-			],
-			273 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_10,
-				'strict'         => Values::BOOLEAN_FALSE,
-				'message'        => Values::STRING_1
-			],
-			274 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_10,
-				'strict'         => Values::BOOLEAN_TRUE,
-				'message'        => Values::STRING_0
-			],
-			275 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_10,
-				'strict'         => Values::BOOLEAN_TRUE,
-				'message'        => Values::STRING_1
-			],
-			276 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_11,
-				'strict'         => Values::BOOLEAN_FALSE,
-				'message'        => Values::STRING_0
-			],
-			277 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_11,
-				'strict'         => Values::BOOLEAN_FALSE,
-				'message'        => Values::STRING_1
-			],
-			278 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_11,
-				'strict'         => Values::BOOLEAN_TRUE,
-				'message'        => Values::STRING_0
-			],
-			279 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_11,
-				'strict'         => Values::BOOLEAN_TRUE,
-				'message'        => Values::STRING_1
-			],
-			280 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_0,
-				'strict'         => Values::BOOLEAN_FALSE,
-				'message'        => Values::STRING_0
-			],
-			281 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_0,
-				'strict'         => Values::BOOLEAN_FALSE,
-				'message'        => Values::STRING_1
-			],
-			282 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_0,
-				'strict'         => Values::BOOLEAN_TRUE,
-				'message'        => Values::STRING_0
-			],
-			283 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_0,
+				'expectedSubset' => Values::ARRAY_4,
+				'actualArray'    => Values::ARRAY_4,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			284 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_1,
+				'expectedSubset' => Values::ARRAY_4,
+				'actualArray'    => Values::ARRAY_SUBSET_2,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			285 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_1,
+				'expectedSubset' => Values::ARRAY_4,
+				'actualArray'    => Values::ARRAY_SUBSET_2,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			286 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_1,
+				'expectedSubset' => Values::ARRAY_4,
+				'actualArray'    => Values::ARRAY_SUBSET_2,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			287 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_1,
-				'strict'         => Values::BOOLEAN_TRUE,
-				'message'        => Values::STRING_1
-			],
-			288 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'expectedSubset' => Values::ARRAY_4,
 				'actualArray'    => Values::ARRAY_SUBSET_2,
-				'strict'         => Values::BOOLEAN_FALSE,
-				'message'        => Values::STRING_0
-			],
-			289 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_2,
-				'strict'         => Values::BOOLEAN_FALSE,
-				'message'        => Values::STRING_1
-			],
-			290 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_2,
-				'strict'         => Values::BOOLEAN_TRUE,
-				'message'        => Values::STRING_0
-			],
-			291 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_2,
-				'strict'         => Values::BOOLEAN_TRUE,
-				'message'        => Values::STRING_1
-			],
-			292 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_3,
-				'strict'         => Values::BOOLEAN_FALSE,
-				'message'        => Values::STRING_0
-			],
-			293 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_3,
-				'strict'         => Values::BOOLEAN_FALSE,
-				'message'        => Values::STRING_1
-			],
-			294 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_3,
-				'strict'         => Values::BOOLEAN_TRUE,
-				'message'        => Values::STRING_0
-			],
-			295 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_3,
-				'strict'         => Values::BOOLEAN_TRUE,
-				'message'        => Values::STRING_1
-			],
-			296 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_4,
-				'strict'         => Values::BOOLEAN_FALSE,
-				'message'        => Values::STRING_0
-			],
-			297 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_4,
-				'strict'         => Values::BOOLEAN_FALSE,
-				'message'        => Values::STRING_1
-			],
-			298 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_4,
-				'strict'         => Values::BOOLEAN_TRUE,
-				'message'        => Values::STRING_0
-			],
-			299 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_4,
-				'strict'         => Values::BOOLEAN_TRUE,
-				'message'        => Values::STRING_1
-			],
-			300 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_5,
-				'strict'         => Values::BOOLEAN_FALSE,
-				'message'        => Values::STRING_0
-			],
-			301 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_5,
-				'strict'         => Values::BOOLEAN_FALSE,
-				'message'        => Values::STRING_1
-			],
-			302 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_5,
-				'strict'         => Values::BOOLEAN_TRUE,
-				'message'        => Values::STRING_0
-			],
-			303 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_5,
-				'strict'         => Values::BOOLEAN_TRUE,
-				'message'        => Values::STRING_1
-			],
-			304 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_6,
-				'strict'         => Values::BOOLEAN_FALSE,
-				'message'        => Values::STRING_0
-			],
-			305 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_6,
-				'strict'         => Values::BOOLEAN_FALSE,
-				'message'        => Values::STRING_1
-			],
-			306 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_6,
-				'strict'         => Values::BOOLEAN_TRUE,
-				'message'        => Values::STRING_0
-			],
-			307 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_6,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			308 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_7,
+				'expectedSubset' => Values::ARRAY_5,
+				'actualArray'    => Values::ARRAY_5,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			309 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_7,
+				'expectedSubset' => Values::ARRAY_5,
+				'actualArray'    => Values::ARRAY_5,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			310 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_7,
+				'expectedSubset' => Values::ARRAY_5,
+				'actualArray'    => Values::ARRAY_5,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			311 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_7,
+				'expectedSubset' => Values::ARRAY_5,
+				'actualArray'    => Values::ARRAY_5,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			312 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_8,
+				'expectedSubset' => Values::ARRAY_6,
+				'actualArray'    => Values::ARRAY_5,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			313 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_8,
+				'expectedSubset' => Values::ARRAY_6,
+				'actualArray'    => Values::ARRAY_5,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			314 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_8,
+				'expectedSubset' => Values::ARRAY_6,
+				'actualArray'    => Values::ARRAY_5,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			315 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_8,
+				'expectedSubset' => Values::ARRAY_6,
+				'actualArray'    => Values::ARRAY_5,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			316 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_9,
+				'expectedSubset' => Values::ARRAY_6,
+				'actualArray'    => Values::ARRAY_6,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			317 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_9,
+				'expectedSubset' => Values::ARRAY_6,
+				'actualArray'    => Values::ARRAY_6,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			318 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_9,
+				'expectedSubset' => Values::ARRAY_6,
+				'actualArray'    => Values::ARRAY_6,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			319 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_9,
+				'expectedSubset' => Values::ARRAY_6,
+				'actualArray'    => Values::ARRAY_6,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			320 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_10,
+				'expectedSubset' => Values::ARRAY_6,
+				'actualArray'    => Values::ARRAY_7,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			321 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_10,
+				'expectedSubset' => Values::ARRAY_6,
+				'actualArray'    => Values::ARRAY_7,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			322 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_10,
+				'expectedSubset' => Values::ARRAY_6,
+				'actualArray'    => Values::ARRAY_7,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			323 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_10,
+				'expectedSubset' => Values::ARRAY_6,
+				'actualArray'    => Values::ARRAY_7,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			324 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_11,
+				'expectedSubset' => Values::ARRAY_6,
+				'actualArray'    => Values::ARRAY_8,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			325 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_11,
+				'expectedSubset' => Values::ARRAY_6,
+				'actualArray'    => Values::ARRAY_8,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			326 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_11,
+				'expectedSubset' => Values::ARRAY_6,
+				'actualArray'    => Values::ARRAY_8,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			327 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_11,
+				'expectedSubset' => Values::ARRAY_6,
+				'actualArray'    => Values::ARRAY_8,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			328 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_12,
+				'expectedSubset' => Values::ARRAY_6,
+				'actualArray'    => Values::ARRAY_SUBSET_3,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			329 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_12,
+				'expectedSubset' => Values::ARRAY_6,
+				'actualArray'    => Values::ARRAY_SUBSET_3,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			330 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_12,
+				'expectedSubset' => Values::ARRAY_6,
+				'actualArray'    => Values::ARRAY_SUBSET_3,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			331 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_12,
+				'expectedSubset' => Values::ARRAY_6,
+				'actualArray'    => Values::ARRAY_SUBSET_3,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			332 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_13,
+				'expectedSubset' => Values::ARRAY_6,
+				'actualArray'    => Values::ARRAY_SUBSET_4,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			333 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_13,
+				'expectedSubset' => Values::ARRAY_6,
+				'actualArray'    => Values::ARRAY_SUBSET_4,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			334 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_13,
+				'expectedSubset' => Values::ARRAY_6,
+				'actualArray'    => Values::ARRAY_SUBSET_4,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			335 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_13,
+				'expectedSubset' => Values::ARRAY_6,
+				'actualArray'    => Values::ARRAY_SUBSET_4,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			336 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_14,
+				'expectedSubset' => Values::ARRAY_6,
+				'actualArray'    => Values::ARRAY_SUBSET_5,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			337 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_14,
+				'expectedSubset' => Values::ARRAY_6,
+				'actualArray'    => Values::ARRAY_SUBSET_5,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			338 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_14,
+				'expectedSubset' => Values::ARRAY_6,
+				'actualArray'    => Values::ARRAY_SUBSET_5,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			339 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_14,
+				'expectedSubset' => Values::ARRAY_6,
+				'actualArray'    => Values::ARRAY_SUBSET_5,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			340 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_15,
+				'expectedSubset' => Values::ARRAY_7,
+				'actualArray'    => Values::ARRAY_7,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			341 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_15,
+				'expectedSubset' => Values::ARRAY_7,
+				'actualArray'    => Values::ARRAY_7,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			342 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_15,
+				'expectedSubset' => Values::ARRAY_7,
+				'actualArray'    => Values::ARRAY_7,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			343 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_15,
+				'expectedSubset' => Values::ARRAY_7,
+				'actualArray'    => Values::ARRAY_7,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			344 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_16,
+				'expectedSubset' => Values::ARRAY_8,
+				'actualArray'    => Values::ARRAY_8,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			345 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_16,
+				'expectedSubset' => Values::ARRAY_8,
+				'actualArray'    => Values::ARRAY_8,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			346 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_16,
+				'expectedSubset' => Values::ARRAY_8,
+				'actualArray'    => Values::ARRAY_8,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			347 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_16,
+				'expectedSubset' => Values::ARRAY_8,
+				'actualArray'    => Values::ARRAY_8,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			348 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_17,
+				'expectedSubset' => Values::ARRAY_8,
+				'actualArray'    => Values::ARRAY_SUBSET_5,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			349 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_17,
+				'expectedSubset' => Values::ARRAY_8,
+				'actualArray'    => Values::ARRAY_SUBSET_5,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			350 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_17,
+				'expectedSubset' => Values::ARRAY_8,
+				'actualArray'    => Values::ARRAY_SUBSET_5,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			351 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_17,
+				'expectedSubset' => Values::ARRAY_8,
+				'actualArray'    => Values::ARRAY_SUBSET_5,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			352 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_12,
+				'expectedSubset' => Values::ARRAY_9,
+				'actualArray'    => Values::ARRAY_9,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			353 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_12,
+				'expectedSubset' => Values::ARRAY_9,
+				'actualArray'    => Values::ARRAY_9,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			354 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_12,
+				'expectedSubset' => Values::ARRAY_9,
+				'actualArray'    => Values::ARRAY_9,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			355 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_12,
+				'expectedSubset' => Values::ARRAY_9,
+				'actualArray'    => Values::ARRAY_9,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			356 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_13,
+				'expectedSubset' => Values::ARRAY_9,
+				'actualArray'    => Values::ARRAY_10,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			357 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_13,
+				'expectedSubset' => Values::ARRAY_9,
+				'actualArray'    => Values::ARRAY_10,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			358 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_13,
+				'expectedSubset' => Values::ARRAY_9,
+				'actualArray'    => Values::ARRAY_10,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			359 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_13,
+				'expectedSubset' => Values::ARRAY_9,
+				'actualArray'    => Values::ARRAY_10,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			360 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_18,
+				'expectedSubset' => Values::ARRAY_9,
+				'actualArray'    => Values::ARRAY_11,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			361 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_18,
+				'expectedSubset' => Values::ARRAY_9,
+				'actualArray'    => Values::ARRAY_11,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			362 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_18,
+				'expectedSubset' => Values::ARRAY_9,
+				'actualArray'    => Values::ARRAY_11,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			363 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_18,
+				'expectedSubset' => Values::ARRAY_9,
+				'actualArray'    => Values::ARRAY_11,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			364 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_19,
+				'expectedSubset' => Values::ARRAY_9,
+				'actualArray'    => Values::ARRAY_12,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			365 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_19,
+				'expectedSubset' => Values::ARRAY_9,
+				'actualArray'    => Values::ARRAY_12,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			366 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_19,
+				'expectedSubset' => Values::ARRAY_9,
+				'actualArray'    => Values::ARRAY_12,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			367 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_19,
+				'expectedSubset' => Values::ARRAY_9,
+				'actualArray'    => Values::ARRAY_12,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			368 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_20,
+				'expectedSubset' => Values::ARRAY_9,
+				'actualArray'    => Values::ARRAY_13,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			369 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_20,
+				'expectedSubset' => Values::ARRAY_9,
+				'actualArray'    => Values::ARRAY_13,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			370 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_20,
+				'expectedSubset' => Values::ARRAY_9,
+				'actualArray'    => Values::ARRAY_13,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			371 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_0,
-				'actualArray'    => Values::ARRAY_SUBSET_20,
+				'expectedSubset' => Values::ARRAY_9,
+				'actualArray'    => Values::ARRAY_13,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			372 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_1,
-				'actualArray'    => Values::ARRAY_3,
+				'expectedSubset' => Values::ARRAY_10,
+				'actualArray'    => Values::ARRAY_10,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			373 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_1,
-				'actualArray'    => Values::ARRAY_3,
+				'expectedSubset' => Values::ARRAY_10,
+				'actualArray'    => Values::ARRAY_10,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			374 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_1,
-				'actualArray'    => Values::ARRAY_3,
+				'expectedSubset' => Values::ARRAY_10,
+				'actualArray'    => Values::ARRAY_10,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			375 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_1,
-				'actualArray'    => Values::ARRAY_3,
+				'expectedSubset' => Values::ARRAY_10,
+				'actualArray'    => Values::ARRAY_10,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			376 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_1,
-				'actualArray'    => Values::ARRAY_4,
+				'expectedSubset' => Values::ARRAY_11,
+				'actualArray'    => Values::ARRAY_11,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			377 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_1,
-				'actualArray'    => Values::ARRAY_4,
+				'expectedSubset' => Values::ARRAY_11,
+				'actualArray'    => Values::ARRAY_11,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			378 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_1,
-				'actualArray'    => Values::ARRAY_4,
+				'expectedSubset' => Values::ARRAY_11,
+				'actualArray'    => Values::ARRAY_11,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			379 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_1,
-				'actualArray'    => Values::ARRAY_4,
+				'expectedSubset' => Values::ARRAY_11,
+				'actualArray'    => Values::ARRAY_11,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			380 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_1,
-				'actualArray'    => Values::ARRAY_SUBSET_1,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_0,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			381 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_1,
-				'actualArray'    => Values::ARRAY_SUBSET_1,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_0,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			382 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_1,
-				'actualArray'    => Values::ARRAY_SUBSET_1,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_0,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			383 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_1,
-				'actualArray'    => Values::ARRAY_SUBSET_1,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_0,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			384 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_1,
-				'actualArray'    => Values::ARRAY_SUBSET_2,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_1,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			385 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_1,
-				'actualArray'    => Values::ARRAY_SUBSET_2,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_1,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			386 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_1,
-				'actualArray'    => Values::ARRAY_SUBSET_2,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_1,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			387 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_1,
-				'actualArray'    => Values::ARRAY_SUBSET_2,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_1,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			388 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_2,
-				'actualArray'    => Values::ARRAY_4,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_2,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			389 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_2,
-				'actualArray'    => Values::ARRAY_4,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_2,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			390 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_2,
-				'actualArray'    => Values::ARRAY_4,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_2,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			391 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_2,
-				'actualArray'    => Values::ARRAY_4,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_2,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			392 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_2,
-				'actualArray'    => Values::ARRAY_SUBSET_2,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_3,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			393 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_2,
-				'actualArray'    => Values::ARRAY_SUBSET_2,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_3,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			394 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_2,
-				'actualArray'    => Values::ARRAY_SUBSET_2,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_3,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			395 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_2,
-				'actualArray'    => Values::ARRAY_SUBSET_2,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_3,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			396 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_3,
-				'actualArray'    => Values::ARRAY_6,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_4,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			397 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_3,
-				'actualArray'    => Values::ARRAY_6,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_4,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			398 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_3,
-				'actualArray'    => Values::ARRAY_6,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_4,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			399 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_3,
-				'actualArray'    => Values::ARRAY_6,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_4,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			400 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_3,
-				'actualArray'    => Values::ARRAY_8,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_5,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			401 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_3,
-				'actualArray'    => Values::ARRAY_8,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_5,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			402 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_3,
-				'actualArray'    => Values::ARRAY_8,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_5,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			403 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_3,
-				'actualArray'    => Values::ARRAY_8,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_5,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			404 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_3,
-				'actualArray'    => Values::ARRAY_SUBSET_3,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_6,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			405 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_3,
-				'actualArray'    => Values::ARRAY_SUBSET_3,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_6,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			406 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_3,
-				'actualArray'    => Values::ARRAY_SUBSET_3,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_6,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			407 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_3,
-				'actualArray'    => Values::ARRAY_SUBSET_3,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_6,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			408 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_3,
-				'actualArray'    => Values::ARRAY_SUBSET_4,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_7,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			409 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_3,
-				'actualArray'    => Values::ARRAY_SUBSET_4,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_7,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			410 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_3,
-				'actualArray'    => Values::ARRAY_SUBSET_4,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_7,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			411 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_3,
-				'actualArray'    => Values::ARRAY_SUBSET_4,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_7,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			412 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_3,
-				'actualArray'    => Values::ARRAY_SUBSET_5,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_8,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			413 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_3,
-				'actualArray'    => Values::ARRAY_SUBSET_5,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_8,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			414 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_3,
-				'actualArray'    => Values::ARRAY_SUBSET_5,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_8,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			415 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_3,
-				'actualArray'    => Values::ARRAY_SUBSET_5,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_8,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			416 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_4,
-				'actualArray'    => Values::ARRAY_SUBSET_4,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_9,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			417 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_4,
-				'actualArray'    => Values::ARRAY_SUBSET_4,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_9,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			418 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_4,
-				'actualArray'    => Values::ARRAY_SUBSET_4,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_9,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			419 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_4,
-				'actualArray'    => Values::ARRAY_SUBSET_4,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_9,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			420 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_5,
-				'actualArray'    => Values::ARRAY_8,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_10,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			421 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_5,
-				'actualArray'    => Values::ARRAY_8,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_10,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			422 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_5,
-				'actualArray'    => Values::ARRAY_8,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_10,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			423 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_5,
-				'actualArray'    => Values::ARRAY_8,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_10,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			424 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_5,
-				'actualArray'    => Values::ARRAY_SUBSET_5,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_11,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			425 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_5,
-				'actualArray'    => Values::ARRAY_SUBSET_5,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_11,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			426 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_5,
-				'actualArray'    => Values::ARRAY_SUBSET_5,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_11,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			427 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_5,
-				'actualArray'    => Values::ARRAY_SUBSET_5,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_11,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			428 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_6,
-				'actualArray'    => Values::ARRAY_9,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_0,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			429 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_6,
-				'actualArray'    => Values::ARRAY_9,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_0,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			430 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_6,
-				'actualArray'    => Values::ARRAY_9,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_0,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			431 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_6,
-				'actualArray'    => Values::ARRAY_9,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_0,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			432 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_6,
-				'actualArray'    => Values::ARRAY_10,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_1,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			433 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_6,
-				'actualArray'    => Values::ARRAY_10,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_1,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			434 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_6,
-				'actualArray'    => Values::ARRAY_10,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_1,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			435 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_6,
-				'actualArray'    => Values::ARRAY_10,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_1,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			436 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_6,
-				'actualArray'    => Values::ARRAY_11,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_2,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			437 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_6,
-				'actualArray'    => Values::ARRAY_11,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_2,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			438 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_6,
-				'actualArray'    => Values::ARRAY_11,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_2,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			439 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_6,
-				'actualArray'    => Values::ARRAY_11,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_2,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			440 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_6,
-				'actualArray'    => Values::ARRAY_SUBSET_6,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_3,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			441 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_6,
-				'actualArray'    => Values::ARRAY_SUBSET_6,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_3,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			442 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_6,
-				'actualArray'    => Values::ARRAY_SUBSET_6,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_3,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			443 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_6,
-				'actualArray'    => Values::ARRAY_SUBSET_6,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_3,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			444 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_6,
-				'actualArray'    => Values::ARRAY_SUBSET_15,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_4,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			445 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_6,
-				'actualArray'    => Values::ARRAY_SUBSET_15,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_4,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			446 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_6,
-				'actualArray'    => Values::ARRAY_SUBSET_15,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_4,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			447 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_6,
-				'actualArray'    => Values::ARRAY_SUBSET_15,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_4,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			448 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_6,
-				'actualArray'    => Values::ARRAY_12,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_5,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			449 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_6,
-				'actualArray'    => Values::ARRAY_12,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_5,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			450 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_6,
-				'actualArray'    => Values::ARRAY_12,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_5,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			451 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_6,
-				'actualArray'    => Values::ARRAY_12,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_5,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			452 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_6,
-				'actualArray'    => Values::ARRAY_13,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_6,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			453 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_6,
-				'actualArray'    => Values::ARRAY_13,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_6,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			454 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_6,
-				'actualArray'    => Values::ARRAY_13,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_6,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			455 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_6,
-				'actualArray'    => Values::ARRAY_13,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_6,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			456 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_7,
-				'actualArray'    => Values::ARRAY_9,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_7,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			457 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_7,
-				'actualArray'    => Values::ARRAY_9,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_7,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			458 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_7,
-				'actualArray'    => Values::ARRAY_10,
-				'strict'         => Values::BOOLEAN_FALSE,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_7,
+				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			459 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_7,
-				'actualArray'    => Values::ARRAY_10,
-				'strict'         => Values::BOOLEAN_FALSE,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_7,
+				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			460 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_7,
-				'actualArray'    => Values::ARRAY_11,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_8,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			461 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_7,
-				'actualArray'    => Values::ARRAY_11,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_8,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			462 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_7,
-				'actualArray'    => Values::ARRAY_SUBSET_7,
-				'strict'         => Values::BOOLEAN_FALSE,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_8,
+				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			463 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_7,
-				'actualArray'    => Values::ARRAY_SUBSET_7,
-				'strict'         => Values::BOOLEAN_FALSE,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_8,
+				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			464 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_7,
-				'actualArray'    => Values::ARRAY_SUBSET_7,
-				'strict'         => Values::BOOLEAN_TRUE,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_9,
+				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			465 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_7,
-				'actualArray'    => Values::ARRAY_SUBSET_7,
-				'strict'         => Values::BOOLEAN_TRUE,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_9,
+				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			466 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_7,
-				'actualArray'    => Values::ARRAY_SUBSET_14,
-				'strict'         => Values::BOOLEAN_FALSE,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_9,
+				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			467 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_7,
-				'actualArray'    => Values::ARRAY_SUBSET_14,
-				'strict'         => Values::BOOLEAN_FALSE,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_9,
+				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			468 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_7,
-				'actualArray'    => Values::ARRAY_12,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_10,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			469 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_7,
-				'actualArray'    => Values::ARRAY_12,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_10,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			470 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_7,
-				'actualArray'    => Values::ARRAY_13,
-				'strict'         => Values::BOOLEAN_FALSE,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_10,
+				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			471 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_7,
-				'actualArray'    => Values::ARRAY_13,
-				'strict'         => Values::BOOLEAN_FALSE,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_10,
+				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			472 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_7,
-				'actualArray'    => Values::ARRAY_SUBSET_19,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_11,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			473 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_7,
-				'actualArray'    => Values::ARRAY_SUBSET_19,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_11,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			474 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_7,
-				'actualArray'    => Values::ARRAY_SUBSET_19,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_11,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			475 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_7,
-				'actualArray'    => Values::ARRAY_SUBSET_19,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_11,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			476 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_8,
-				'actualArray'    => Values::ARRAY_SUBSET_8,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_12,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			477 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_8,
-				'actualArray'    => Values::ARRAY_SUBSET_8,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_12,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			478 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_8,
-				'actualArray'    => Values::ARRAY_SUBSET_8,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_12,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			479 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_8,
-				'actualArray'    => Values::ARRAY_SUBSET_8,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_12,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			480 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_8,
-				'actualArray'    => Values::ARRAY_SUBSET_17,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_13,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			481 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_8,
-				'actualArray'    => Values::ARRAY_SUBSET_17,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_13,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			482 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_8,
-				'actualArray'    => Values::ARRAY_SUBSET_17,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_13,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			483 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_8,
-				'actualArray'    => Values::ARRAY_SUBSET_17,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_13,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			484 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_9,
-				'actualArray'    => Values::ARRAY_10,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_14,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			485 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_9,
-				'actualArray'    => Values::ARRAY_10,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_14,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			486 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_9,
-				'actualArray'    => Values::ARRAY_10,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_14,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			487 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_9,
-				'actualArray'    => Values::ARRAY_10,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_14,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			488 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_9,
-				'actualArray'    => Values::ARRAY_SUBSET_9,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_15,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			489 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_9,
-				'actualArray'    => Values::ARRAY_SUBSET_9,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_15,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			490 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_9,
-				'actualArray'    => Values::ARRAY_SUBSET_9,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_15,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			491 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_9,
-				'actualArray'    => Values::ARRAY_SUBSET_9,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_15,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			492 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_9,
-				'actualArray'    => Values::ARRAY_SUBSET_15,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_16,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			493 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_9,
-				'actualArray'    => Values::ARRAY_SUBSET_15,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_16,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			494 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_9,
-				'actualArray'    => Values::ARRAY_SUBSET_15,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_16,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			495 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_9,
-				'actualArray'    => Values::ARRAY_SUBSET_15,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_16,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			496 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_10,
-				'actualArray'    => Values::ARRAY_SUBSET_10,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_17,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			497 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_10,
-				'actualArray'    => Values::ARRAY_SUBSET_10,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_17,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			498 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_10,
-				'actualArray'    => Values::ARRAY_SUBSET_10,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_17,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			499 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_10,
-				'actualArray'    => Values::ARRAY_SUBSET_10,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_17,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			500 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_11,
-				'actualArray'    => Values::ARRAY_11,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_12,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			501 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_11,
-				'actualArray'    => Values::ARRAY_11,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_12,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			502 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_11,
-				'actualArray'    => Values::ARRAY_11,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_12,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			503 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_11,
-				'actualArray'    => Values::ARRAY_11,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_12,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			504 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_11,
-				'actualArray'    => Values::ARRAY_SUBSET_11,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_13,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			505 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_11,
-				'actualArray'    => Values::ARRAY_SUBSET_11,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_13,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			506 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_11,
-				'actualArray'    => Values::ARRAY_SUBSET_11,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_13,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			507 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_11,
-				'actualArray'    => Values::ARRAY_SUBSET_11,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_13,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			508 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_12,
-				'actualArray'    => Values::ARRAY_SUBSET_12,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_18,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			509 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_12,
-				'actualArray'    => Values::ARRAY_SUBSET_12,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_18,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			510 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_12,
-				'actualArray'    => Values::ARRAY_SUBSET_12,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_18,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			511 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_12,
-				'actualArray'    => Values::ARRAY_SUBSET_12,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_18,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			512 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_13,
-				'actualArray'    => Values::ARRAY_SUBSET_13,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_19,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			513 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_13,
-				'actualArray'    => Values::ARRAY_SUBSET_13,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_19,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			514 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_13,
-				'actualArray'    => Values::ARRAY_SUBSET_13,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_19,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			515 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_13,
-				'actualArray'    => Values::ARRAY_SUBSET_13,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_19,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			516 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_14,
-				'actualArray'    => Values::ARRAY_SUBSET_14,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_20,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			517 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_14,
-				'actualArray'    => Values::ARRAY_SUBSET_14,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_20,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			518 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_14,
-				'actualArray'    => Values::ARRAY_SUBSET_14,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_20,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			519 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_14,
-				'actualArray'    => Values::ARRAY_SUBSET_14,
+				'expectedSubset' => Values::ARRAY_SUBSET_0,
+				'actualArray'    => Values::ARRAY_SUBSET_20,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			520 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_15,
-				'actualArray'    => Values::ARRAY_10,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
+				'actualArray'    => Values::ARRAY_1,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			521 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_15,
-				'actualArray'    => Values::ARRAY_10,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
+				'actualArray'    => Values::ARRAY_1,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			522 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_15,
-				'actualArray'    => Values::ARRAY_10,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
+				'actualArray'    => Values::ARRAY_1,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			523 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_15,
-				'actualArray'    => Values::ARRAY_10,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
+				'actualArray'    => Values::ARRAY_1,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			524 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_15,
-				'actualArray'    => Values::ARRAY_SUBSET_15,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
+				'actualArray'    => Values::ARRAY_2,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			525 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_15,
-				'actualArray'    => Values::ARRAY_SUBSET_15,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
+				'actualArray'    => Values::ARRAY_2,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			526 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_15,
-				'actualArray'    => Values::ARRAY_SUBSET_15,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
+				'actualArray'    => Values::ARRAY_2,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			527 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_15,
-				'actualArray'    => Values::ARRAY_SUBSET_15,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
+				'actualArray'    => Values::ARRAY_2,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			528 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_16,
-				'actualArray'    => Values::ARRAY_10,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
+				'actualArray'    => Values::ARRAY_3,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			529 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_16,
-				'actualArray'    => Values::ARRAY_10,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
+				'actualArray'    => Values::ARRAY_3,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			530 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_16,
-				'actualArray'    => Values::ARRAY_10,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
+				'actualArray'    => Values::ARRAY_3,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			531 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_16,
-				'actualArray'    => Values::ARRAY_10,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
+				'actualArray'    => Values::ARRAY_3,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			532 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_16,
-				'actualArray'    => Values::ARRAY_SUBSET_16,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
+				'actualArray'    => Values::ARRAY_4,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			533 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_16,
-				'actualArray'    => Values::ARRAY_SUBSET_16,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
+				'actualArray'    => Values::ARRAY_4,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			534 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_16,
-				'actualArray'    => Values::ARRAY_SUBSET_16,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
+				'actualArray'    => Values::ARRAY_4,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			535 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_16,
-				'actualArray'    => Values::ARRAY_SUBSET_16,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
+				'actualArray'    => Values::ARRAY_4,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			536 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_17,
-				'actualArray'    => Values::ARRAY_SUBSET_17,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
+				'actualArray'    => Values::ARRAY_8,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			537 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_17,
-				'actualArray'    => Values::ARRAY_SUBSET_17,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
+				'actualArray'    => Values::ARRAY_8,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			538 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_17,
-				'actualArray'    => Values::ARRAY_SUBSET_17,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
+				'actualArray'    => Values::ARRAY_8,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			539 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_17,
-				'actualArray'    => Values::ARRAY_SUBSET_17,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
+				'actualArray'    => Values::ARRAY_8,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			540 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_12,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
 				'actualArray'    => Values::ARRAY_9,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			541 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_12,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
 				'actualArray'    => Values::ARRAY_9,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			542 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_12,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
 				'actualArray'    => Values::ARRAY_9,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			543 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_12,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
 				'actualArray'    => Values::ARRAY_9,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			544 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_12,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
 				'actualArray'    => Values::ARRAY_10,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			545 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_12,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
 				'actualArray'    => Values::ARRAY_10,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			546 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_12,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
 				'actualArray'    => Values::ARRAY_10,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			547 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_12,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
 				'actualArray'    => Values::ARRAY_10,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			548 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_12,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
 				'actualArray'    => Values::ARRAY_11,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			549 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_12,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
 				'actualArray'    => Values::ARRAY_11,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			550 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_12,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
 				'actualArray'    => Values::ARRAY_11,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			551 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_12,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
 				'actualArray'    => Values::ARRAY_11,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			552 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_12,
-				'actualArray'    => Values::ARRAY_12,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
+				'actualArray'    => Values::ARRAY_SUBSET_1,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			553 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_12,
-				'actualArray'    => Values::ARRAY_12,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
+				'actualArray'    => Values::ARRAY_SUBSET_1,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			554 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_12,
-				'actualArray'    => Values::ARRAY_12,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
+				'actualArray'    => Values::ARRAY_SUBSET_1,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			555 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_12,
-				'actualArray'    => Values::ARRAY_12,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
+				'actualArray'    => Values::ARRAY_SUBSET_1,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			556 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_13,
-				'actualArray'    => Values::ARRAY_13,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
+				'actualArray'    => Values::ARRAY_SUBSET_2,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			557 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_13,
-				'actualArray'    => Values::ARRAY_13,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
+				'actualArray'    => Values::ARRAY_SUBSET_2,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			558 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_13,
-				'actualArray'    => Values::ARRAY_13,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
+				'actualArray'    => Values::ARRAY_SUBSET_2,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			559 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_13,
-				'actualArray'    => Values::ARRAY_13,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
+				'actualArray'    => Values::ARRAY_SUBSET_2,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			560 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_18,
-				'actualArray'    => Values::ARRAY_9,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
+				'actualArray'    => Values::ARRAY_SUBSET_5,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			561 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_18,
-				'actualArray'    => Values::ARRAY_9,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
+				'actualArray'    => Values::ARRAY_SUBSET_5,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			562 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_18,
-				'actualArray'    => Values::ARRAY_9,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
+				'actualArray'    => Values::ARRAY_SUBSET_5,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			563 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_18,
-				'actualArray'    => Values::ARRAY_9,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
+				'actualArray'    => Values::ARRAY_SUBSET_5,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			564 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_18,
-				'actualArray'    => Values::ARRAY_10,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
+				'actualArray'    => Values::ARRAY_SUBSET_6,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			565 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_18,
-				'actualArray'    => Values::ARRAY_10,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
+				'actualArray'    => Values::ARRAY_SUBSET_6,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			566 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_18,
-				'actualArray'    => Values::ARRAY_10,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
+				'actualArray'    => Values::ARRAY_SUBSET_6,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			567 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_18,
-				'actualArray'    => Values::ARRAY_10,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
+				'actualArray'    => Values::ARRAY_SUBSET_6,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			568 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_18,
-				'actualArray'    => Values::ARRAY_11,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
+				'actualArray'    => Values::ARRAY_SUBSET_15,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			569 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_18,
-				'actualArray'    => Values::ARRAY_11,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
+				'actualArray'    => Values::ARRAY_SUBSET_15,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			570 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_18,
-				'actualArray'    => Values::ARRAY_11,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
+				'actualArray'    => Values::ARRAY_SUBSET_15,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			571 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_18,
-				'actualArray'    => Values::ARRAY_11,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
+				'actualArray'    => Values::ARRAY_SUBSET_15,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			572 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_18,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
 				'actualArray'    => Values::ARRAY_12,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			573 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_18,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
 				'actualArray'    => Values::ARRAY_12,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			574 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_18,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
 				'actualArray'    => Values::ARRAY_12,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			575 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_18,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
 				'actualArray'    => Values::ARRAY_12,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
 			576 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_18,
-				'actualArray'    => Values::ARRAY_SUBSET_18,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
+				'actualArray'    => Values::ARRAY_13,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			577 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_18,
-				'actualArray'    => Values::ARRAY_SUBSET_18,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
+				'actualArray'    => Values::ARRAY_13,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			578 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_18,
-				'actualArray'    => Values::ARRAY_SUBSET_18,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
+				'actualArray'    => Values::ARRAY_13,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			579 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_18,
-				'actualArray'    => Values::ARRAY_SUBSET_18,
+				'expectedSubset' => Values::ARRAY_SUBSET_1,
+				'actualArray'    => Values::ARRAY_13,
 				'strict'         => Values::BOOLEAN_TRUE,
-				'message'        => Values::STRING_1
-			],
-			580 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_18,
-				'actualArray'    => Values::ARRAY_SUBSET_19,
-				'strict'         => Values::BOOLEAN_FALSE,
-				'message'        => Values::STRING_0
-			],
-			581 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_18,
-				'actualArray'    => Values::ARRAY_SUBSET_19,
-				'strict'         => Values::BOOLEAN_FALSE,
-				'message'        => Values::STRING_1
-			],
-			582 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_18,
-				'actualArray'    => Values::ARRAY_SUBSET_19,
-				'strict'         => Values::BOOLEAN_TRUE,
-				'message'        => Values::STRING_0
-			],
-			583 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_18,
-				'actualArray'    => Values::ARRAY_SUBSET_19,
-				'strict'         => Values::BOOLEAN_TRUE,
-				'message'        => Values::STRING_1
-			],
-			584 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_19,
-				'actualArray'    => Values::ARRAY_9,
-				'strict'         => Values::BOOLEAN_FALSE,
-				'message'        => Values::STRING_0
-			],
-			585 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_19,
-				'actualArray'    => Values::ARRAY_9,
-				'strict'         => Values::BOOLEAN_FALSE,
-				'message'        => Values::STRING_1
-			],
-			586 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_19,
-				'actualArray'    => Values::ARRAY_10,
-				'strict'         => Values::BOOLEAN_FALSE,
-				'message'        => Values::STRING_0
-			],
-			587 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_19,
-				'actualArray'    => Values::ARRAY_10,
-				'strict'         => Values::BOOLEAN_FALSE,
-				'message'        => Values::STRING_1
-			],
-			588 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_19,
-				'actualArray'    => Values::ARRAY_11,
-				'strict'         => Values::BOOLEAN_FALSE,
-				'message'        => Values::STRING_0
-			],
-			589 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_19,
-				'actualArray'    => Values::ARRAY_11,
-				'strict'         => Values::BOOLEAN_FALSE,
-				'message'        => Values::STRING_1
-			],
-			590 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_19,
-				'actualArray'    => Values::ARRAY_12,
-				'strict'         => Values::BOOLEAN_FALSE,
-				'message'        => Values::STRING_0
-			],
-			591 => [
-				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_19,
-				'actualArray'    => Values::ARRAY_12,
-				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			592 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_19,
-				'actualArray'    => Values::ARRAY_SUBSET_19,
+				'expectedSubset' => Values::ARRAY_SUBSET_2,
+				'actualArray'    => Values::ARRAY_4,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
 			593 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_19,
-				'actualArray'    => Values::ARRAY_SUBSET_19,
+				'expectedSubset' => Values::ARRAY_SUBSET_2,
+				'actualArray'    => Values::ARRAY_4,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
 			594 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_19,
-				'actualArray'    => Values::ARRAY_SUBSET_19,
+				'expectedSubset' => Values::ARRAY_SUBSET_2,
+				'actualArray'    => Values::ARRAY_4,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
 			595 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_19,
+				'expectedSubset' => Values::ARRAY_SUBSET_2,
+				'actualArray'    => Values::ARRAY_4,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			616 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_2,
+				'actualArray'    => Values::ARRAY_SUBSET_2,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			617 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_2,
+				'actualArray'    => Values::ARRAY_SUBSET_2,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			618 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_2,
+				'actualArray'    => Values::ARRAY_SUBSET_2,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			619 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_2,
+				'actualArray'    => Values::ARRAY_SUBSET_2,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			640 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_3,
+				'actualArray'    => Values::ARRAY_5,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			641 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_3,
+				'actualArray'    => Values::ARRAY_5,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			642 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_3,
+				'actualArray'    => Values::ARRAY_5,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			643 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_3,
+				'actualArray'    => Values::ARRAY_5,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			644 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_3,
+				'actualArray'    => Values::ARRAY_6,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			645 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_3,
+				'actualArray'    => Values::ARRAY_6,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			646 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_3,
+				'actualArray'    => Values::ARRAY_6,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			647 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_3,
+				'actualArray'    => Values::ARRAY_6,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			648 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_3,
+				'actualArray'    => Values::ARRAY_7,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			649 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_3,
+				'actualArray'    => Values::ARRAY_7,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			650 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_3,
+				'actualArray'    => Values::ARRAY_7,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			651 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_3,
+				'actualArray'    => Values::ARRAY_7,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			652 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_3,
+				'actualArray'    => Values::ARRAY_8,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			653 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_3,
+				'actualArray'    => Values::ARRAY_8,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			654 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_3,
+				'actualArray'    => Values::ARRAY_8,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			655 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_3,
+				'actualArray'    => Values::ARRAY_8,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			656 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_3,
+				'actualArray'    => Values::ARRAY_SUBSET_3,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			657 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_3,
+				'actualArray'    => Values::ARRAY_SUBSET_3,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			658 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_3,
+				'actualArray'    => Values::ARRAY_SUBSET_3,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			659 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_3,
+				'actualArray'    => Values::ARRAY_SUBSET_3,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			660 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_3,
+				'actualArray'    => Values::ARRAY_SUBSET_4,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			661 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_3,
+				'actualArray'    => Values::ARRAY_SUBSET_4,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			662 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_3,
+				'actualArray'    => Values::ARRAY_SUBSET_4,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			663 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_3,
+				'actualArray'    => Values::ARRAY_SUBSET_4,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			664 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_3,
+				'actualArray'    => Values::ARRAY_SUBSET_5,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			665 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_3,
+				'actualArray'    => Values::ARRAY_SUBSET_5,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			666 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_3,
+				'actualArray'    => Values::ARRAY_SUBSET_5,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			667 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_3,
+				'actualArray'    => Values::ARRAY_SUBSET_5,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			688 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_4,
+				'actualArray'    => Values::ARRAY_SUBSET_4,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			689 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_4,
+				'actualArray'    => Values::ARRAY_SUBSET_4,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			690 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_4,
+				'actualArray'    => Values::ARRAY_SUBSET_4,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			691 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_4,
+				'actualArray'    => Values::ARRAY_SUBSET_4,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			696 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_5,
+				'actualArray'    => Values::ARRAY_8,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			697 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_5,
+				'actualArray'    => Values::ARRAY_8,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			698 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_5,
+				'actualArray'    => Values::ARRAY_8,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			699 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_5,
+				'actualArray'    => Values::ARRAY_8,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			700 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_5,
+				'actualArray'    => Values::ARRAY_SUBSET_5,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			701 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_5,
+				'actualArray'    => Values::ARRAY_SUBSET_5,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			702 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_5,
+				'actualArray'    => Values::ARRAY_SUBSET_5,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			703 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_5,
+				'actualArray'    => Values::ARRAY_SUBSET_5,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			704 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_1,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			705 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_1,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			706 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_1,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			707 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_1,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			708 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_2,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			709 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_2,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			710 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_2,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			711 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_2,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			712 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_3,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			713 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_3,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			714 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_3,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			715 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_3,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			716 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_4,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			717 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_4,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			718 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_4,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			719 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_4,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			720 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_8,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			721 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_8,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			722 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_8,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			723 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_8,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			724 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_9,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			725 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_9,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			726 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_9,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			727 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_9,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			728 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_10,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			729 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_10,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			730 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_10,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			731 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_10,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			732 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_11,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			733 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_11,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			734 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_11,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			735 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_11,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			736 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_SUBSET_1,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			737 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_SUBSET_1,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			738 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_SUBSET_1,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			739 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_SUBSET_1,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			740 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_SUBSET_2,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			741 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_SUBSET_2,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			742 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_SUBSET_2,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			743 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_SUBSET_2,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			744 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_SUBSET_5,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			745 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_SUBSET_5,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			746 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_SUBSET_5,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			747 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_SUBSET_5,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			748 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_SUBSET_6,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			749 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_SUBSET_6,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			750 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_SUBSET_6,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			751 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_SUBSET_6,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			752 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_SUBSET_15,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			753 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_SUBSET_15,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			754 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_SUBSET_15,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			755 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_SUBSET_15,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			756 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_12,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			757 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_12,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			758 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_12,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			759 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_12,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			760 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_13,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			761 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_13,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			762 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_13,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			763 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_6,
+				'actualArray'    => Values::ARRAY_13,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			764 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_7,
+				'actualArray'    => Values::ARRAY_1,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			765 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_7,
+				'actualArray'    => Values::ARRAY_1,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			766 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_7,
+				'actualArray'    => Values::ARRAY_7,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			767 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_7,
+				'actualArray'    => Values::ARRAY_7,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			768 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_7,
+				'actualArray'    => Values::ARRAY_9,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			769 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_7,
+				'actualArray'    => Values::ARRAY_9,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			770 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_7,
+				'actualArray'    => Values::ARRAY_10,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			771 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_7,
+				'actualArray'    => Values::ARRAY_10,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			772 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_7,
+				'actualArray'    => Values::ARRAY_11,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			773 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_7,
+				'actualArray'    => Values::ARRAY_11,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			774 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_7,
+				'actualArray'    => Values::ARRAY_SUBSET_7,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			775 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_7,
+				'actualArray'    => Values::ARRAY_SUBSET_7,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			776 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_7,
+				'actualArray'    => Values::ARRAY_SUBSET_7,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			777 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_7,
+				'actualArray'    => Values::ARRAY_SUBSET_7,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			778 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_7,
+				'actualArray'    => Values::ARRAY_SUBSET_13,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			779 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_7,
+				'actualArray'    => Values::ARRAY_SUBSET_13,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			780 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_7,
+				'actualArray'    => Values::ARRAY_SUBSET_14,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			781 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_7,
+				'actualArray'    => Values::ARRAY_SUBSET_14,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			782 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_7,
+				'actualArray'    => Values::ARRAY_12,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			783 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_7,
+				'actualArray'    => Values::ARRAY_12,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			784 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_7,
+				'actualArray'    => Values::ARRAY_13,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			785 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_7,
+				'actualArray'    => Values::ARRAY_13,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			786 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_7,
+				'actualArray'    => Values::ARRAY_SUBSET_19,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			787 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_7,
+				'actualArray'    => Values::ARRAY_SUBSET_19,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			788 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_7,
+				'actualArray'    => Values::ARRAY_SUBSET_19,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			789 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_7,
 				'actualArray'    => Values::ARRAY_SUBSET_19,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
-			596 => [
+			790 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_20,
+				'expectedSubset' => Values::ARRAY_SUBSET_8,
+				'actualArray'    => Values::ARRAY_SUBSET_8,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			791 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_8,
+				'actualArray'    => Values::ARRAY_SUBSET_8,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			792 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_8,
+				'actualArray'    => Values::ARRAY_SUBSET_8,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			793 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_8,
+				'actualArray'    => Values::ARRAY_SUBSET_8,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			794 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_8,
+				'actualArray'    => Values::ARRAY_SUBSET_17,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			795 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_8,
+				'actualArray'    => Values::ARRAY_SUBSET_17,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			796 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_8,
+				'actualArray'    => Values::ARRAY_SUBSET_17,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			797 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_8,
+				'actualArray'    => Values::ARRAY_SUBSET_17,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			798 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_9,
+				'actualArray'    => Values::ARRAY_10,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			799 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_9,
+				'actualArray'    => Values::ARRAY_10,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			800 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_9,
+				'actualArray'    => Values::ARRAY_10,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			801 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_9,
+				'actualArray'    => Values::ARRAY_10,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			802 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_9,
+				'actualArray'    => Values::ARRAY_SUBSET_9,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			803 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_9,
+				'actualArray'    => Values::ARRAY_SUBSET_9,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			804 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_9,
+				'actualArray'    => Values::ARRAY_SUBSET_9,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			805 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_9,
+				'actualArray'    => Values::ARRAY_SUBSET_9,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			806 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_9,
+				'actualArray'    => Values::ARRAY_SUBSET_12,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			807 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_9,
+				'actualArray'    => Values::ARRAY_SUBSET_12,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			808 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_9,
+				'actualArray'    => Values::ARRAY_SUBSET_12,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			809 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_9,
+				'actualArray'    => Values::ARRAY_SUBSET_12,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			810 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_9,
+				'actualArray'    => Values::ARRAY_SUBSET_15,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			811 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_9,
+				'actualArray'    => Values::ARRAY_SUBSET_15,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			812 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_9,
+				'actualArray'    => Values::ARRAY_SUBSET_15,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			813 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_9,
+				'actualArray'    => Values::ARRAY_SUBSET_15,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			814 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_10,
+				'actualArray'    => Values::ARRAY_10,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			815 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_10,
+				'actualArray'    => Values::ARRAY_10,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			816 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_10,
+				'actualArray'    => Values::ARRAY_10,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			817 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_10,
+				'actualArray'    => Values::ARRAY_10,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			818 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_10,
+				'actualArray'    => Values::ARRAY_SUBSET_10,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			819 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_10,
+				'actualArray'    => Values::ARRAY_SUBSET_10,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			820 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_10,
+				'actualArray'    => Values::ARRAY_SUBSET_10,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			821 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_10,
+				'actualArray'    => Values::ARRAY_SUBSET_10,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			822 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_11,
+				'actualArray'    => Values::ARRAY_11,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			823 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_11,
+				'actualArray'    => Values::ARRAY_11,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			824 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_11,
+				'actualArray'    => Values::ARRAY_11,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			825 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_11,
+				'actualArray'    => Values::ARRAY_11,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			826 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_11,
+				'actualArray'    => Values::ARRAY_SUBSET_11,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			827 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_11,
+				'actualArray'    => Values::ARRAY_SUBSET_11,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			828 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_11,
+				'actualArray'    => Values::ARRAY_SUBSET_11,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			829 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_11,
+				'actualArray'    => Values::ARRAY_SUBSET_11,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			830 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_12,
+				'actualArray'    => Values::ARRAY_10,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			831 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_12,
+				'actualArray'    => Values::ARRAY_10,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			832 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_12,
+				'actualArray'    => Values::ARRAY_10,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			833 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_12,
+				'actualArray'    => Values::ARRAY_10,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			834 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_12,
+				'actualArray'    => Values::ARRAY_SUBSET_9,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			835 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_12,
+				'actualArray'    => Values::ARRAY_SUBSET_9,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			836 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_12,
+				'actualArray'    => Values::ARRAY_SUBSET_9,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			837 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_12,
+				'actualArray'    => Values::ARRAY_SUBSET_9,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			838 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_12,
+				'actualArray'    => Values::ARRAY_SUBSET_12,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			839 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_12,
+				'actualArray'    => Values::ARRAY_SUBSET_12,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			840 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_12,
+				'actualArray'    => Values::ARRAY_SUBSET_12,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			841 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_12,
+				'actualArray'    => Values::ARRAY_SUBSET_12,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			842 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_12,
+				'actualArray'    => Values::ARRAY_SUBSET_15,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			843 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_12,
+				'actualArray'    => Values::ARRAY_SUBSET_15,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			844 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_12,
+				'actualArray'    => Values::ARRAY_SUBSET_15,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			845 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_12,
+				'actualArray'    => Values::ARRAY_SUBSET_15,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			846 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_13,
+				'actualArray'    => Values::ARRAY_1,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			847 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_13,
+				'actualArray'    => Values::ARRAY_1,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			848 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_13,
+				'actualArray'    => Values::ARRAY_1,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			849 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_13,
+				'actualArray'    => Values::ARRAY_1,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			850 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_13,
+				'actualArray'    => Values::ARRAY_7,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			851 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_13,
+				'actualArray'    => Values::ARRAY_7,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			852 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_13,
+				'actualArray'    => Values::ARRAY_7,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			853 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_13,
+				'actualArray'    => Values::ARRAY_7,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			854 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_13,
+				'actualArray'    => Values::ARRAY_9,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			855 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_13,
+				'actualArray'    => Values::ARRAY_9,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			856 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_13,
+				'actualArray'    => Values::ARRAY_9,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			857 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_13,
+				'actualArray'    => Values::ARRAY_9,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			858 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_13,
+				'actualArray'    => Values::ARRAY_10,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			859 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_13,
+				'actualArray'    => Values::ARRAY_10,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			860 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_13,
+				'actualArray'    => Values::ARRAY_10,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			861 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_13,
+				'actualArray'    => Values::ARRAY_10,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			862 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_13,
+				'actualArray'    => Values::ARRAY_11,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			863 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_13,
+				'actualArray'    => Values::ARRAY_11,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			864 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_13,
+				'actualArray'    => Values::ARRAY_11,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			865 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_13,
+				'actualArray'    => Values::ARRAY_11,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			866 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_13,
+				'actualArray'    => Values::ARRAY_SUBSET_7,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			867 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_13,
+				'actualArray'    => Values::ARRAY_SUBSET_7,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			868 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_13,
+				'actualArray'    => Values::ARRAY_SUBSET_13,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			869 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_13,
+				'actualArray'    => Values::ARRAY_SUBSET_13,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			870 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_13,
+				'actualArray'    => Values::ARRAY_SUBSET_13,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			871 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_13,
+				'actualArray'    => Values::ARRAY_SUBSET_13,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			872 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_13,
+				'actualArray'    => Values::ARRAY_SUBSET_14,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			873 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_13,
+				'actualArray'    => Values::ARRAY_SUBSET_14,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			874 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_13,
+				'actualArray'    => Values::ARRAY_SUBSET_14,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			875 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_13,
+				'actualArray'    => Values::ARRAY_SUBSET_14,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			876 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_13,
+				'actualArray'    => Values::ARRAY_12,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			877 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_13,
+				'actualArray'    => Values::ARRAY_12,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			878 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_13,
+				'actualArray'    => Values::ARRAY_12,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			879 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_13,
+				'actualArray'    => Values::ARRAY_12,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			880 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_13,
 				'actualArray'    => Values::ARRAY_13,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
-			597 => [
+			881 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_20,
+				'expectedSubset' => Values::ARRAY_SUBSET_13,
 				'actualArray'    => Values::ARRAY_13,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
-			598 => [
+			882 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_20,
+				'expectedSubset' => Values::ARRAY_SUBSET_13,
 				'actualArray'    => Values::ARRAY_13,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
-			599 => [
+			883 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_20,
+				'expectedSubset' => Values::ARRAY_SUBSET_13,
 				'actualArray'    => Values::ARRAY_13,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_1
 			],
-			600 => [
+			884 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_20,
-				'actualArray'    => Values::ARRAY_SUBSET_20,
+				'expectedSubset' => Values::ARRAY_SUBSET_13,
+				'actualArray'    => Values::ARRAY_SUBSET_19,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_0
 			],
-			601 => [
+			885 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_20,
-				'actualArray'    => Values::ARRAY_SUBSET_20,
+				'expectedSubset' => Values::ARRAY_SUBSET_13,
+				'actualArray'    => Values::ARRAY_SUBSET_19,
 				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			],
-			602 => [
+			912 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_20,
-				'actualArray'    => Values::ARRAY_SUBSET_20,
+				'expectedSubset' => Values::ARRAY_SUBSET_14,
+				'actualArray'    => Values::ARRAY_SUBSET_14,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			913 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_14,
+				'actualArray'    => Values::ARRAY_SUBSET_14,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			914 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_14,
+				'actualArray'    => Values::ARRAY_SUBSET_14,
 				'strict'         => Values::BOOLEAN_TRUE,
 				'message'        => Values::STRING_0
 			],
-			603 => [
+			915 => [
 				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset' => Values::ARRAY_SUBSET_20,
-				'actualArray'    => Values::ARRAY_SUBSET_20,
+				'expectedSubset' => Values::ARRAY_SUBSET_14,
+				'actualArray'    => Values::ARRAY_SUBSET_14,
 				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			926 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_15,
+				'actualArray'    => Values::ARRAY_10,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			927 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_15,
+				'actualArray'    => Values::ARRAY_10,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			928 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_15,
+				'actualArray'    => Values::ARRAY_10,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			929 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_15,
+				'actualArray'    => Values::ARRAY_10,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			930 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_15,
+				'actualArray'    => Values::ARRAY_SUBSET_15,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			931 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_15,
+				'actualArray'    => Values::ARRAY_SUBSET_15,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			932 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_15,
+				'actualArray'    => Values::ARRAY_SUBSET_15,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			933 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_15,
+				'actualArray'    => Values::ARRAY_SUBSET_15,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			934 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_16,
+				'actualArray'    => Values::ARRAY_10,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			935 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_16,
+				'actualArray'    => Values::ARRAY_10,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			936 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_16,
+				'actualArray'    => Values::ARRAY_10,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			937 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_16,
+				'actualArray'    => Values::ARRAY_10,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			938 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_16,
+				'actualArray'    => Values::ARRAY_SUBSET_16,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			939 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_16,
+				'actualArray'    => Values::ARRAY_SUBSET_16,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			940 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_16,
+				'actualArray'    => Values::ARRAY_SUBSET_16,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			941 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_16,
+				'actualArray'    => Values::ARRAY_SUBSET_16,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			942 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_17,
+				'actualArray'    => Values::ARRAY_SUBSET_17,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			943 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_17,
+				'actualArray'    => Values::ARRAY_SUBSET_17,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			944 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_17,
+				'actualArray'    => Values::ARRAY_SUBSET_17,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			945 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_17,
+				'actualArray'    => Values::ARRAY_SUBSET_17,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			946 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_12,
+				'actualArray'    => Values::ARRAY_9,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			947 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_12,
+				'actualArray'    => Values::ARRAY_9,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			948 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_12,
+				'actualArray'    => Values::ARRAY_9,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			949 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_12,
+				'actualArray'    => Values::ARRAY_9,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			950 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_12,
+				'actualArray'    => Values::ARRAY_10,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			951 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_12,
+				'actualArray'    => Values::ARRAY_10,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			952 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_12,
+				'actualArray'    => Values::ARRAY_10,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			953 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_12,
+				'actualArray'    => Values::ARRAY_10,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			954 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_12,
+				'actualArray'    => Values::ARRAY_11,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			955 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_12,
+				'actualArray'    => Values::ARRAY_11,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			956 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_12,
+				'actualArray'    => Values::ARRAY_11,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			957 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_12,
+				'actualArray'    => Values::ARRAY_11,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			958 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_12,
+				'actualArray'    => Values::ARRAY_12,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			959 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_12,
+				'actualArray'    => Values::ARRAY_12,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			960 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_12,
+				'actualArray'    => Values::ARRAY_12,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			961 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_12,
+				'actualArray'    => Values::ARRAY_12,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			962 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_12,
+				'actualArray'    => Values::ARRAY_13,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			963 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_12,
+				'actualArray'    => Values::ARRAY_13,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			964 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_12,
+				'actualArray'    => Values::ARRAY_13,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			965 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_12,
+				'actualArray'    => Values::ARRAY_13,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			966 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_13,
+				'actualArray'    => Values::ARRAY_9,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			967 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_13,
+				'actualArray'    => Values::ARRAY_9,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			968 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_13,
+				'actualArray'    => Values::ARRAY_9,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			969 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_13,
+				'actualArray'    => Values::ARRAY_9,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			970 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_13,
+				'actualArray'    => Values::ARRAY_10,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			971 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_13,
+				'actualArray'    => Values::ARRAY_10,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			972 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_13,
+				'actualArray'    => Values::ARRAY_10,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			973 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_13,
+				'actualArray'    => Values::ARRAY_10,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			974 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_13,
+				'actualArray'    => Values::ARRAY_11,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			975 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_13,
+				'actualArray'    => Values::ARRAY_11,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			976 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_13,
+				'actualArray'    => Values::ARRAY_11,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			977 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_13,
+				'actualArray'    => Values::ARRAY_11,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			978 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_13,
+				'actualArray'    => Values::ARRAY_12,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			979 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_13,
+				'actualArray'    => Values::ARRAY_12,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			980 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_13,
+				'actualArray'    => Values::ARRAY_12,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			981 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_13,
+				'actualArray'    => Values::ARRAY_12,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			982 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_13,
+				'actualArray'    => Values::ARRAY_13,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			983 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_13,
+				'actualArray'    => Values::ARRAY_13,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			984 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_13,
+				'actualArray'    => Values::ARRAY_13,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			985 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_13,
+				'actualArray'    => Values::ARRAY_13,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			986 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_18,
+				'actualArray'    => Values::ARRAY_9,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			987 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_18,
+				'actualArray'    => Values::ARRAY_9,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			988 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_18,
+				'actualArray'    => Values::ARRAY_9,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			989 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_18,
+				'actualArray'    => Values::ARRAY_9,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			990 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_18,
+				'actualArray'    => Values::ARRAY_10,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			991 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_18,
+				'actualArray'    => Values::ARRAY_10,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			992 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_18,
+				'actualArray'    => Values::ARRAY_10,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			993 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_18,
+				'actualArray'    => Values::ARRAY_10,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			994 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_18,
+				'actualArray'    => Values::ARRAY_11,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			995 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_18,
+				'actualArray'    => Values::ARRAY_11,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_1
+			],
+			996 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_18,
+				'actualArray'    => Values::ARRAY_11,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_0
+			],
+			997 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_18,
+				'actualArray'    => Values::ARRAY_11,
+				'strict'         => Values::BOOLEAN_TRUE,
+				'message'        => Values::STRING_1
+			],
+			998 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_18,
+				'actualArray'    => Values::ARRAY_12,
+				'strict'         => Values::BOOLEAN_FALSE,
+				'message'        => Values::STRING_0
+			],
+			999 => [
+				'testCase'       => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset' => Values::ARRAY_SUBSET_18,
+				'actualArray'    => Values::ARRAY_12,
+				'strict'         => Values::BOOLEAN_FALSE,
 				'message'        => Values::STRING_1
 			]
 		];

@@ -1,7 +1,7 @@
 <?php declare( strict_types = 1 );
 namespace CodeKandis\PhpUnit\Tests\DataProviders\Integration\TestCaseInterfaceTest;
 
-use CodeKandis\PhpUnit\Constraints\ArrayContainsKeyedSubsetConstraint;
+use CodeKandis\PhpUnit\Constraints\ArrayContainsUnkeyedSubsetConstraint;
 use CodeKandis\PhpUnit\DataProviderInterface;
 use CodeKandis\PhpUnit\Tests\Accessors\ConstraintExposingValueToTypeStringFragmentMethodAccessor;
 use CodeKandis\PhpUnit\Tests\Accessors\TestCaseClassAccessor;
@@ -10,748 +10,20 @@ use Override;
 use PHPUnit\Framework\ExpectationFailedException;
 
 /**
- * Represents a data provider providing test cases with expected subset, actual array, strict, message and expected throwable.
+ * Represents a data provider providing test cases with expected unkeyed subset, actual array and expected throwable.
  * @package codekandis/phpunit
  * @author Christian Ramelow <info@codekandis.net>
  */
-final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpectedThrowableClassFqcnExpectedThrowableMessageExpectedThrowableCodeAndExpectedThrowablePreviousDataProvider0001 implements DataProviderInterface
+final readonly class TestCasesWithExpectedUnkeyedSubsetActualArrayStrictMessageExpectedThrowableClassFqcnExpectedThrowableMessageExpectedThrowableCodeAndExpectedThrowablePreviousDataProvider0003 implements DataProviderInterface
 {
-	/**
-	 * {@inheritDoc}
-	 */
+	/** {@inheritDoc} */
 	#[Override]
 	public static function provideData(): iterable
 	{
 		return [
-			1000 => [
+			3000 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1001 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1002 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1003 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1004 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1005 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1006 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1007 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1008 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1009 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1010 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1011 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1012 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1013 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1014 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1015 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1016 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1017 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1018 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1019 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1020 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1021 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1022 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1023 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1024 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1025 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1026 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1027 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1028 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1029 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1030 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1031 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1032 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_12,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1033 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_12,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1034 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_12,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1035 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_12,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1036 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_13,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1037 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_13,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1038 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_13,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1039 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_13,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1040 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_18,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1041 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_18,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1042 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_18,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1043 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_18,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1044 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_19,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1045 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_19,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1046 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_19,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1047 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_19,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1048 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_20,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1049 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_20,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1050 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_20,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1051 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_8,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_20,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1052 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_0,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1053 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_0,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1054 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_0,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1055 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_0,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1056 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_1,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1057 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_1,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1058 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_1,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1059 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_1,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1060 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_2,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1061 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_2,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1062 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_2,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1063 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_2,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1064 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_3,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1065 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_3,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1066 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_3,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -760,9 +32,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1067 => [
+			3001 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_3,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -771,9 +43,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1068 => [
+			3002 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_4,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -782,9 +54,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1069 => [
+			3003 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_4,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -793,9 +65,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1070 => [
+			3004 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_4,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -804,9 +76,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1071 => [
+			3005 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_4,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -815,9 +87,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1072 => [
+			3006 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_5,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -826,9 +98,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1073 => [
+			3007 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_5,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -837,9 +109,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1074 => [
+			3008 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_5,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -848,9 +120,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1075 => [
+			3009 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_5,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -859,9 +131,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1076 => [
+			3010 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_6,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -870,9 +142,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1077 => [
+			3011 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_6,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -881,9 +153,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1078 => [
+			3012 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_6,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -892,9 +164,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1079 => [
+			3013 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_6,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -903,9 +175,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1080 => [
+			3014 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_7,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -914,9 +186,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1081 => [
+			3015 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_7,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -925,9 +197,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1082 => [
+			3016 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_7,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -936,9 +208,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1083 => [
+			3017 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_7,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -947,9 +219,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1084 => [
+			3018 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_8,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -958,9 +230,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1085 => [
+			3019 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_8,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -969,9 +241,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1086 => [
+			3020 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_8,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -980,9 +252,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1087 => [
+			3021 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_8,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -991,1373 +263,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1088 => [
+			3022 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_0,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1089 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_0,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1090 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_0,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1091 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_0,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1092 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_1,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1093 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_1,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1094 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_1,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1095 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_1,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1096 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_2,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1097 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_2,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1098 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_2,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1099 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_2,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1100 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_3,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1101 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_3,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1102 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_3,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1103 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_3,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1104 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_4,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1105 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_4,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1106 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_4,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1107 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_4,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1108 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_5,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1109 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_5,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1110 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_5,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1111 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_5,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1112 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_6,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1113 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_6,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1114 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_6,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1115 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_6,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1116 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_7,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1117 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_7,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1118 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_7,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1119 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_7,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1120 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_8,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1121 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_8,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1122 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_8,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1123 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_8,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1124 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_9,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1125 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_9,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1126 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_9,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1127 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_9,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1128 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1129 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1130 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1131 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1132 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1133 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1134 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1135 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1136 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1137 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1138 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1139 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1140 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1141 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1142 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1143 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1144 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1145 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1146 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1147 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1148 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1149 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1150 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1151 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1152 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1153 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1154 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1155 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1156 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1157 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1158 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1159 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1160 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_13,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1161 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_13,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1162 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_13,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1163 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_13,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1164 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_18,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1165 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_18,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1166 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_18,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1167 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_18,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1168 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_19,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1169 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_19,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1170 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_19,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1171 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_19,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1172 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_20,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1173 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_20,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1174 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_20,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1175 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_9,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_20,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1176 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
-				'actualArray'                => $actualArray = Values::ARRAY_0,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1177 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
-				'actualArray'                => $actualArray = Values::ARRAY_0,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1178 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
-				'actualArray'                => $actualArray = Values::ARRAY_0,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1179 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
-				'actualArray'                => $actualArray = Values::ARRAY_0,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1180 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
-				'actualArray'                => $actualArray = Values::ARRAY_1,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1181 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
-				'actualArray'                => $actualArray = Values::ARRAY_1,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1182 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
-				'actualArray'                => $actualArray = Values::ARRAY_1,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1183 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
-				'actualArray'                => $actualArray = Values::ARRAY_1,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1184 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
-				'actualArray'                => $actualArray = Values::ARRAY_2,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1185 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
-				'actualArray'                => $actualArray = Values::ARRAY_2,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1186 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
-				'actualArray'                => $actualArray = Values::ARRAY_2,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1187 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
-				'actualArray'                => $actualArray = Values::ARRAY_2,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1188 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
-				'actualArray'                => $actualArray = Values::ARRAY_3,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1189 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
-				'actualArray'                => $actualArray = Values::ARRAY_3,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1190 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
-				'actualArray'                => $actualArray = Values::ARRAY_3,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1191 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
-				'actualArray'                => $actualArray = Values::ARRAY_3,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1192 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
-				'actualArray'                => $actualArray = Values::ARRAY_4,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1193 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
-				'actualArray'                => $actualArray = Values::ARRAY_4,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1194 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
-				'actualArray'                => $actualArray = Values::ARRAY_4,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1195 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
-				'actualArray'                => $actualArray = Values::ARRAY_4,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1196 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
-				'actualArray'                => $actualArray = Values::ARRAY_5,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1197 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
-				'actualArray'                => $actualArray = Values::ARRAY_5,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1198 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
-				'actualArray'                => $actualArray = Values::ARRAY_5,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1199 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
-				'actualArray'                => $actualArray = Values::ARRAY_5,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1200 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
-				'actualArray'                => $actualArray = Values::ARRAY_6,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1201 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
-				'actualArray'                => $actualArray = Values::ARRAY_6,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1202 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
-				'actualArray'                => $actualArray = Values::ARRAY_6,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1203 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
-				'actualArray'                => $actualArray = Values::ARRAY_6,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1204 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
-				'actualArray'                => $actualArray = Values::ARRAY_7,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1205 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
-				'actualArray'                => $actualArray = Values::ARRAY_7,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1206 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
-				'actualArray'                => $actualArray = Values::ARRAY_7,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1207 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
-				'actualArray'                => $actualArray = Values::ARRAY_7,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1208 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
-				'actualArray'                => $actualArray = Values::ARRAY_8,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1209 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
-				'actualArray'                => $actualArray = Values::ARRAY_8,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1210 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
-				'actualArray'                => $actualArray = Values::ARRAY_8,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1211 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
-				'actualArray'                => $actualArray = Values::ARRAY_8,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1212 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_9,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -2366,9 +274,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1213 => [
+			3023 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_9,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -2377,9 +285,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1214 => [
+			3024 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_9,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -2388,9 +296,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1215 => [
+			3025 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_9,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -2399,9 +307,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1216 => [
+			3026 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_11,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -2410,9 +318,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1217 => [
+			3027 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_11,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -2421,9 +329,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1218 => [
+			3028 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_11,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -2432,9 +340,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1219 => [
+			3029 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_11,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -2443,9 +351,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1220 => [
+			3030 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_0,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -2454,9 +362,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1221 => [
+			3031 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_0,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -2465,9 +373,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1222 => [
+			3032 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_0,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -2476,9 +384,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1223 => [
+			3033 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_0,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -2487,9 +395,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1224 => [
+			3034 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_1,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -2498,9 +406,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1225 => [
+			3035 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_1,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -2509,9 +417,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1226 => [
+			3036 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_1,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -2520,9 +428,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1227 => [
+			3037 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_1,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -2531,9 +439,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1228 => [
+			3038 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_2,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -2542,9 +450,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1229 => [
+			3039 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_2,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -2553,9 +461,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1230 => [
+			3040 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_2,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -2564,9 +472,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1231 => [
+			3041 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_2,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -2575,9 +483,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1232 => [
+			3042 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_3,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -2586,9 +494,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1233 => [
+			3043 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_3,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -2597,9 +505,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1234 => [
+			3044 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_3,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -2608,9 +516,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1235 => [
+			3045 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_3,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -2619,9 +527,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1236 => [
+			3046 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_4,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -2630,9 +538,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1237 => [
+			3047 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_4,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -2641,9 +549,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1238 => [
+			3048 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_4,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -2652,9 +560,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1239 => [
+			3049 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_4,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -2663,9 +571,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1240 => [
+			3050 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_5,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -2674,9 +582,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1241 => [
+			3051 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_5,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -2685,9 +593,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1242 => [
+			3052 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_5,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -2696,9 +604,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1243 => [
+			3053 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_5,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -2707,9 +615,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1244 => [
+			3054 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_6,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -2718,9 +626,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1245 => [
+			3055 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_6,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -2729,9 +637,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1246 => [
+			3056 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_6,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -2740,9 +648,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1247 => [
+			3057 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_6,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -2751,9 +659,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1248 => [
+			3058 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_7,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -2762,9 +670,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1249 => [
+			3059 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_7,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -2773,9 +681,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1250 => [
+			3060 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_7,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -2784,9 +692,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1251 => [
+			3061 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_7,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -2795,9 +703,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1252 => [
+			3062 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_8,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -2806,9 +714,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1253 => [
+			3063 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_8,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -2817,9 +725,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1254 => [
+			3064 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_8,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -2828,9 +736,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1255 => [
+			3065 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_8,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -2839,9 +747,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1256 => [
+			3066 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_9,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -2850,9 +758,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1257 => [
+			3067 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_9,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -2861,9 +769,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1258 => [
+			3068 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_9,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -2872,9 +780,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1259 => [
+			3069 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_9,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -2883,9 +791,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1260 => [
+			3070 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -2894,9 +802,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1261 => [
+			3071 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -2905,9 +813,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1262 => [
+			3072 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -2916,9 +824,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1263 => [
+			3073 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -2927,9 +835,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1264 => [
+			3074 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -2938,9 +846,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1265 => [
+			3075 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -2949,9 +857,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1266 => [
+			3076 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -2960,9 +868,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1267 => [
+			3077 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -2971,9 +879,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1268 => [
+			3078 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -2982,9 +890,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1269 => [
+			3079 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -2993,9 +901,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1270 => [
+			3080 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -3004,9 +912,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1271 => [
+			3081 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -3015,9 +923,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1272 => [
+			3082 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -3026,9 +934,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1273 => [
+			3083 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -3037,9 +945,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1274 => [
+			3084 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -3048,9 +956,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1275 => [
+			3085 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -3059,9 +967,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1276 => [
+			3086 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -3070,9 +978,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1277 => [
+			3087 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -3081,9 +989,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1278 => [
+			3088 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -3092,9 +1000,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1279 => [
+			3089 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -3103,9 +1011,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1280 => [
+			3090 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -3114,9 +1022,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1281 => [
+			3091 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -3125,9 +1033,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1282 => [
+			3092 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -3136,9 +1044,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1283 => [
+			3093 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -3147,53 +1055,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1284 => [
+			3094 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1285 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1286 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1287 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1288 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -3202,9 +1066,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1289 => [
+			3095 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -3213,9 +1077,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1290 => [
+			3096 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -3224,9 +1088,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1291 => [
+			3097 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -3235,9 +1099,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1292 => [
+			3098 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_12,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -3246,9 +1110,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1293 => [
+			3099 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_12,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -3257,9 +1121,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1294 => [
+			3100 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_12,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -3268,9 +1132,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1295 => [
+			3101 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_12,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -3279,9 +1143,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1296 => [
+			3102 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_13,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -3290,9 +1154,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1297 => [
+			3103 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_13,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -3301,9 +1165,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1298 => [
+			3104 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_13,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -3312,9 +1176,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1299 => [
+			3105 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_13,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -3323,9 +1187,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1300 => [
+			3106 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_18,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -3334,9 +1198,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1301 => [
+			3107 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_18,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -3345,9 +1209,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1302 => [
+			3108 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_18,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -3356,9 +1220,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1303 => [
+			3109 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_18,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -3367,9 +1231,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1304 => [
+			3110 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_19,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -3378,9 +1242,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1305 => [
+			3111 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_19,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -3389,9 +1253,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1306 => [
+			3112 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_19,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -3400,9 +1264,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1307 => [
+			3113 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_19,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -3411,9 +1275,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1308 => [
+			3114 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_20,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -3422,9 +1286,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1309 => [
+			3115 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_20,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -3433,9 +1297,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1310 => [
+			3116 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_20,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -3444,9 +1308,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1311 => [
+			3117 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_10,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_16,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_20,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -3455,9 +1319,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1312 => [
+			3118 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_0,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -3466,9 +1330,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1313 => [
+			3119 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_0,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -3477,9 +1341,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1314 => [
+			3120 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_0,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -3488,9 +1352,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1315 => [
+			3121 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_0,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -3499,9 +1363,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1316 => [
+			3122 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_1,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -3510,9 +1374,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1317 => [
+			3123 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_1,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -3521,9 +1385,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1318 => [
+			3124 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_1,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -3532,9 +1396,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1319 => [
+			3125 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_1,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -3543,9 +1407,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1320 => [
+			3126 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_2,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -3554,9 +1418,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1321 => [
+			3127 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_2,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -3565,9 +1429,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1322 => [
+			3128 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_2,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -3576,9 +1440,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1323 => [
+			3129 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_2,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -3587,9 +1451,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1324 => [
+			3130 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_3,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -3598,9 +1462,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1325 => [
+			3131 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_3,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -3609,9 +1473,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1326 => [
+			3132 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_3,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -3620,9 +1484,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1327 => [
+			3133 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_3,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -3631,9 +1495,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1328 => [
+			3134 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_4,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -3642,9 +1506,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1329 => [
+			3135 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_4,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -3653,9 +1517,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1330 => [
+			3136 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_4,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -3664,9 +1528,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1331 => [
+			3137 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_4,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -3675,9 +1539,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1332 => [
+			3138 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_5,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -3686,9 +1550,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1333 => [
+			3139 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_5,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -3697,9 +1561,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1334 => [
+			3140 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_5,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -3708,9 +1572,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1335 => [
+			3141 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_5,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -3719,9 +1583,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1336 => [
+			3142 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_6,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -3730,9 +1594,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1337 => [
+			3143 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_6,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -3741,9 +1605,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1338 => [
+			3144 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_6,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -3752,9 +1616,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1339 => [
+			3145 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_6,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -3763,9 +1627,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1340 => [
+			3146 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_7,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -3774,9 +1638,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1341 => [
+			3147 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_7,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -3785,9 +1649,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1342 => [
+			3148 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_7,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -3796,9 +1660,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1343 => [
+			3149 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_7,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -3807,9 +1671,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1344 => [
+			3150 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_8,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -3818,9 +1682,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1345 => [
+			3151 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_8,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -3829,9 +1693,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1346 => [
+			3152 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_8,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -3840,9 +1704,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1347 => [
+			3153 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_8,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -3851,9 +1715,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1348 => [
+			3154 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_9,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -3862,9 +1726,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1349 => [
+			3155 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_9,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -3873,9 +1737,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1350 => [
+			3156 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_9,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -3884,9 +1748,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1351 => [
+			3157 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_9,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -3895,9 +1759,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1352 => [
+			3158 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_10,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -3906,9 +1770,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1353 => [
+			3159 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_10,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -3917,9 +1781,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1354 => [
+			3160 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_10,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -3928,9 +1792,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1355 => [
+			3161 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_10,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -3939,9 +1803,53 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1356 => [
+			3162 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
+				'actualArray'                => $actualArray = Values::ARRAY_11,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3163 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
+				'actualArray'                => $actualArray = Values::ARRAY_11,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3164 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
+				'actualArray'                => $actualArray = Values::ARRAY_11,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3165 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
+				'actualArray'                => $actualArray = Values::ARRAY_11,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3166 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_0,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -3950,9 +1858,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1357 => [
+			3167 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_0,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -3961,9 +1869,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1358 => [
+			3168 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_0,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -3972,9 +1880,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1359 => [
+			3169 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_0,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -3983,9 +1891,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1360 => [
+			3170 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_1,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -3994,9 +1902,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1361 => [
+			3171 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_1,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -4005,9 +1913,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1362 => [
+			3172 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_1,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -4016,9 +1924,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1363 => [
+			3173 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_1,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -4027,9 +1935,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1364 => [
+			3174 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_2,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -4038,9 +1946,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1365 => [
+			3175 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_2,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -4049,9 +1957,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1366 => [
+			3176 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_2,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -4060,9 +1968,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1367 => [
+			3177 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_2,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -4071,9 +1979,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1368 => [
+			3178 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_3,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -4082,9 +1990,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1369 => [
+			3179 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_3,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -4093,9 +2001,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1370 => [
+			3180 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_3,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -4104,9 +2012,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1371 => [
+			3181 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_3,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -4115,9 +2023,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1372 => [
+			3182 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_4,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -4126,9 +2034,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1373 => [
+			3183 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_4,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -4137,9 +2045,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1374 => [
+			3184 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_4,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -4148,9 +2056,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1375 => [
+			3185 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_4,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -4159,9 +2067,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1376 => [
+			3186 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_5,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -4170,9 +2078,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1377 => [
+			3187 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_5,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -4181,9 +2089,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1378 => [
+			3188 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_5,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -4192,9 +2100,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1379 => [
+			3189 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_5,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -4203,9 +2111,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1380 => [
+			3190 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_6,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -4214,9 +2122,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1381 => [
+			3191 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_6,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -4225,9 +2133,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1382 => [
+			3192 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_6,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -4236,9 +2144,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1383 => [
+			3193 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_6,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -4247,9 +2155,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1384 => [
+			3194 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_7,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -4258,9 +2166,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1385 => [
+			3195 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_7,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -4269,9 +2177,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1386 => [
+			3196 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_7,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -4280,9 +2188,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1387 => [
+			3197 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_7,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -4291,9 +2199,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1388 => [
+			3198 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_8,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -4302,9 +2210,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1389 => [
+			3199 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_8,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -4313,9 +2221,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1390 => [
+			3200 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_8,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -4324,9 +2232,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1391 => [
+			3201 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_8,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -4335,9 +2243,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1392 => [
+			3202 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_9,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -4346,9 +2254,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1393 => [
+			3203 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_9,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -4357,9 +2265,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1394 => [
+			3204 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_9,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -4368,9 +2276,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1395 => [
+			3205 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_9,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -4379,9 +2287,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1396 => [
+			3206 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -4390,9 +2298,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1397 => [
+			3207 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -4401,9 +2309,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1398 => [
+			3208 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -4412,9 +2320,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1399 => [
+			3209 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -4423,9 +2331,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1400 => [
+			3210 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -4434,9 +2342,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1401 => [
+			3211 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -4445,9 +2353,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1402 => [
+			3212 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -4456,9 +2364,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1403 => [
+			3213 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -4467,9 +2375,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1404 => [
+			3214 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -4478,9 +2386,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1405 => [
+			3215 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -4489,9 +2397,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1406 => [
+			3216 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -4500,9 +2408,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1407 => [
+			3217 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -4511,9 +2419,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1408 => [
+			3218 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -4522,9 +2430,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1409 => [
+			3219 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -4533,9 +2441,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1410 => [
+			3220 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -4544,9 +2452,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1411 => [
+			3221 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -4555,9 +2463,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1412 => [
+			3222 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -4566,9 +2474,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1413 => [
+			3223 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -4577,9 +2485,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1414 => [
+			3224 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -4588,9 +2496,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1415 => [
+			3225 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -4599,9 +2507,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1416 => [
+			3226 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -4610,9 +2518,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1417 => [
+			3227 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -4621,9 +2529,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1418 => [
+			3228 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -4632,9 +2540,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1419 => [
+			3229 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -4643,9 +2551,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1420 => [
+			3230 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -4654,9 +2562,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1421 => [
+			3231 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -4665,9 +2573,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1422 => [
+			3232 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -4676,9 +2584,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1423 => [
+			3233 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -4687,53 +2595,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1424 => [
+			3234 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1425 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1426 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1427 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1428 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_12,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -4742,9 +2606,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1429 => [
+			3235 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_12,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -4753,9 +2617,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1430 => [
+			3236 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_12,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -4764,9 +2628,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1431 => [
+			3237 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_12,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -4775,9 +2639,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1432 => [
+			3238 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_13,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -4786,9 +2650,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1433 => [
+			3239 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_13,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -4797,9 +2661,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1434 => [
+			3240 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_13,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -4808,9 +2672,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1435 => [
+			3241 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_13,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -4819,9 +2683,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1436 => [
+			3242 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_18,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -4830,9 +2694,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1437 => [
+			3243 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_18,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -4841,9 +2705,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1438 => [
+			3244 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_18,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -4852,9 +2716,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1439 => [
+			3245 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_18,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -4863,9 +2727,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1440 => [
+			3246 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_19,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -4874,9 +2738,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1441 => [
+			3247 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_19,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -4885,9 +2749,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1442 => [
+			3248 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_19,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -4896,9 +2760,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1443 => [
+			3249 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_19,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -4907,9 +2771,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1444 => [
+			3250 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_20,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -4918,9 +2782,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1445 => [
+			3251 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_20,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -4929,9 +2793,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1446 => [
+			3252 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_20,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -4940,9 +2804,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1447 => [
+			3253 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_11,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_17,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_20,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -4951,9 +2815,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1448 => [
+			3254 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_0,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -4962,9 +2826,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1449 => [
+			3255 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_0,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -4973,9 +2837,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1450 => [
+			3256 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_0,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -4984,9 +2848,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1451 => [
+			3257 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_0,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -4995,9 +2859,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1452 => [
+			3258 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_1,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -5006,9 +2870,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1453 => [
+			3259 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_1,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -5017,9 +2881,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1454 => [
+			3260 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_1,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -5028,9 +2892,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1455 => [
+			3261 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_1,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -5039,9 +2903,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1456 => [
+			3262 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_2,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -5050,9 +2914,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1457 => [
+			3263 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_2,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -5061,9 +2925,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1458 => [
+			3264 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_2,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -5072,9 +2936,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1459 => [
+			3265 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_2,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -5083,1373 +2947,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1460 => [
+			3266 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_5,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1461 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_5,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1462 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_5,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1463 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_5,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1464 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_6,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1465 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_6,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1466 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_6,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1467 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_6,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1468 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_7,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1469 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_7,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1470 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_7,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1471 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_7,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1472 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_8,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1473 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_8,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1474 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_8,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1475 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_8,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1476 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_9,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1477 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_9,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1478 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_9,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1479 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_9,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1480 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_10,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1481 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_10,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1482 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_10,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1483 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_10,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1484 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_11,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1485 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_11,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1486 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_11,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1487 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_11,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1488 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_0,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1489 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_0,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1490 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_0,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1491 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_0,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1492 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_3,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1493 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_3,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1494 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_3,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1495 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_3,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1496 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_4,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1497 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_4,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1498 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_4,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1499 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_4,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1500 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_5,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1501 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_5,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1502 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_5,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1503 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_5,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1504 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_6,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1505 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_6,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1506 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_6,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1507 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_6,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1508 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_7,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1509 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_7,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1510 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_7,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1511 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_7,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1512 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_8,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1513 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_8,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1514 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_8,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1515 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_8,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1516 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_9,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1517 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_9,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1518 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_9,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1519 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_9,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1520 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1521 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1522 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1523 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1524 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1525 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1526 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1527 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1528 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1529 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1530 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1531 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1532 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1533 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1534 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1535 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1536 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1537 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1538 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1539 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1540 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1541 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1542 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1543 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1544 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1545 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1546 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1547 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1548 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1549 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1550 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1551 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1552 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_12,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1553 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_12,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1554 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_12,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1555 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_12,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1556 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_13,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1557 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_13,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1558 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_13,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1559 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_13,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1560 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_18,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1561 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_18,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1562 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_18,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1563 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_18,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1564 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_19,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1565 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_19,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1566 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_19,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1567 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_19,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1568 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_20,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1569 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_20,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1570 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_20,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1571 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_1,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_20,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1572 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_0,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1573 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_0,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1574 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_0,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1575 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_0,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1576 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_1,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1577 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_1,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1578 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_1,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1579 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_1,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1580 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_2,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1581 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_2,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1582 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_2,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1583 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_2,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1584 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_3,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -6458,9 +2958,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1585 => [
+			3267 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_3,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -6469,9 +2969,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1586 => [
+			3268 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_3,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -6480,9 +2980,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1587 => [
+			3269 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_3,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -6491,1461 +2991,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1588 => [
+			3270 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_5,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1589 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_5,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1590 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_5,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1591 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_5,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1592 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_6,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1593 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_6,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1594 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_6,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1595 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_6,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1596 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_7,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1597 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_7,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1598 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_7,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1599 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_7,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1600 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_8,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1601 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_8,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1602 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_8,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1603 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_8,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1604 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_9,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1605 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_9,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1606 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_9,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1607 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_9,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1608 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_10,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1609 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_10,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1610 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_10,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1611 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_10,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1612 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_11,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1613 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_11,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1614 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_11,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1615 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_11,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1616 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_0,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1617 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_0,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1618 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_0,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1619 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_0,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1620 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_1,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1621 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_1,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1622 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_1,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1623 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_1,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1624 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_3,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1625 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_3,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1626 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_3,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1627 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_3,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1628 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_4,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1629 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_4,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1630 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_4,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1631 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_4,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1632 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_5,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1633 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_5,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1634 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_5,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1635 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_5,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1636 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_6,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1637 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_6,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1638 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_6,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1639 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_6,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1640 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_7,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1641 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_7,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1642 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_7,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1643 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_7,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1644 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_8,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1645 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_8,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1646 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_8,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1647 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_8,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1648 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_9,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1649 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_9,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1650 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_9,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1651 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_9,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1652 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1653 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1654 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1655 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1656 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1657 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1658 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1659 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1660 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1661 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1662 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1663 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1664 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1665 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1666 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1667 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1668 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1669 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1670 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1671 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1672 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1673 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1674 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1675 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1676 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1677 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1678 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1679 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1680 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1681 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1682 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1683 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1684 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_12,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1685 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_12,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1686 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_12,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1687 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_12,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1688 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_13,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1689 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_13,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1690 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_13,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1691 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_13,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1692 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_18,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1693 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_18,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1694 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_18,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1695 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_18,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1696 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_19,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1697 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_19,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1698 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_19,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1699 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_19,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1700 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_20,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1701 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_20,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1702 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_20,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1703 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_2,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_20,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1704 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_0,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1705 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_0,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1706 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_0,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1707 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_0,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1708 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_1,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1709 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_1,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1710 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_1,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1711 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_1,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1712 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_2,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1713 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_2,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1714 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_2,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1715 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_2,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1716 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_3,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1717 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_3,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1718 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_3,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1719 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_3,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1720 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_4,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -7954,9 +3002,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1721 => [
+			3271 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_4,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -7965,9 +3013,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1722 => [
+			3272 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_4,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -7976,9 +3024,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1723 => [
+			3273 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_4,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -7987,9 +3035,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1724 => [
+			3274 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_5,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -7998,9 +3046,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1725 => [
+			3275 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_5,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -8009,9 +3057,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1726 => [
+			3276 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_5,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -8020,9 +3068,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1727 => [
+			3277 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_5,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -8031,9 +3079,53 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1728 => [
+			3278 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
+				'actualArray'                => $actualArray = Values::ARRAY_6,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3279 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
+				'actualArray'                => $actualArray = Values::ARRAY_6,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3280 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
+				'actualArray'                => $actualArray = Values::ARRAY_6,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3281 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
+				'actualArray'                => $actualArray = Values::ARRAY_6,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3282 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_7,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -8042,9 +3134,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1729 => [
+			3283 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_7,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -8053,9 +3145,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1730 => [
+			3284 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_7,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -8064,9 +3156,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1731 => [
+			3285 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_7,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -8075,10 +3167,10 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1732 => [
+			3286 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_9,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
+				'actualArray'                => $actualArray = Values::ARRAY_8,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
@@ -8086,10 +3178,10 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1733 => [
+			3287 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_9,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
+				'actualArray'                => $actualArray = Values::ARRAY_8,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
@@ -8097,10 +3189,10 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1734 => [
+			3288 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_9,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
+				'actualArray'                => $actualArray = Values::ARRAY_8,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
@@ -8108,10 +3200,10 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1735 => [
+			3289 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_9,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
+				'actualArray'                => $actualArray = Values::ARRAY_8,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
@@ -8119,97 +3211,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1736 => [
+			3290 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_10,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1737 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_10,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1738 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_10,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1739 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_10,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1740 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_11,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1741 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_11,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1742 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_11,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1743 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_11,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1744 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_0,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -8218,9 +3222,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1745 => [
+			3291 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_0,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -8229,9 +3233,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1746 => [
+			3292 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_0,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -8240,9 +3244,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1747 => [
+			3293 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_0,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -8251,9 +3255,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1748 => [
+			3294 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_1,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -8262,9 +3266,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1749 => [
+			3295 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_1,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -8273,9 +3277,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1750 => [
+			3296 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_1,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -8284,9 +3288,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1751 => [
+			3297 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_1,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -8295,9 +3299,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1752 => [
+			3298 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_2,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -8306,9 +3310,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1753 => [
+			3299 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_2,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -8317,9 +3321,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1754 => [
+			3300 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_2,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -8328,9 +3332,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1755 => [
+			3301 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_2,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -8339,1417 +3343,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1756 => [
+			3302 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_6,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1757 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_6,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1758 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_6,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1759 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_6,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1760 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_7,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1761 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_7,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1762 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_7,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1763 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_7,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1764 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_8,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1765 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_8,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1766 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_8,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1767 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_8,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1768 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_9,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1769 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_9,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1770 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_9,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1771 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_9,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1772 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1773 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1774 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1775 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1776 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1777 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1778 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1779 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1780 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1781 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1782 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1783 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1784 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1785 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1786 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1787 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1788 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1789 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1790 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1791 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1792 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1793 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1794 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1795 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1796 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1797 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1798 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1799 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1800 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1801 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1802 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1803 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1804 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_12,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1805 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_12,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1806 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_12,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1807 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_12,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1808 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_13,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1809 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_13,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1810 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_13,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1811 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_13,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1812 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_18,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1813 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_18,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1814 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_18,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1815 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_18,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1816 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_19,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1817 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_19,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1818 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_19,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1819 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_19,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1820 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_20,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1821 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_20,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1822 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_20,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1823 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_3,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_20,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1824 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_0,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1825 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_0,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1826 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_0,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1827 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_0,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1828 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_1,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1829 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_1,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1830 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_1,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1831 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_1,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1832 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_2,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1833 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_2,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1834 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_2,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1835 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_2,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1836 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_3,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1837 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_3,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1838 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_3,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1839 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_3,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1840 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_4,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1841 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_4,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1842 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_4,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1843 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_4,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1844 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_5,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1845 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_5,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1846 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_5,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1847 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_5,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1848 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_6,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1849 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_6,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1850 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_6,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1851 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_6,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1852 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_7,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1853 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_7,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1854 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_7,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1855 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_7,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1856 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_8,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1857 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_8,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1858 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_8,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1859 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_8,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1860 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_9,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1861 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_9,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1862 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_9,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1863 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_9,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1864 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_10,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1865 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_10,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1866 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_10,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1867 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_10,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1868 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_11,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1869 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_11,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1870 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_11,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1871 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_11,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1872 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_0,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1873 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_0,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1874 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_0,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1875 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_0,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1876 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_1,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1877 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_1,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1878 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_1,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1879 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_1,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1880 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_2,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1881 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_2,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1882 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_2,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1883 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_2,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1884 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_3,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -9758,9 +3354,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1885 => [
+			3303 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_3,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -9769,9 +3365,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1886 => [
+			3304 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_3,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -9780,9 +3376,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1887 => [
+			3305 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_3,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -9791,9 +3387,53 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1888 => [
+			3306 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_4,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3307 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_4,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3308 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_4,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3309 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_4,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3310 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_5,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -9802,9 +3442,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1889 => [
+			3311 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_5,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -9813,9 +3453,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1890 => [
+			3312 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_5,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -9824,9 +3464,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1891 => [
+			3313 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_5,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -9835,9 +3475,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1892 => [
+			3314 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_6,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -9846,9 +3486,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1893 => [
+			3315 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_6,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -9857,9 +3497,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1894 => [
+			3316 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_6,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -9868,9 +3508,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1895 => [
+			3317 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_6,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -9879,9 +3519,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1896 => [
+			3318 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_7,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -9890,9 +3530,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1897 => [
+			3319 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_7,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -9901,9 +3541,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1898 => [
+			3320 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_7,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -9912,9 +3552,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1899 => [
+			3321 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_7,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -9923,9 +3563,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1900 => [
+			3322 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_8,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -9934,9 +3574,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1901 => [
+			3323 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_8,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -9945,9 +3585,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1902 => [
+			3324 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_8,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -9956,9 +3596,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1903 => [
+			3325 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_8,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -9967,9 +3607,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1904 => [
+			3326 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_9,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -9978,9 +3618,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1905 => [
+			3327 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_9,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -9989,9 +3629,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1906 => [
+			3328 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_9,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -10000,9 +3640,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1907 => [
+			3329 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_9,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -10011,9 +3651,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1908 => [
+			3330 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -10022,9 +3662,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1909 => [
+			3331 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -10033,9 +3673,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1910 => [
+			3332 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -10044,9 +3684,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1911 => [
+			3333 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -10055,9 +3695,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1912 => [
+			3334 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -10066,9 +3706,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1913 => [
+			3335 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -10077,9 +3717,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1914 => [
+			3336 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -10088,9 +3728,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1915 => [
+			3337 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -10099,9 +3739,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1916 => [
+			3338 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -10110,9 +3750,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1917 => [
+			3339 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -10121,9 +3761,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1918 => [
+			3340 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -10132,9 +3772,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1919 => [
+			3341 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -10143,9 +3783,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1920 => [
+			3342 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -10154,9 +3794,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1921 => [
+			3343 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -10165,9 +3805,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1922 => [
+			3344 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -10176,9 +3816,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1923 => [
+			3345 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -10187,9 +3827,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1924 => [
+			3346 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -10198,9 +3838,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1925 => [
+			3347 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -10209,9 +3849,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1926 => [
+			3348 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -10220,9 +3860,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1927 => [
+			3349 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -10231,9 +3871,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1928 => [
+			3350 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -10242,9 +3882,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1929 => [
+			3351 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -10253,9 +3893,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1930 => [
+			3352 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -10264,9 +3904,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1931 => [
+			3353 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -10275,9 +3915,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1932 => [
+			3354 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -10286,9 +3926,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1933 => [
+			3355 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -10297,9 +3937,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1934 => [
+			3356 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -10308,9 +3948,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1935 => [
+			3357 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -10319,9 +3959,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1936 => [
+			3358 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -10330,9 +3970,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1937 => [
+			3359 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -10341,9 +3981,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1938 => [
+			3360 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -10352,9 +3992,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1939 => [
+			3361 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -10363,97 +4003,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1940 => [
+			3362 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_12,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1941 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_12,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1942 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_12,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1943 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_12,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1944 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_13,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1945 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_13,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1946 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_13,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1947 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
-				'actualArray'                => $actualArray = Values::ARRAY_13,
-				'strict'                     => $strict = Values::BOOLEAN_TRUE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1948 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_18,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -10462,9 +4014,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1949 => [
+			3363 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_18,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -10473,9 +4025,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1950 => [
+			3364 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_18,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -10484,9 +4036,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1951 => [
+			3365 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_18,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -10495,9 +4047,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1952 => [
+			3366 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_19,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -10506,9 +4058,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1953 => [
+			3367 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_19,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -10517,9 +4069,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1954 => [
+			3368 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_19,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -10528,9 +4080,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1955 => [
+			3369 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_19,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -10539,9 +4091,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1956 => [
+			3370 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_20,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -10550,9 +4102,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1957 => [
+			3371 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_20,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -10561,9 +4113,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1958 => [
+			3372 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_20,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -10572,9 +4124,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1959 => [
+			3373 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_4,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_12,
 				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_20,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -10583,9 +4135,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1960 => [
+			3374 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_5,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
 				'actualArray'                => $actualArray = Values::ARRAY_0,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -10594,9 +4146,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1961 => [
+			3375 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_5,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
 				'actualArray'                => $actualArray = Values::ARRAY_0,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -10605,9 +4157,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1962 => [
+			3376 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_5,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
 				'actualArray'                => $actualArray = Values::ARRAY_0,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -10616,9 +4168,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1963 => [
+			3377 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_5,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
 				'actualArray'                => $actualArray = Values::ARRAY_0,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -10627,9 +4179,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1964 => [
+			3378 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_5,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
 				'actualArray'                => $actualArray = Values::ARRAY_1,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -10638,9 +4190,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1965 => [
+			3379 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_5,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
 				'actualArray'                => $actualArray = Values::ARRAY_1,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -10649,9 +4201,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1966 => [
+			3380 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_5,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
 				'actualArray'                => $actualArray = Values::ARRAY_1,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -10660,9 +4212,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1967 => [
+			3381 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_5,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
 				'actualArray'                => $actualArray = Values::ARRAY_1,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -10671,9 +4223,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1968 => [
+			3382 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_5,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
 				'actualArray'                => $actualArray = Values::ARRAY_2,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -10682,9 +4234,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1969 => [
+			3383 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_5,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
 				'actualArray'                => $actualArray = Values::ARRAY_2,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -10693,9 +4245,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1970 => [
+			3384 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_5,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
 				'actualArray'                => $actualArray = Values::ARRAY_2,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -10704,9 +4256,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1971 => [
+			3385 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_5,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
 				'actualArray'                => $actualArray = Values::ARRAY_2,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -10715,9 +4267,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1972 => [
+			3386 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_5,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
 				'actualArray'                => $actualArray = Values::ARRAY_3,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -10726,9 +4278,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1973 => [
+			3387 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_5,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
 				'actualArray'                => $actualArray = Values::ARRAY_3,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -10737,9 +4289,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1974 => [
+			3388 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_5,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
 				'actualArray'                => $actualArray = Values::ARRAY_3,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -10748,9 +4300,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1975 => [
+			3389 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_5,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
 				'actualArray'                => $actualArray = Values::ARRAY_3,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -10759,9 +4311,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1976 => [
+			3390 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_5,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
 				'actualArray'                => $actualArray = Values::ARRAY_4,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -10770,9 +4322,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1977 => [
+			3391 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_5,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
 				'actualArray'                => $actualArray = Values::ARRAY_4,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -10781,9 +4333,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1978 => [
+			3392 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_5,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
 				'actualArray'                => $actualArray = Values::ARRAY_4,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -10792,9 +4344,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1979 => [
+			3393 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_5,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
 				'actualArray'                => $actualArray = Values::ARRAY_4,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -10803,9 +4355,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1980 => [
+			3394 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_5,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
 				'actualArray'                => $actualArray = Values::ARRAY_5,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -10814,9 +4366,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1981 => [
+			3395 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_5,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
 				'actualArray'                => $actualArray = Values::ARRAY_5,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -10825,9 +4377,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1982 => [
+			3396 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_5,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
 				'actualArray'                => $actualArray = Values::ARRAY_5,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -10836,9 +4388,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1983 => [
+			3397 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_5,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
 				'actualArray'                => $actualArray = Values::ARRAY_5,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -10847,9 +4399,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1984 => [
+			3398 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_5,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
 				'actualArray'                => $actualArray = Values::ARRAY_6,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -10858,9 +4410,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1985 => [
+			3399 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_5,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
 				'actualArray'                => $actualArray = Values::ARRAY_6,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -10869,9 +4421,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1986 => [
+			3400 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_5,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
 				'actualArray'                => $actualArray = Values::ARRAY_6,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -10880,9 +4432,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1987 => [
+			3401 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_5,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
 				'actualArray'                => $actualArray = Values::ARRAY_6,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -10891,9 +4443,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1988 => [
+			3402 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_5,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
 				'actualArray'                => $actualArray = Values::ARRAY_7,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
@@ -10902,9 +4454,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1989 => [
+			3403 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_5,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
 				'actualArray'                => $actualArray = Values::ARRAY_7,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
@@ -10913,9 +4465,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1990 => [
+			3404 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_5,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
 				'actualArray'                => $actualArray = Values::ARRAY_7,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -10924,9 +4476,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1991 => [
+			3405 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_5,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
 				'actualArray'                => $actualArray = Values::ARRAY_7,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -10935,10 +4487,10 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1992 => [
+			3406 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_5,
-				'actualArray'                => $actualArray = Values::ARRAY_9,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_8,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_0,
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
@@ -10946,10 +4498,10 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1993 => [
+			3407 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_5,
-				'actualArray'                => $actualArray = Values::ARRAY_9,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_8,
 				'strict'                     => $strict = Values::BOOLEAN_FALSE,
 				'message'                    => $message = Values::STRING_1,
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
@@ -10957,9 +4509,2539 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1994 => [
+			3408 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_5,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_8,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3409 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_8,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3410 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_0,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3411 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_0,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3412 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_0,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3413 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_0,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3414 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_1,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3415 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_1,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3416 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_1,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3417 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_1,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3418 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_2,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3419 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_2,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3420 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_2,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3421 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_2,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3422 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_3,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3423 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_3,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3424 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_3,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3425 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_3,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3426 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_4,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3427 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_4,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3428 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_4,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3429 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_4,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3430 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_5,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3431 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_5,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3432 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_5,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3433 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_5,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3434 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_6,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3435 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_6,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3436 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_6,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3437 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_6,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3438 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_7,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3439 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_7,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3440 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_7,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3441 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_7,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3442 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_8,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3443 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_8,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3444 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_8,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3445 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_8,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3446 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_9,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3447 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_9,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3448 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_9,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3449 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_9,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3450 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3451 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3452 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3453 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3454 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3455 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3456 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3457 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3458 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3459 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3460 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3461 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3462 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3463 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3464 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3465 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3466 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3467 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3468 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3469 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3470 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3471 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3472 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3473 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3474 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3475 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3476 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3477 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3478 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3479 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3480 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3481 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3482 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_18,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3483 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_18,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3484 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_18,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3485 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_18,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3486 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_19,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3487 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_19,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3488 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_19,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3489 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_19,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3490 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_20,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3491 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_20,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3492 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_20,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3493 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_13,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_20,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3494 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_0,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3495 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_0,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3496 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_0,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3497 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_0,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3498 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_1,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3499 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_1,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3500 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_1,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3501 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_1,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3502 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_2,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3503 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_2,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3504 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_2,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3505 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_2,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3506 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_3,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3507 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_3,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3508 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_3,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3509 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_3,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3510 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_4,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3511 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_4,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3512 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_4,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3513 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_4,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3514 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_5,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3515 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_5,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3516 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_5,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3517 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_5,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3518 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_6,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3519 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_6,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3520 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_6,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3521 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_6,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3522 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_7,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3523 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_7,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3524 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_7,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3525 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_7,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3526 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_8,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3527 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_8,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3528 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_8,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3529 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_8,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3530 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_0,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3531 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_0,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3532 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_0,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3533 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_0,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3534 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_1,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3535 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_1,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3536 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_1,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3537 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_1,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3538 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_2,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3539 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_2,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3540 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_2,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3541 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_2,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3542 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_3,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3543 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_3,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3544 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_3,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3545 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_3,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3546 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_4,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3547 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_4,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3548 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_4,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3549 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_4,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3550 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_5,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3551 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_5,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3552 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_5,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3553 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_5,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3554 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_6,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3555 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_6,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3556 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_6,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3557 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_6,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3558 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_7,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3559 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_7,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3560 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_7,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3561 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_7,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3562 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_8,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3563 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_8,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3564 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_8,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3565 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_8,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3566 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_9,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3567 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_9,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3568 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_9,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3569 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_9,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3570 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3571 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3572 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3573 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3574 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3575 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3576 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3577 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3578 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3579 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3580 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3581 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3582 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3583 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3584 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3585 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3586 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3587 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3588 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3589 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3590 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3591 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3592 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3593 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3594 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3595 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3596 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3597 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3598 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3599 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3600 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3601 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_18,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3602 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_0,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3603 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_0,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3604 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_0,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3605 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_0,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3606 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_1,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3607 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_1,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3608 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_1,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3609 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_1,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3610 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_2,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3611 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_2,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3612 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_2,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3613 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_2,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3614 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_3,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3615 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_3,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3616 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_3,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3617 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_3,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3618 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_4,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3619 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_4,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3620 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_4,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3621 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_4,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3622 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_5,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3623 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_5,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3624 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_5,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3625 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_5,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3626 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_6,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3627 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_6,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3628 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_6,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3629 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_6,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3630 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_7,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3631 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_7,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3632 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_7,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3633 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_7,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3634 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_8,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3635 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_8,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3636 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_8,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3637 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_8,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3638 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
 				'actualArray'                => $actualArray = Values::ARRAY_9,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -10968,9 +7050,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1995 => [
+			3639 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_5,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
 				'actualArray'                => $actualArray = Values::ARRAY_9,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
@@ -10979,31 +7061,9 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1996 => [
+			3640 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_5,
-				'actualArray'                => $actualArray = Values::ARRAY_10,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_0,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1997 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_5,
-				'actualArray'                => $actualArray = Values::ARRAY_10,
-				'strict'                     => $strict = Values::BOOLEAN_FALSE,
-				'message'                    => $message = Values::STRING_1,
-				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
-				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
-				'expectedThrowableCode'      => 0,
-				'expectedThrowablePrevious'  => null
-			],
-			1998 => [
-				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_5,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
 				'actualArray'                => $actualArray = Values::ARRAY_10,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_0,
@@ -11012,10 +7072,2144 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 				'expectedThrowableCode'      => 0,
 				'expectedThrowablePrevious'  => null
 			],
-			1999 => [
+			3641 => [
 				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
-				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_5,
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
 				'actualArray'                => $actualArray = Values::ARRAY_10,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3642 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_11,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3643 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_11,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3644 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_0,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3645 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_0,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3646 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_0,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3647 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_0,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3648 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_1,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3649 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_1,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3650 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_1,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3651 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_1,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3652 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_2,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3653 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_2,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3654 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_2,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3655 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_2,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3656 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_3,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3657 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_3,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3658 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_3,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3659 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_3,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3660 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_4,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3661 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_4,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3662 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_4,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3663 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_4,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3664 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_5,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3665 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_5,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3666 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_5,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3667 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_5,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3668 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_6,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3669 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_6,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3670 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_6,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3671 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_6,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3672 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_7,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3673 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_7,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3674 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_7,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3675 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_7,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3676 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_8,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3677 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_8,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3678 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_8,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3679 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_8,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3680 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_9,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3681 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_9,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3682 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_9,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3683 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_9,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3684 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3685 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3686 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3687 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3688 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3689 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3690 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3691 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3692 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3693 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3694 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3695 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3696 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3697 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3698 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3699 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3700 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3701 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3702 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3703 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3704 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3705 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3706 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3707 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3708 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3709 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3710 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3711 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3712 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3713 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3714 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3715 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3716 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_12,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3717 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_12,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3718 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_13,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3719 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_13,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3720 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_18,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3721 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_18,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3722 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_18,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3723 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_18,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3724 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_20,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3725 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_20,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3726 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_20,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3727 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_19,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_20,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3728 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_0,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3729 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_0,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3730 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_0,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3731 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_0,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3732 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_1,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3733 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_1,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3734 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_1,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3735 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_1,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3736 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_2,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3737 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_2,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3738 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_2,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3739 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_2,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3740 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_3,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3741 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_3,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3742 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_3,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3743 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_3,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3744 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_4,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3745 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_4,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3746 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_4,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3747 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_4,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3748 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_5,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3749 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_5,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3750 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_5,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3751 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_5,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3752 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_6,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3753 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_6,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3754 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_6,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3755 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_6,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3756 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_7,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3757 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_7,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3758 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_7,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3759 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_7,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3760 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_8,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3761 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_8,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3762 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_8,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3763 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_8,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3764 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_0,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3765 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_0,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3766 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_0,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3767 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_0,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3768 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_1,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3769 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_1,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3770 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_1,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3771 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_1,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3772 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_2,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3773 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_2,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3774 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_2,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3775 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_2,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3776 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_3,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3777 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_3,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3778 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_3,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3779 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_3,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3780 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_4,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3781 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_4,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3782 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_4,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3783 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_4,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3784 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_5,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3785 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_5,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3786 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_5,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3787 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_5,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3788 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_6,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3789 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_6,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3790 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_6,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3791 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_6,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3792 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_7,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3793 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_7,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3794 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_7,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3795 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_7,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3796 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_8,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3797 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_8,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3798 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_8,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3799 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_8,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3800 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_9,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3801 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_9,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3802 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_9,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3803 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_9,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3804 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3805 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3806 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3807 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_10,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3808 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3809 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3810 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3811 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_11,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3812 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3813 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3814 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3815 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_12,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3816 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3817 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3818 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3819 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_13,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3820 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3821 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3822 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3823 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_14,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3824 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3825 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3826 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3827 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_15,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3828 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3829 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3830 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3831 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_16,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3832 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3833 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
+				'strict'                     => $strict = Values::BOOLEAN_FALSE,
+				'message'                    => $message = Values::STRING_1,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3834 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
+				'strict'                     => $strict = Values::BOOLEAN_TRUE,
+				'message'                    => $message = Values::STRING_0,
+				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
+				'expectedThrowableMessage'   => static::buildExpectedThrowableMessage( $actualArray, $expectedSubset, $strict, $message ),
+				'expectedThrowableCode'      => 0,
+				'expectedThrowablePrevious'  => null
+			],
+			3835 => [
+				'testCase'                   => new TestCaseClassAccessor( Values::EMPTY_STRING ),
+				'expectedSubset'             => $expectedSubset = Values::ARRAY_SUBSET_20,
+				'actualArray'                => $actualArray = Values::ARRAY_SUBSET_17,
 				'strict'                     => $strict = Values::BOOLEAN_TRUE,
 				'message'                    => $message = Values::STRING_1,
 				'expectedThrowableClassFqcn' => ExpectationFailedException::class,
@@ -11026,20 +9220,12 @@ final readonly class TestCasesWithExpectedSubsetActualArrayStrictMessageExpected
 		];
 	}
 
-	/**
-	 * Builds the expected throwable message.
-	 * @param array $actualArray The actualArray.
-	 * @param array $expectedSubset The expectedSubset.
-	 * @param bool $strict The strict flag to pass.
-	 * @param string $message The message to pass.
-	 * @return string The expected throwable message.
-	 */
 	private static function buildExpectedThrowableMessage( array $actualArray, array $expectedSubset, bool $strict, string $message ): string
 	{
 		$messagePrefix = Values::EMPTY_STRING === $message
 			? Values::EMPTY_STRING
 			: sprintf( '%1$s%2$s', $message, "\n" );
-		$constraint    = new ArrayContainsKeyedSubsetConstraint( $expectedSubset, $strict );
+		$constraint    = new ArrayContainsUnkeyedSubsetConstraint( $expectedSubset, $strict );
 
 		return sprintf(
 			'%1$sFailed asserting that %2$s%3$s.',

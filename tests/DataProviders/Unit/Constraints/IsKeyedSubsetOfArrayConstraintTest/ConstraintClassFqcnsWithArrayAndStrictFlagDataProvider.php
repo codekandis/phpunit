@@ -319,6 +319,56 @@ final readonly class ConstraintClassFqcnsWithArrayAndStrictFlagDataProvider impl
 				'constraintClassFqcn' => IsKeyedSubsetOfArrayConstraint::class,
 				'array'               => Values::ARRAY_SUBSET_17,
 				'strict'              => Values::BOOLEAN_TRUE
+			],
+			60 => [
+				'constraintClassFqcn' => IsKeyedSubsetOfArrayConstraint::class,
+				'array'               => Values::ARRAY_12,
+				'strict'              => Values::BOOLEAN_FALSE
+			],
+			61 => [
+				'constraintClassFqcn' => IsKeyedSubsetOfArrayConstraint::class,
+				'array'               => Values::ARRAY_12,
+				'strict'              => Values::BOOLEAN_TRUE
+			],
+			62 => [
+				'constraintClassFqcn' => IsKeyedSubsetOfArrayConstraint::class,
+				'array'               => Values::ARRAY_13,
+				'strict'              => Values::BOOLEAN_FALSE
+			],
+			63 => [
+				'constraintClassFqcn' => IsKeyedSubsetOfArrayConstraint::class,
+				'array'               => Values::ARRAY_13,
+				'strict'              => Values::BOOLEAN_TRUE
+			],
+			64 => [
+				'constraintClassFqcn' => IsKeyedSubsetOfArrayConstraint::class,
+				'array'               => Values::ARRAY_SUBSET_18,
+				'strict'              => Values::BOOLEAN_FALSE
+			],
+			65 => [
+				'constraintClassFqcn' => IsKeyedSubsetOfArrayConstraint::class,
+				'array'               => Values::ARRAY_SUBSET_18,
+				'strict'              => Values::BOOLEAN_TRUE
+			],
+			66 => [
+				'constraintClassFqcn' => IsKeyedSubsetOfArrayConstraint::class,
+				'array'               => Values::ARRAY_SUBSET_19,
+				'strict'              => Values::BOOLEAN_FALSE
+			],
+			67 => [
+				'constraintClassFqcn' => IsKeyedSubsetOfArrayConstraint::class,
+				'array'               => Values::ARRAY_SUBSET_19,
+				'strict'              => Values::BOOLEAN_TRUE
+			],
+			68 => [
+				'constraintClassFqcn' => IsKeyedSubsetOfArrayConstraint::class,
+				'array'               => Values::ARRAY_SUBSET_20,
+				'strict'              => Values::BOOLEAN_FALSE
+			],
+			69 => [
+				'constraintClassFqcn' => IsKeyedSubsetOfArrayConstraint::class,
+				'array'               => Values::ARRAY_SUBSET_20,
+				'strict'              => Values::BOOLEAN_TRUE
 			]
 		];
 	}

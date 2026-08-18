@@ -19,7 +19,8 @@ final readonly class ArraySubsetHelpersWithExpectedValueActualValueAndExpectedRe
 	{
 		return [
 			...ArraySubsetHelpersWithExpectedValueActualValueAndExpectedResultDataProvider0000::provideData(),
-			...ArraySubsetHelpersWithExpectedValueActualValueAndExpectedResultDataProvider0001::provideData()
+			...ArraySubsetHelpersWithExpectedValueActualValueAndExpectedResultDataProvider0001::provideData(),
+			...ArraySubsetHelpersWithExpectedValueActualValueAndExpectedResultDataProvider0002::provideData()
 		];
 	}
 }
