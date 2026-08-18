@@ -7,6 +7,7 @@ use function count;
 use function is_array;
 use function is_float;
 use function is_nan;
+use function is_object;
 
 /**
  * Represents the base class of all array subset helpers.
@@ -62,6 +63,26 @@ abstract class AbstractArraySubsetHelper implements ArraySubsetHelperInterface
 	}
 
 	/**
+	 * Determines if two objects are equal.
+	 * @param object $expectedObject The expected object.
+	 * @param object $actualObject The actual object.
+	 * @return bool True if the objects are equal according to the comparison mode, otherwise false.
+	 */
+	protected function objectsAreEqual( object $expectedObject, object $actualObject ): bool
+	{
+		if ( $this->strict === true )
+		{
+			return $expectedObject === $actualObject;
+		}
+
+		return $expectedObject === $actualObject
+		       || (
+				   $expectedObject::class === $actualObject::class
+			       && $this->arraysAreEqual( (array) $expectedObject, (array) $actualObject )
+			   );
+	}
+
+	/**
 	 * Determines if two values are equal.
 	 * @param mixed $expectedValue The expected value.
 	 * @param mixed $actualValue The actual value.
@@ -76,6 +97,17 @@ abstract class AbstractArraySubsetHelper implements ArraySubsetHelperInterface
 		}
 
 		if ( is_array( $actualValue ) === true )
+		{
+			return false;
+		}
+
+		if ( is_object( $expectedValue ) === true )
+		{
+			return is_object( $actualValue ) === true
+			       && $this->objectsAreEqual( $expectedValue, $actualValue );
+		}
+
+		if ( is_object( $actualValue ) === true )
 		{
 			return false;
 		}
