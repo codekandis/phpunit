@@ -33,7 +33,17 @@ final readonly class ConstraintsWithValidValueAndExpectedResultDataProvider impl
 			...ConstraintsWithValidValueAndExpectedResultDataProvider0012::provideData(),
 			...ConstraintsWithValidValueAndExpectedResultDataProvider0013::provideData(),
 			...ConstraintsWithValidValueAndExpectedResultDataProvider0014::provideData(),
-			...ConstraintsWithValidValueAndExpectedResultDataProvider0015::provideData()
+			...ConstraintsWithValidValueAndExpectedResultDataProvider0015::provideData(),
+			...ConstraintsWithValidValueAndExpectedResultDataProvider0016::provideData(),
+			...ConstraintsWithValidValueAndExpectedResultDataProvider0017::provideData(),
+			...ConstraintsWithValidValueAndExpectedResultDataProvider0018::provideData(),
+			...ConstraintsWithValidValueAndExpectedResultDataProvider0019::provideData(),
+			...ConstraintsWithValidValueAndExpectedResultDataProvider0020::provideData(),
+			...ConstraintsWithValidValueAndExpectedResultDataProvider0021::provideData(),
+			...ConstraintsWithValidValueAndExpectedResultDataProvider0022::provideData(),
+			...ConstraintsWithValidValueAndExpectedResultDataProvider0023::provideData(),
+			...ConstraintsWithValidValueAndExpectedResultDataProvider0024::provideData(),
+			...ConstraintsWithValidValueAndExpectedResultDataProvider0025::provideData()
 		];
 	}
 }

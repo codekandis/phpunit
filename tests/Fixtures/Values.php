@@ -16,6 +16,9 @@ use CodeKandis\PhpUnit\Tests\Fixtures\Objects\ClassFixture_9;
 use CodeKandis\PhpUnit\Tests\Fixtures\Objects\InterfaceFixture_0;
 use CodeKandis\PhpUnit\Tests\Fixtures\Objects\InterfaceFixture_1;
 use CodeKandis\PhpUnit\Tests\Fixtures\Objects\InterfaceFixture_2;
+use CodeKandis\PhpUnit\Tests\Fixtures\Objects\ObjectFixture_0;
+use CodeKandis\PhpUnit\Tests\Fixtures\Objects\ObjectFixture_1;
+use CodeKandis\PhpUnit\Tests\Fixtures\Objects\ObjectFixture_2;
 
 /**
  * Represents an enumeration of fixture values.
@@ -721,5 +724,258 @@ abstract class Values
 	public static function createClassFixture_11(): ClassFixture_11
 	{
 		return new ClassFixture_11();
+	}
+
+	/**
+	 * Creates an object fixture.
+	 * @return ObjectFixture_0 The created object fixture.
+	 */
+	public static function createObjectFixture_0(): ObjectFixture_0
+	{
+		return new ObjectFixture_0();
+	}
+
+	/**
+	 * Creates an object fixture.
+	 * @return ObjectFixture_1 The created object fixture.
+	 */
+	public static function createObjectFixture_1(): ObjectFixture_1
+	{
+		return new ObjectFixture_1();
+	}
+
+	/**
+	 * Creates an object fixture.
+	 * @return ObjectFixture_2 The created object fixture.
+	 */
+	public static function createObjectFixture_2(): ObjectFixture_2
+	{
+		return new ObjectFixture_2();
+	}
+
+	/**
+	 * Creates an `array` value.
+	 * @return array< string, mixed > The created array value.
+	 */
+	public static function createArray_14(): array
+	{
+		$objectFixture = new ObjectFixture_0();
+
+		return [
+			'foo' => self::STRING_0,
+			'tt'  => self::INTEGER_0,
+			'ft'  => self::INTEGER_1,
+			'bar' => self::STRING_1,
+			's'   => [
+				't'  => 13,
+				'ts' => 37,
+				'o0' => $objectFixture
+			],
+			'nan' => self::NAN,
+			'sn'  => [
+				'st' => 73,
+				'oe' => 108,
+				'o1' => new ObjectFixture_1()
+			],
+			'o0'  => $objectFixture
+		];
+	}
+
+	/**
+	 * Creates an `array` value.
+	 * @return array< int, mixed > The created array value.
+	 */
+	public static function createArray_15(): array
+	{
+		return [
+			self::INTEGER_0,
+			[
+				'tt' => self::INTEGER_0
+			],
+			self::STRING_0,
+			new ObjectFixture_0(),
+			[
+				't'  => 13,
+				'ts' => 37,
+				'o1' => new ObjectFixture_1()
+			],
+			self::NAN,
+			[
+				'st' => 73,
+				'oe' => 108
+			],
+			self::INTEGER_1,
+			self::STRING_1,
+			[
+				new ObjectFixture_1(),
+				self::NAN
+			]
+		];
+	}
+
+	/**
+	 * Creates an `array` value.
+	 * @return array< string, string|ObjectFixture_0 > The created array value.
+	 */
+	public static function createArray_16(): array
+	{
+		static $objectFixture = null;
+
+		$objectFixture ??= new ObjectFixture_0();
+
+		return [
+			'foo' => self::STRING_0,
+			'o0'  => $objectFixture
+		];
+	}
+
+	/**
+	 * Creates an `array` value.
+	 * @return array< string, string|ObjectFixture_0|ObjectFixture_1 > The created array value.
+	 */
+	public static function createArray_17(): array
+	{
+		static $objectFixture = null;
+
+		$objectFixture ??= new ObjectFixture_1();
+		$array         = self::createArray_16();
+
+		return [
+			'foo' => self::STRING_0,
+			'o0'  => $array[ 'o0' ],
+			'bar' => self::STRING_1,
+			'o1'  => $objectFixture
+		];
+	}
+
+	/**
+	 * Creates an `array subset` value.
+	 * @return array< string, mixed > The created array subset value.
+	 */
+	public static function createArraySubset_21(): array
+	{
+		$objectFixture = new ObjectFixture_0();
+
+		return [
+			'nan' => self::NAN,
+			'o0'  => $objectFixture,
+			's'   => [
+				't'  => 13,
+				'ts' => 37,
+				'o0' => $objectFixture
+			]
+		];
+	}
+
+	/**
+	 * Creates an `array subset` value.
+	 * @return array< string, mixed > The created array subset value.
+	 */
+	public static function createArraySubset_22(): array
+	{
+		return [
+			'sn'  => [
+				'st' => 73,
+				'oe' => 108,
+				'o1' => new ObjectFixture_1()
+			],
+			'foo' => self::STRING_0
+		];
+	}
+
+	/**
+	 * Creates an `array subset` value.
+	 * @return array< string, mixed > The created array subset value.
+	 */
+	public static function createArraySubset_23(): array
+	{
+		return [
+			'nan' => self::NAN,
+			'o0'  => new ObjectFixture_2()
+		];
+	}
+
+	/**
+	 * Creates an `array subset` value.
+	 * @return array< int, mixed > The created array subset value.
+	 */
+	public static function createArraySubset_24(): array
+	{
+		return [
+			self::INTEGER_0,
+			[
+				'tt' => self::INTEGER_0
+			],
+			self::STRING_0,
+			new ObjectFixture_0(),
+			[
+				't'  => 13,
+				'ts' => 37,
+				'o1' => new ObjectFixture_1()
+			],
+			self::NAN,
+			[
+				'st' => 73,
+				'oe' => 108
+			],
+			self::INTEGER_1,
+			self::STRING_1,
+			[
+				new ObjectFixture_1(),
+				self::NAN
+			]
+		];
+	}
+
+	/**
+	 * Creates an `array subset` value.
+	 * @return array< int, mixed > The created array subset value.
+	 */
+	public static function createArraySubset_25(): array
+	{
+		return [
+			self::INTEGER_0,
+			self::STRING_0,
+			new ObjectFixture_2()
+		];
+	}
+
+	/**
+	 * Creates an `array subset` value.
+	 * @return array< string, string|ObjectFixture_0 > The created array subset value.
+	 */
+	public static function createArraySubset_26(): array
+	{
+		$array = self::createArray_16();
+
+		return [
+			'foo' => self::STRING_0,
+			'o0'  => $array[ 'o0' ]
+		];
+	}
+
+	/**
+	 * Creates an `array subset` value.
+	 * @return array< string, string|ObjectFixture_1 > The created array subset value.
+	 */
+	public static function createArraySubset_27(): array
+	{
+		$array = self::createArray_17();
+
+		return [
+			'bar' => self::STRING_1,
+			'o1'  => $array[ 'o1' ]
+		];
+	}
+
+	/**
+	 * Creates an `array subset` value.
+	 * @return array< string, ObjectFixture_0 > The created array subset value.
+	 */
+	public static function createArraySubset_28(): array
+	{
+		return [
+			'o0' => new ObjectFixture_0( self::FLOAT )
+		];
 	}
 }

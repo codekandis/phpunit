@@ -369,6 +369,126 @@ final readonly class ConstraintClassFqcnsWithArrayAndStrictFlagDataProvider impl
 				'constraintClassFqcn' => IsUnkeyedSubsetOfArrayConstraint::class,
 				'array'               => Values::ARRAY_SUBSET_20,
 				'strict'              => Values::BOOLEAN_TRUE
+			],
+			70 => [
+				'constraintClassFqcn' => IsUnkeyedSubsetOfArrayConstraint::class,
+				'array'               => Values::createArray_14(),
+				'strict'              => Values::BOOLEAN_FALSE
+			],
+			71 => [
+				'constraintClassFqcn' => IsUnkeyedSubsetOfArrayConstraint::class,
+				'array'               => Values::createArray_14(),
+				'strict'              => Values::BOOLEAN_TRUE
+			],
+			72 => [
+				'constraintClassFqcn' => IsUnkeyedSubsetOfArrayConstraint::class,
+				'array'               => Values::createArray_15(),
+				'strict'              => Values::BOOLEAN_FALSE
+			],
+			73 => [
+				'constraintClassFqcn' => IsUnkeyedSubsetOfArrayConstraint::class,
+				'array'               => Values::createArray_15(),
+				'strict'              => Values::BOOLEAN_TRUE
+			],
+			74 => [
+				'constraintClassFqcn' => IsUnkeyedSubsetOfArrayConstraint::class,
+				'array'               => Values::createArraySubset_21(),
+				'strict'              => Values::BOOLEAN_FALSE
+			],
+			75 => [
+				'constraintClassFqcn' => IsUnkeyedSubsetOfArrayConstraint::class,
+				'array'               => Values::createArraySubset_21(),
+				'strict'              => Values::BOOLEAN_TRUE
+			],
+			76 => [
+				'constraintClassFqcn' => IsUnkeyedSubsetOfArrayConstraint::class,
+				'array'               => Values::createArraySubset_22(),
+				'strict'              => Values::BOOLEAN_FALSE
+			],
+			77 => [
+				'constraintClassFqcn' => IsUnkeyedSubsetOfArrayConstraint::class,
+				'array'               => Values::createArraySubset_22(),
+				'strict'              => Values::BOOLEAN_TRUE
+			],
+			78 => [
+				'constraintClassFqcn' => IsUnkeyedSubsetOfArrayConstraint::class,
+				'array'               => Values::createArraySubset_23(),
+				'strict'              => Values::BOOLEAN_FALSE
+			],
+			79 => [
+				'constraintClassFqcn' => IsUnkeyedSubsetOfArrayConstraint::class,
+				'array'               => Values::createArraySubset_23(),
+				'strict'              => Values::BOOLEAN_TRUE
+			],
+			80 => [
+				'constraintClassFqcn' => IsUnkeyedSubsetOfArrayConstraint::class,
+				'array'               => Values::createArraySubset_24(),
+				'strict'              => Values::BOOLEAN_FALSE
+			],
+			81 => [
+				'constraintClassFqcn' => IsUnkeyedSubsetOfArrayConstraint::class,
+				'array'               => Values::createArraySubset_24(),
+				'strict'              => Values::BOOLEAN_TRUE
+			],
+			82 => [
+				'constraintClassFqcn' => IsUnkeyedSubsetOfArrayConstraint::class,
+				'array'               => Values::createArraySubset_25(),
+				'strict'              => Values::BOOLEAN_FALSE
+			],
+			83 => [
+				'constraintClassFqcn' => IsUnkeyedSubsetOfArrayConstraint::class,
+				'array'               => Values::createArraySubset_25(),
+				'strict'              => Values::BOOLEAN_TRUE
+			],
+			84 => [
+				'constraintClassFqcn' => IsUnkeyedSubsetOfArrayConstraint::class,
+				'array'               => Values::createArray_16(),
+				'strict'              => Values::BOOLEAN_FALSE
+			],
+			85 => [
+				'constraintClassFqcn' => IsUnkeyedSubsetOfArrayConstraint::class,
+				'array'               => Values::createArray_16(),
+				'strict'              => Values::BOOLEAN_TRUE
+			],
+			86 => [
+				'constraintClassFqcn' => IsUnkeyedSubsetOfArrayConstraint::class,
+				'array'               => Values::createArray_17(),
+				'strict'              => Values::BOOLEAN_FALSE
+			],
+			87 => [
+				'constraintClassFqcn' => IsUnkeyedSubsetOfArrayConstraint::class,
+				'array'               => Values::createArray_17(),
+				'strict'              => Values::BOOLEAN_TRUE
+			],
+			88 => [
+				'constraintClassFqcn' => IsUnkeyedSubsetOfArrayConstraint::class,
+				'array'               => Values::createArraySubset_26(),
+				'strict'              => Values::BOOLEAN_FALSE
+			],
+			89 => [
+				'constraintClassFqcn' => IsUnkeyedSubsetOfArrayConstraint::class,
+				'array'               => Values::createArraySubset_26(),
+				'strict'              => Values::BOOLEAN_TRUE
+			],
+			90 => [
+				'constraintClassFqcn' => IsUnkeyedSubsetOfArrayConstraint::class,
+				'array'               => Values::createArraySubset_27(),
+				'strict'              => Values::BOOLEAN_FALSE
+			],
+			91 => [
+				'constraintClassFqcn' => IsUnkeyedSubsetOfArrayConstraint::class,
+				'array'               => Values::createArraySubset_27(),
+				'strict'              => Values::BOOLEAN_TRUE
+			],
+			92 => [
+				'constraintClassFqcn' => IsUnkeyedSubsetOfArrayConstraint::class,
+				'array'               => Values::createArraySubset_28(),
+				'strict'              => Values::BOOLEAN_FALSE
+			],
+			93 => [
+				'constraintClassFqcn' => IsUnkeyedSubsetOfArrayConstraint::class,
+				'array'               => Values::createArraySubset_28(),
+				'strict'              => Values::BOOLEAN_TRUE
 			]
 		];
 	}
